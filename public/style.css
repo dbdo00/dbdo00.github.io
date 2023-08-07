@@ -1,0 +1,20 @@
+body {
+    font-family: "DejaVu Serif", "Cambria", "Noto Serif","Iowan Old Style", Georgia,  sans-serif;
+    padding: 1em;
+    font-size: 1em;
+  }
+  
+  .article-section, .blog {
+    border-top: 1px dashed #000;
+    max-width: 38em;
+    margin : 0 auto;
+    min-height: 100vh;/*prevent inconsistent nav bar position*/
+    line-height: 1.6;
+  }
+  .article-section a { width: 100%; display: inline-block;}
+  .article-section li {
+    padding-bottom: 1em;
+  }
+nav {
+  font-family: cursive
+}
