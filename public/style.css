@@ -2,19 +2,44 @@ body {
     font-family: "DejaVu Serif", "Cambria", "Noto Serif","Iowan Old Style", Georgia,  sans-serif;
     padding: 1em;
     font-size: 1em;
+    background-color: var(--background-color);
+    color: var(--text-color);
   }
   
   .article-section, .blog {
-    border-top: 1px dashed #000;
+    border-top: 1px dashed var(--text-color);
     max-width: 38em;
     margin : 0 auto;
     min-height: 100vh;/*prevent inconsistent nav bar position*/
     line-height: 1.6;
   }
-  .article-section a { width: 100%; display: inline-block;}
+   a { width: 100%;  color: var(--link-color)}
   .article-section li {
     padding-bottom: 1em;
   }
+  .article-section a {
+    display: inline-block;
+
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    
+    :root { 
+      --background-color: rgb(33, 36, 32);
+      --text-color: #fff; 
+      --link-color:  #8c8dff ;
+    }
+    }
+  
+  @media (prefers-color-scheme: light) {
+    
+      :root { 
+        --background-color: white;
+        --text-color: #000; 
+        --link-color:  #3a3bff ;
+      }
+      }
+    
 nav {
   font-family: cursive
 }

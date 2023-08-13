@@ -1,0 +1,40 @@
+name: Update Blog on Markdown/Public Changes
+
+on:
+  push:
+    paths:
+      - 'markdown/**'
+      - 'public/**'
+
+jobs:
+  update_blog:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+
+    - name: Run Python script on markdown changes
+      if: ${{ github.event_name == 'push' && contains(github.event.head_commit.modified, 'markdown/') }}
+      run: |
+        python your_python_script.py
+
+    - name: Push public folder changes to blog repository
+      if: ${{ github.event_name == 'push' && contains(github.event.head_commit.modified, 'public/') }}
+      env: 
+        GIT_USER: ${{ secrets.BLOG_GIT_USER }}
+        GIT_TOKEN: ${{ secrets.BLOG_GIT_TOKEN }}
+      run: |
+        git config --global user.name "$GIT_USER"
+        git config --global user.email "111195758+dbdowjfb@users.noreply.github.com"
+        git clone https://github.com/dbdowjfb/dbdowjfb.github.io
+        cd dbdowjfb.github.io 
+        cp -r ../public/* .
+        git add .
+        git commit -m "Update public folder"
+        git push origin main
