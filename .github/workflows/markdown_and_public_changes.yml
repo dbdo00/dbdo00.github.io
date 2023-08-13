@@ -2,9 +2,7 @@ name: Update Blog on Markdown/Public Changes
 
 on:
   push:
-    paths:
-      - 'markdown/**'
-      - 'public/**'
+    
 
 jobs:
   update_blog:
