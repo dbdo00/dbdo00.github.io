@@ -37,4 +37,4 @@ jobs:
           deploy_key: ${{ secrets.BLOG_GIT_TOKEN}} 
           external_repository: dbdowjfb/dbdowjfb.github.io
           publish_branch: main # default: gh-pages
-          publish_dir: .
+          publish_dir: ./public
