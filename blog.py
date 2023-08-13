@@ -125,7 +125,7 @@ def update_data(md_dir):
                 # concatenate the directory to specify the path of markdown and html files 
                 'html_path' : f"post/{html_filename}",
                 'md_path' : f"markdown/{md}", 
-                'ctime' : get_file_last_modified_date(f'{md_dir}/{md}')
+                'ctime' : file_ctime(f'{md_dir}/{md}')
             }
             data.append(file_data)
     
