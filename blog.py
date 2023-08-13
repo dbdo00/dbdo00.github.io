@@ -86,13 +86,14 @@ def get_tags(content):
 def file_ctime(filename):
     # filename : the precise path of a file
     # return the creation time of the file
-    # the format is year-month-day-hour-minute-second
-    return time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime(os.path.getmtime(filename))) 
+    # the format is year-month-day-hour-minute-second 
+    # return time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime(os.path.getmtime(filename))) 
+    return get_file_last_modified_date(filename)
 
 def get_file_last_modified_date(file_path):
     try:
         # 运行 git log 命令获取文件的最后修改日期
-        command = ["git", "log", "-1", "%Y-%m-%d %H:%M", file_path]
+        command = ["git", "log", "-1", r"--date=format:%Y-%m-%d %H:%M", file_path]
         result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
         modified_date = result.stdout.strip().split('\n')
         for line in modified_date:
