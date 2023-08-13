@@ -6,6 +6,7 @@ import markdown
 import sys 
 import time
 import latex2mathml.converter as latex_to_mathml
+import subprocess
 
 def render_html(template_name,content):    
     # template_name : the complete path of the template file  
@@ -88,6 +89,17 @@ def file_ctime(filename):
     # the format is year-month-day-hour-minute-second
     return time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime(os.path.getmtime(filename))) 
 
+def get_file_last_modified_date(file_path):
+    try:
+        # 运行 git log 命令获取文件的最后修改日期
+        command = ["git", "log", "-1", "--format=%ad", "--", file_path]
+        result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
+        modified_date = result.stdout.strip()
+        return modified_date
+    except subprocess.CalledProcessError as e:
+        print("Error:", e)
+        return None
+    
 # update data for each post
 def update_data(md_dir):
     # md_dir : the directory of markdown files
@@ -110,7 +122,7 @@ def update_data(md_dir):
                 # concatenate the directory to specify the path of markdown and html files 
                 'html_path' : f"post/{html_filename}",
                 'md_path' : f"markdown/{md}", 
-                'ctime' : file_ctime(f'{md_dir}/{md}')
+                'ctime' : get_file_last_modified_date(f'{md_dir}/{md}')
             }
             data.append(file_data)
     
@@ -135,7 +147,7 @@ def name_a_file(filename):
     if get_title(markdown_content) == None:
                 # when the title is not specified, generate the title using the precise time of the markdown file
                 # the title is in the form of 'title-2020-01-01-00-00-00'
-                title = file_ctime(filename)
+                title = get_file_last_modified_date(filename)
     else: 
         title = get_title(markdown_content)
     return title
