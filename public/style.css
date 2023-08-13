@@ -1,5 +1,5 @@
 body {
-  font-family: sans-serif;
+  font-family: Verdana, sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
   /* position:relative; */
@@ -15,8 +15,13 @@ body {
 }
 
 .article-section li {
-  display: inline;
+  display: flex;
 }
+
+.article-section li span {
+  flex: 0 0 145.4px;
+}
+
 
 .article-section a {
   display: inline-block;
@@ -86,6 +91,32 @@ nav a {
 
   
 
+/* Add your additional styles here if needed */
+
+
+
+
+
+a {
+  color : var(--link-color); 
+  text-decoration: none;
+}
+
+
+
+
+a:hover {
+  background-color: var(--link-hover-color); 
+  color: var(--background-color);
+}
+
+
+  p {
+     line-height: 1.6;
+     
+ }
+
+ 
 /* reset.css */
 html, body, div, span, applet, object, iframe,
  pre,
@@ -104,33 +135,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   font-size: 100%;
   font-family: inherit;
   vertical-align: baseline;
-}
-
-/* Add your additional styles here if needed */
-
-
-
-
-
-a {
-  
-  color : var(--link-color); 
-}
-
-
-
-
-a:hover {
-  background-color: var(--link-hover-color); 
-  color: var(--background-color);
-}
-
-
-  p {
-     line-height: 1.6;
-     
- }
-
+} 
 
 
 

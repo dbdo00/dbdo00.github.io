@@ -219,12 +219,7 @@ def main():
     
     # render index markdown 
     render_index_page(f'{root_dir}/data.json',index_page_path=index_page_path)
-    # put index markdown into a string
-    # index_md = text_file_to_string(f'{markdown_dir}/index.md')
-    # render html for index page's markdown 
-    # output = render_html(template_name=f'{template_dir}/index.html', content=index_md )   
-    # write the rendered html to a file
-    # write_html(output, root_dir, 'index')
+   
 
 if __name__ == '__main__':
     main()
