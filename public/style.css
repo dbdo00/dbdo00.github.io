@@ -19,7 +19,7 @@ body {
 }
 
 .article-section li span {
-  flex: 0 0 145.4px;
+  flex: 0 0 calc(var(--l) * 6);
 }
 
 
@@ -35,7 +35,7 @@ body {
 }
 
 li {
-  margin-bottom: 0.5em;
+  margin-bottom: var(--s);
 }
 
 
@@ -51,6 +51,10 @@ li {
   ;
   --bright-pink: #F4DFA16E;
   /* this is actually certain yellow */
+  --xl : 36px;
+  --l : 24px;
+  --m : 16px;
+  --s : 8px;
 
 }
 
@@ -63,8 +67,7 @@ nav {
 }
 
 nav a {
-  display: inline-block;
-  margin-right: 20px;
+  margin: 0 var(--s) 0 0;
 }
 :root {
   --background-color : white;
@@ -105,10 +108,10 @@ a {
 
 
 
-a:hover {
+/* a:hover {
   background-color: var(--link-hover-color); 
   color: var(--background-color);
-}
+} */
 
 
   p {
@@ -117,27 +120,3 @@ a:hover {
  }
 
  
-/* reset.css */
-html, body, div, span, applet, object, iframe,
- pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-} 
-
-
-
-
-
