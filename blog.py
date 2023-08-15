@@ -114,8 +114,8 @@ def update_data(md_dir):
     for md in os.listdir(md_dir): 
         if md.endswith('.md'):
             markdown_content = text_file_to_string(f'{md_dir}/{md}')
-            title = name_a_file(f'{md_dir}/{md}') 
-            html_filename = f'{title}.html'  
+            title = get_title(markdown_content) 
+            html_filename = f'{name_a_file(f"{md_dir}/{md}")}.html'  
             print("MAKE SURE THAT:")
             print('The current post directory is `post`')
             print('The current markdown directory is `markdown`')
