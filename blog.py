@@ -7,7 +7,7 @@ import sys
 import time
 import latex2mathml.converter as latex_to_mathml
 import subprocess
-
+import re
 def render_html(template_name,content):    
     # template_name : the complete path of the template file  
     # content : the string of the markdown file
@@ -154,7 +154,8 @@ def name_a_file(filename):
                 title = get_file_last_modified_date(filename)
     else: 
         title = get_title(markdown_content)
-    return title
+    return re.sub(r'\s', '-', title) # replace the spaces in the title with '-'
+
 
 # print(name_a_file('markdown/readme.md'))
 
