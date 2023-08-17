@@ -37,9 +37,9 @@ body {
   min-height: 100vh; /*prevent inconsistent nav bar position*/
   margin: var(--s) auto;
   /*! margin: flex; */
-  border: solid;
+/*   border: solid; */
   padding: 0 var(--s);
-  border-radius: 10px;
+/*   border-radius: 10px; */
 }
 
 li {
@@ -70,8 +70,8 @@ li {
 nav {
   text-align: center;
    padding: var(--s) 0;
-  border: solid;
-  border-radius: 10px;
+/*   border: solid; */
+/*   border-radius: 10px; */
   /*! margin: ; */
 }
 
