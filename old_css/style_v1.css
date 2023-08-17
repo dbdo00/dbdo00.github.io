@@ -35,8 +35,11 @@ body {
 .blog {
   max-width: clamp(min(10vw, 20rem),90vw, 800px);
   min-height: 100vh; /*prevent inconsistent nav bar position*/
-  margin: auto;
+  margin: var(--s) auto;
   /*! margin: flex; */
+  border: solid;
+  padding: 0 var(--s);
+  border-radius: 10px;
 }
 
 li {
@@ -67,6 +70,9 @@ li {
 nav {
   text-align: center;
    padding: var(--s) 0;
+  border: solid;
+  border-radius: 10px;
+  /*! margin: ; */
 }
 
 nav a {
