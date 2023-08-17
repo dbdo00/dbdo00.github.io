@@ -124,16 +124,19 @@ body {
     /* font-size: var(--size-step-0);  */
     /* font-weight: 400; */
     
-    margin: var(--s) 0 0 0;
-    /*! background: black; */
+    margin: var(--s) auto;    /*! background: black; */
     /*! margin: var(--l); */
     text-align: justify;
+    max-width: clamp(min(10vw, 20rem),90vw, 800px);
   }
   
   .article-section {
     max-width: 800px;
     margin: 0 auto;
     min-height: 100vh;/*prevent inconsistent nav bar position*/
+    border: solid;
+    margin: var(--s) auto;
+    border-radius: 10px;
   }
   
   .article-section li {
@@ -151,9 +154,9 @@ body {
   }
   
   .blog {
-    max-width: clamp(min(10vw, 20rem),90vw, 800px);
+    
     min-height: 100vh; /*prevent inconsistent nav bar position*/
-    margin: var(--s) auto;
+    
     /*! margin: flex; */
     border: solid;
     padding: 0 var(--s);
@@ -235,3 +238,8 @@ body {
    }
   
      
+.mastodon-embed {
+    /*! align-items: center; */
+    display: flex;
+    margin: inherit;
+  }

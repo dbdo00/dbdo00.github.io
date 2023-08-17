@@ -116,3 +116,8 @@ a {
  }
 
  
+.mastodon-embed {
+  /*! align-items: center; */
+  display: flex;
+  margin: inherit;
+}
