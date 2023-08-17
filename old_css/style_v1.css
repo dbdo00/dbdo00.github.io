@@ -1,11 +1,15 @@
 body {
-  font-family: Verdana, sans-serif;
+  font-family: var(--fonts);
   background-color: var(--background-color);
   color: var(--text-color);
   /* position:relative; */
   /* font-size: var(--size-step-0);  */
   /* font-weight: 400; */
   
+  margin: var(--s) 0 0 0;
+  /*! background: black; */
+  /*! margin: var(--l); */
+  text-align: justify;
 }
 
 .article-section {
@@ -29,9 +33,10 @@ body {
 }
 
 .blog {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: clamp(min(10vw, 20rem),90vw, 800px);
   min-height: 100vh; /*prevent inconsistent nav bar position*/
+  margin: auto;
+  /*! margin: flex; */
 }
 
 li {
@@ -56,18 +61,16 @@ li {
   --m : 16px;
   --s : 8px;
 
+  --fonts: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
 nav {
   text-align: center;
-  width: 100%;
-  margin: auto;
-  box-sizing: border-box;
-  
+   padding: var(--s) 0;
 }
 
 nav a {
-  margin: 0 var(--s) 0 0;
+  margin: 0 var(--m) 0 0;
 }
 :root {
   --background-color : white;
@@ -92,26 +95,13 @@ nav a {
   }
   }
 
-  
-
-/* Add your additional styles here if needed */
-
-
-
 
 
 a {
-  color : var(--link-color); 
-  text-decoration: none;
+  color : var(--text-color); 
+  font-weight: 700;
 }
 
-
-
-
-/* a:hover {
-  background-color: var(--link-hover-color); 
-  color: var(--background-color);
-} */
 
 
   p {
