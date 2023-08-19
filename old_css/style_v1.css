@@ -86,15 +86,16 @@ nav a {
   --article-link-box-hover : var(--classic-gray);
   --link-hover-color: #234fd3;
   --link-color: #000;
-
+  --gkeep-text: #b9b9ba;
+  --gkeep-background: #202124 ;
 }
 
 
 @media (prefers-color-scheme: dark) {
 
   :root { 
-    --background-color: var(--lighter-black);
-    --text-color: rgb(239, 218, 185); 
+    --background-color: var(--gkeep-background);
+    --text-color: var(--gkeep-text); 
     --link-color: #aeec71;
     /* --link-color: #a5d296; */
     --link-hover-color: var(--bright-pink);
@@ -120,4 +121,12 @@ a {
   /*! align-items: center; */
   display: flex;
   margin: inherit;
+}
+
+
+.cat {
+  width: 3em;
+  position: absolute;
+  left: 2vw;
+  top: 3vw;
 }
