@@ -98,10 +98,13 @@ def get_file_last_modified_date(file_path):
         modified_date = result.stdout.strip().split('\n')
         for line in modified_date:
             if line.startswith('Date:'):
-                date = line.split('Date:')[1].strip()        
+                date = line.split('Date:')[1].strip()       
+        print("file:", file_path)
         return date
     except subprocess.CalledProcessError as e:
         print("Error:", e)
+        print("Error:", e.stderr)
+        print("file:", file_path)
         return None
     
 # update data for each post
