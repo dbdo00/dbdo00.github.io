@@ -23,7 +23,7 @@ body {
 }
 
 .article-section li span {
-  flex: 0 0 calc(var(--l) * 6);
+  flex: 0 0 8em;
 }
 
 

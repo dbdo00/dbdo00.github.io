@@ -18,12 +18,15 @@ body {
   min-height: 100vh;/*prevent inconsistent nav bar position*/
 }
 
+
 .article-section li {
   display: flex;
 }
 
 .article-section li span {
   flex: 0 0 calc(var(--l) * 6);
+  font-weight: 300;
+
 }
 
 
