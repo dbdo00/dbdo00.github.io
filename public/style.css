@@ -90,7 +90,7 @@ nav a {
 
 }
 
-
+/* 
 @media (prefers-color-scheme: dark) {
 
   :root { 
@@ -100,7 +100,7 @@ nav a {
     /* --link-color: #a5d296; */
     --link-hover-color: var(--bright-pink);
   }
-  }
+  } */
 
 
 
