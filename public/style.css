@@ -10,7 +10,6 @@ body {
   margin: var(--s) auto;
   /*! background: black; */
   /*! margin: var(--l); */
-  text-align: justify;
 }
 
 .article-section {
@@ -111,7 +110,7 @@ a {
 
 
   p {
-     line-height: 1.6;
+     line-height: 2;
      
  }
 
