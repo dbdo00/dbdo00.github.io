@@ -90,17 +90,17 @@ nav a {
 
 }
 
-/* 
-@media (prefers-color-scheme: dark) {
 
+/* @media (prefers-color-scheme: dark) {
   :root { 
     --background-color: var(--lighter-black);
     --text-color: rgb(239, 218, 185); 
     --link-color: #aeec71;
-    /* --link-color: #a5d296; */
+     --link-color: #a5d296; 
     --link-hover-color: var(--bright-pink);
   }
-  } */
+  }  */
+
 
 
 
