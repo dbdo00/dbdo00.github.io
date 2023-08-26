@@ -1,0 +1,135 @@
+body {
+  font-family: var(--fonts);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  /* position:relative; */
+  /* font-size: var(--size-step-0);  */
+  /* font-weight: 400; */
+  
+  margin: var(--s) 0 0 0;
+  /*! background: black; */
+  /*! margin: var(--l); */
+  text-align: justify;
+}
+
+.article-section {
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 100vh;/*prevent inconsistent nav bar position*/
+}
+
+
+.article-section li {
+  display: flex;
+}
+
+.article-section li span {
+  flex: 0 0 calc(var(--l) * 6);
+  font-weight: 300;
+
+}
+
+
+.article-section a {
+  display: inline-block;
+  width: 100%;
+}
+
+.blog {
+  max-width: clamp(min(10vw, 20rem),90vw, 800px);
+  min-height: 100vh; /*prevent inconsistent nav bar position*/
+  margin: var(--s) auto;
+  /*! margin: flex; */
+/*   border: solid; */
+  padding: 0 var(--s);
+/*   border-radius: 10px; */
+}
+
+li {
+  margin-bottom: var(--s);
+}
+
+
+:root {
+  /* colors */
+  --classic-gray: #d9e1e8;
+  --old-plain-gray-link-color: #595e5e;
+  --vibrant-light-pink: #ECE1D5;
+  --warmer-gray: #797979;
+  --lighter-black : #333 ;
+  --warmer-white: #F6F6F6;
+  --pink : rgb(173, 26, 114);
+  ;
+  --bright-pink: #F4DFA16E;
+  /* this is actually certain yellow */
+  --xl : 36px;
+  --l : 24px;
+  --m : 16px;
+  --s : 8px;
+
+  --fonts: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+nav {
+  text-align: center;
+   padding: var(--s) 0;
+/*   border: solid; */
+/*   border-radius: 10px; */
+  /*! margin: ; */
+}
+
+nav a {
+  margin: 0 var(--m) 0 0;
+}
+:root {
+  --background-color : white;
+  --text-color : #000;
+  --nav-bar-color: var(--classic-gray); 
+  --article-section-gap-top: 20pt ;
+  --article-link-box-hover : var(--classic-gray);
+  --link-hover-color: #234fd3;
+  --link-color: #000;
+  --gkeep-text: #b9b9ba;
+  --gkeep-background: #202124 ;
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+  :root { 
+    --background-color: var(--gkeep-background);
+    --text-color: var(--gkeep-text); 
+    --link-color: #aeec71;
+    /* --link-color: #a5d296; */
+    --link-hover-color: var(--bright-pink);
+  }
+  }
+
+
+
+a {
+  color : var(--text-color); 
+  font-weight: 700;
+}
+
+
+
+  p {
+     line-height: 1.6;
+     
+ }
+
+ 
+.mastodon-embed {
+  /*! align-items: center; */
+  display: flex;
+  margin: inherit;
+}
+
+
+.cat {
+  width: 3em;
+  position: absolute;
+  left: 2vw;
+  top: 3vw;
+}
