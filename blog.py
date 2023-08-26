@@ -8,6 +8,9 @@ import time
 import latex2mathml.converter as latex_to_mathml
 import subprocess
 import re
+from datetime import datetime
+import pytz
+
 def render_html(template_name,content):    
     # template_name : the complete path of the template file  
     # content : the string of the markdown file
@@ -88,19 +91,20 @@ def file_ctime(filename):
     # return the creation time of the file
     # the format is year-month-day-hour-minute-second 
     # return time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime(os.path.getmtime(filename))) 
-    return get_file_last_modified_date(filename)
+    return get_file_date(filename)
 
-def get_file_last_modified_date(file_path):
+def get_file_date(file_path):
     try:
         # 运行 git log 命令获取文件的最后修改日期
-        command = ["git", "log", "-1", r"--date=format:%Y-%m-%d %H:%M", file_path]
+        command = ["git", "log","--reverse", r"--date=format:%Y-%m-%d %H:%M", "--date=iso-local", file_path]
         result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
         modified_date = result.stdout.strip().split('\n')
         for line in modified_date:
             if line.startswith('Date:'):
-                date = line.split('Date:')[1].strip()       
+                listified_line = line.split('Date:')[1].strip().split(' ') # dates and tzone after 'Date:'
+                break     
         print("file:", file_path)
-        return date
+        return ' '.join(listified_line).strip()
     except subprocess.CalledProcessError as e:
         print("Error:", e)
         print("Error:", e.stderr)
@@ -129,7 +133,7 @@ def update_data(md_dir):
                 # concatenate the directory to specify the path of markdown and html files 
                 'html_path' : f"post/{html_filename}",
                 'md_path' : f"markdown/{md}", 
-                'ctime' : file_ctime(f'{md_dir}/{md}')
+                'ctime' : file_ctime(f'{md_dir}/{md}') # the date of the initial commit
             }
             data.append(file_data)
     
@@ -154,7 +158,7 @@ def name_a_file(filename):
     if get_title(markdown_content) == None:
                 # when the title is not specified, generate the title using the precise time of the markdown file
                 # the title is in the form of 'title-2020-01-01-00-00-00'
-                title = get_file_last_modified_date(filename)
+                title = get_file_date(filename)
     else: 
         title = get_title(markdown_content)
     return re.sub(r'\s', '-', title) # replace the spaces in the title with '-'
@@ -168,7 +172,7 @@ def render_html_for_each_post(md_dir, post_dir):
     # render html for each post
     for md in os.listdir(md_dir): 
         # print(md,'is passed to render_html_for_each_post')
-        # put markdown file into a string 
+        # put markdown file i@nto a string 
         markdown_content = text_file_to_string(f'{md_dir}/{md}')
         output = render_html('post.html', markdown_content)  
         # write the rendered html to a file
@@ -194,7 +198,7 @@ def render_index_page(data_json, index_page_path):
         try:
             posts = sorted(data, key=lambda x: x['ctime'], reverse=True)
         except KeyError:
-            print('KeyError in sorting data.We will skip this time.')
+            print('KeyError in sorting data. We will skip this time.')
             pass 
 
         # print(type(posts[1]))
@@ -210,6 +214,86 @@ def render_index_page(data_json, index_page_path):
         with open(f'{index_page_path}', 'w', encoding='utf-8') as file:
             file.write(output)
 
+def rss_time(time):
+    input_datetime_str = ' '.join(time.split(' ')[:2]).strip()
+    input_datetime = datetime.strptime(input_datetime_str, r'%Y-%m-%d %H:%M:%S')
+    input_offset = time.split(' ')[-1]
+    # return the current time in the format of rss
+    # 解析时区偏移字符串
+    offset_hours = int(input_offset[:3])  # 提取小时部分
+    offset_minutes = int(input_offset[3:])  # 提取分钟部分
+
+    # 创建时区对象
+    offset_tz = pytz.FixedOffset(offset_hours * 60 + offset_minutes)
+
+    # 将datetime对象应用时区偏移
+    localized_datetime = input_datetime.replace(tzinfo=offset_tz)
+
+    # 转换为UTC时间
+    utc_datetime = localized_datetime.astimezone(pytz.UTC)
+
+    return utc_datetime.strftime(r"%a, %d %b %Y %H:%M:%S GMT")
+
+    
+
+
+def create_rss(data_json, rss_path):
+    rss_content = f'''<?xml version="1.0" encoding="UTF-8"?>
+    <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:admin="http://webns.net/mvcb/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    >
+    <channel>
+    <description>Dbdo 的网站</description>
+    <link > http://dbdo.website </link>
+    <title>Dbdo 的网站</title>
+     <atom:link href="http://dbdo.website" rel="self" type="application/rss+xml" />
+    @@@ 
+    </channel>
+    </rss>
+    '''
+    items = ''
+    with open(data_json, 'r') as file:
+        site_url = 'https://dbdo.website'
+        data = json.load(file)
+        # the link in the json file is the form "html_path": "/post/mdtest.html"
+        # the link in the markdown file is the form "[title](html_path)"
+        try:
+            posts = sorted(data, key=lambda x: x['ctime'], reverse=True)
+        except KeyError:
+            print('KeyError in sorting data. We will skip this time.')
+            pass 
+        
+        for post in data:
+            # append posts info to the rss_content between <channel> and </channel>
+            # create a new item tag
+            with open(post['md_path'], 'r') as file:
+                content = file.read()
+            item = f'''
+            <item>
+                <title>{post['title']}</title>
+                <link>{site_url}/{post['html_path']}</link>
+                <description>{post['title']}</description>
+                <content:encoded><![CDATA[
+                {markdown.markdown(content)}
+                ]]>
+                 </content:encoded>
+                <pubDate>{rss_time(post['ctime'])}</pubDate>
+                <guid>{site_url}/{post['html_path']}</guid>
+            </item>
+            '''
+            items += item
+    rss_content = rss_content.replace('@@@', f'{items}\n') 
+    with open(rss_path, 'w') as file:
+        file.write(rss_content)
+
+
+            
+
+
+
 def main():
     # root : the root directory of the blog
     root_dir = os.getcwd()
@@ -223,8 +307,7 @@ def main():
     
     # render index markdown 
     render_index_page(f'{root_dir}/data.json',index_page_path=index_page_path)
-   
-
+    create_rss(f'{root_dir}/data.json', f'{root_dir}/public/rss.xml')
 if __name__ == '__main__':
     main()
     # if --debug is specified, open a http server to view the generated html
