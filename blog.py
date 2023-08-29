@@ -170,13 +170,15 @@ def name_a_file(filename):
 def render_html_for_each_post(md_dir, post_dir):
     # md_dir : the directory of markdown files
     # render html for each post
-    for md in os.listdir(md_dir): 
-        # print(md,'is passed to render_html_for_each_post')
-        # put markdown file i@nto a string 
-        markdown_content = text_file_to_string(f'{md_dir}/{md}')
-        output = render_html('post.html', markdown_content)  
-        # write the rendered html to a file
-        write_html(output, post_dir,  name_a_file(f'{md_dir}/{md}'))
+    for file in os.listdir(md_dir): 
+        if os.path.isfile(file):
+            md = file
+            # print(md,'is passed to render_html_for_each_post')
+            # put markdown file i@nto a string 
+            markdown_content = text_file_to_string(f'{md_dir}/{md}')
+            output = render_html('post.html', markdown_content)  
+            # write the rendered html to a file
+            write_html(output, post_dir,  name_a_file(f'{md_dir}/{md}'))
 
 # render data for index page to a list of links to each post 
 # written in markown 
