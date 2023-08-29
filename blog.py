@@ -147,7 +147,7 @@ def update_data(md_dir):
 def text_file_to_string(filename):
     # filename : a text file's precise path
     # return the string of the text file
-    with open(filename, 'rb', encoding='utf-8') as file:
+    with open(filename, 'r', encoding='utf-8') as file:
         return file.read() 
 
 def name_a_file(filename):
