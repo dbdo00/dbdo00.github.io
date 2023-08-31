@@ -11,9 +11,13 @@ body{
     line-height: 1.5;
     background:  #ffffcc;
     /*! font-size: 1.2em; */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 nav {
+    /* flex:1; */
     background-color: #ddd;
     border: 1px solid #000;
     box-shadow: #00c;
@@ -22,6 +26,7 @@ nav {
     display: flex;
     justify-content: flex-start;
     /*! width: 305.4px; */
+    max-height: max-content;
 }
 
 
@@ -49,19 +54,15 @@ h4 {
 }
 
 .blog, .article-section {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-     min-height: 100vh;
+    /* flex: 2; */
     margin: 0 auto;
     padding: 10px calc(12.5% - 8px);
     line-height: 1;
     padding-bottom: 60px;
-    align-items: baseline;
+    align-items: flex-start;
     max-width: 125.9ch;
     font-style: normal !important;
-
-   
+    flex-direction: column;
 }
 
 .article-section i{
