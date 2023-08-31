@@ -102,9 +102,12 @@ def get_file_date(file_path):
         modified_date = result.stdout.strip().split('\n')
         for line in modified_date:
             if line.startswith('Date:'):
+                print("listified_line:", line.split('Date:')[1].strip().split(' '))
                 listified_line = line.split('Date:')[1].strip().split(' ') # dates and tzone after 'Date:
+                print("listified_line2:", listified_line)        
                 break     
         print("file:", file_path)
+        print("listified_line3:", listified_line)
         return ' '.join(listified_line).strip()
     except subprocess.CalledProcessError as e:
         print("Error:", e)
