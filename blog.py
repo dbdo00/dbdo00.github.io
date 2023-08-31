@@ -12,34 +12,34 @@ from datetime import datetime
 import pytz
 import subprocess
 
-def render_html(template_name,content):    
+def render_html(template_name,content):        
     # template_name : the complete path of the template file  
     # content : the string of the markdown file
     # post_dir : the directory of the generated html files
 
     # render html for each post
     # env = Environment(loader= FileSystemLoader('./template'))
-    template = Environment(loader= FileSystemLoader('./template')).get_template('post.html')
+    template = Environment(loader= FileSystemLoader('./template')).get_template(template_name) 
 
     # get title and tags from the markdown file
     try:
         title = get_title(content)
+        # print("title:", title)
         tags = get_tags(content)
     except ValueError:
         print('Error in getting title or tags') 
         return ValueError
     # convert markdown to html
     paragraphs_html = markdown.markdown(content)
-
-    # data for rendering the template
+    
     data = {
-        'title': title,
+        'title': f"{title} | Dbdowjfb ",
         'tags': tags,
-        'header': 'title',
-        # content is rendered using markdown converter
         'paragraphs': paragraphs_html
-    } 
+    }
+    
     # 渲染模板并生成静态页面
+    # print( title)
     output = template.render(data)
     
     return output
@@ -106,8 +106,8 @@ def get_file_date(file_path):
                 listified_line = line.split('Date:')[1].strip().split(' ') # dates and tzone after 'Date:
                 print("listified_line2:", listified_line)        
                 break     
-        print("file:", file_path)
-        print("listified_line3:", listified_line)
+        # print("file:", file_path)
+        # print("listified_line3:", listified_line)
         return ' '.join(listified_line).strip()
     except subprocess.CalledProcessError as e:
         print("Error:", e)
@@ -171,19 +171,29 @@ def name_a_file(filename):
 # print(name_a_file('markdown/readme.md'))
 
 # render html for each post
-def render_html_for_each_post(md_dir, post_dir):
+def render_html_for_each_post(template_dir, md_dir, post_dir):
     # md_dir : the directory of markdown files
     # render html for each post
+
+    # print("render_html_for_each_post is called")
     for file in os.listdir(md_dir): 
-        if os.path.isfile(file):
-            md = file
+        
+        # if True: print("file:", file)
+        # print(f"{md_dir}/{file}")
+        # print(os.path.isfile(f"{md_dir}/{file}"))
+        if os.path.isfile(f"{md_dir}/{file}"):
+            # print()
+            # print("---")
+            # print("file:", file)
+            md = file 
             # print(md,'is passed to render_html_for_each_post')
             # put markdown file i@nto a string 
             markdown_content = text_file_to_string(f'{md_dir}/{md}') 
-            output = render_html('post.html', markdown_content)  
-            print(output)
+            output = render_html(template_dir, markdown_content) 
+            
+            # print("output:", output)
             # write the rendered html to a file
-            write_html(output, post_dir,  name_a_file(f'{md_dir}/{md}'))
+            write_html(output=output, post_dir=post_dir,title=  name_a_file(f'{md_dir}/{md}')) 
 
 # render data for index page to a list of links to each post 
 # written in markown 
@@ -214,9 +224,13 @@ def render_index_page(data_json, index_page_path):
             post['ctime'] = post['ctime'][:11].replace('-', '年', 1).replace('-', '月', 1).replace('-', '日', 1) 
 
         # create the index page using jinja2 from the data in the json file 
-        print("posts contain: ", posts)
-        template = Environment(loader= FileSystemLoader('./template')).get_template('index.html')
-        output = template.render(posts=posts)
+        # print("posts contain: ", posts)
+        
+        template = Environment(
+            loader= FileSystemLoader('./template')).get_template('index.html')
+        
+        output = template.render(posts=posts, title="Dbdo")
+
         # write the rendered html to a file
         with open(f'{index_page_path}', 'w', encoding='utf-8') as file:
             file.write(output)
@@ -297,10 +311,6 @@ def create_rss(data_json, rss_path):
         file.write(rss_content)
 
 
-            
-
-
-
 def main():
     # root : the root directory of the blog
     root_dir = os.getcwd()
@@ -310,8 +320,14 @@ def main():
     index_page_path = f'{root_dir}/public/index.html'
     # render html for each post
     update_data(md_dir=markdown_dir)
-    render_html_for_each_post(md_dir = markdown_dir, post_dir=post_dir)
-    
+    render_html_for_each_post(
+        
+        template_dir="post.html", 
+        
+        md_dir = markdown_dir, 
+        
+        post_dir=post_dir
+    )
     # render index markdown 
     render_index_page(f'{root_dir}/data.json',index_page_path=index_page_path)
     create_rss(f'{root_dir}/data.json', f'{root_dir}/public/rss.xml')
