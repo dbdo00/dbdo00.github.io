@@ -10,11 +10,11 @@ def execute_command(command):
     process = subprocess.Popen(command, shell=True)
     process.wait()
 
-execute_command(f"cd {blog}")
+
 def run_blog_script():
     print("Committing to Git...")
     execute_command("git add * && git commit -m 'update' -a ")
-
+    
     print(f"Running blog.py...")
     execute_command("python blog.py")
     
@@ -31,6 +31,8 @@ def run_code_and_wait(title):
 
     # 继续执行其他操作
     run_blog_script()
+
+execute_command(f"cd {blog}")
 
 # 获取命令行参数
 args = sys.argv[1]
