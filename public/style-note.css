@@ -24,8 +24,7 @@ nav {
     /*! width: 305.4px; */
 }
 
-nav * {
-}
+
 
 nav a {
     color: #999;
@@ -52,8 +51,8 @@ h4 {
 .blog, .article-section {
     display: flex;
     flex: 1;
-    /*! flex-direction: column; */
-    /*! min-height: 100vh; */
+    flex-direction: column;
+     min-height: 100vh;
     margin: 0 auto;
     padding: 10px calc(12.5% - 8px);
     line-height: 1;
