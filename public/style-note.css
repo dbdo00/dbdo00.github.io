@@ -64,6 +64,10 @@ h4 {
    
 }
 
+.article-section i{
+    font-style: normal !important;
+}
+
 .article-section li {
  margin-bottom: 2rem;
   display: flex;
@@ -72,6 +76,7 @@ h4 {
  font-size: larger;
  letter-spacing: calc(1vw/8);
 }
+
 p {
     line-height: 1.5;
     max-width: 80vw;
