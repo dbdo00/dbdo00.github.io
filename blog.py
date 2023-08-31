@@ -10,6 +10,7 @@ import subprocess
 import re
 from datetime import datetime
 import pytz
+import subprocess
 
 def render_html(template_name,content):    
     # template_name : the complete path of the template file  
@@ -101,7 +102,13 @@ def get_file_date(file_path):
         modified_date = result.stdout.strip().split('\n')
         for line in modified_date:
             if line.startswith('Date:'):
-                listified_line = line.split('Date:')[1].strip().split(' ') # dates and tzone after 'Date:'
+                try:
+                    listified_line = line.split('Date:')[1].strip().split(' ') # dates and tzone after 'Date:
+                except err as err:
+                    print("Error:", err)
+                    print("Error:", err.stderr)
+                    subprocess.run(["git", "commit", "-m", "update", file_path]) 
+
                 break     
         print("file:", file_path)
         return ' '.join(listified_line).strip()
