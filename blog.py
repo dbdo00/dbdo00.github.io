@@ -103,7 +103,6 @@ def get_file_date(file_path):
         for line in modified_date:
             if line.startswith('Date:'):
                 listified_line = line.split('Date:')[1].strip().split(' ') # dates and tzone after 'Date:
-
                 break     
         print("file:", file_path)
         return ' '.join(listified_line).strip()
@@ -177,8 +176,9 @@ def render_html_for_each_post(md_dir, post_dir):
             md = file
             # print(md,'is passed to render_html_for_each_post')
             # put markdown file i@nto a string 
-            markdown_content = text_file_to_string(f'{md_dir}/{md}')
+            markdown_content = text_file_to_string(f'{md_dir}/{md}') 
             output = render_html('post.html', markdown_content)  
+            print(output)
             # write the rendered html to a file
             write_html(output, post_dir,  name_a_file(f'{md_dir}/{md}'))
 
