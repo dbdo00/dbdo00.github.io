@@ -19,8 +19,7 @@ def run_blog_script():
 
 def run_code_and_wait(title):
     print("Running code...")
-    execute_command("cd ./markdown")  # 替换为你的code的执行命令
-    execute_command(f"code ./{title}.md")
+    execute_command(f"code ./markdown/{title}.md")
 
     # 等待code窗口关闭
     input("Press Enter to continue...")
