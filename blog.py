@@ -102,12 +102,7 @@ def get_file_date(file_path):
         modified_date = result.stdout.strip().split('\n')
         for line in modified_date:
             if line.startswith('Date:'):
-                try:
-                    listified_line = line.split('Date:')[1].strip().split(' ') # dates and tzone after 'Date:
-                except err as err:
-                    print("Error:", err)
-                    print("Error:", err.stderr)
-                    subprocess.run(["git", "commit", "-m", "update", file_path]) 
+                listified_line = line.split('Date:')[1].strip().split(' ') # dates and tzone after 'Date:
 
                 break     
         print("file:", file_path)

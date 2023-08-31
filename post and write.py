@@ -12,9 +12,13 @@ def execute_command(command):
 
 execute_command(f"cd {blog}")
 def run_blog_script():
+    print("Committing to Git...")
+    execute_command("git add * && git commit -m 'update' -a ")
+
     print(f"Running blog.py...")
     execute_command("python blog.py")
-    print("Committing and pushing to Git...")
+    
+    print("Committing newly generated files and pushing to Git...")
     execute_command("git add * && git commit -m 'update' -a  && git push")
 
 def run_code_and_wait(title):
