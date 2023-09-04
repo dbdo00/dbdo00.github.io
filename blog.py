@@ -95,6 +95,7 @@ def file_ctime(filename):
     return get_file_date(filename)
 
 def get_file_date(file_path):
+    print("file_path:", file_path)
     try:
         # 运行 git log 命令获取文件的最后修改日期
         command = ["git", "log","--reverse", r"--date=format:%Y-%m-%d %H:%M", "--date=iso-local", file_path]
