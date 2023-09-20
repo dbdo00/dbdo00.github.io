@@ -12,6 +12,26 @@
      <atom:link href="http://dbdo.website" rel="self" type="application/rss+xml" />
     
             <item>
+                <title>Journal 230920722</title>
+                <link>https://dbdo.website/post/Journal-230920722.html</link>
+                <description>Journal 230920722</description>
+                <content:encoded><![CDATA[
+                <p>title: Journal 230920722</p>
+<p>tags: journal</p>
+<p>So, hi. It's now September 20th. I just woke up, and it's quite chilly as fall is approaching. I've only left social media for two days, and it feels great. It wasn't until then that I realized how silly some of the things I've posted are.</p>
+<p>Yesterday, I listened to a podcast discussing "yang sheng". It was thought-provoking for me as it highlighted how people tend to judge those with health issues. The podcast pointed out that many people believe that those who are unwell somehow brought it upon themselves, which is not always the case. This raised an interesting point; it's concerning that many others think this way.</p>
+<p>When i'm ill,  I fear facing criticism because of my condition. I'm worried that people might say there's something inherently wrong with me just because I'm unwell.</p>
+<p>The podcast also pointed out that the concept of life preservation is deeply cultural rather than universal. People cling to the idea of preserving their lives because they often feel helpless in controlling other aspects of their existence. This reveals that the notion of life preservation can be rather bleak and desperate, as it often arises when hope in other areas is dwindling.</p>
+<p>Consider daily habits, for instance, which can become almost ritualistic. Tracking these habits in an app can provide a sense of control. I've come to realize this about myself. I'll likely continue with these habits for a while. Life is hectic right now, and there are other topics I'd like to discuss. Thank to Chatgpt to correct my grammar.</p>
+<p>For the ids of each entries, my static generator cannot handle them now. I perhaps will be able to do this in the future. </p>
+<p>If you, as the reader, feel inclined, please don't hesitate to reach out via email or other means. Your input is welcomed and appreciated. </p>
+                ]]>
+                 </content:encoded>
+                <pubDate>Wed, 20 Sep 2023 11:23:51 GMT</pubDate>
+                <guid>https://dbdo.website/post/Journal-230920722.html</guid>
+            </item>
+            
+            <item>
                 <title>2023-9-10 梦</title>
                 <link>https://dbdo.website/post/2023-9-10-梦.html</link>
                 <description>2023-9-10 梦</description>
@@ -66,23 +86,26 @@ tags: 随记, journal, 2023, 快乐，妄想</p>
             </item>
             
             <item>
-                <title>Journal 230920722</title>
-                <link>https://dbdo.website/post/Journal-230920722.html</link>
-                <description>Journal 230920722</description>
+                <title>周记 8-7 ~ 8-13</title>
+                <link>https://dbdo.website/post/周记-8-7-~-8-13.html</link>
+                <description>周记 8-7 ~ 8-13</description>
                 <content:encoded><![CDATA[
-                <p>title: Journal 230920722</p>
-<p>tags: journal</p>
-<p>So, hi. It's now September 20th. I just woke up, and it's quite chilly as fall is approaching. I've only left social media for two days, and it feels great. It wasn't until then that I realized how silly some of the things I've posted are.</p>
-<p>Yesterday, I listened to a podcast discussing "yang sheng". It was thought-provoking for me as it highlighted how people tend to judge those with health issues. The podcast pointed out that many people believe that those who are unwell somehow brought it upon themselves, which is not always the case. This raised an interesting point; it's concerning that many others think this way.</p>
-<p>When i'm ill,  I fear facing criticism because of my condition. I'm worried that people might say there's something inherently wrong with me just because I'm unwell.</p>
-<p>The podcast also pointed out that the concept of life preservation is deeply cultural rather than universal. People cling to the idea of preserving their lives because they often feel helpless in controlling other aspects of their existence. This reveals that the notion of life preservation can be rather bleak and desperate, as it often arises when hope in other areas is dwindling.</p>
-<p>Consider daily habits, for instance, which can become almost ritualistic. Tracking these habits in an app can provide a sense of control. I've come to realize this about myself. I'll likely continue with these habits for a while. Life is hectic right now, and there are other topics I'd like to discuss. Thank to Chatgpt to correct my grammar.</p>
-<p>For the ids of each entries, my static generator cannot handle them now. I perhaps will be able to do this in the future. </p>
-<p>If you, as the reader, feel inclined, please don't hesitate to reach out via email or other means. Your input is welcomed and appreciated. </p>
+                <p>title: 周记 8-7 ~ 8-13</p>
+<h1>周记</h1>
+<p>上周也发生了很多事~~</p>
+<p><a href="https://github.com/squidfunk/mkdocs-material/discussions/2346">mkdoc 多语言</a>： 想把博客改用 mkdocs 写。发现它能支持多语言。不过最后因为懒惰还是继续用自己写的简陋小脚本生成博客页面，不用再设置什么，能把时间省下来。</p>
+<p>找到了一个声称能帮助mastodon显示所有评论的东西：<a href="https://www.reddit.com/r/Mastodon/comments/13xmpnk/any_way_to_show_all_replies_on_home_timeline/">reddit.com/r/Mastodon...</a>. 可是用了以后，自己也不确定有没有起作用。 </p>
+<hr />
+<p>试着用http shortcut 朗读喵窝公共时间线。朗读的内容常常听不懂在说什么。下划线被直接读出来。因为文字转换成声音以后听不懂在说什么，我感叹道:</p>
+<iframe src="https://mas.to/@cxwh/110857347189432415/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe>
+<script src="https://mas.to/embed.js" async="async"></script>
+
+<p>用了几周 <a href="https://github.com/FriesI23/mhabit">table habit</a>。感觉不错。我设置的习惯之一是每天至少看一会书。没超过30分钟，甚至不到30分钟。一开始锻炼身体的项目很单调。后来决定有了跳舞, 做操几个选项. 客观地说，感觉还好。 </p>
+<p>任何尝试应该在一段时间以后再评价，回顾太频繁反而不好。评价方式应该客观，只要有好的地方就承认，不一定要让所有方面都好起来。</p>
                 ]]>
                  </content:encoded>
-                <pubDate>Wed, 20 Sep 2023 11:23:51 GMT</pubDate>
-                <guid>https://dbdo.website/post/Journal-230920722.html</guid>
+                <pubDate>Tue, 15 Aug 2023 16:19:31 GMT</pubDate>
+                <guid>https://dbdo.website/post/周记-8-7-~-8-13.html</guid>
             </item>
             
             <item>
@@ -140,29 +163,6 @@ Nam pharetra velit et ultricies congue. Nullam efficitur mollis odio in porta. S
                  </content:encoded>
                 <pubDate>Mon, 07 Aug 2023 15:37:29 GMT</pubDate>
                 <guid>https://dbdo.website/post/Test-2.html</guid>
-            </item>
-            
-            <item>
-                <title>周记 8-7 ~ 8-13</title>
-                <link>https://dbdo.website/post/周记-8-7-~-8-13.html</link>
-                <description>周记 8-7 ~ 8-13</description>
-                <content:encoded><![CDATA[
-                <p>title: 周记 8-7 ~ 8-13</p>
-<h1>周记</h1>
-<p>上周也发生了很多事~~</p>
-<p><a href="https://github.com/squidfunk/mkdocs-material/discussions/2346">mkdoc 多语言</a>： 想把博客改用 mkdocs 写。发现它能支持多语言。不过最后因为懒惰还是继续用自己写的简陋小脚本生成博客页面，不用再设置什么，能把时间省下来。</p>
-<p>找到了一个声称能帮助mastodon显示所有评论的东西：<a href="https://www.reddit.com/r/Mastodon/comments/13xmpnk/any_way_to_show_all_replies_on_home_timeline/">reddit.com/r/Mastodon...</a>. 可是用了以后，自己也不确定有没有起作用。 </p>
-<hr />
-<p>试着用http shortcut 朗读喵窝公共时间线。朗读的内容常常听不懂在说什么。下划线被直接读出来。因为文字转换成声音以后听不懂在说什么，我感叹道:</p>
-<iframe src="https://mas.to/@cxwh/110857347189432415/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe>
-<script src="https://mas.to/embed.js" async="async"></script>
-
-<p>用了几周 <a href="https://github.com/FriesI23/mhabit">table habit</a>。感觉不错。我设置的习惯之一是每天至少看一会书。没超过30分钟，甚至不到30分钟。一开始锻炼身体的项目很单调。后来决定有了跳舞, 做操几个选项. 客观地说，感觉还好。 </p>
-<p>任何尝试应该在一段时间以后再评价，回顾太频繁反而不好。评价方式应该客观，只要有好的地方就承认，不一定要让所有方面都好起来。</p>
-                ]]>
-                 </content:encoded>
-                <pubDate>Tue, 15 Aug 2023 16:19:31 GMT</pubDate>
-                <guid>https://dbdo.website/post/周记-8-7-~-8-13.html</guid>
             </item>
             
             <item>

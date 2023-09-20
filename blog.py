@@ -283,12 +283,15 @@ def create_rss(data_json, rss_path):
         # the link in the json file is the form "html_path": "/post/mdtest.html"
         # the link in the markdown file is the form "[title](html_path)"
         try:
+            # order the posts by the creation time of the markdown file
             posts = sorted(data, key=lambda x: x['ctime'], reverse=True)
+            print("posts:", posts)
         except KeyError:
             print('KeyError in sorting data. We will skip this time.')
             pass 
         
-        for post in data:
+        # iterate through the sorted list of posts
+        for post in posts:
             # append posts info to the rss_content between <channel> and </channel>
             # create a new item tag
             with open(post['md_path'], 'r') as file:
@@ -331,7 +334,7 @@ def main():
     )
     # render index markdown 
     render_index_page(f'{root_dir}/data.json',index_page_path=index_page_path)
-    create_rss(f'{root_dir}/data.json', f'{root_dir}/public/rss.xml')
+    create_rss(data_json=f'{root_dir}/data.json', rss_path = f'{root_dir}/public/rss.xml')
 if __name__ == '__main__':
     main()
     # if --debug is specified, open a http server to view the generated html
