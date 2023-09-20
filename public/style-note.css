@@ -7,7 +7,7 @@ html, body {
     }
     
     body{
-        font-family: "Times New Roman", arial, sans-serif;
+        font-family: arial, sans-serif;
         line-height: 1.5;
         background:  #ffffcc;
         display: flex;
