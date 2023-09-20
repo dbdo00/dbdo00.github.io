@@ -83,8 +83,15 @@ tags: 随记, journal, 2023, 快乐，妄想</p>
                 <link>https://dbdo.website/post/links.html</link>
                 <description>links</description>
                 <content:encoded><![CDATA[
-                <p>title: links
-- <a href="https://alkaline-galette-eee.notion.site/bookmarks-df001ecaffd14a0bbf806daee38ed1e3">看到想分享的链接</a> </p>
+                <p>title: links</p>
+<ul>
+<li>
+<p><a href="https://dbdowjfb.notion.site/df001ecaffd14a0bbf806daee38ed1e3">看到想分享的链接</a> </p>
+</li>
+<li>
+<p><a href="/logseq/index.html">我的wiki</a></p>
+</li>
+</ul>
                 ]]>
                  </content:encoded>
                 <pubDate>Mon, 07 Aug 2023 15:37:29 GMT</pubDate>
