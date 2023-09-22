@@ -83,6 +83,7 @@ html, body {
         text-decoration: none;
         display: flex;
         flex-grow: 1;
+	line-height: 1.5
     }
     .article-section li {
      margin-bottom: calc(2em - 1.1vw);
