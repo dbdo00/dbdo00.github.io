@@ -86,7 +86,7 @@ html, body {
 	line-height: 1.5
     }
     .article-section li {
-     margin-bottom: calc(2em - 1.1vw);
+     margin-bottom: 1.8rem; 
       display: flex;
       flex-direction: row;
       align-items: baseline;
