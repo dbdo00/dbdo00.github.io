@@ -85,7 +85,7 @@ html, body {
         flex-grow: 1;
     }
     .article-section li {
-     margin-bottom: 1em;
+     margin-bottom: calc(2em - 1.1vw);
       display: flex;
       flex-direction: row;
       align-items: baseline;
