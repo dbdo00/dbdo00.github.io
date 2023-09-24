@@ -2,6 +2,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
      <title> {{ title }} </title>
+     <script>
+      // Render blocking JS:
+      if (localStorage.darkMode === "enabled") 
+      document.documentElement.dataset.darkMode =  'yes'      </script>
     <link rel="stylesheet" href="/style-note.css">
     <link href="https://mas.to/@cxwh" rel="me">
     <link href="https://github.com/dbdowjfb" rel="me">
