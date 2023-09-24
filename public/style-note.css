@@ -6,10 +6,18 @@ html, body {
     
     }
     
+ :root {
+    --background-color: #ffffcc;
+    --font-color: #000;
+    --nav-link-color: #000;
+ }
+
+
     body{
         font-family: BlinkMacSystemFont, Segoe UI, sans-serif, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
         line-height: 1.5;
-        background:  #ffffcc;
+        background: var(--background-color);
+        color: var(--font-color);
         display: flex;
         flex-direction: column;
         font-size: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
@@ -33,6 +41,7 @@ html, body {
     nav a { 
         margin:0 4.8vw 0 0;
         background-color: #fff;
+        color: var(--nav-link-color);
         height: 100%;
         text-decoration: none;
     }
@@ -103,7 +112,7 @@ html, body {
     }
     
     a {
-        color: #000;
+        color: var(--link-color);
         padding: 2px;
         list-style: cjk-heavenly-stem;
         text-decoration-color: blue;
@@ -200,3 +209,9 @@ button#dark-mode {
   width: fit-content;
   
 }
+
+[data-dark-mode="yes"], [data-dark-mode="yes"]  {
+  --background-color: #000;
+  --font-color: #fff;
+}
+
