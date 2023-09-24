@@ -7,7 +7,7 @@ html, body {
     }
     
     body{
-        font-family: arial, sans-serif;
+        font-family: BlinkMacSystemFont, Segoe UI, sans-serif, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
         line-height: 1.5;
         background:  #ffffcc;
         display: flex;
@@ -126,7 +126,7 @@ html, body {
     
     
 .article-section span {
-    flex: 0 0 13ch;
+    flex: 0 0 13.5ch;
   }
 
  .article-section > ul {
