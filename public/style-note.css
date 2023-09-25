@@ -115,7 +115,7 @@ html, body {
         color: var(--link-color);
         padding: 2px;
         list-style: cjk-heavenly-stem;
-        text-decoration-color: blue;
+        text-decoration-color: var(--link-dark, blue);
       text-decoration-thickness: 0.3ex;
       text-underline-offset: 0.3ex;
     
@@ -168,7 +168,7 @@ html, body {
   
       
       footer a {
-        color: #00c;
+        color: var(--link-dark, #00c);
         text-decoration: none;
       }
       
@@ -210,8 +210,13 @@ button#dark-mode {
   
 }
 
+.blog a {
+	color: var(--link-dark, #000)
+}
+
 [data-dark-mode="yes"], [data-dark-mode="yes"]  {
   --background-color: #000;
   --font-color: #fff;
+  --link-dark: #fff;
 }
 
