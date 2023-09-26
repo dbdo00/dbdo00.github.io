@@ -1,5 +1,15 @@
+html {
+  font-family: initial;
+  font-size: medium;
+  font-weight: normal;
+  /* font-style: normal; */
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  text-decoration: none;
+  text-transform: none;
+}
 
-    
  :root {
     --background-color: #ffffcc;
     --font-color: #000;
@@ -133,7 +143,7 @@
     
     
 .article-section span {
-    flex: 0 0 calc(160px + 5vw);
+    flex: 0 0 calc(130px + 10vw);
   }
 
  .article-section > ul {
