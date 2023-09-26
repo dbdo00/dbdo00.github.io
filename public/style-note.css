@@ -1,10 +1,4 @@
-html, body {
-    /*     padding: 0; */
-        /* margin: 0; */
-        height:   100%;
-       
-    
-    }
+
     
  :root {
     --background-color: #ffffcc;
@@ -92,10 +86,12 @@ html, body {
         text-decoration: none;
         display: flex;
         flex-grow: 1;
-	line-height: 1.5
+	line-height: 1.5;
+  font-weight: 600;
     }
+  
     .article-section li {
-      margin-bottom: calc(1.8rem - 1.6vw);
+      margin-bottom: calc(1.8rem + 1.6vw);
       display: flex;
       flex-direction: row;
       align-items: baseline;
@@ -103,7 +99,9 @@ html, body {
      letter-spacing: calc(1vw/8);
      align-content: space-evenly;
      display: flex;
-     /*! flex-wrap: wrap; */
+     /* ! flex-wrap: wrap; */
+      padding-bottom: 0.5rem;
+     border-bottom: 1px solid var(--border-bottom-color, #e5e5e5);
     }
     
     p {
@@ -135,7 +133,7 @@ html, body {
     
     
 .article-section span {
-    flex: 0 0 13.5ch;
+    flex: 0 0 calc(160px + 5vw);
   }
 
  .article-section > ul {
@@ -218,5 +216,7 @@ button#dark-mode {
   --background-color: #000;
   --font-color: #fff;
   --link-dark: #fff;
+  --border-bottom-color: #384566;
+  --link-hover-dark: #fff;
 }
 
