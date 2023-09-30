@@ -12,6 +12,25 @@
      <atom:link href="http://dbdo.website" rel="self" type="application/rss+xml" />
     
             <item>
+                <title>我的图标制作</title>
+                <link>https://dbdo.website/post/我的图标制作.html</link>
+                <description>我的图标制作</description>
+                <content:encoded><![CDATA[
+                <p>title: 我的图标制作</p>
+<p>```</p>
+<blockquote>
+<p>convert   -background lightblue  -fill blue  -font /usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf  -pointsize 200
+-size 80x80 -gravity center  -pointsize 200  label:'D' caption.gif 
+```</p>
+</blockquote>
+<p>使用 ctrl + F5 去除缓存看dbdo.website 的图标.</p>
+                ]]>
+                 </content:encoded>
+                <pubDate>Sat, 30 Sep 2023 03:59:27 GMT</pubDate>
+                <guid>https://dbdo.website/post/我的图标制作.html</guid>
+            </item>
+            
+            <item>
                 <title>Journal 230920722</title>
                 <link>https://dbdo.website/post/Journal-230920722.html</link>
                 <description>Journal 230920722</description>
