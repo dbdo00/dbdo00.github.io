@@ -302,7 +302,7 @@ def create_rss(data_json, rss_path):
                 <link>{site_url}/{post['html_path']}</link>
                 <description>{post['title']}</description>
                 <content:encoded><![CDATA[
-                {markdown.markdown(content)}
+                {markdown.markdown(content,extensions=['fenced_code','footnotes'])}
                 ]]>
                  </content:encoded>
                 <pubDate>{rss_time(post['ctime'])}</pubDate>
