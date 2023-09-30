@@ -30,7 +30,7 @@ def render_html(template_name,content):
         print('Error in getting title or tags') 
         return ValueError
     # convert markdown to html
-    paragraphs_html = markdown.markdown(content)
+    paragraphs_html = markdown.markdown(content,extensions=['fenced_code','footnotes'])
     
     data = {
         'title': f"{title} | Dbdowjfb ",
