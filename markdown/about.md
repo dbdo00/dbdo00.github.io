@@ -2,6 +2,8 @@ title: about
 
 - 羡慕, 无助 和 毫无行动 (一种描述)
 
+https://open.spotify.com/album/7F4To6m6YDL3MVNJhEOZb7
+
 ## 近况
 - ...
 
