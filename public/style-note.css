@@ -98,7 +98,6 @@ nav a:hover{
         display: flex;
         flex-grow: 1;
 	line-height: 1.5;
-  font-weight: 600;
     }
   
     .article-section li {
