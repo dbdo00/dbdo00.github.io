@@ -106,7 +106,7 @@ nav a:hover{
       display: flex;
       flex-direction: row;
       align-items: baseline;
-     font-size: larger;
+     /* font-size: larger; */
      letter-spacing: calc(1vw/8);
      align-content: space-evenly;
      display: flex;
