@@ -8,6 +8,7 @@ title: about
 
 - 试着用Lazy.nvim给nvim安装插件。其实是会用的第一个nvim插件管理器
     - 装了“卡布奇诺”配色。真好看呀
+- figma
 - React.js
 - 要添加的功能
     - 发布状态(允许草稿和不列出）和预览(serve)的功能
