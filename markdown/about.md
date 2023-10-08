@@ -8,12 +8,12 @@ title: about
 
 - 试着用Lazy.nvim给nvim安装插件。其实是会用的第一个nvim插件管理器
     - 装了“卡布奇诺”配色。真好看呀
-- React.js 知道怎么启动react了……
+- React.js
 - 要添加的功能
     - 发布状态(允许草稿和不列出）和预览(serve)的功能
     -  图片 图片 图片 ： 插入图片的工作流
     - “关于”页面加上最后修改日期（这个应该是最简单的)
-    - 没有标题构建会出问题。不想这样
+    - 没有标题构建会出问题。要解决
 - [洗足池音乐网校](https://www.senzoku-online.jp/solfege/rhythmn_cn/index.php) 在这里做节奏阅读练习
 - 看医生
 - 想找点漫画或者有趣好读的书<del>看</del>听
