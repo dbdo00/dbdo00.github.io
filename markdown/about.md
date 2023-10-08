@@ -13,6 +13,7 @@ title: about
     - 发布状态(允许草稿和不列出）和预览(serve)的功能
     -  图片 图片 图片 ： 插入图片的工作流
     - “关于”页面加上最后修改日期（这个应该是最简单的)
+    - 没有标题构建会出问题。不想这样
 - [洗足池音乐网校](https://www.senzoku-online.jp/solfege/rhythmn_cn/index.php) 在这里做节奏阅读练习
 - 看医生
 - 想找点漫画或者有趣好读的书<del>看</del>听
