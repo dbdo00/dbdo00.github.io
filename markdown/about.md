@@ -3,13 +3,17 @@ title: about
 - 羡慕, 无助 和 毫无行动 (一种描述)
 
 
-https://open.spotify.com/album/7F4To6m6YDL3MVNJhEOZb7
 
-## 近况
+## 近况 
+
+- React.js
+- 要添加的功能
+    - 发布状态(允许草稿和不列出）和预览(serve)的功能
+    -  图片 图片 图片 ： 插入图片的工作流
 
 - [洗足池音乐网校](https://www.senzoku-online.jp/solfege/rhythmn_cn/index.php) 在这里做节奏阅读练习
 - 看医生
-- 想找点漫画或者有趣好读的书看
+- 想找点漫画或者有趣好读的书<del>看</del> 听
 
 
 
