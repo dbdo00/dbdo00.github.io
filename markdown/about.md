@@ -5,6 +5,7 @@ title: about
 
 ## 近况 
 2023-10-08
+- 发现自己不知道git pull怎么工作的，只是在一直用它
 - 试着用Lazy.nvim给nvim安装插件。其实是会用的第一个nvim插件管理器
     - 装了“卡布奇诺”配色。真好看呀
 - figma
@@ -29,6 +30,7 @@ title: about
 
 ---
 推荐Gitjournal！
+
 
 
 
