@@ -12,6 +12,32 @@
      <atom:link href="http://dbdo.website" rel="self" type="application/rss+xml" />
     
             <item>
+                <title>new keyboard</title>
+                <link>https://dbdo.website/post/new-keyboard.html</link>
+                <description>new keyboard</description>
+                <content:encoded><![CDATA[
+                <p>title: new keyboard</p>
+<p>the first blog post from my new keyboard</p>
+                ]]>
+                 </content:encoded>
+                <pubDate>Sat, 07 Oct 2023 20:38:46 GMT</pubDate>
+                <guid>https://dbdo.website/post/new-keyboard.html</guid>
+            </item>
+            
+            <item>
+                <title>想法</title>
+                <link>https://dbdo.website/post/想法.html</link>
+                <description>想法</description>
+                <content:encoded><![CDATA[
+                <p>title: 想法</p>
+<p>能让想了以后做希望自己做的事情的</p>
+                ]]>
+                 </content:encoded>
+                <pubDate>Thu, 05 Oct 2023 14:58:21 GMT</pubDate>
+                <guid>https://dbdo.website/post/想法.html</guid>
+            </item>
+            
+            <item>
                 <title>社交媒体</title>
                 <link>https://dbdo.website/post/社交媒体.html</link>
                 <description>社交媒体</description>
@@ -161,12 +187,22 @@ tags: 随记, journal, 2023, 快乐，妄想</p>
 <ul>
 <li>羡慕, 无助 和 毫无行动 (一种描述)</li>
 </ul>
-<p>https://open.spotify.com/album/7F4To6m6YDL3MVNJhEOZb7</p>
 <h2>近况</h2>
 <ul>
+<li>试着用Lazy.nvim给nvim安装插件。其实是会用的第一个nvim插件管理器<ul>
+<li>装了“卡布奇诺”配色。真好看呀</li>
+</ul>
+</li>
+<li>React.js</li>
+<li>要添加的功能<ul>
+<li>发布状态(允许草稿和不列出）和预览(serve)的功能</li>
+<li>图片 图片 图片 ： 插入图片的工作流</li>
+<li>“关于”页面加上最后修改日期（这个应该是最简单的)</li>
+</ul>
+</li>
 <li><a href="https://www.senzoku-online.jp/solfege/rhythmn_cn/index.php">洗足池音乐网校</a> 在这里做节奏阅读练习</li>
 <li>看医生</li>
-<li>想找点漫画或者有趣好读的书看</li>
+<li>想找点漫画或者有趣好读的书<del>看</del>听</li>
 </ul>
 <p>2023-10-02</p>
 <ul>

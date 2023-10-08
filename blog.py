@@ -340,7 +340,7 @@ if __name__ == '__main__':
     # if --debug is specified, open a http server to view the generated html
     try: 
         if sys.argv[1] == '--debug':
-            os.system('python -m http.server 5051')
+            os.system('python -m http.server -d ./public 5000')
     except IndexError:
         pass
 
