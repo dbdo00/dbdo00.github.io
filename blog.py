@@ -15,6 +15,8 @@ import subprocess
 import yaml
 from ignore_section import IgnoreSectionExtension
 # markdown preprocessor that ignore that yaml metadata
+
+
 def render_html(template_name,content):        
     # template_name : the complete path of the template file  
     # content : the string of the markdown file
@@ -290,13 +292,15 @@ def create_rss(data_json, rss_path):
             # create a new item tag
             with open(post['md_path'], 'r') as file:
                 content = file.read()
+            md = markdown.Markdown(extensions=['fenced_code','footnotes', IgnoreSectionExtension()])
+            content = md.convert(content)
             item = f'''
             <item>
                 <title>{post['title']}</title>
                 <link>{site_url}/{post['html_path']}</link>
                 <description>{post['title']}</description>
                 <content:encoded><![CDATA[
-                {markdown.markdown(content,extensions=['fenced_code','footnotes'])}
+                {content}
                 ]]>
                  </content:encoded>
                 <pubDate>{rss_time(post['ctime'])}</pubDate>
@@ -322,6 +326,7 @@ def get_metadata(markdown_content : str) -> str:
         in_metadata_block = False
         # if no metadata return None
         if not markdown_content.startswith('---'):
+            print(markdown_content)
             raise ValueError('No metadata')
         # if there is metadata, return the metadata
         else:    
