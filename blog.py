@@ -12,6 +12,11 @@ from datetime import datetime
 import pytz
 import subprocess
 import yaml
+
+# markdown preprocessor that ignore that yaml metadata
+
+
+
 def render_html(template_name,content):        
     # template_name : the complete path of the template file  
     # content : the string of the markdown file
@@ -30,8 +35,9 @@ def render_html(template_name,content):
         print('Error in getting title or tags') 
         return ValueError
     # convert markdown to html
-    paragraphs_html = markdown.markdown(content,extensions=['fenced_code','footnotes'])
+    paragraphs_html = markdown.markdown(content,extensions=['fenced_code','footnotes', 'meta'])
     
+    # print(paragraphs_html.Meta)
     data = {
         'title': f"{title} | Dbdowjfb ",
         'tags': tags,
@@ -162,6 +168,7 @@ def render_html_for_each_post(template_name, md_dir, post_dir):
 
 
     for file in os.listdir(md_dir) :
+        
         if file.endswith('.md'): 
             file_content = text_file_to_string(f'{md_dir}/{file}')
             visibility = post_vivsibility(process_metadata(file_content))
@@ -176,6 +183,10 @@ def render_html_for_each_post(template_name, md_dir, post_dir):
                 # write the rendered html to a file
                 print("filename", name_a_file(f'{md_dir}/{md}'))
                 write_html(output=output, post_dir=post_dir,title=  name_a_file(f'{md_dir}/{md}')) 
+
+                # publish images in the markdown file to the post directory
+                pubimg = linked_images(markdown_content)
+                publish_images(pubimg, post_dir)
             elif visibility == 'draft':
                 post_file = f'{post_dir}/{name_a_file(f"{md_dir}/{file}")}'
                 delete_post(post_file)
