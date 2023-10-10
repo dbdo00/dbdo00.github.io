@@ -11,7 +11,7 @@ import re
 from datetime import datetime
 import pytz
 import subprocess
-
+import yaml
 def render_html(template_name,content):        
     # template_name : the complete path of the template file  
     # content : the string of the markdown file
@@ -53,40 +53,22 @@ def write_html(output, post_dir, title):
         file.write(output)
 
 def get_title(content): 
-    # content : the string of the markdown file
     # 从content中获取title
-    # content is a markdown file
-     
-    # read the first line of the markdown string "content"
-    first_line = content.split('\n')[0] 
-    #   去掉开头的 "tags:" 但如果标题中有 "tags:" 就会出错
-    
-    if first_line.replace(" ","").startswith('title:'):
-        title = first_line.split('title:')[1].strip()
-        if 'title:' not in title:
-            return title 
-        else:   
-            # when the title contains 'title:', generate the title using the precise time of the markdown file
-            # the title is in the form of 'title-2020-01-01-00-00-00'
-            return f'title-{os.path.getmtime(content)}'
+    return process_metadata(content)['title'] if process_metadata(content) else get_metadata(content)['date']
 
 # test get_title
 # print('below are titles and tags for the test post')
 
 # print(get_title('markdown/mdtest.md'))
 
-def get_tags(content):
-    # 从content中获取tags
-    # content is a string of markdown file
-    # tags are specified after a line of 'tags:', seperated by ','
-    # tags are in the form of 'tag1, tag2, tag3'
-
-# find the line starting with 'tags:' in the string of markdown file "content"
-    for line in content.split('\n'):
-        if line.startswith('tags:'):
-            tags = line[5:].strip() # remove the leading and trailing spaces
-            return [tag.strip() for tag in tags.split(',')] # return the stripped tags as a list
-                    
+def get_tags(content : str) -> list:
+    # content : the string of the markdown file
+    # return a list of tags
+    try:
+        return process_metadata(content)['tags']
+    except KeyError:
+        return None
+                   
 def file_ctime(filename):
     # filename : the precise path of a file
     # return the creation time of the file
@@ -127,7 +109,7 @@ def update_data(md_dir):
         if md.endswith('.md'):
             markdown_content = text_file_to_string(f'{md_dir}/{md}')
             title = get_title(markdown_content) 
-            html_filename = f'{name_a_file(f"{md_dir}/{md}")}.html'  
+            html_filename = f'{name_a_file(f"{md_dir}/{md}")}'  
             print("MAKE SURE THAT:")
             print('The current post directory is `post`')
             print('The current markdown directory is `markdown`')
@@ -136,9 +118,10 @@ def update_data(md_dir):
                 'title': title,
                 'tags': get_tags(markdown_content),
                 # concatenate the directory to specify the path of markdown and html files 
-                'html_path' : f"post/{html_filename}",
+                'html_path' : f"post/{html_filename}.html",
                 'md_path' : f"markdown/{md}", 
-                'ctime' : file_ctime(f'{md_dir}/{md}') # the date of the initial commit
+                'ctime' : file_ctime(f'{md_dir}/{md}'), # the date of the initial commit
+                'publish' : post_vivsibility(process_metadata(markdown_content))
             }
             data.append(file_data)
     
@@ -172,34 +155,36 @@ def name_a_file(filename):
 # print(name_a_file('markdown/readme.md'))
 
 # render html for each post
-def render_html_for_each_post(template_dir, md_dir, post_dir):
+def render_html_for_each_post(template_name, md_dir, post_dir):
     # md_dir : the directory of markdown files
     # render html for each post
+    # ALSO delete unpublished posts
 
-    # print("render_html_for_each_post is called")
-    for file in os.listdir(md_dir): 
-        
-        # if True: print("file:", file)
-        # print(f"{md_dir}/{file}")
-        # print(os.path.isfile(f"{md_dir}/{file}"))
-        if os.path.isfile(f"{md_dir}/{file}"):
-            # print()
-            # print("---")
-            # print("file:", file)
-            md = file 
-            # print(md,'is passed to render_html_for_each_post')
-            # put markdown file i@nto a string 
-            markdown_content = text_file_to_string(f'{md_dir}/{md}') 
-            output = render_html(template_dir, markdown_content) 
-            
-            # print("output:", output)
-            # write the rendered html to a file
-            write_html(output=output, post_dir=post_dir,title=  name_a_file(f'{md_dir}/{md}')) 
+
+    for file in os.listdir(md_dir) :
+        if file.endswith('.md'): 
+            file_content = text_file_to_string(f'{md_dir}/{file}')
+            visibility = post_vivsibility(process_metadata(file_content))
+            if os.path.isfile(f"{md_dir}/{file}") and visibility != 'draft' :
+                
+                md = file 
+                # put markdown file into a string 
+                markdown_content = text_file_to_string(f'{md_dir}/{md}') 
+                output = render_html(template_name, markdown_content) 
+                
+
+                # write the rendered html to a file
+                print("filename", name_a_file(f'{md_dir}/{md}'))
+                write_html(output=output, post_dir=post_dir,title=  name_a_file(f'{md_dir}/{md}')) 
+            elif visibility == 'draft':
+                post_file = f'{post_dir}/{name_a_file(f"{md_dir}/{file}")}'
+                delete_post(post_file)
+                delete_post(post_file +'.html')
 
 # render data for index page to a list of links to each post 
 # written in markown 
 
-def render_index_page(data_json, index_page_path):
+def render_index_page(data_json, index_page_path) -> None:
     
     # data_json : the json file containing data for each post
     # render a markdown file for index page
@@ -208,7 +193,7 @@ def render_index_page(data_json, index_page_path):
     # the link in the markdown file is the form "[title](html_path)"
     
     with open(data_json, 'r') as file:
-        data = json.load(file)
+        data : list = filter(lambda x: x['publish'] == 'public',json.load(file))
         # the link in the json file is the form "html_path": "/post/mdtest.html"
         # the link in the markdown file is the form "[title](html_path)"
 
@@ -218,7 +203,7 @@ def render_index_page(data_json, index_page_path):
         except KeyError:
             print('KeyError in sorting data. We will skip this time.')
             pass 
-
+        
         # print(type(posts[1]))
         # change the dates in the format in chinese
         for post in posts:
@@ -314,6 +299,151 @@ def create_rss(data_json, rss_path):
     with open(rss_path, 'w') as file:
         file.write(rss_content)
 
+md_sample = """
+    title: test
+    tags: test
+
+"""
+# TEST
+# print("generate metadata")
+# print(generate_metadata(md_sample, '2020-01-01 00:00:00 +0800'))
+def get_metadata(markdown_content : str) -> str:
+        # print("get metadata is called")
+        yaml_metadata = ''
+        in_metadata_block = False
+        # if no metadata return None
+        if not markdown_content.startswith('---'):
+            raise ValueError('No metadata')
+        # if there is metadata, return the metadata
+        else:    
+            for lines in markdown_content.split('\n'):
+
+                if lines.startswith('---') and not in_metadata_block:
+                    # print('metadata block starts')
+                    in_metadata_block = True
+                    continue
+                elif lines.startswith('---') and in_metadata_block:
+                    # print('metadata block ends')
+                    in_metadata_block = False
+                    break
+                if in_metadata_block:
+                    yaml_metadata += lines + '\n'
+                    # print('yaml_metadata:', yaml_metadata)
+
+            return yaml_metadata
+
+def process_metadata(markdown_content) -> dict:
+    
+
+# print(get_metadata(string))
+    
+    def yamlparser(yamlstring):
+        """
+        parse yaml string to a dictionary
+        """
+        return yaml.load(yamlstring, Loader=yaml.FullLoader)
+    
+    
+#     def generate_metadata(markdown_content : str, file_date : str) -> str:
+#             """
+#             generate metadata for a markdown file
+#             where the metadata is missing
+#             markdown_path : the path of a markdown file
+            
+#             insert metadata in the form of yaml and insert 
+#             in the start of the markdown content and then
+#             return the markdown content with metadata
+
+#             also clean up the old unenclosed metadata
+#             """
+            
+#             return f"""---
+# title: {get_title(markdown_content)}
+# date: {file_date}
+# tags: {get_tags(markdown_content) 
+#         if get_tags(markdown_content) else ''}
+# ---\n\n{    
+#             ''.join([clearup_md(line)                      
+#                      for line in markdown_content.splitlines()])
+#             }"""
+
+    # def insert_metadata(markdown_path):
+    #     """
+    #     insert metadata in the form of yaml and insert 
+    #     in the start of the markdown content and then
+    #     return the markdown content with metadata
+    #     """
+    #     with open(markdown_path, 'r') as file:
+    #         markdown_content = file.read()
+    #         file_date = get_file_date(markdown_path)
+    #         file_with_metadata = generate_metadata(markdown_content, file_date)
+    #     overwrite_file(markdown_path, file_with_metadata)
+    
+    # def overwrite_file(filename, content) -> None:
+    #     with open(filename, 'w') as file:
+    #         file.write(content)
+
+    # def clearup_md(line : str) -> str:
+    #     """
+    #     clear up the metadata not enclosed in ---
+    #     in the markdown file
+    #     """
+        
+    #     if line.startswith('title:') or line.startswith('tags:'):
+    #         return ''
+    #     else:
+    #         return line
+    try:
+        metadata = get_metadata(markdown_content)
+        # print("metadata:", metadata)
+        return yamlparser(metadata)
+    except ValueError:
+        print('ValueError in processing metadata')
+        return None
+
+
+def post_vivsibility(metadata : dict) -> str:
+    """
+    dict : a dictionary of a post's metadata
+    return the visibility of the post
+    default visibility is public
+    """
+    try:
+       return metadata['publish']
+    except KeyError:
+        return 'public'
+
+def linked_images(markdown_content : str) -> list:
+    list_of_images = re.findall(r'!\[.*?\]\((.*?)\)', markdown_content)
+    return list_of_images
+
+def publish_images(list_of_images : list, public_dir : str) -> None:
+    """
+    list_of_images : a list of images in the markdown file
+    (each image is in the form of 'assets/image.png')
+    public_dir : the directory of the generated html files
+    publish images in the markdown file to the post directory
+    """
+    if 'assets' not in os.listdir(public_dir):
+        os.system(f'mkdir {public_dir}/assets')
+
+    for image in list_of_images:
+        if image in os.listdir(public_dir):
+            continue
+        else:
+            os.system(f'cp {image} {public_dir}')
+
+def delete_post(post_path : str) -> None:
+    """
+    post_path : the path of a post
+    delete the post
+    """
+    try:
+        os.remove('{post_path}')
+    except FileNotFoundError:
+        print('FileNotFoundError in deleting post')
+        pass
+
 
 def main():
     # root : the root directory of the blog
@@ -326,7 +456,7 @@ def main():
     update_data(md_dir=markdown_dir)
     render_html_for_each_post(
         
-        template_dir="post.html", 
+        template_name="post.html", 
         
         md_dir = markdown_dir, 
         
@@ -334,7 +464,9 @@ def main():
     )
     # render index markdown 
     render_index_page(f'{root_dir}/data.json',index_page_path=index_page_path)
+    # generate rss.xml
     create_rss(data_json=f'{root_dir}/data.json', rss_path = f'{root_dir}/public/rss.xml')
+
 if __name__ == '__main__':
     main()
     # if --debug is specified, open a http server to view the generated html
