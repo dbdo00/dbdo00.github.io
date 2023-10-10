@@ -3,6 +3,7 @@ import os
 import json 
 import codecs
 import markdown
+from markdown.preprocessors import Preprocessor
 import sys 
 import time
 import latex2mathml.converter as latex_to_mathml
@@ -12,11 +13,8 @@ from datetime import datetime
 import pytz
 import subprocess
 import yaml
-
+from ignore_section import IgnoreSectionExtension
 # markdown preprocessor that ignore that yaml metadata
-
-
-
 def render_html(template_name,content):        
     # template_name : the complete path of the template file  
     # content : the string of the markdown file
@@ -35,11 +33,11 @@ def render_html(template_name,content):
         print('Error in getting title or tags') 
         return ValueError
     # convert markdown to html
-    paragraphs_html = markdown.markdown(content,extensions=['fenced_code','footnotes', 'meta'])
-    
-    # print(paragraphs_html.Meta)
+    md = markdown.Markdown(extensions=['fenced_code','footnotes', IgnoreSectionExtension()])
+    paragraphs_html = md.convert( content )
     data = {
         'title': f"{title} | Dbdowjfb ",
+        'heading' : title,
         'tags': tags,
         'paragraphs': paragraphs_html
     }
