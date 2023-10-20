@@ -15,18 +15,19 @@
       <button id="dark-mode">🌙</button>
   </nav>
 
-  <img src="https://i.giphy.com/media/UQ1EI1ML2ABQdbebup/giphy.webp" class="cat" alt="一个在敲桌子的小猫（白色的）">
-    <div class="article-section"><ul>
+  
+    <div class="article-section">
+      <ul aria-label="list of posts">
     {% for post in posts %}
     
     <li>
         <span>
-            <i> 
+            <i aria-label="post time"> 
             {{ post.ctime }} 
 
             </i>
         </span> 
-    <a href="{{ post.html_path }}"> {{ post.title }} </a>  </li>
+    <a href="{{ post.html_path }}" aria-label="post title"> {{ post.title }} </a>  </li>
     {% endfor %}
   </ul> 
 </div>
