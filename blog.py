@@ -1,12 +1,10 @@
 from jinja2 import Environment, FileSystemLoader
 import os
 import json 
-import codecs
 import markdown
 from markdown.preprocessors import Preprocessor
 import sys 
-import time
-import latex2mathml.converter as latex_to_mathml
+
 import subprocess
 import re
 from datetime import datetime
@@ -16,6 +14,32 @@ import yaml
 from ignore_section import IgnoreSectionExtension
 # markdown preprocessor that ignore that yaml metadata
 
+def pandoc(content:str, flags:list) -> str:
+    
+        
+    template = """
+<header id="title-block-header">
+<h1 class="title">$title$</h1>
+</header>
+
+$if(toc)$
+<nav id="TOC">
+    $toc$
+</nav>
+$endif$
+$body$
+
+"""
+    with open("web_blank_pandoctemp.html", "w") as f:
+        f.write(template)
+
+
+    pandoc_process = subprocess.Popen(['pandoc', *flags,'--template=web_blank_pandoctemp.html'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    stdout, stderr = pandoc_process.communicate(input=content)
+
+    # delete template file
+    os.remove("web_blank_pandoctemp.html")
+    return stdout 
 
 def render_html(template_name,content):        
     # template_name : the complete path of the template file  
@@ -35,8 +59,8 @@ def render_html(template_name,content):
         print('Error in getting title or tags') 
         return ValueError
     # convert markdown to html
-    md = markdown.Markdown(extensions=['fenced_code','footnotes', IgnoreSectionExtension()])
-    paragraphs_html = md.convert( content )
+   
+    paragraphs_html = pandoc(content, ['--mathml', '--toc'])
     data = {
         'title': f"{title} | Dbdowjfb ",
         'heading' : title,
@@ -170,6 +194,7 @@ def render_html_for_each_post(template_name, md_dir, post_dir):
     for file in os.listdir(md_dir) :
         
         if file.endswith('.md'): 
+
             file_content = text_file_to_string(f'{md_dir}/{file}')
             visibility = post_vivsibility(process_metadata(file_content))
             if os.path.isfile(f"{md_dir}/{file}") and visibility != 'draft' :
@@ -292,8 +317,8 @@ def create_rss(data_json, rss_path):
             # create a new item tag
             with open(post['md_path'], 'r') as file:
                 content = file.read()
-            md = markdown.Markdown(extensions=['fenced_code','footnotes', IgnoreSectionExtension()])
-            content = md.convert(content)
+            
+            content = pandoc(content, ['--mathml'])
             item = f'''
             <item>
                 <title>{post['title']}</title>

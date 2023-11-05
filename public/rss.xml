@@ -12,23 +12,17 @@
      <atom:link href="http://dbdo.website" rel="self" type="application/rss+xml" />
     
             <item>
-                <title>notes 2023-10-19-0441</title>
-                <link>https://dbdo.website/post/notes-2023-10-19-0441.html</link>
-                <description>notes 2023-10-19-0441</description>
-                <content:encoded><![CDATA[
-                <p>test</p>
-                ]]>
-                 </content:encoded>
-                <pubDate>Tue, 10 Oct 2023 08:36:23 GMT</pubDate>
-                <guid>https://dbdo.website/post/notes-2023-10-19-0441.html</guid>
-            </item>
-            
-            <item>
                 <title>new keyboard</title>
                 <link>https://dbdo.website/post/new-keyboard.html</link>
                 <description>new keyboard</description>
                 <content:encoded><![CDATA[
-                <p>the first blog post from my new keyboard</p>
+                
+<header id="title-block-header">
+<h1 class="title">new keyboard</h1>
+</header>
+
+<p>the first blog post from my new keyboard</p>
+
                 ]]>
                  </content:encoded>
                 <pubDate>Sat, 07 Oct 2023 20:38:46 GMT</pubDate>
@@ -40,7 +34,13 @@
                 <link>https://dbdo.website/post/想法.html</link>
                 <description>想法</description>
                 <content:encoded><![CDATA[
-                <p>能让想了以后做希望自己做的事情的</p>
+                
+<header id="title-block-header">
+<h1 class="title">想法</h1>
+</header>
+
+<p>能让想了以后做希望自己做的事情的</p>
+
                 ]]>
                  </content:encoded>
                 <pubDate>Thu, 05 Oct 2023 14:58:21 GMT</pubDate>
@@ -52,7 +52,13 @@
                 <link>https://dbdo.website/post/社交媒体.html</link>
                 <description>社交媒体</description>
                 <content:encoded><![CDATA[
-                <p>社交媒体这个词根本不恰当，是不是那些记者只知道抄推特，推特对他们就是媒体，他们作为记者有发言权，所以推特对所有人就都是媒体?</p>
+                
+<header id="title-block-header">
+<h1 class="title">社交媒体</h1>
+</header>
+
+<p>社交媒体这个词根本不恰当，是不是那些记者只知道抄推特，推特对他们就是媒体，他们作为记者有发言权，所以推特对所有人就都是媒体?</p>
+
                 ]]>
                  </content:encoded>
                 <pubDate>Sun, 01 Oct 2023 05:31:43 GMT</pubDate>
@@ -64,9 +70,32 @@
                 <link>https://dbdo.website/post/night-walk.html</link>
                 <description>night walk</description>
                 <content:encoded><![CDATA[
-                <p>i walked through campus tonight to reach my goal of 10,000 steps, suprised by how bright it was on the street (the campus is still dark though). i even fear my small braid (something i never tried wearing outside as a male-presenting person) would be too noticeable .</p>
-<p>my patience in walking changes over time. initially i walked a lot and had fun doing it, but then it became less satisfying for me, perhaps because i expected more. now i can appreciate it better when i don't expect it to be a perfect hobby choice.  Since i want to walk for a long time, i came to a place which is far but still close to the edge of the campus. the lighting for the paths is dark there, but the court nearby is bright. i saw some old buildings, and weird stairs everywhere. i don't remeber how many stairs i went through just to walk forword. the light was dimmer as i moved forward. the only light around caught my attention, comming from the entrance of three old buildings to my left. i saw students with long hairs and skirts entered one of the buildings together but they seemed not to be talking.</p>
-<p>this place wasn't that familiar to me and so i decided to leave. i needed some time to find my way back to the paths i had walked more often and had become more familiar with. but this wasn't so hard. i found a familiar path very soon and i walked on it. </p>
+                
+<header id="title-block-header">
+<h1 class="title">night walk</h1>
+</header>
+
+<p>i walked through campus tonight to reach my goal of 10,000 steps,
+suprised by how bright it was on the street (the campus is still dark
+though). i even fear my small braid (something i never tried wearing
+outside as a male-presenting person) would be too noticeable .</p>
+<p>my patience in walking changes over time. initially i walked a lot
+and had fun doing it, but then it became less satisfying for me, perhaps
+because i expected more. now i can appreciate it better when i don’t
+expect it to be a perfect hobby choice. Since i want to walk for a long
+time, i came to a place which is far but still close to the edge of the
+campus. the lighting for the paths is dark there, but the court nearby
+is bright. i saw some old buildings, and weird stairs everywhere. i
+don’t remeber how many stairs i went through just to walk forword. the
+light was dimmer as i moved forward. the only light around caught my
+attention, comming from the entrance of three old buildings to my left.
+i saw students with long hairs and skirts entered one of the buildings
+together but they seemed not to be talking.</p>
+<p>this place wasn’t that familiar to me and so i decided to leave. i
+needed some time to find my way back to the paths i had walked more
+often and had become more familiar with. but this wasn’t so hard. i
+found a familiar path very soon and i walked on it.</p>
+
                 ]]>
                  </content:encoded>
                 <pubDate>Sun, 01 Oct 2023 04:20:47 GMT</pubDate>
@@ -78,10 +107,15 @@
                 <link>https://dbdo.website/post/我的图标制作.html</link>
                 <description>我的图标制作</description>
                 <content:encoded><![CDATA[
-                <pre><code>&gt; convert   -background lightblue  -fill blue  -font /usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf  -pointsize 200
--size 80x80 -gravity center  -pointsize 200  label:'D' caption.gif 
-</code></pre>
+                
+<header id="title-block-header">
+<h1 class="title">我的图标制作</h1>
+</header>
+
+<pre><code>&gt; convert   -background lightblue  -fill blue  -font /usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf  -pointsize 200
+-size 80x80 -gravity center  -pointsize 200  label:&#39;D&#39; caption.gif </code></pre>
 <p>使用 ctrl + F5 去除缓存看dbdo.website 的图标.</p>
+
                 ]]>
                  </content:encoded>
                 <pubDate>Sat, 30 Sep 2023 03:59:27 GMT</pubDate>
@@ -93,13 +127,42 @@
                 <link>https://dbdo.website/post/Journal-230920722.html</link>
                 <description>Journal 230920722</description>
                 <content:encoded><![CDATA[
-                <p>So, hi. It's now September 20th. I just woke up, and it's quite chilly as fall is approaching. I've only left social media for two days, and it feels still ok. It wasn't until then that I realized how silly some of the things I've posted are.</p>
-<p>Yesterday, I listened to a podcast discussing "yang sheng". It was thought-provoking for me as it highlighted how people tend to judge those with health issues. The podcast pointed out that many people believe that those who are unwell somehow brought it upon themselves, which is not always the case. This raised an interesting point; it's concerning that many others think this way.</p>
-<p>When i'm ill,  I fear facing criticism because of my condition. I'm worried that people might say there's something inherently wrong with me just because I'm unwell.</p>
-<p>The podcast also pointed out that the concept of life preservation is deeply cultural rather than universal. People cling to the idea of preserving their lives because they often feel helpless in controlling other aspects of their existence. This reveals that the notion of life preservation can be rather bleak and desperate, as it often arises when hope in other areas is dwindling.</p>
-<p>Consider daily habits, for instance, which can become almost ritualistic. Tracking these habits in an app can provide a sense of control. I've come to realize this about myself. I'll likely continue with these habits for a while. Life is hectic right now, and there are other topics I'd like to discuss. Thank to Chatgpt to correct my grammar.</p>
-<p>For the ids of each entries, my static generator cannot handle them now. I perhaps will be able to do this in the future. </p>
-<p>If you, as the reader, feel inclined, please don't hesitate to reach out via email or other means. Your input is welcomed and appreciated. </p>
+                
+<header id="title-block-header">
+<h1 class="title">Journal 230920722</h1>
+</header>
+
+<p>So, hi. It’s now September 20th. I just woke up, and it’s quite
+chilly as fall is approaching. I’ve only left social media for two days,
+and it feels still ok. It wasn’t until then that I realized how silly
+some of the things I’ve posted are.</p>
+<p>Yesterday, I listened to a podcast discussing “yang sheng”. It was
+thought-provoking for me as it highlighted how people tend to judge
+those with health issues. The podcast pointed out that many people
+believe that those who are unwell somehow brought it upon themselves,
+which is not always the case. This raised an interesting point; it’s
+concerning that many others think this way.</p>
+<p>When i’m ill, I fear facing criticism because of my condition. I’m
+worried that people might say there’s something inherently wrong with me
+just because I’m unwell.</p>
+<p>The podcast also pointed out that the concept of life preservation is
+deeply cultural rather than universal. People cling to the idea of
+preserving their lives because they often feel helpless in controlling
+other aspects of their existence. This reveals that the notion of life
+preservation can be rather bleak and desperate, as it often arises when
+hope in other areas is dwindling.</p>
+<p>Consider daily habits, for instance, which can become almost
+ritualistic. Tracking these habits in an app can provide a sense of
+control. I’ve come to realize this about myself. I’ll likely continue
+with these habits for a while. Life is hectic right now, and there are
+other topics I’d like to discuss. Thank to Chatgpt to correct my
+grammar.</p>
+<p>For the ids of each entries, my static generator cannot handle them
+now. I perhaps will be able to do this in the future.</p>
+<p>If you, as the reader, feel inclined, please don’t hesitate to reach
+out via email or other means. Your input is welcomed and
+appreciated.</p>
+
                 ]]>
                  </content:encoded>
                 <pubDate>Wed, 20 Sep 2023 11:23:51 GMT</pubDate>
@@ -111,9 +174,23 @@
                 <link>https://dbdo.website/post/2023-9-10-梦.html</link>
                 <description>2023-9-10 梦</description>
                 <content:encoded><![CDATA[
-                <p>梦里有人唱歌，我觉得比ta更寂寞。然后演示闹鬼片段，有点教学范例的风格，笑着演示。有一段是和另一个人贴着，头突然摸不到了，只剩下布。不觉得恐怖，只是格外孤独。然后 醒来 ，觉得孤独感淹没，是咖啡喝的多，把心脏和胃的感觉解释成‘孤独’了。</p>
-<p><img alt="Alt text" src="./assests/2e5982ad4416624d-1.png" /></p>
-<p><img alt="Alt text" src="./assests/c1089c83c1203ca9.jpg" /></p>
+                
+<header id="title-block-header">
+<h1 class="title">2023-9-10 梦</h1>
+</header>
+
+<p>梦里有人唱歌，我觉得比ta更寂寞。然后演示闹鬼片段，有点教学范例的风格，笑着演示。有一段是和另一个人贴着，头突然摸不到了，只剩下布。不觉得恐怖，只是格外孤独。然后
+醒来
+，觉得孤独感淹没，是咖啡喝的多，把心脏和胃的感觉解释成‘孤独’了。</p>
+<figure>
+<img src="./assests/2e5982ad4416624d-1.png" alt="Alt text" />
+<figcaption aria-hidden="true">Alt text</figcaption>
+</figure>
+<figure>
+<img src="./assests/c1089c83c1203ca9.jpg" alt="Alt text" />
+<figcaption aria-hidden="true">Alt text</figcaption>
+</figure>
+
                 ]]>
                  </content:encoded>
                 <pubDate>Sun, 10 Sep 2023 04:30:19 GMT</pubDate>
@@ -125,13 +202,19 @@
                 <link>https://dbdo.website/post/随记-2023-8-31.html</link>
                 <description>随记 2023-8-31</description>
                 <content:encoded><![CDATA[
-                <p>如果活着而没有这些东西，那我的快乐就是一种占有的快乐，一种拥有我的生命的快乐，一种占有我自己生命的快乐。</p>
+                
+<header id="title-block-header">
+<h1 class="title">随记 2023-8-31</h1>
+</header>
+
+<p>如果活着而没有这些东西，那我的快乐就是一种占有的快乐，一种拥有我的生命的快乐，一种占有我自己生命的快乐。</p>
 <p>占有我自己生命的快乐也没有所谓的精神分析批评的那么不堪。</p>
 <p>如果一个人拥有占有着自己的生命的快乐，这也没什么不好的，而且是可以理解的。</p>
 <p>可以体验出来这种倾向我觉得这是可以理解的.</p>
 <p>如何过得很“好”，然后死掉，这样好像首先會更加超越一些。它是一個超越自我的選項。其實它不是一種圓滿的回答，能感覺到它是一個好的答案。但是問題是冲动然後並不現實。更现实的是，只有活下去，接下来才有<strong>可能</strong>得到更多。而不存在活不下去了，只要牺牲一点就能得到的选项。</p>
-<p>这个选项只是一种妄想。在整个半年甚至一年中我是在这种妄想中度过的。也是一种基于对别人的误读，或者说对一种想象的误读，对自身想象的误解。 </p>
+<p>这个选项只是一种妄想。在整个半年甚至一年中我是在这种妄想中度过的。也是一种基于对别人的误读，或者说对一种想象的误读，对自身想象的误解。</p>
 <p>有一種類似於“認知酸雨”一类說法。這種价值观就是一種認知上的酸雨。它會讓人心智不清楚。</p>
+
                 ]]>
                  </content:encoded>
                 <pubDate>Thu, 31 Aug 2023 22:26:40 GMT</pubDate>
@@ -143,12 +226,33 @@
                 <link>https://dbdo.website/post/journal-2023-08-24.html</link>
                 <description>journal 2023-08-24</description>
                 <content:encoded><![CDATA[
-                <p>I've just got up. Everything is still quiet.</p>
-<p>I should have started with these habits back in May, especially getting up at 7 in the morning. It gives me what I want: silence, and it also gives me what the night doesn't offer: the rising sun. </p>
-<p>My head is suddenly empty. </p>
-<p>Bottled water is handy and also tasty. Tap water tastes bad (hard). I cannot bear it.</p>
-<p>Let us return to the subject of habits. When do I feel that habits are bullshit and don't want to bother with daily routines? When I am in a hurry. I want the sweetness to come quickly and waiting means failure to me. Mindset changes. One day I asked myself why people choose hardships, is it because they like to endure? Not quite. I realised that hardship promises a future in which we win what we dream of. Foolishly, I thought that fun was the reason people put in the effort, which it is, but for many things the result is the main motivation. </p>
-<p>Recently I also learned Javascript.  Promise is a key concept in Javascript. In javascript, we often wait for a function to finish and do the next thing only after the function has finished. Waiting takes time, but in the end we get what we want. Waiting also has its advantages: priorities, optimising the use of limited resources... Life is really the same.</p>
+                
+<header id="title-block-header">
+<h1 class="title">journal 2023-08-24</h1>
+</header>
+
+<p>I’ve just got up. Everything is still quiet.</p>
+<p>I should have started with these habits back in May, especially
+getting up at 7 in the morning. It gives me what I want: silence, and it
+also gives me what the night doesn’t offer: the rising sun.</p>
+<p>My head is suddenly empty.</p>
+<p>Bottled water is handy and also tasty. Tap water tastes bad (hard). I
+cannot bear it.</p>
+<p>Let us return to the subject of habits. When do I feel that habits
+are bullshit and don’t want to bother with daily routines? When I am in
+a hurry. I want the sweetness to come quickly and waiting means failure
+to me. Mindset changes. One day I asked myself why people choose
+hardships, is it because they like to endure? Not quite. I realised that
+hardship promises a future in which we win what we dream of. Foolishly,
+I thought that fun was the reason people put in the effort, which it is,
+but for many things the result is the main motivation.</p>
+<p>Recently I also learned Javascript. Promise is a key concept in
+Javascript. In javascript, we often wait for a function to finish and do
+the next thing only after the function has finished. Waiting takes time,
+but in the end we get what we want. Waiting also has its advantages:
+priorities, optimising the use of limited resources… Life is really the
+same.</p>
+
                 ]]>
                  </content:encoded>
                 <pubDate>Thu, 24 Aug 2023 15:46:35 GMT</pubDate>
@@ -160,10 +264,31 @@
                 <link>https://dbdo.website/post/周记-8-7-~-8-13.html</link>
                 <description>周记 8-7 ~ 8-13</description>
                 <content:encoded><![CDATA[
-                <h1>周记</h1>
+                
+<header id="title-block-header">
+<h1 class="title">周记 8-7 ~ 8-13</h1>
+</header>
+
+<h1 id="周记">周记</h1>
 <p>上周也发生了很多事~~</p>
-<p><a href="https://github.com/squidfunk/mkdocs-material/discussions/2346">mkdoc 多语言</a>： 想把博客改用 mkdocs 写。发现它能支持多语言。不过最后因为懒惰还是继续用自己写的简陋小脚本生成博客页面，不用再设置什么，能把时间省下来。</p>
-<p>找到了一个声称能帮助mastodon显示所有评论的东西：<a href="https://www.reddit.com/r/Mastodon/comments/13xmpnk/any_way_to_show_all_replies_on_home_timeline/">reddit.com/r/Mastodon...</a>. 可是用了以后，自己也不确定有没有起作用。 </p>
+<p><a
+href="https://github.com/squidfunk/mkdocs-material/discussions/2346">mkdoc
+多语言</a>： 想把博客改用 mkdocs
+写。发现它能支持多语言。不过最后因为懒惰还是继续用自己写的简陋小脚本生成博客页面，不用再设置什么，能把时间省下来。</p>
+<p>找到了一个声称能帮助mastodon显示所有评论的东西：<a
+href="https://www.reddit.com/r/Mastodon/comments/13xmpnk/any_way_to_show_all_replies_on_home_timeline/">reddit.com/r/Mastodon…</a>.
+可是用了以后，自己也不确定有没有起作用。</p>
+<hr />
+<p>试着用http shortcut
+朗读喵窝公共时间线。朗读的内容常常听不懂在说什么。下划线被直接读出来。因为文字转换成声音以后听不懂在说什么，我感叹道:</p>
+<iframe src="https://mas.to/@cxwh/110857347189432415/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen">
+</iframe>
+<script src="https://mas.to/embed.js" async="async"></script>
+<p>用了几周 <a href="https://github.com/FriesI23/mhabit">table
+habit</a>。感觉不错。我设置的习惯之一是每天至少看一会书。没超过30分钟，甚至不到30分钟。一开始锻炼身体的项目很单调。后来决定有了跳舞,
+做操几个选项. 客观地说，感觉还好。</p>
+<p>任何尝试应该在一段时间以后再评价，回顾太频繁反而不好。评价方式应该客观，只要有好的地方就承认，不一定要让所有方面都好起来。</p>
+
                 ]]>
                  </content:encoded>
                 <pubDate>Tue, 15 Aug 2023 16:19:31 GMT</pubDate>
@@ -175,28 +300,35 @@
                 <link>https://dbdo.website/post/about.html</link>
                 <description>about</description>
                 <content:encoded><![CDATA[
-                <h2>近况</h2>
+                
+<header id="title-block-header">
+<h1 class="title">about</h1>
+</header>
+
+<h2 id="近况">近况</h2>
 <p>2023-10-08</p>
 <ul>
 <li>发现自己不知道git pull怎么工作的，只是在一直用它</li>
-<li>试着用Lazy.nvim给nvim安装插件。其实是会用的第一个nvim插件管理器<ul>
+<li>试着用Lazy.nvim给nvim安装插件。其实是会用的第一个nvim插件管理器
+<ul>
 <li>装了“卡布奇诺”配色。真好看呀</li>
-</ul>
-</li>
+</ul></li>
 <li>figma</li>
 <li>React.js 会启动react了</li>
-<li>要添加的功能<ul>
+<li>要添加的功能
+<ul>
 <li>发布状态(允许草稿和不列出）和预览(serve)的功能</li>
 <li>图片 图片 图片 ： 插入图片的工作流</li>
 <li>“关于”页面加上最后修改日期（这个应该是最简单的)</li>
 <li>没有标题构建会出问题。要解决</li>
 <li>标题写在元数据里</li>
-</ul>
-</li>
+</ul></li>
 </ul>
 <p><code>中间的某一天</code></p>
 <ul>
-<li><a href="https://www.senzoku-online.jp/solfege/rhythmn_cn/index.php">洗足池音乐网校</a> 在这里做节奏阅读练习</li>
+<li><a
+href="https://www.senzoku-online.jp/solfege/rhythmn_cn/index.php">洗足池音乐网校</a>
+在这里做节奏阅读练习</li>
 <li>看医生</li>
 <li>想找点漫画或者有趣好读的书<del>看</del>听</li>
 </ul>
@@ -204,6 +336,9 @@
 <ul>
 <li>最近喜欢把心情写在这里。</li>
 </ul>
+<hr />
+<p>推荐Gitjournal！</p>
+
                 ]]>
                  </content:encoded>
                 <pubDate>Mon, 07 Aug 2023 15:37:29 GMT</pubDate>
@@ -215,14 +350,17 @@
                 <link>https://dbdo.website/post/links.html</link>
                 <description>links</description>
                 <content:encoded><![CDATA[
-                <ul>
-<li>
-<p><a href="https://dbdowjfb.notion.site/df001ecaffd14a0bbf806daee38ed1e3">看到想分享的链接</a> </p>
-</li>
-<li>
-<p><a href="/logseq/index.html">我的wiki</a></p>
-</li>
+                
+<header id="title-block-header">
+<h1 class="title">links</h1>
+</header>
+
+<ul>
+<li><p><a
+href="https://dbdowjfb.notion.site/df001ecaffd14a0bbf806daee38ed1e3">看到想分享的链接</a></p></li>
+<li><p><a href="/logseq/index.html">我的wiki</a></p></li>
 </ul>
+
                 ]]>
                  </content:encoded>
                 <pubDate>Mon, 07 Aug 2023 15:37:29 GMT</pubDate>
@@ -234,17 +372,106 @@
                 <link>https://dbdo.website/post/Test-2.html</link>
                 <description>Test 2</description>
                 <content:encoded><![CDATA[
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis velit non vestibulum condimentum. Quisque turpis quam, congue vitae ipsum a, commodo suscipit enim. Sed ac fermentum ante, eu lacinia odio. Cras vel sodales lorem. Sed sollicitudin nisl in elit ornare dapibus. Aliquam erat volutpat. Integer scelerisque consequat libero, sit amet porta dolor ultrices vitae. Etiam luctus sodales cursus. Aenean a turpis pretium, ultrices turpis ut, vestibulum eros. Praesent nec sem eleifend, tincidunt lacus et, dictum eros.</p>
-<p>Donec semper nisl a auctor laoreet. Integer risus elit, consequat consequat vehicula sed, maximus vitae dui. Quisque pretium convallis molestie. Nam ultricies, libero sed ultricies interdum, diam elit congue magna, et consectetur urna neque et elit. Pellentesque quis ligula in justo tincidunt imperdiet. Vivamus at nulla malesuada, sollicitudin tortor id, sagittis turpis. Aliquam erat volutpat. Ut laoreet sit amet tortor a faucibus. Suspendisse potenti.</p>
-<p>Mauris egestas, tellus eu congue cursus, erat orci porta arcu, a fermentum orci nunc nec elit. Maecenas eu mollis sem. Donec ac tempus nisi, quis sodales neque. Duis pharetra id urna eget semper. Nulla finibus molestie sem at rutrum. Curabitur auctor ut erat sed ornare. Praesent accumsan vulputate augue sed auctor.</p>
-<p>Morbi quis eros tempus, feugiat ipsum et, vestibulum massa. Vivamus scelerisque, nisl id faucibus faucibus, purus neque dictum risus, quis convallis lorem velit vitae justo. Aliquam vehicula justo non neque porttitor, et porta ipsum fringilla. Duis tempor pulvinar risus, mollis tincidunt nulla cursus ac. Curabitur molestie nisl quis diam volutpat, vitae commodo enim dignissim. Morbi vulputate ante nec neque ornare ullamcorper. Sed iaculis rhoncus velit, id placerat augue ultrices nec. Fusce condimentum velit ac est tempus condimentum.</p>
-<p>Vestibulum non odio ipsum. Nam lobortis at ante ut vehicula. Etiam dapibus justo ut feugiat fermentum. Mauris vitae consequat massa. Donec maximus ante velit, non mattis arcu commodo sit amet. Aenean vehicula dictum sapien, quis pretium ligula tincidunt ac. Sed risus ante, eleifend ac lacinia eget, euismod in diam. Phasellus nisl turpis, fermentum quis euismod vel, mattis non purus. Vivamus sed est id turpis blandit ullamcorper sed ut sapien. In hac habitasse platea dictumst. Cras volutpat augue maximus sapien interdum, sed facilisis augue mollis. </p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sodales mauris dapibus nibh molestie, vitae aliquam odio dictum. Quisque tincidunt lacus vel sem mollis dignissim. Morbi sodales vel ipsum id tincidunt. Phasellus semper consectetur erat. Duis cursus, justo vel iaculis sollicitudin, tortor lacus consectetur metus, vestibulum aliquet massa leo quis mauris. Proin at imperdiet leo. Maecenas placerat, neque tempor mollis feugiat, odio felis euismod mauris, ac elementum purus justo et augue. Donec id erat dignissim, pellentesque orci vitae, venenatis tellus. Morbi eu aliquam odio. In sollicitudin nunc sed dignissim euismod. Integer magna odio, cursus id finibus in, molestie a orci. Maecenas sit amet dignissim ex, quis pharetra magna.</p>
-<p>Etiam risus metus, venenatis eget urna ultricies, tempor tristique mi. Maecenas non accumsan nisl. Mauris viverra, erat eu blandit vestibulum, felis lorem vulputate risus, nec luctus eros felis at ligula. Donec ullamcorper pulvinar lorem, non accumsan sem pharetra non. Duis posuere dolor id odio fringilla, sit amet egestas sem posuere. Praesent sit amet massa vitae ex imperdiet consectetur non sit amet augue. Phasellus volutpat facilisis eros, at lacinia mauris vestibulum sit amet. Nam id fringilla augue. Mauris condimentum, lorem ac dictum iaculis, nulla purus euismod ipsum, a hendrerit ipsum odio ut sem. Duis in posuere risus.</p>
-<p>Aliquam bibendum placerat nisl vitae eleifend. Mauris et consequat nulla, non cursus libero. Cras lacinia vulputate tortor sit amet scelerisque. Aliquam ac nibh eros. Ut at tristique metus. Sed pulvinar gravida mauris sit amet lacinia. Nulla pellentesque orci dictum dui varius, in feugiat ante hendrerit. Duis id ante ante. Maecenas semper, lacus sed semper molestie, ipsum quam imperdiet mi, at pharetra erat dolor id massa. Sed volutpat dapibus neque nec ultrices. Sed justo risus, pulvinar id fringilla at, congue a sem. Sed ac nibh mi. Maecenas vitae leo at ante ultricies tempor at id nisi. Mauris cursus dictum leo, at faucibus metus pulvinar nec. Praesent pretium sodales luctus. Mauris metus diam, varius elementum eros nec, faucibus maximus arcu.</p>
-<p>Phasellus vitae lacus bibendum, viverra dolor sed, commodo elit. Vivamus at orci nec arcu dignissim gravida. Aliquam porta ex nec felis tristique fermentum. Etiam quis justo a tellus vulputate egestas ut eu libero. Integer auctor tortor in semper blandit. Suspendisse porttitor massa viverra rhoncus accumsan. Phasellus lacus eros, ullamcorper eu ornare ac, suscipit id libero. Sed vulputate urna et mi commodo, tempus blandit tellus gravida. Suspendisse porttitor posuere magna eget mollis. Pellentesque sed lacus id orci fringilla pretium. Phasellus quis massa eget augue vestibulum blandit. Integer sollicitudin tortor quis eros semper tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus malesuada purus eget nunc faucibus iaculis. In nec molestie massa, vel finibus sem.</p>
-<p><img alt="Image" src="./img/277fd55a22f6a9187e1eaa9574488661.jpg" /> 
-Nam pharetra velit et ultricies congue. Nullam efficitur mollis odio in porta. Sed molestie tortor eu arcu mattis, quis bibendum orci feugiat. Vestibulum semper blandit felis non pellentesque. Pellentesque commodo ac velit ac ornare. Cras ac pellentesque leo. Mauris eget molestie quam. Phasellus lectus magna, condimentum semper mollis vitae, pretium vel turpis. Phasellus dapibus dolor in dui viverra, commodo elementum tortor aliquet. Quisque dapibus leo in arcu facilisis, sed rhoncus ipsum mollis. Etiam at neque fermentum, tempor enim pulvinar, posuere mi. Suspendisse et neque cursus, bibendum neque vitae, tempus dolor.</p>
+                
+<header id="title-block-header">
+<h1 class="title">Test 2</h1>
+</header>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+convallis velit non vestibulum condimentum. Quisque turpis quam, congue
+vitae ipsum a, commodo suscipit enim. Sed ac fermentum ante, eu lacinia
+odio. Cras vel sodales lorem. Sed sollicitudin nisl in elit ornare
+dapibus. Aliquam erat volutpat. Integer scelerisque consequat libero,
+sit amet porta dolor ultrices vitae. Etiam luctus sodales cursus. Aenean
+a turpis pretium, ultrices turpis ut, vestibulum eros. Praesent nec sem
+eleifend, tincidunt lacus et, dictum eros.</p>
+<p>Donec semper nisl a auctor laoreet. Integer risus elit, consequat
+consequat vehicula sed, maximus vitae dui. Quisque pretium convallis
+molestie. Nam ultricies, libero sed ultricies interdum, diam elit congue
+magna, et consectetur urna neque et elit. Pellentesque quis ligula in
+justo tincidunt imperdiet. Vivamus at nulla malesuada, sollicitudin
+tortor id, sagittis turpis. Aliquam erat volutpat. Ut laoreet sit amet
+tortor a faucibus. Suspendisse potenti.</p>
+<p>Mauris egestas, tellus eu congue cursus, erat orci porta arcu, a
+fermentum orci nunc nec elit. Maecenas eu mollis sem. Donec ac tempus
+nisi, quis sodales neque. Duis pharetra id urna eget semper. Nulla
+finibus molestie sem at rutrum. Curabitur auctor ut erat sed ornare.
+Praesent accumsan vulputate augue sed auctor.</p>
+<p>Morbi quis eros tempus, feugiat ipsum et, vestibulum massa. Vivamus
+scelerisque, nisl id faucibus faucibus, purus neque dictum risus, quis
+convallis lorem velit vitae justo. Aliquam vehicula justo non neque
+porttitor, et porta ipsum fringilla. Duis tempor pulvinar risus, mollis
+tincidunt nulla cursus ac. Curabitur molestie nisl quis diam volutpat,
+vitae commodo enim dignissim. Morbi vulputate ante nec neque ornare
+ullamcorper. Sed iaculis rhoncus velit, id placerat augue ultrices nec.
+Fusce condimentum velit ac est tempus condimentum.</p>
+<p>Vestibulum non odio ipsum. Nam lobortis at ante ut vehicula. Etiam
+dapibus justo ut feugiat fermentum. Mauris vitae consequat massa. Donec
+maximus ante velit, non mattis arcu commodo sit amet. Aenean vehicula
+dictum sapien, quis pretium ligula tincidunt ac. Sed risus ante,
+eleifend ac lacinia eget, euismod in diam. Phasellus nisl turpis,
+fermentum quis euismod vel, mattis non purus. Vivamus sed est id turpis
+blandit ullamcorper sed ut sapien. In hac habitasse platea dictumst.
+Cras volutpat augue maximus sapien interdum, sed facilisis augue
+mollis.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+sodales mauris dapibus nibh molestie, vitae aliquam odio dictum. Quisque
+tincidunt lacus vel sem mollis dignissim. Morbi sodales vel ipsum id
+tincidunt. Phasellus semper consectetur erat. Duis cursus, justo vel
+iaculis sollicitudin, tortor lacus consectetur metus, vestibulum aliquet
+massa leo quis mauris. Proin at imperdiet leo. Maecenas placerat, neque
+tempor mollis feugiat, odio felis euismod mauris, ac elementum purus
+justo et augue. Donec id erat dignissim, pellentesque orci vitae,
+venenatis tellus. Morbi eu aliquam odio. In sollicitudin nunc sed
+dignissim euismod. Integer magna odio, cursus id finibus in, molestie a
+orci. Maecenas sit amet dignissim ex, quis pharetra magna.</p>
+<p>Etiam risus metus, venenatis eget urna ultricies, tempor tristique
+mi. Maecenas non accumsan nisl. Mauris viverra, erat eu blandit
+vestibulum, felis lorem vulputate risus, nec luctus eros felis at
+ligula. Donec ullamcorper pulvinar lorem, non accumsan sem pharetra non.
+Duis posuere dolor id odio fringilla, sit amet egestas sem posuere.
+Praesent sit amet massa vitae ex imperdiet consectetur non sit amet
+augue. Phasellus volutpat facilisis eros, at lacinia mauris vestibulum
+sit amet. Nam id fringilla augue. Mauris condimentum, lorem ac dictum
+iaculis, nulla purus euismod ipsum, a hendrerit ipsum odio ut sem. Duis
+in posuere risus.</p>
+<p>Aliquam bibendum placerat nisl vitae eleifend. Mauris et consequat
+nulla, non cursus libero. Cras lacinia vulputate tortor sit amet
+scelerisque. Aliquam ac nibh eros. Ut at tristique metus. Sed pulvinar
+gravida mauris sit amet lacinia. Nulla pellentesque orci dictum dui
+varius, in feugiat ante hendrerit. Duis id ante ante. Maecenas semper,
+lacus sed semper molestie, ipsum quam imperdiet mi, at pharetra erat
+dolor id massa. Sed volutpat dapibus neque nec ultrices. Sed justo
+risus, pulvinar id fringilla at, congue a sem. Sed ac nibh mi. Maecenas
+vitae leo at ante ultricies tempor at id nisi. Mauris cursus dictum leo,
+at faucibus metus pulvinar nec. Praesent pretium sodales luctus. Mauris
+metus diam, varius elementum eros nec, faucibus maximus arcu.</p>
+<p>Phasellus vitae lacus bibendum, viverra dolor sed, commodo elit.
+Vivamus at orci nec arcu dignissim gravida. Aliquam porta ex nec felis
+tristique fermentum. Etiam quis justo a tellus vulputate egestas ut eu
+libero. Integer auctor tortor in semper blandit. Suspendisse porttitor
+massa viverra rhoncus accumsan. Phasellus lacus eros, ullamcorper eu
+ornare ac, suscipit id libero. Sed vulputate urna et mi commodo, tempus
+blandit tellus gravida. Suspendisse porttitor posuere magna eget mollis.
+Pellentesque sed lacus id orci fringilla pretium. Phasellus quis massa
+eget augue vestibulum blandit. Integer sollicitudin tortor quis eros
+semper tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Vivamus malesuada purus eget nunc faucibus iaculis. In nec molestie
+massa, vel finibus sem.</p>
+<p><img src="./img/277fd55a22f6a9187e1eaa9574488661.jpg" alt="Image" />
+Nam pharetra velit et ultricies congue. Nullam efficitur mollis odio in
+porta. Sed molestie tortor eu arcu mattis, quis bibendum orci feugiat.
+Vestibulum semper blandit felis non pellentesque. Pellentesque commodo
+ac velit ac ornare. Cras ac pellentesque leo. Mauris eget molestie quam.
+Phasellus lectus magna, condimentum semper mollis vitae, pretium vel
+turpis. Phasellus dapibus dolor in dui viverra, commodo elementum tortor
+aliquet. Quisque dapibus leo in arcu facilisis, sed rhoncus ipsum
+mollis. Etiam at neque fermentum, tempor enim pulvinar, posuere mi.
+Suspendisse et neque cursus, bibendum neque vitae, tempus dolor.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f():</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span></code></pre></div>
+
                 ]]>
                  </content:encoded>
                 <pubDate>Mon, 07 Aug 2023 15:37:29 GMT</pubDate>
@@ -256,8 +483,13 @@ Nam pharetra velit et ultricies congue. Nullam efficitur mollis odio in porta. S
                 <link>https://dbdo.website/post/摸鱼儿.html</link>
                 <description>摸鱼儿</description>
                 <content:encoded><![CDATA[
-                <h2>宋・李演</h2>
-<p>又西风、四桥疏柳，惊蝉相对秋语。 <br />
+                
+<header id="title-block-header">
+<h1 class="title">摸鱼儿</h1>
+</header>
+
+<h2 id="宋李演">宋・李演</h2>
+<p>又西风、四桥疏柳，惊蝉相对秋语。<br />
 琼荷万笠花云重，袅袅红衣如舞。<br />
 鸿北去<br />
 渺岸芷汀芳，几点斜阳字。<br />
@@ -271,6 +503,7 @@ Nam pharetra velit et ultricies congue. Nullam efficitur mollis odio in porta. S
 怕月冷吟魂，婉冉空江暮。<br />
 明灯暗浦。<br />
 更短笛衔风，长云弄晚，天际画秋句。</p>
+
                 ]]>
                  </content:encoded>
                 <pubDate>Mon, 07 Aug 2023 15:37:29 GMT</pubDate>
