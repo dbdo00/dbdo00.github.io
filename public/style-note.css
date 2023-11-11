@@ -83,11 +83,14 @@ nav[role="banner"] a:hover{
     
     .blog, .article-section {
         flex:1 ;
+        /*! margin: 0 auto; */
+        padding: 0 10% 0 0;
         padding-bottom: 60px;
         align-items: flex-start;
-        max-width: 70ch;
+        max-width: 65ch;
         font-style: normal !important;
         flex-direction: column;
+        /* flex-grow: 9; */
         text-align: left;
     }
     
@@ -122,9 +125,8 @@ nav[role="banner"] a:hover{
     }
     
     p {
-	font-family: monospace;
         line-height: 1.5;
-        max-width: 75ch;
+        max-width: 80ch;
     }
     
     a {
