@@ -2,7 +2,7 @@
 title: webmention 的现实
 ---
 
-## 理想化的
+
 
 试图理解webmention协议已经4个月了。借口是自己本来就不专业。刚才发现，现实是，webmention是一种过于理想化的东西，它假设，发的一边和接的一边都遵守（这样小众的）协议，很不现实。
 
@@ -14,8 +14,14 @@ mastodon 上引用符合 webmention 的目标站点，mastodon自己、不会自
 
 大家好像不假思索选用 bridgy 之类的东西给主流网站(twitter，tumblr, mastodon....) 加上对 webmention 的支持。能想到给不支持小众协议的大众网站添加支持的理由，没想到要 webmention 是要降低使用的门槛必须如此迁就，最后迁就的用法最多的一个东西。失望
 
-## 现在能做的
 
 用 [webmention.app](https://webmention.app) 在自己的*发*东西的地方都支持发送 webmention。收的对方不用协议以外的办法迁就自己。
+
+人们不在协议上不同意，而在协议的具体操作，具体到不是协议一部分的事情上不同意：下载网页。不同的webmention服务对`https://mastodon.social/@bmsPeppermint/111397416879701209/embed` 下载的结果都不一样。比如webmention.io 不仅对不加`/embed` 的链接下载不了，还不能下载加了`embed` 的链接。主要是现在的网页app很多是一大团javascript，没有就拒绝加载不提供别的选项。想要抱怨现状是一种有点无力的情绪，尤其是在这种没有较真理由的事情。自然不会为它计较。但下载不了网页就是正在发生的事情。mastodon 不行， 推特呢？出于javascript app 的原因，官方网站当然不能直接作为webmention的来源链接。而nitter 的站点都严格地防止不用浏览器的访问，因为它们免费的工作量还是很大的可以理解。nitter从来也没有给自己一个人运行的选项。
+
+
+
+
+
 
 
