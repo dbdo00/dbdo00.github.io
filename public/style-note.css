@@ -84,13 +84,11 @@ nav[role="banner"] a:hover{
     .blog, .article-section {
         flex:1 ;
         /*! margin: 0 auto; */
-        padding: 0 10% 0 0;
         padding-bottom: 60px;
         align-items: flex-start;
-        max-width: 65ch;
+        max-width: 75ch;
         font-style: normal !important;
         flex-direction: column;
-        /* flex-grow: 9; */
         text-align: left;
     }
     
@@ -100,7 +98,6 @@ nav[role="banner"] a:hover{
     .article-section i{
         font-style: normal !important;
         text-align: left;
-        /*! flex-wrap: wrap; */
     }
     
     .article-section a {
