@@ -2,6 +2,8 @@
 title: webmention 的现实
 ---
 
+## 理想化的
+
 试图理解webmention协议已经4个月了。借口是自己本来就不专业。刚才发现，现实是，webmention是一种过于理想化的东西，它假设，发的一边和接的一边都遵守（这样小众的）协议，很不现实。
 
 mastodon 上引用符合 webmention 的目标站点，mastodon自己、不会自动给目标站点发 mention。所以只能手动发送请求[^1]。
@@ -11,4 +13,9 @@ mastodon 上引用符合 webmention 的目标站点，mastodon自己、不会自
 
 
 大家好像不假思索选用 bridgy 之类的东西给主流网站(twitter，tumblr, mastodon....) 加上对 webmention 的支持。能想到给不支持小众协议的大众网站添加支持的理由，没想到要 webmention 是要降低使用的门槛必须如此迁就，最后迁就的用法最多的一个东西。失望
+
+## 现在能做的
+
+用 [webmention.app](https://webmention.app) 在自己的*发*东西的地方都支持发送 webmention。收的对方不用协议以外的办法迁就自己。
+
 
