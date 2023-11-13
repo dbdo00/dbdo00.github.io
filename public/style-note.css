@@ -125,18 +125,20 @@ nav[role="banner"] a:hover{
         line-height: 1.5;
         max-width: 80ch;
     }
-    
+    .blog a {
+      text-decoration-thickness: 0.3ex;
+      text-underline-offset: 0.3em;
+    }
     a {
         color: var(--link-color);
         padding: 2px;
         list-style: cjk-heavenly-stem;
         text-decoration-color: var(--link-dark, blue);
-      text-decoration-thickness: 0.3ex;
-      text-underline-offset: 0.3em;
+      
     
     }
     
-    a:hover[class="blog"] {
+    .blog a:hover {
     text-decoration: none;
   
     box-shadow: inset 0 -.5em 0 0 #3cffd0;
