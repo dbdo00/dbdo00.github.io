@@ -236,7 +236,7 @@ button{
 [data-dark-mode="yes"], [data-dark-mode="yes"]  {
   --background-color: #000;
   --font-color: #fff;
-  --link-dark: var(--font-color)
+  --link-dark: var(--font-color);
   --border-bottom-color: #384566;
   --link-hover-dark: var(--font-color);
 }
