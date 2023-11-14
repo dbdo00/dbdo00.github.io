@@ -380,7 +380,7 @@ color: var(--link-dark, #000);
     }
     
     nav[role="banner"] a { 
-        margin:0 4.8vw 0 0;
+        margin:0 4.8vw 0.8rem 0;
         color: var(--nav-link-color);
         height: 100%;
         text-decoration: none;
@@ -567,6 +567,7 @@ button#dark-mode{
 display: inline-flex;
 width: fit-content;
 appearance: none;  
+height: min-content;
 }
 
 .blog a {
