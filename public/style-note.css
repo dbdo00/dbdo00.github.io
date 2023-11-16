@@ -4,29 +4,33 @@
     --nav-link-color: var(--font-color);
     --footer-link-color: unset;
     --content-link-color: #000;
+    --font-size: 1.2rem;
  }
 
-
-
+*, *:before, *:after {
+	padding : 0;
+	margin: 0;
+}
     body{
-        font-family: BlinkMacSystemFont, Segoe UI, sans-serif, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+	    font-family: BlinkMacSystemFont, Segoe UI, sans-serif, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
         background: var(--background-color);
         color: var(--font-color);
         display: flex;
         flex-direction: column;
         min-height: 0vw;
-        max-width: 38em;
-        margin: auto;
-        padding: 20px;
+        max-width: 60rem;
+        margin: 0 auto;
+        padding: 1.2rem;
+        font-size: var(--font-size, 16px);
     }
     
     nav[role="banner"] {
-        padding: 1.9rem 1rem 0.4rem 0;
+        padding: 1.8rem 1rem 1.8rem 1rem;
         border-bottom: 1px solid var(--border-bottom-color, #e5e5e5);
         margin-bottom: 2rem;
         justify-content: flex-start;
         width: 100%;
-
+	font-size: 1.3rem; 
     }
     
     nav[role="banner"] a { 
@@ -35,8 +39,6 @@
         padding: 2px;
         height: 100%;
         text-decoration: none;
-border-radius: 25%;
-        box-shadow: 0px 0px 1px 0px var(--font-color);
     }
     
 
@@ -48,6 +50,10 @@ nav[role="banner"] a:hover{
 } 
     
 
+
+nav#TOC {
+  padding: 1.8rem 1rem 1.8rem 0;
+}
 header {
   margin-bottom: 4em;
   text-align: center;
@@ -71,8 +77,7 @@ h4 {
 .blog, .article-section {
     flex:1 ;
     padding-bottom: 60px;
-    align-items: flex-start;
-    max-width: 75ch;
+    align-items: center;
     flex-direction: column;
     text-align: left;
 }
@@ -103,8 +108,8 @@ h4 {
 
 .blog p {
   line-height: 1.8;
-  max-width: 80ch;
-  margin: 1.75rem 0;
+  /* max-width: 80ch; */
+  margin: 1.5rem 0;
 }
 
 .blog a {
@@ -120,6 +125,28 @@ text-decoration: none;
 
 box-shadow: inset 0 -.5em 0 0 #3cffd0;
 }
+
+ol, ul {
+  padding-left: 1.7em;
+  margin-top: 1em;
+  line-height: 1.8;
+}
+li > ol, li > ul {
+  margin-top: 0;
+}
+blockquote {
+  margin: 1em 0 1em 1.7em;
+  padding-left: 1em;
+  border-left: 2px solid #e6e6e6;
+  color: #606060;
+}
+code {
+  font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+  font-size: 85%;
+  margin: 0;
+  hyphens: manual;
+}
+
 pre {
     background: #eee none repeat scroll 0 0;
     padding: 10px 20px;
@@ -161,6 +188,7 @@ border-top: 1.5px solid #e5e5e5;
 footer ul{
 padding-left: 0;
 }
+
 
 
 footer a {
@@ -290,4 +318,16 @@ color: var(--content-link-color);
  }
  div.csl-indent {
    margin-left: 2em;
+ }
+
+ .pm {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 630px;
+ }
+
+ .pm p{
+  padding: 0 80px;
+  text-align: left;
+  word-break: break-word;
  }

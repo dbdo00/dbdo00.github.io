@@ -12,6 +12,25 @@
      <atom:link href="http://dbdo.website" rel="self" type="application/rss+xml" />
     
             <item>
+                <title>从 mastodon 发 webmention</title>
+                <link>https://dbdo.website/post/从-mastodon-发-webmention.html</link>
+                <description>从 mastodon 发 webmention</description>
+                <content:encoded><![CDATA[
+                
+<header id="title-block-header">
+<h1 class="title">从 mastodon 发 webmention</h1>
+</header>
+
+<p>应该可以（也许，通过改 HTTP header） 让 mastodon 认为我们是一个
+activitypub 服务器。 这是收的一方要实现的。</p>
+
+                ]]>
+                 </content:encoded>
+                <pubDate>Tue, 14 Nov 2023 17:28:46 GMT</pubDate>
+                <guid>https://dbdo.website/post/从-mastodon-发-webmention.html</guid>
+            </item>
+            
+            <item>
                 <title>webmention 体验</title>
                 <link>https://dbdo.website/post/webmention-体验.html</link>
                 <description>webmention 体验</description>
@@ -538,7 +557,8 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
 <h1 class="title">摸鱼儿</h1>
 </header>
 
-<h2 id="宋李演">宋・李演</h2>
+<section id="宋李演" class="pm">
+<h2>宋・李演</h2>
 <p>又西风、四桥疏柳，惊蝉相对秋语。<br />
 琼荷万笠花云重，袅袅红衣如舞。<br />
 鸿北去<br />
@@ -553,6 +573,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
 怕月冷吟魂，婉冉空江暮。<br />
 明灯暗浦。<br />
 更短笛衔风，长云弄晚，天际画秋句。</p>
+</section>
 
                 ]]>
                  </content:encoded>
