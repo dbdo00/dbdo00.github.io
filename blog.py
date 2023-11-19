@@ -318,7 +318,7 @@ def create_rss(data_json, rss_path):
             with open(post['md_path'], 'r') as file:
                 content = file.read()
             
-            content = pandoc(content, ['--mathml'])
+            content = pandoc(content, ['--mathml','-V title:""'])
             item = f'''
             <item>
                 <title>{post['title']}</title>
