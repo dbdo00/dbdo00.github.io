@@ -4,7 +4,6 @@ import json
 import markdown
 from markdown.preprocessors import Preprocessor
 import sys 
-
 import subprocess
 import re
 from datetime import datetime
@@ -15,12 +14,15 @@ from ignore_section import IgnoreSectionExtension
 # markdown preprocessor that ignore that yaml metadata
 
 def pandoc(content:str, flags:list) -> str:
-    
+   
         
     template = """
+$if(title)$
 <header id="title-block-header">
 <h1 class="title">$title$</h1>
 </header>
+$endif$
+
 
 $if(toc)$
 <nav id="TOC">
@@ -39,6 +41,7 @@ $body$
 
     # delete template file
     os.remove("web_blank_pandoctemp.html")
+    
     return stdout 
 
 def render_html(template_name,content):        
@@ -197,16 +200,18 @@ def render_html_for_each_post(template_name, md_dir, post_dir):
 
             file_content = text_file_to_string(f'{md_dir}/{file}')
             visibility = post_vivsibility(process_metadata(file_content))
+            
             if os.path.isfile(f"{md_dir}/{file}") and visibility != 'draft' :
                 
                 md = file 
                 # put markdown file into a string 
                 markdown_content = text_file_to_string(f'{md_dir}/{md}') 
+                
                 output = render_html(template_name, markdown_content) 
                 
 
                 # write the rendered html to a file
-                print("filename", name_a_file(f'{md_dir}/{md}'))
+                # print("filename", name_a_file(f'{md_dir}/{md}'))
                 write_html(output=output, post_dir=post_dir,title=  name_a_file(f'{md_dir}/{md}')) 
 
                 # publish images in the markdown file to the post directory
@@ -216,6 +221,7 @@ def render_html_for_each_post(template_name, md_dir, post_dir):
                 post_file = f'{post_dir}/{name_a_file(f"{md_dir}/{file}")}'
                 delete_post(post_file)
                 delete_post(post_file +'.html')
+                
 
 # render data for index page to a list of links to each post 
 # written in markown 
@@ -318,7 +324,7 @@ def create_rss(data_json, rss_path):
             with open(post['md_path'], 'r') as file:
                 content = file.read()
             
-            content = pandoc(content, ['--mathml','-V title:""'])
+            content = pandoc(content, flags=['--mathml','-V','title:'])
             item = f'''
             <item>
                 <title>{post['title']}</title>
@@ -481,7 +487,7 @@ def delete_post(post_path : str) -> None:
         os.remove('{post_path}')
     except FileNotFoundError:
         print('FileNotFoundError in deleting post')
-        pass
+        # pass
 
 
 def main():
@@ -501,6 +507,7 @@ def main():
         
         post_dir=post_dir
     )
+    print("OK move on")
     # render index markdown 
     render_index_page(f'{root_dir}/data.json',index_page_path=index_page_path)
     # generate rss.xml

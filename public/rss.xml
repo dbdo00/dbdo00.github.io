@@ -12,14 +12,105 @@
      <atom:link href="http://dbdo.website" rel="self" type="application/rss+xml" />
     
             <item>
+                <title>sl2</title>
+                <link>https://dbdo.website/post/sl2.html</link>
+                <description>sl2</description>
+                <content:encoded><![CDATA[
+                
+
+
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><msub><mi>l</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">sl_2</annotation></semantics></math>
+has a unique irreducible representation of dimension
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>.
+by <em>Jordan preservation theorem</em>, the representation of the group
+element</p>
+<pre class="math"><code>H =\begin{bmatrix} 1 &amp; 0\\ 0 &amp; -1 \\ \end{bmatrix}</code></pre>
+<p>is diagonalizable.</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mi>n</mi><mo>,</mo><mi>n</mi><mo>−</mo><mn>2</mn><mo>,</mo><mi>n</mi><mo>−</mo><mn>4</mn><mo>,</mo><mi>…</mi><mo>,</mo><mi>n</mi><mo>−</mo><mn>2</mn><mi>k</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{n, n-2, n-4, \ldots, n-2 k\}</annotation></semantics></math>
+all eigenvalues</p>
+<p>spaces spanned by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>Y</mi><mi>k</mi></msup><mi>v</mi></mrow><annotation encoding="application/x-tex">Y^k v</annotation></semantics></math>
+are irreducible
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⟹</mo><annotation encoding="application/x-tex">\implies</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Y</mi><annotation encoding="application/x-tex">Y</annotation></semantics></math>
+all invariant in the space.</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n+1</annotation></semantics></math></p>
+
+                ]]>
+                 </content:encoded>
+                <pubDate>Sat, 18 Nov 2023 22:40:00 GMT</pubDate>
+                <guid>https://dbdo.website/post/sl2.html</guid>
+            </item>
+            
+            <item>
+                <title>limits</title>
+                <link>https://dbdo.website/post/limits.html</link>
+                <description>limits</description>
+                <content:encoded><![CDATA[
+                
+
+
+<p>The ideas in the mind are not produced by rationalities, but by
+habitual thinking and beliefs.</p>
+<p>Do things we don’t normally do. it’s not impossible. it can be
+easy.</p>
+<p>Often we are afraid to fail and believe that the way we live must be
+unchanging. why is this?</p>
+
+                ]]>
+                 </content:encoded>
+                <pubDate>Sat, 18 Nov 2023 19:51:27 GMT</pubDate>
+                <guid>https://dbdo.website/post/limits.html</guid>
+            </item>
+            
+            <item>
+                <title>通过写邮件评论</title>
+                <link>https://dbdo.website/post/通过写邮件评论.html</link>
+                <description>通过写邮件评论</description>
+                <content:encoded><![CDATA[
+                
+
+
+<p><a href="https://testmail.app">testmail.app</a>
+有学生一年免费使用。</p>
+<p>一个账户有无限个邮箱地址。</p>
+<p>能不能给每个文章分配一个邮箱地址，允许通过给邮箱写信发评论？</p>
+
+                ]]>
+                 </content:encoded>
+                <pubDate>Fri, 17 Nov 2023 01:50:24 GMT</pubDate>
+                <guid>https://dbdo.website/post/通过写邮件评论.html</guid>
+            </item>
+            
+            <item>
+                <title>free programming courses</title>
+                <link>https://dbdo.website/post/free-programming-courses.html</link>
+                <description>free programming courses</description>
+                <content:encoded><![CDATA[
+                
+
+
+<p>学生免费60小时</p>
+<p>课程：<a
+href="https://frontendmasters.com/welcome/github-student-developers/">frontendmasters.</a><br />
+如果对前端不感兴趣的话也有用js做别的事情（arduino，虚拟机）的课</p>
+
+                ]]>
+                 </content:encoded>
+                <pubDate>Fri, 17 Nov 2023 01:50:24 GMT</pubDate>
+                <guid>https://dbdo.website/post/free-programming-courses.html</guid>
+            </item>
+            
+            <item>
                 <title>从 mastodon 发 webmention</title>
                 <link>https://dbdo.website/post/从-mastodon-发-webmention.html</link>
                 <description>从 mastodon 发 webmention</description>
                 <content:encoded><![CDATA[
                 
-<header id="title-block-header">
-<h1 class="title">从 mastodon 发 webmention</h1>
-</header>
+
 
 <p>应该可以（也许，通过改 HTTP header） 让 mastodon 认为我们是一个
 activitypub 服务器。 这是收的一方要实现的。</p>
@@ -36,9 +127,7 @@ activitypub 服务器。 这是收的一方要实现的。</p>
                 <description>webmention 体验</description>
                 <content:encoded><![CDATA[
                 
-<header id="title-block-header">
-<h1 class="title">webmention 体验</h1>
-</header>
+
 
 <p>试图理解webmention协议已经4个月了。借口是自己本来就不专业。刚才发现，现实是，webmention是一种过于理想化的东西，它假设，发的一边和接的一边都遵守（这样小众的）协议，不现实。</p>
 <p>mastodon 上引用符合 webmention
@@ -86,9 +175,7 @@ href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
                 <description>new keyboard</description>
                 <content:encoded><![CDATA[
                 
-<header id="title-block-header">
-<h1 class="title">new keyboard</h1>
-</header>
+
 
 <p>the first blog post from my new keyboard</p>
 
@@ -104,9 +191,7 @@ href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
                 <description>想法</description>
                 <content:encoded><![CDATA[
                 
-<header id="title-block-header">
-<h1 class="title">想法</h1>
-</header>
+
 
 <p>能让想了以后做希望自己做的事情的</p>
 
@@ -122,9 +207,7 @@ href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
                 <description>社交媒体</description>
                 <content:encoded><![CDATA[
                 
-<header id="title-block-header">
-<h1 class="title">社交媒体</h1>
-</header>
+
 
 <p>社交媒体这个词根本不恰当，是不是那些记者只知道抄推特，推特对他们就是媒体，他们作为记者有发言权，所以推特对所有人就都是媒体?</p>
 
@@ -140,9 +223,7 @@ href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
                 <description>night walk</description>
                 <content:encoded><![CDATA[
                 
-<header id="title-block-header">
-<h1 class="title">night walk</h1>
-</header>
+
 
 <p>i walked through campus tonight to reach my goal of 10,000 steps,
 suprised by how bright it was on the street (the campus is still dark
@@ -177,9 +258,7 @@ found a familiar path very soon and i walked on it.</p>
                 <description>我的图标制作</description>
                 <content:encoded><![CDATA[
                 
-<header id="title-block-header">
-<h1 class="title">我的图标制作</h1>
-</header>
+
 
 <pre><code>&gt; convert   -background lightblue  -fill blue  -font /usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf  -pointsize 200
 -size 80x80 -gravity center  -pointsize 200  label:&#39;D&#39; caption.gif </code></pre>
@@ -197,9 +276,7 @@ found a familiar path very soon and i walked on it.</p>
                 <description>Journal 230920722</description>
                 <content:encoded><![CDATA[
                 
-<header id="title-block-header">
-<h1 class="title">Journal 230920722</h1>
-</header>
+
 
 <p>So, hi. It’s now September 20th. I just woke up, and it’s quite
 chilly as fall is approaching. I’ve only left social media for two days,
@@ -244,9 +321,7 @@ appreciated.</p>
                 <description>2023-9-10 梦</description>
                 <content:encoded><![CDATA[
                 
-<header id="title-block-header">
-<h1 class="title">2023-9-10 梦</h1>
-</header>
+
 
 <p>梦里有人唱歌，我觉得比ta更寂寞。然后演示闹鬼片段，有点教学范例的风格，笑着演示。有一段是和另一个人贴着，头突然摸不到了，只剩下布。不觉得恐怖，只是格外孤独。然后
 醒来
@@ -272,9 +347,7 @@ appreciated.</p>
                 <description>随记 2023-8-31</description>
                 <content:encoded><![CDATA[
                 
-<header id="title-block-header">
-<h1 class="title">随记 2023-8-31</h1>
-</header>
+
 
 <p>如果活着而没有这些东西，那我的快乐就是一种占有的快乐，一种拥有我的生命的快乐，一种占有我自己生命的快乐。</p>
 <p>占有我自己生命的快乐也没有所谓的精神分析批评的那么不堪。</p>
@@ -296,9 +369,7 @@ appreciated.</p>
                 <description>journal 2023-08-24</description>
                 <content:encoded><![CDATA[
                 
-<header id="title-block-header">
-<h1 class="title">journal 2023-08-24</h1>
-</header>
+
 
 <p>I’ve just got up. Everything is still quiet.</p>
 <p>I should have started with these habits back in May, especially
@@ -334,9 +405,7 @@ same.</p>
                 <description>周记 8-7 ~ 8-13</description>
                 <content:encoded><![CDATA[
                 
-<header id="title-block-header">
-<h1 class="title">周记 8-7 ~ 8-13</h1>
-</header>
+
 
 <h1 id="周记">周记</h1>
 <p>上周也发生了很多事~~</p>
@@ -370,9 +439,7 @@ habit</a>。感觉不错。我设置的习惯之一是每天至少看一会书�
                 <description>about</description>
                 <content:encoded><![CDATA[
                 
-<header id="title-block-header">
-<h1 class="title">about</h1>
-</header>
+
 
 <h2 id="近况">近况</h2>
 <p>2023-10-08</p>
@@ -420,9 +487,7 @@ href="https://www.senzoku-online.jp/solfege/rhythmn_cn/index.php">洗足池音�
                 <description>links</description>
                 <content:encoded><![CDATA[
                 
-<header id="title-block-header">
-<h1 class="title">links</h1>
-</header>
+
 
 <ul>
 <li><p><a
@@ -442,9 +507,7 @@ href="https://dbdowjfb.notion.site/df001ecaffd14a0bbf806daee38ed1e3">看到想�
                 <description>Test 2</description>
                 <content:encoded><![CDATA[
                 
-<header id="title-block-header">
-<h1 class="title">Test 2</h1>
-</header>
+
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
 convallis velit non vestibulum condimentum. Quisque turpis quam, congue
@@ -553,12 +616,10 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
                 <description>摸鱼儿</description>
                 <content:encoded><![CDATA[
                 
-<header id="title-block-header">
-<h1 class="title">摸鱼儿</h1>
-</header>
 
-<section id="宋李演" class="pm">
-<h2>宋・李演</h2>
+
+<div class="pm">
+<p>宋・李演</p>
 <p>又西风、四桥疏柳，惊蝉相对秋语。<br />
 琼荷万笠花云重，袅袅红衣如舞。<br />
 鸿北去<br />
@@ -573,7 +634,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
 怕月冷吟魂，婉冉空江暮。<br />
 明灯暗浦。<br />
 更短笛衔风，长云弄晚，天际画秋句。</p>
-</section>
+</div>
 
                 ]]>
                  </content:encoded>
