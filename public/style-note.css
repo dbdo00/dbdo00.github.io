@@ -129,7 +129,7 @@ blockquote {
   color: #606060;
 }
 code {
-  font-family:'Sarasa Mono SC', Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+  font-family: 'Sarasa Mono SC', Iosevka, Menlo, Monaco, Consolas, 'Lucida Console', monospace;
   font-size: 85%;
   margin: 0;
   hyphens: manual;
