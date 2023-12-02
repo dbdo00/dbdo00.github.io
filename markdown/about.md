@@ -7,7 +7,7 @@ publish : unlisted
 
 ## 近况 
 
-2023-10-08
+### 2023-10-08
 
 - 发现自己不知道git pull怎么工作的，只是在一直用它
 - 试着用Lazy.nvim给nvim安装插件。其实是会用的第一个nvim插件管理器
@@ -21,7 +21,7 @@ publish : unlisted
     - 没有标题构建会出问题。要解决
     - 标题写在元数据里
 
-`中间的某一天`
+### `中间的某一天`
 
 - [洗足池音乐网校](https://www.senzoku-online.jp/solfege/rhythmn_cn/index.php) 在这里做节奏阅读练习
 - 看医生
@@ -29,7 +29,7 @@ publish : unlisted
 
 
 
-2023-10-02
+### 2023-10-02
 
 - 最近喜欢把心情写在这里。
 

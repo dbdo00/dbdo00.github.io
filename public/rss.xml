@@ -12,6 +12,31 @@
      <atom:link href="http://dbdo.website" rel="self" type="application/rss+xml" />
     
             <item>
+                <title>pandoc</title>
+                <link>https://dbdo.website/post/pandoc.html</link>
+                <description>pandoc</description>
+                <content:encoded><![CDATA[
+                
+
+
+<p>模板里有标题时，输出也不包含标题: <code>-V title:""</code></p>
+<p>在 subrocess 里面用要注意</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>flags<span class="op">=</span>[<span class="st">&#39;--mathml&#39;</span>,<span class="st">&#39;-V&#39;</span>,<span class="st">&#39;title:&#39;</span>]</span></code></pre></div>
+<p>而不是<code>'title:""'</code>. 否则pandoc
+会把标题都当成两个引号”“.</p>
+<p>完整写法是:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pandoc_process <span class="op">=</span> subprocess.Popen([<span class="st">&#39;pandoc&#39;</span>, flags,<span class="st">&#39;--template=web_blank_pandoctemp.html&#39;</span>], stdin<span class="op">=</span>subprocess.PIPE, stdout<span class="op">=</span>subprocess.PIPE, stderr<span class="op">=</span>subprocess.PIPE, text<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>stdout, stderr <span class="op">=</span> pandoc_process.communicate(<span class="bu">input</span><span class="op">=</span>content)</span></code></pre></div>
+
+                ]]>
+                 </content:encoded>
+                <pubDate>Sun, 19 Nov 2023 05:03:49 GMT</pubDate>
+                <guid>https://dbdo.website/post/pandoc.html</guid>
+            </item>
+            
+            <item>
                 <title>sl2</title>
                 <link>https://dbdo.website/post/sl2.html</link>
                 <description>sl2</description>
@@ -492,7 +517,7 @@ href="https://www.senzoku-online.jp/solfege/rhythmn_cn/index.php">洗足池音�
 <ul>
 <li><p><a
 href="https://dbdowjfb.notion.site/df001ecaffd14a0bbf806daee38ed1e3">看到想分享的链接</a></p></li>
-<li><p><a href="/logseq/index.html">我的wiki</a></p></li>
+<li><p><a href="/logseq/#/all-pages">我的wiki</a></p></li>
 </ul>
 
                 ]]>
