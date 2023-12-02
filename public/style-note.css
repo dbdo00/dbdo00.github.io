@@ -173,6 +173,10 @@ padding-left: 8px;
 justify-content: flex-start;
 flex-wrap: wrap;
 border-top: 1.5px solid #e5e5e5;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+
 }
 
 footer ul{
