@@ -20,7 +20,7 @@
         min-height: 0vw;
         max-width: 60rem;
         margin: 0 auto;
-        padding: 1.2rem;
+        padding: 2rem;
         font-size: var(--font-size, 16px);
     }
     
@@ -156,19 +156,13 @@ padding-left: 0;
 }
 
 footer {
-/*! flex:2 ; */
 border-top: 1px solid #eee;
 font-size: 12px;
-padding-bottom: 6.9px;
-padding-top: 8.3px;
-/*! position: absolute; */
+padding: 0 1rem 4rem 1rem;
 bottom: 0;
-/*! width: 100%; */
-/*! text-align: center; */
 clear: both;
-/*! background-color: #e6e6fa; */
 display: flex;
-/*! align-items: baseline; */
+align-items: center;
 padding-left: 8px;
 justify-content: flex-start;
 flex-wrap: wrap;
