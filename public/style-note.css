@@ -82,8 +82,12 @@ h4 {
     align-items: center;
     flex-direction: column;
     text-align: left;
+    
 }
 
+.blog {
+  padding: 1rem;
+}
 
 .article-section i{
     text-align: left;
@@ -113,8 +117,11 @@ h4 {
 
 .blog p {
   line-height: 1.8;
-  /* max-width: 80ch; */
+  hyphens: auto;
+  overflow-wrap: break-word;
+  text-rendering: optimizeLegibility;
   margin: 1.5rem 0;
+  
 }
 
 ul {
@@ -185,6 +192,7 @@ padding-left: 0;
       height: auto;
       max-width: 100%;
     }
+
 
 footer a {
   color: var(--footer-link-color, #00c);
