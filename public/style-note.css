@@ -11,19 +11,20 @@
 	padding : 0;
 	margin: 0;
 }
-    body{
-	    font-family: BlinkMacSystemFont, Segoe UI, sans-serif, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-        background: var(--background-color);
-        color: var(--font-color);
-        display: flex;
-        flex-direction: column;
-        min-height: 0vw;
-        max-width: 60rem;
-        margin: 0 auto;
-        padding: 1rem; 
-        font-size: var(--font-size, 16px);
-    }
-    
+
+body{
+  font-family: BlinkMacSystemFont, Segoe UI, sans-serif, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  background: var(--background-color);
+  color: var(--font-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 0vw;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1rem;  
+  font-size: var(--font-size, 17px);
+}
+
     nav[role="banner"] {
 	    padding: 1.8rem 0;
         border-bottom: 1px solid var(--border-bottom-color, #e5e5e5);
@@ -89,20 +90,22 @@ h4 {
   padding: 1rem;
 }
 
+
+.article-section {
+  font-size: clamp(0.8em, 1.2rem + 0.5vw, 1.8rem);
+}
 .article-section i{
     text-align: left;
     display: flex;
-    flex-shrink: 2;
-    font-size: calc(14px + 1vw);
+    flex-shrink: 2; 
 }
 
 .article-section a{
   color: var(--font-color);
-    text-decoration: none;
-    display: flex;
-    flex-grow: 1;
-    font-size: calc(10px + 1vw);
+  text-decoration: none;
+  text-justify: justify;
 }
+
 
 
 .article-section li {
