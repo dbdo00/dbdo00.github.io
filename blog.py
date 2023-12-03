@@ -215,7 +215,12 @@ def render_html_for_each_post(template_name, md_dir, post_dir):
                 write_html(output=output, post_dir=post_dir,title=  name_a_file(f'{md_dir}/{md}')) 
 
                 # publish images in the markdown file to the post directory
+                # concatenate the directory to specify the path of markdown file 
+                convert_path = lambda x: os.path.basename(x)
                 pubimg = linked_images(markdown_content)
+                pubimg = [
+                    f'{md_dir}/{convert_path(img)}' for img in pubimg
+                    ]
                 publish_images(pubimg, post_dir)
             elif visibility == 'draft':
                 post_file = f'{post_dir}/{name_a_file(f"{md_dir}/{file}")}'
@@ -470,13 +475,21 @@ def publish_images(list_of_images : list, public_dir : str) -> None:
     publish images in the markdown file to the post directory
     """
     if 'assets' not in os.listdir(public_dir):
-        os.system(f'mkdir {public_dir}/assets')
+        print('assets not in public_dir')
+        os.mkdir(f'{public_dir}/assets')
 
     for image in list_of_images:
         if image in os.listdir(public_dir):
             continue
         else:
-            os.system(f'cp {image} {public_dir}')
+            # if the operating system is windows, use powershell to copy the image
+            # if the operating system is linux, use cp to copy the image
+            if os.name == 'nt':
+                os.system(f'powershell -c " cp {image} {public_dir}/assets" ')
+            elif os.name == 'posix':
+                os.system(f'cp {image} {public_dir}/assets')
+            else:
+                raise OSError('Unsupported operating system')
 
 def delete_post(post_path : str) -> None:
     """

@@ -177,7 +177,13 @@ footer ul{
 padding-left: 0;
 }
 
-
+ img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
 
 footer a {
   color: var(--footer-link-color, #00c);
