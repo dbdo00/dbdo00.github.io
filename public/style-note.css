@@ -94,6 +94,7 @@ h4 {
 .article-section a {
   hyphens: auto;
   overflow-wrap: break-word;
+  flex-grow: 1;
 }
 .article-section i{
     text-align: left;
