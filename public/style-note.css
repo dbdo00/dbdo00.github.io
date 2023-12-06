@@ -20,8 +20,8 @@ body{
   flex-direction: column;
   min-height: 0vw;
   max-width: 60rem;
-  margin: 0 auto;
-  padding: 1rem;  
+  padding: 2vw ;
+  margin: 0 auto; 
   font-size: var(--font-size, 17px);
 }
 
@@ -91,8 +91,9 @@ h4 {
 }
 
 
-.article-section {
-  font-size: clamp(0.8em, 1.2rem + 0.5vw, 1.8rem);
+.article-section a {
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
 .article-section i{
     text-align: left;
@@ -152,7 +153,7 @@ code {
 pre {
     background: #eee none repeat scroll 0 0;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: inherit;
     line-height: 1.5;
     color: #000;
 overflow: scroll;
@@ -207,10 +208,6 @@ footer a {
   text-decoration: underline;
   }
   
-  footer p {
-    padding: 0 10px 0 0;
-    line-height: 1.0;
-  }
  
 
 
