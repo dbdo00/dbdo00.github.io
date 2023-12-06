@@ -95,6 +95,7 @@ h4 {
   hyphens: auto;
   overflow-wrap: break-word;
   flex-grow: 1;
+  max-width: 50%;
 }
 .article-section i{
     text-align: left;
@@ -162,7 +163,8 @@ overflow: scroll;
 
 
 .article-section span {
-flex: 0 0 calc(130px + 10vw);
+flex-grow: 1;
+max-width: 50%;
 }
 
 .article-section > ul {
