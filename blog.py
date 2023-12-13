@@ -110,6 +110,9 @@ def file_ctime(filename):
     return get_file_date(filename)
 
 def get_file_date(file_path):
+    """
+    TODO: error occurs when the file is not committed
+    """
     print("file_path:", file_path)
     try:
         # 运行 git log 命令获取文件的最后修改日期
