@@ -12,6 +12,34 @@
      <atom:link href="http://dbdo.website" rel="self" type="application/rss+xml" />
     
             <item>
+                <title>links 2023-12-12</title>
+                <link>https://dbdo.website/post/links-2023-12-12.html</link>
+                <description>links 2023-12-12</description>
+                <content:encoded><![CDATA[
+                
+
+
+<p><a href="https://toobnix.org/w/vV7qtK176DVE6RLXrZ18Ee">EmacsConf
+2023: Using Koutline for stream of thought journaling - Matthew
+Jorgensen (PlasmaStrike)</a></p>
+<p><a href="https://toobnix.org/w/1t3hLzUmaNqtjE9aQXFbad">EmacsConf 2023
+Q&amp;A: Bringing joy to Scheme programming</a></p>
+<p><a href="https://toobnix.org/w/4DeRkvJyKFdCBLWnHtsZW2">EmacsConf
+2023: Windows into Freedom - Corwin Brust</a></p>
+<p><a
+href="https://toobnix.org/w/4moUfTEo2G8we5JuLGArWx">https://toobnix.org/w/4moUfTEo2G8we5JuLGArWx</a></p>
+<p><a
+href="EmacsConf%202023:%20REPLs%20in%20strange%20places:%20Lua,%20LaTeX,%20LPeg,%20LPegRex,%20TikZ%20-%20Eduardo%20Ochs">EmacsConf
+2023: REPLs in strange places: Lua, LaTeX, LPeg, LPegRex, TikZ - Eduardo
+Ochs</a></p>
+
+                ]]>
+                 </content:encoded>
+                <pubDate>Wed, 13 Dec 2023 00:26:39 GMT</pubDate>
+                <guid>https://dbdo.website/post/links-2023-12-12.html</guid>
+            </item>
+            
+            <item>
                 <title>pandoc</title>
                 <link>https://dbdo.website/post/pandoc.html</link>
                 <description>pandoc</description>
