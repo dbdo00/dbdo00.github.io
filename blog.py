@@ -328,25 +328,28 @@ def create_rss(data_json, rss_path):
         # iterate through the sorted list of posts
         for post in posts:
             # append posts info to the rss_content between <channel> and </channel>
-            # create a new item tag
-            with open(post['md_path'], 'r') as file:
-                content = file.read()
-            
-            content = pandoc(content, flags=['--mathml','-V','title:'])
-            item = f'''
-            <item>
-                <title>{post['title']}</title>
-                <link>{site_url}/{post['html_path']}</link>
-                <description>{post['title']}</description>
-                <content:encoded><![CDATA[
-                {content}
-                ]]>
-                 </content:encoded>
-                <pubDate>{rss_time(post['ctime'])}</pubDate>
-                <guid>{site_url}/{post['html_path']}</guid>
-            </item>
-            '''
-            items += item
+            if post['publish'] and post['publish'] in {"draft" , "unlisted"}:
+                continue
+            else:
+                # create a new item tag
+                with open(post['md_path'], 'r') as file:
+                    content = file.read()
+
+                    content = pandoc(content, flags=['--mathml','-V','title:'])
+                    item = f'''
+                    <item>
+                        <title>{post['title']}</title>
+                        <link>{site_url}/{post['html_path']}</link>
+                        <description>{post['title']}</description>
+                        <content:encoded><![CDATA[
+                        {content}
+                        ]]>
+                         </content:encoded>
+                        <pubDate>{rss_time(post['ctime'])}</pubDate>
+                        <guid>{site_url}/{post['html_path']}</guid>
+                    </item>
+                    '''
+                items += item
     rss_content = rss_content.replace('@@@', f'{items}\n') 
     with open(rss_path, 'w') as file:
         file.write(rss_content)

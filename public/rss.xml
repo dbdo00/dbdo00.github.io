@@ -11,12 +11,12 @@
     <title>Dbdo 的网站</title>
      <atom:link href="http://dbdo.website" rel="self" type="application/rss+xml" />
     
-            <item>
-                <title>links 2023-12-12</title>
-                <link>https://dbdo.website/post/links-2023-12-12.html</link>
-                <description>links 2023-12-12</description>
-                <content:encoded><![CDATA[
-                
+                    <item>
+                        <title>links 2023-12-12</title>
+                        <link>https://dbdo.website/post/links-2023-12-12.html</link>
+                        <description>links 2023-12-12</description>
+                        <content:encoded><![CDATA[
+                        
 
 
 <p><a href="https://toobnix.org/w/vV7qtK176DVE6RLXrZ18Ee">EmacsConf
@@ -28,103 +28,22 @@ Q&amp;A: Bringing joy to Scheme programming</a></p>
 2023: Windows into Freedom - Corwin Brust</a></p>
 <p><a
 href="https://toobnix.org/w/4moUfTEo2G8we5JuLGArWx">https://toobnix.org/w/4moUfTEo2G8we5JuLGArWx</a></p>
-<p><a
-href="EmacsConf%202023:%20REPLs%20in%20strange%20places:%20Lua,%20LaTeX,%20LPeg,%20LPegRex,%20TikZ%20-%20Eduardo%20Ochs">EmacsConf
-2023: REPLs in strange places: Lua, LaTeX, LPeg, LPegRex, TikZ - Eduardo
+<p><a href="https://www.youtube.com/watch?v=lGjfzfC1CH0">EmacsConf 2023:
+REPLs in strange places: Lua, LaTeX, LPeg, LPegRex, TikZ - Eduardo
 Ochs</a></p>
 
-                ]]>
-                 </content:encoded>
-                <pubDate>Wed, 13 Dec 2023 00:26:39 GMT</pubDate>
-                <guid>https://dbdo.website/post/links-2023-12-12.html</guid>
-            </item>
-            
-            <item>
-                <title>pandoc</title>
-                <link>https://dbdo.website/post/pandoc.html</link>
-                <description>pandoc</description>
-                <content:encoded><![CDATA[
-                
-
-
-<p>模板里有标题时，输出也不包含标题: <code>-V title:""</code></p>
-<p>在 subrocess 里面用要注意</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>flags<span class="op">=</span>[<span class="st">&#39;--mathml&#39;</span>,<span class="st">&#39;-V&#39;</span>,<span class="st">&#39;title:&#39;</span>]</span></code></pre></div>
-<p>而不是<code>'title:""'</code>. 否则pandoc
-会把标题都当成两个引号”“.</p>
-<p>完整写法是:</p>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pandoc_process <span class="op">=</span> subprocess.Popen([<span class="st">&#39;pandoc&#39;</span>, flags,<span class="st">&#39;--template=web_blank_pandoctemp.html&#39;</span>], stdin<span class="op">=</span>subprocess.PIPE, stdout<span class="op">=</span>subprocess.PIPE, stderr<span class="op">=</span>subprocess.PIPE, text<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>stdout, stderr <span class="op">=</span> pandoc_process.communicate(<span class="bu">input</span><span class="op">=</span>content)</span></code></pre></div>
-
-                ]]>
-                 </content:encoded>
-                <pubDate>Sun, 19 Nov 2023 05:03:49 GMT</pubDate>
-                <guid>https://dbdo.website/post/pandoc.html</guid>
-            </item>
-            
-            <item>
-                <title>sl2</title>
-                <link>https://dbdo.website/post/sl2.html</link>
-                <description>sl2</description>
-                <content:encoded><![CDATA[
-                
-
-
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><msub><mi>l</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">sl_2</annotation></semantics></math>
-has a unique irreducible representation of dimension
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>.
-by <em>Jordan preservation theorem</em>, the representation of the group
-element</p>
-<pre class="math"><code>H =\begin{bmatrix} 1 &amp; 0\\ 0 &amp; -1 \\ \end{bmatrix}</code></pre>
-<p>is diagonalizable.</p>
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mi>n</mi><mo>,</mo><mi>n</mi><mo>−</mo><mn>2</mn><mo>,</mo><mi>n</mi><mo>−</mo><mn>4</mn><mo>,</mo><mi>…</mi><mo>,</mo><mi>n</mi><mo>−</mo><mn>2</mn><mi>k</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{n, n-2, n-4, \ldots, n-2 k\}</annotation></semantics></math>
-all eigenvalues</p>
-<p>spaces spanned by
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>Y</mi><mi>k</mi></msup><mi>v</mi></mrow><annotation encoding="application/x-tex">Y^k v</annotation></semantics></math>
-are irreducible
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⟹</mo><annotation encoding="application/x-tex">\implies</annotation></semantics></math>
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>,
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
-,
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Y</mi><annotation encoding="application/x-tex">Y</annotation></semantics></math>
-all invariant in the space.</p>
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n+1</annotation></semantics></math></p>
-
-                ]]>
-                 </content:encoded>
-                <pubDate>Sat, 18 Nov 2023 22:40:00 GMT</pubDate>
-                <guid>https://dbdo.website/post/sl2.html</guid>
-            </item>
-            
-            <item>
-                <title>limits</title>
-                <link>https://dbdo.website/post/limits.html</link>
-                <description>limits</description>
-                <content:encoded><![CDATA[
-                
-
-
-<p>The ideas in the mind are not produced by rationalities, but by
-habitual thinking and beliefs.</p>
-<p>Do things we don’t normally do. it’s not impossible. it can be
-easy.</p>
-<p>Often we are afraid to fail and believe that the way we live must be
-unchanging. why is this?</p>
-
-                ]]>
-                 </content:encoded>
-                <pubDate>Sat, 18 Nov 2023 19:51:27 GMT</pubDate>
-                <guid>https://dbdo.website/post/limits.html</guid>
-            </item>
-            
-            <item>
-                <title>通过写邮件评论</title>
-                <link>https://dbdo.website/post/通过写邮件评论.html</link>
-                <description>通过写邮件评论</description>
-                <content:encoded><![CDATA[
-                
+                        ]]>
+                         </content:encoded>
+                        <pubDate>Wed, 13 Dec 2023 00:26:39 GMT</pubDate>
+                        <guid>https://dbdo.website/post/links-2023-12-12.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>通过写邮件评论</title>
+                        <link>https://dbdo.website/post/通过写邮件评论.html</link>
+                        <description>通过写邮件评论</description>
+                        <content:encoded><![CDATA[
+                        
 
 
 <p><a href="https://testmail.app">testmail.app</a>
@@ -132,18 +51,18 @@ unchanging. why is this?</p>
 <p>一个账户有无限个邮箱地址。</p>
 <p>能不能给每个文章分配一个邮箱地址，允许通过给邮箱写信发评论？</p>
 
-                ]]>
-                 </content:encoded>
-                <pubDate>Fri, 17 Nov 2023 01:50:24 GMT</pubDate>
-                <guid>https://dbdo.website/post/通过写邮件评论.html</guid>
-            </item>
-            
-            <item>
-                <title>free programming courses</title>
-                <link>https://dbdo.website/post/free-programming-courses.html</link>
-                <description>free programming courses</description>
-                <content:encoded><![CDATA[
-                
+                        ]]>
+                         </content:encoded>
+                        <pubDate>Fri, 17 Nov 2023 01:50:24 GMT</pubDate>
+                        <guid>https://dbdo.website/post/通过写邮件评论.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>free programming courses</title>
+                        <link>https://dbdo.website/post/free-programming-courses.html</link>
+                        <description>free programming courses</description>
+                        <content:encoded><![CDATA[
+                        
 
 
 <p>学生免费60小时</p>
@@ -151,35 +70,35 @@ unchanging. why is this?</p>
 href="https://frontendmasters.com/welcome/github-student-developers/">frontendmasters.</a><br />
 如果对前端不感兴趣的话也有用js做别的事情（arduino，虚拟机）的课</p>
 
-                ]]>
-                 </content:encoded>
-                <pubDate>Fri, 17 Nov 2023 01:50:24 GMT</pubDate>
-                <guid>https://dbdo.website/post/free-programming-courses.html</guid>
-            </item>
-            
-            <item>
-                <title>从 mastodon 发 webmention</title>
-                <link>https://dbdo.website/post/从-mastodon-发-webmention.html</link>
-                <description>从 mastodon 发 webmention</description>
-                <content:encoded><![CDATA[
-                
+                        ]]>
+                         </content:encoded>
+                        <pubDate>Fri, 17 Nov 2023 01:50:24 GMT</pubDate>
+                        <guid>https://dbdo.website/post/free-programming-courses.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>从 mastodon 发 webmention</title>
+                        <link>https://dbdo.website/post/从-mastodon-发-webmention.html</link>
+                        <description>从 mastodon 发 webmention</description>
+                        <content:encoded><![CDATA[
+                        
 
 
 <p>应该可以（也许，通过改 HTTP header） 让 mastodon 认为我们是一个
 activitypub 服务器。 这是收的一方要实现的。</p>
 
-                ]]>
-                 </content:encoded>
-                <pubDate>Tue, 14 Nov 2023 17:28:46 GMT</pubDate>
-                <guid>https://dbdo.website/post/从-mastodon-发-webmention.html</guid>
-            </item>
-            
-            <item>
-                <title>webmention 体验</title>
-                <link>https://dbdo.website/post/webmention-体验.html</link>
-                <description>webmention 体验</description>
-                <content:encoded><![CDATA[
-                
+                        ]]>
+                         </content:encoded>
+                        <pubDate>Tue, 14 Nov 2023 17:28:46 GMT</pubDate>
+                        <guid>https://dbdo.website/post/从-mastodon-发-webmention.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>webmention 体验</title>
+                        <link>https://dbdo.website/post/webmention-体验.html</link>
+                        <description>webmention 体验</description>
+                        <content:encoded><![CDATA[
+                        
 
 
 <p>试图理解webmention协议已经4个月了。借口是自己本来就不专业。刚才发现，现实是，webmention是一种过于理想化的东西，它假设，发的一边和接的一边都遵守（这样小众的）协议，不现实。</p>
@@ -207,75 +126,75 @@ webmention。收的对方不用协议以外的办法迁就自己。</p>
 <p>为什么要发推特，上面有别人，或者发得更方便。还是自己想要的太多了，或者发到GitHub
 pages
 上太不直接方便了。想要方便和自主结果就会发现自己浪费太多时间，或者什么也做不好。有这样的看法也是发出一篇看起来不有趣想起来不愉快，写出来清空想法可以治愈（作者自己）的文章的缘故。</p>
-<aside id="footnotes" class="footnotes footnotes-end-of-document"
+<section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
 <ol>
 <li id="fn1"><p>发送请求已经提高使用的门槛，至少更麻烦了<a
 href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</aside>
+</section>
 
-                ]]>
-                 </content:encoded>
-                <pubDate>Sun, 12 Nov 2023 09:09:14 GMT</pubDate>
-                <guid>https://dbdo.website/post/webmention-体验.html</guid>
-            </item>
-            
-            <item>
-                <title>new keyboard</title>
-                <link>https://dbdo.website/post/new-keyboard.html</link>
-                <description>new keyboard</description>
-                <content:encoded><![CDATA[
-                
+                        ]]>
+                         </content:encoded>
+                        <pubDate>Sun, 12 Nov 2023 09:09:14 GMT</pubDate>
+                        <guid>https://dbdo.website/post/webmention-体验.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>new keyboard</title>
+                        <link>https://dbdo.website/post/new-keyboard.html</link>
+                        <description>new keyboard</description>
+                        <content:encoded><![CDATA[
+                        
 
 
 <p>the first blog post from my new keyboard</p>
 
-                ]]>
-                 </content:encoded>
-                <pubDate>Sat, 07 Oct 2023 20:38:46 GMT</pubDate>
-                <guid>https://dbdo.website/post/new-keyboard.html</guid>
-            </item>
-            
-            <item>
-                <title>想法</title>
-                <link>https://dbdo.website/post/想法.html</link>
-                <description>想法</description>
-                <content:encoded><![CDATA[
-                
+                        ]]>
+                         </content:encoded>
+                        <pubDate>Sat, 07 Oct 2023 20:38:46 GMT</pubDate>
+                        <guid>https://dbdo.website/post/new-keyboard.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>想法</title>
+                        <link>https://dbdo.website/post/想法.html</link>
+                        <description>想法</description>
+                        <content:encoded><![CDATA[
+                        
 
 
 <p>能让想了以后做希望自己做的事情的</p>
 
-                ]]>
-                 </content:encoded>
-                <pubDate>Thu, 05 Oct 2023 14:58:21 GMT</pubDate>
-                <guid>https://dbdo.website/post/想法.html</guid>
-            </item>
-            
-            <item>
-                <title>社交媒体</title>
-                <link>https://dbdo.website/post/社交媒体.html</link>
-                <description>社交媒体</description>
-                <content:encoded><![CDATA[
-                
+                        ]]>
+                         </content:encoded>
+                        <pubDate>Thu, 05 Oct 2023 14:58:21 GMT</pubDate>
+                        <guid>https://dbdo.website/post/想法.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>社交媒体</title>
+                        <link>https://dbdo.website/post/社交媒体.html</link>
+                        <description>社交媒体</description>
+                        <content:encoded><![CDATA[
+                        
 
 
 <p>社交媒体这个词根本不恰当，是不是那些记者只知道抄推特，推特对他们就是媒体，他们作为记者有发言权，所以推特对所有人就都是媒体?</p>
 
-                ]]>
-                 </content:encoded>
-                <pubDate>Sun, 01 Oct 2023 05:31:43 GMT</pubDate>
-                <guid>https://dbdo.website/post/社交媒体.html</guid>
-            </item>
-            
-            <item>
-                <title>night walk</title>
-                <link>https://dbdo.website/post/night-walk.html</link>
-                <description>night walk</description>
-                <content:encoded><![CDATA[
-                
+                        ]]>
+                         </content:encoded>
+                        <pubDate>Sun, 01 Oct 2023 05:31:43 GMT</pubDate>
+                        <guid>https://dbdo.website/post/社交媒体.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>night walk</title>
+                        <link>https://dbdo.website/post/night-walk.html</link>
+                        <description>night walk</description>
+                        <content:encoded><![CDATA[
+                        
 
 
 <p>i walked through campus tonight to reach my goal of 10,000 steps,
@@ -299,36 +218,36 @@ needed some time to find my way back to the paths i had walked more
 often and had become more familiar with. but this wasn’t so hard. i
 found a familiar path very soon and i walked on it.</p>
 
-                ]]>
-                 </content:encoded>
-                <pubDate>Sun, 01 Oct 2023 04:20:47 GMT</pubDate>
-                <guid>https://dbdo.website/post/night-walk.html</guid>
-            </item>
-            
-            <item>
-                <title>我的图标制作</title>
-                <link>https://dbdo.website/post/我的图标制作.html</link>
-                <description>我的图标制作</description>
-                <content:encoded><![CDATA[
-                
+                        ]]>
+                         </content:encoded>
+                        <pubDate>Sun, 01 Oct 2023 04:20:47 GMT</pubDate>
+                        <guid>https://dbdo.website/post/night-walk.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>我的图标制作</title>
+                        <link>https://dbdo.website/post/我的图标制作.html</link>
+                        <description>我的图标制作</description>
+                        <content:encoded><![CDATA[
+                        
 
 
 <pre><code>&gt; convert   -background lightblue  -fill blue  -font /usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf  -pointsize 200
 -size 80x80 -gravity center  -pointsize 200  label:&#39;D&#39; caption.gif </code></pre>
 <p>使用 ctrl + F5 去除缓存看dbdo.website 的图标.</p>
 
-                ]]>
-                 </content:encoded>
-                <pubDate>Sat, 30 Sep 2023 03:59:27 GMT</pubDate>
-                <guid>https://dbdo.website/post/我的图标制作.html</guid>
-            </item>
-            
-            <item>
-                <title>Journal 230920722</title>
-                <link>https://dbdo.website/post/Journal-230920722.html</link>
-                <description>Journal 230920722</description>
-                <content:encoded><![CDATA[
-                
+                        ]]>
+                         </content:encoded>
+                        <pubDate>Sat, 30 Sep 2023 03:59:27 GMT</pubDate>
+                        <guid>https://dbdo.website/post/我的图标制作.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>Journal 230920722</title>
+                        <link>https://dbdo.website/post/Journal-230920722.html</link>
+                        <description>Journal 230920722</description>
+                        <content:encoded><![CDATA[
+                        
 
 
 <p>So, hi. It’s now September 20th. I just woke up, and it’s quite
@@ -362,18 +281,18 @@ now. I perhaps will be able to do this in the future.</p>
 out via email or other means. Your input is welcomed and
 appreciated.</p>
 
-                ]]>
-                 </content:encoded>
-                <pubDate>Wed, 20 Sep 2023 11:23:51 GMT</pubDate>
-                <guid>https://dbdo.website/post/Journal-230920722.html</guid>
-            </item>
-            
-            <item>
-                <title>2023-9-10 梦</title>
-                <link>https://dbdo.website/post/2023-9-10-梦.html</link>
-                <description>2023-9-10 梦</description>
-                <content:encoded><![CDATA[
-                
+                        ]]>
+                         </content:encoded>
+                        <pubDate>Wed, 20 Sep 2023 11:23:51 GMT</pubDate>
+                        <guid>https://dbdo.website/post/Journal-230920722.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>2023-9-10 梦</title>
+                        <link>https://dbdo.website/post/2023-9-10-梦.html</link>
+                        <description>2023-9-10 梦</description>
+                        <content:encoded><![CDATA[
+                        
 
 
 <p>梦里有人唱歌，我觉得比ta更寂寞。然后演示闹鬼片段，有点教学范例的风格，笑着演示。有一段是和另一个人贴着，头突然摸不到了，只剩下布。不觉得恐怖，只是格外孤独。然后
@@ -388,18 +307,18 @@ appreciated.</p>
 <figcaption aria-hidden="true">Alt text</figcaption>
 </figure>
 
-                ]]>
-                 </content:encoded>
-                <pubDate>Sun, 10 Sep 2023 04:30:19 GMT</pubDate>
-                <guid>https://dbdo.website/post/2023-9-10-梦.html</guid>
-            </item>
-            
-            <item>
-                <title>随记 2023-8-31</title>
-                <link>https://dbdo.website/post/随记-2023-8-31.html</link>
-                <description>随记 2023-8-31</description>
-                <content:encoded><![CDATA[
-                
+                        ]]>
+                         </content:encoded>
+                        <pubDate>Sun, 10 Sep 2023 04:30:19 GMT</pubDate>
+                        <guid>https://dbdo.website/post/2023-9-10-梦.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>随记 2023-8-31</title>
+                        <link>https://dbdo.website/post/随记-2023-8-31.html</link>
+                        <description>随记 2023-8-31</description>
+                        <content:encoded><![CDATA[
+                        
 
 
 <p>如果活着而没有这些东西，那我的快乐就是一种占有的快乐，一种拥有我的生命的快乐，一种占有我自己生命的快乐。</p>
@@ -410,18 +329,18 @@ appreciated.</p>
 <p>这个选项只是一种妄想。在整个半年甚至一年中我是在这种妄想中度过的。也是一种基于对别人的误读，或者说对一种想象的误读，对自身想象的误解。</p>
 <p>有一種類似於“認知酸雨”一类說法。這種价值观就是一種認知上的酸雨。它會讓人心智不清楚。</p>
 
-                ]]>
-                 </content:encoded>
-                <pubDate>Thu, 31 Aug 2023 22:26:40 GMT</pubDate>
-                <guid>https://dbdo.website/post/随记-2023-8-31.html</guid>
-            </item>
-            
-            <item>
-                <title>journal 2023-08-24</title>
-                <link>https://dbdo.website/post/journal-2023-08-24.html</link>
-                <description>journal 2023-08-24</description>
-                <content:encoded><![CDATA[
-                
+                        ]]>
+                         </content:encoded>
+                        <pubDate>Thu, 31 Aug 2023 22:26:40 GMT</pubDate>
+                        <guid>https://dbdo.website/post/随记-2023-8-31.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>journal 2023-08-24</title>
+                        <link>https://dbdo.website/post/journal-2023-08-24.html</link>
+                        <description>journal 2023-08-24</description>
+                        <content:encoded><![CDATA[
+                        
 
 
 <p>I’ve just got up. Everything is still quiet.</p>
@@ -446,18 +365,18 @@ but in the end we get what we want. Waiting also has its advantages:
 priorities, optimising the use of limited resources… Life is really the
 same.</p>
 
-                ]]>
-                 </content:encoded>
-                <pubDate>Thu, 24 Aug 2023 15:46:35 GMT</pubDate>
-                <guid>https://dbdo.website/post/journal-2023-08-24.html</guid>
-            </item>
-            
-            <item>
-                <title>周记 8-7 ~ 8-13</title>
-                <link>https://dbdo.website/post/周记-8-7-~-8-13.html</link>
-                <description>周记 8-7 ~ 8-13</description>
-                <content:encoded><![CDATA[
-                
+                        ]]>
+                         </content:encoded>
+                        <pubDate>Thu, 24 Aug 2023 15:46:35 GMT</pubDate>
+                        <guid>https://dbdo.website/post/journal-2023-08-24.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>周记 8-7 ~ 8-13</title>
+                        <link>https://dbdo.website/post/周记-8-7-~-8-13.html</link>
+                        <description>周记 8-7 ~ 8-13</description>
+                        <content:encoded><![CDATA[
+                        
 
 
 <h1 id="周记">周记</h1>
@@ -480,86 +399,18 @@ habit</a>。感觉不错。我设置的习惯之一是每天至少看一会书�
 做操几个选项. 客观地说，感觉还好。</p>
 <p>任何尝试应该在一段时间以后再评价，回顾太频繁反而不好。评价方式应该客观，只要有好的地方就承认，不一定要让所有方面都好起来。</p>
 
-                ]]>
-                 </content:encoded>
-                <pubDate>Tue, 15 Aug 2023 16:19:31 GMT</pubDate>
-                <guid>https://dbdo.website/post/周记-8-7-~-8-13.html</guid>
-            </item>
-            
-            <item>
-                <title>about</title>
-                <link>https://dbdo.website/post/about.html</link>
-                <description>about</description>
-                <content:encoded><![CDATA[
-                
-
-
-<h2 id="近况">近况</h2>
-<h3 id="section">2023-10-08</h3>
-<ul>
-<li>发现自己不知道git pull怎么工作的，只是在一直用它</li>
-<li>试着用Lazy.nvim给nvim安装插件。其实是会用的第一个nvim插件管理器
-<ul>
-<li>装了“卡布奇诺”配色。真好看呀</li>
-</ul></li>
-<li>figma</li>
-<li>React.js 会启动react了</li>
-<li>要添加的功能
-<ul>
-<li>发布状态(允许草稿和不列出）和预览(serve)的功能</li>
-<li>图片 图片 图片 ： 插入图片的工作流</li>
-<li>“关于”页面加上最后修改日期（这个应该是最简单的)</li>
-<li>没有标题构建会出问题。要解决</li>
-<li>标题写在元数据里</li>
-</ul></li>
-</ul>
-<h3 id="中间的某一天"><code>中间的某一天</code></h3>
-<ul>
-<li><a
-href="https://www.senzoku-online.jp/solfege/rhythmn_cn/index.php">洗足池音乐网校</a>
-在这里做节奏阅读练习</li>
-<li>看医生</li>
-<li>想找点漫画或者有趣好读的书<del>看</del>听</li>
-</ul>
-<h3 id="section-1">2023-10-02</h3>
-<ul>
-<li>最近喜欢把心情写在这里。</li>
-</ul>
-<hr />
-<p>推荐Gitjournal！</p>
-
-                ]]>
-                 </content:encoded>
-                <pubDate>Mon, 07 Aug 2023 15:37:29 GMT</pubDate>
-                <guid>https://dbdo.website/post/about.html</guid>
-            </item>
-            
-            <item>
-                <title>links</title>
-                <link>https://dbdo.website/post/links.html</link>
-                <description>links</description>
-                <content:encoded><![CDATA[
-                
-
-
-<ul>
-<li><p><a
-href="https://dbdowjfb.notion.site/df001ecaffd14a0bbf806daee38ed1e3">看到想分享的链接</a></p></li>
-<li><p><a href="/logseq/#/all-pages">我的wiki</a></p></li>
-</ul>
-
-                ]]>
-                 </content:encoded>
-                <pubDate>Mon, 07 Aug 2023 15:37:29 GMT</pubDate>
-                <guid>https://dbdo.website/post/links.html</guid>
-            </item>
-            
-            <item>
-                <title>Test 2</title>
-                <link>https://dbdo.website/post/Test-2.html</link>
-                <description>Test 2</description>
-                <content:encoded><![CDATA[
-                
+                        ]]>
+                         </content:encoded>
+                        <pubDate>Tue, 15 Aug 2023 16:19:31 GMT</pubDate>
+                        <guid>https://dbdo.website/post/周记-8-7-~-8-13.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>Test 2</title>
+                        <link>https://dbdo.website/post/Test-2.html</link>
+                        <description>Test 2</description>
+                        <content:encoded><![CDATA[
+                        
 
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
@@ -665,18 +516,18 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
 <figcaption aria-hidden="true">Alt text</figcaption>
 </figure>
 
-                ]]>
-                 </content:encoded>
-                <pubDate>Mon, 07 Aug 2023 15:37:29 GMT</pubDate>
-                <guid>https://dbdo.website/post/Test-2.html</guid>
-            </item>
-            
-            <item>
-                <title>摸鱼儿</title>
-                <link>https://dbdo.website/post/摸鱼儿.html</link>
-                <description>摸鱼儿</description>
-                <content:encoded><![CDATA[
-                
+                        ]]>
+                         </content:encoded>
+                        <pubDate>Mon, 07 Aug 2023 15:37:29 GMT</pubDate>
+                        <guid>https://dbdo.website/post/Test-2.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>摸鱼儿</title>
+                        <link>https://dbdo.website/post/摸鱼儿.html</link>
+                        <description>摸鱼儿</description>
+                        <content:encoded><![CDATA[
+                        
 
 
 <div class="pm">
@@ -697,12 +548,12 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
 更短笛衔风，长云弄晚，天际画秋句。</p>
 </div>
 
-                ]]>
-                 </content:encoded>
-                <pubDate>Mon, 07 Aug 2023 15:37:29 GMT</pubDate>
-                <guid>https://dbdo.website/post/摸鱼儿.html</guid>
-            </item>
-            
+                        ]]>
+                         </content:encoded>
+                        <pubDate>Mon, 07 Aug 2023 15:37:29 GMT</pubDate>
+                        <guid>https://dbdo.website/post/摸鱼儿.html</guid>
+                    </item>
+                    
  
     </channel>
     </rss>
