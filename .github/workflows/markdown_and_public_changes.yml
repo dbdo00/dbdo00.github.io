@@ -32,7 +32,7 @@ jobs:
 
       - name: Build
         run: 
-          python blog.py
+          make
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

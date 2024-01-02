@@ -1,8 +1,6 @@
 from jinja2 import Environment, FileSystemLoader
 import os
 import json 
-import markdown
-from markdown.preprocessors import Preprocessor
 import sys 
 import subprocess
 import re
@@ -10,8 +8,6 @@ from datetime import datetime
 import pytz
 import subprocess
 import yaml
-from ignore_section import IgnoreSectionExtension
-# markdown preprocessor that ignore that yaml metadata
 
 def pandoc(content:str, flags:list) -> str:
    
