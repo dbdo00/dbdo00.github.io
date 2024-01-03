@@ -3,7 +3,7 @@ from livereload import shell, Server
 def run( ):
     server = Server()
     server.watch("./markdown/*.md", 
-                 shell('git add * && git commit && make')
+                 shell("make addandcommit")
                  )
     server.serve(
         restart_delay=0.3,

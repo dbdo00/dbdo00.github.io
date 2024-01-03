@@ -3,3 +3,7 @@ all:
 
 serve:
 	python serve.py
+
+addandcommit:
+	git add *
+	git commit -a -m "u“
