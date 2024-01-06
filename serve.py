@@ -6,7 +6,6 @@ def run( ):
                  shell("make")
                  )
     server.serve(
-        restart_delay=0.3,
         root = 'public'
         )
 
