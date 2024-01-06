@@ -506,7 +506,28 @@ def delete_post(post_path : str) -> None:
 
 
 def main():
-    
+    # testing hash
+    # import time
+    # a = os.listdir('markdown')[0] 
+    # print(a)
+    # start_time = time.time()
+    # l = []
+    # for i in os.listdir('markdown'):
+    #     if not i.endswith('.md'):
+    #         continue
+    #     s = text_file_to_string('markdown/'+i)
+    #     h = hash(s)
+    #     l.append(h)
+
+    # end_time = time.time()
+
+    # print(end_time - start_time)
+    # print(len(l))
+    # end of testing hash
+
+
+
+
     # root : the root directory of the blog
     root_dir = os.getcwd()
     markdown_dir = f'{root_dir}/markdown'
