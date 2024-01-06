@@ -506,12 +506,21 @@ def delete_post(post_path : str) -> None:
 
 
 def main():
+    
     # root : the root directory of the blog
     root_dir = os.getcwd()
     markdown_dir = f'{root_dir}/markdown'
     template_dir = f'{root_dir}/template'
     post_dir = f'{root_dir}/public/post' 
     index_page_path = f'{root_dir}/public/index.html'
+    # for i in os.listdir(markdown_dir):
+    #     print("file is: ", i)
+    #     if not i.endswith('.md'):
+    #         continue 
+    #     a = text_file_to_string(markdown_dir+'/'+i)
+        
+    #     print(get_title(a))
+
     # render html for each post
     update_data(md_dir=markdown_dir)
     render_html_for_each_post(
