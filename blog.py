@@ -9,6 +9,12 @@ import pytz
 import subprocess
 import yaml
 
+root_dir = os.getcwd()
+markdown_dir = f'{root_dir}/markdown'
+template_dir = f'{root_dir}/template'
+post_dir = f'{root_dir}/public/post' 
+index_page_path = f'{root_dir}/public/index.html'
+
 def pandoc(content:str, flags:list) -> str:
    
         
@@ -187,7 +193,7 @@ def name_a_file(filename):
 # print(name_a_file('markdown/readme.md'))
 
 # render html for each post
-def render_html_for_each_post(template_name, md_dir, post_dir):
+def render_html_for_each_post(template_name, md_dir, post_dir, updated:callable=lambda : True):
     # md_dir : the directory of markdown files
     # render html for each post
     # ALSO delete unpublished posts
@@ -195,7 +201,7 @@ def render_html_for_each_post(template_name, md_dir, post_dir):
 
     for file in os.listdir(md_dir) :
         
-        if file.endswith('.md'): 
+        if file.endswith('.md') and updated(f'{md_dir}/{file}'):
 
             file_content = text_file_to_string(f'{md_dir}/{file}')
             visibility = post_vivsibility(process_metadata(file_content))
