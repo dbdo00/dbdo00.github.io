@@ -26,7 +26,8 @@ def build():
         md_dir = markdown_dir, 
         
         post_dir=post_dir,
-        updated=updated 
+
+        updated = updated
     )
     end_time = time.time()
     print(f"Build time: {end_time - start_time} seconds")

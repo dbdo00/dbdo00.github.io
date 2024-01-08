@@ -193,7 +193,7 @@ def name_a_file(filename):
 # print(name_a_file('markdown/readme.md'))
 
 # render html for each post
-def render_html_for_each_post(template_name, md_dir, post_dir, updated:callable=lambda : True):
+def render_html_for_each_post(template_name, md_dir, post_dir, updated:callable=lambda x : True):
     # md_dir : the directory of markdown files
     # render html for each post
     # ALSO delete unpublished posts
