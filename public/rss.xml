@@ -12,6 +12,22 @@
      <atom:link href="http://dbdo.website" rel="self" type="application/rss+xml" />
     
                     <item>
+                        <title>用了几天 emacs</title>
+                        <link>https://dbdo.website/post/用了几天-emacs.html</link>
+                        <description>用了几天 emacs</description>
+                        <content:encoded><![CDATA[
+                        
+
+
+
+
+                        ]]>
+                         </content:encoded>
+                        <pubDate>Wed, 24 Jan 2024 01:49:10 GMT</pubDate>
+                        <guid>https://dbdo.website/post/用了几天-emacs.html</guid>
+                    </item>
+                    
+                    <item>
                         <title>2024 一月日记 1</title>
                         <link>https://dbdo.website/post/2024-一月日记-1.html</link>
                         <description>2024 一月日记 1</description>
@@ -206,6 +222,7 @@ href="https://frontendmasters.com/welcome/github-student-developers/">frontendma
 
 <p>应该可以（也许，通过改 HTTP header） 让 mastodon 认为我们是一个
 activitypub 服务器。 这是收的一方要实现的。</p>
+<p>[[Untitled]] Untitled</p>
 
                         ]]>
                          </content:encoded>
@@ -286,6 +303,11 @@ href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 
 
 <p>能让想了以后做希望自己做的事情的</p>
+<pre><code>1 
+ \
+  \
+   \
+   2</code></pre>
 
                         ]]>
                          </content:encoded>
@@ -337,6 +359,12 @@ together but they seemed not to be talking.</p>
 needed some time to find my way back to the paths i had walked more
 often and had become more familiar with. but this wasn’t so hard. i
 found a familiar path very soon and i walked on it.</p>
+<pre><code>1 
+ \
+  ---  \
+        \
+         \
+          3    人</code></pre>
 
                         ]]>
                          </content:encoded>
