@@ -153,11 +153,12 @@ code {
 }
 
 pre {
-    background: #eee none repeat scroll 0 0;
+  background-color: rgb(45, 46, 46);
+  background-image: none;
+  color: rgb(229, 224, 216);
     padding: 10px 20px;
     font-size: inherit;
     line-height: 1.5;
-    color: #000;
 overflow: scroll;
 }
 
@@ -246,17 +247,48 @@ button#dark-mode{
 color: var(--content-link-color);
 }
 
+[data-dark-mode="yes"] ::-moz-selection {
+  background-color: #15539c !important;
+  color: #e5e0d8 !important;
+}
+
+[data-dark-mode="yes"]  ::selection {
+  background-color: #15539c !important;
+  color: #e5e0d8 !important;
+}
+
+[data-dark-mode="yes"] blockquote {
+  border-left-color: rgb(65, 68, 68);
+  color: rgb(172, 164, 150);
+}
 
 [data-dark-mode="yes"]  {
---background-color: #000;
---font-color: #fff;
---content-link-color:#49c; 
---border-bottom-color: #384566;
+
+--background-color: #0d0d0d;
+--font-color: #e5e0d8;
+--content-link-color: #63a0c1;
+--border-bottom-color: #546181;
 --link-hover-dark: var(--font-color);
---footer-link-color: white;
+--footer-link-color: #e5e0d8;
 --link-decoration-dark: #3cffd0;
 }
 
+code.sourceCode > span {
+  color: inherit;
+  text-decoration-color: inherit;
+}
+pre.numberSource code > span > a:first-child::before {
+  border-color: currentcolor;
+  color: rgb(178, 171, 158);
+}
+pre.numberSource {
+  border-left-color: rgb(81, 84, 85);
+}
+@media screen {
+  pre > code.sourceCode > span > a:first-child::before {
+      text-decoration-color: currentcolor;
+  }
+}
 
 
  /* CSS for syntax highlighting */
@@ -286,43 +318,99 @@ color: var(--content-link-color);
      -khtml-user-select: none; -moz-user-select: none;
      -ms-user-select: none; user-select: none;
      padding: 0 4px; width: 4em;
-     color: #aaaaaa;
+     /* color: #aaaaaa; */
+     color: rgb(178, 171, 158);
    }
  pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
- div.sourceCode
-   {   }
+
  @media screen {
  pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
  }
- code span.al { color: #ff0000; font-weight: bold; } /* Alert */
- code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
- code span.at { color: #7d9029; } /* Attribute */
- code span.bn { color: #40a070; } /* BaseN */
- code span.bu { color: #008000; } /* BuiltIn */
- code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
- code span.ch { color: #4070a0; } /* Char */
- code span.cn { color: #880000; } /* Constant */
- code span.co { color: #60a0b0; font-style: italic; } /* Comment */
- code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
- code span.do { color: #ba2121; font-style: italic; } /* Documentation */
- code span.dt { color: #902000; } /* DataType */
- code span.dv { color: #40a070; } /* DecVal */
- code span.er { color: #ff0000; font-weight: bold; } /* Error */
- code span.ex { } /* Extension */
- code span.fl { color: #40a070; } /* Float */
- code span.fu { color: #06287e; } /* Function */
- code span.im { color: #008000; font-weight: bold; } /* Import */
- code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
- code span.kw { color: #007020; font-weight: bold; } /* Keyword */
- code span.op { color: #666666; } /* Operator */
- code span.ot { color: #007020; } /* Other */
- code span.pp { color: #bc7a00; } /* Preprocessor */
- code span.sc { color: #4070a0; } /* SpecialChar */
- code span.ss { color: #bb6688; } /* SpecialString */
- code span.st { color: #4070a0; } /* String */
- code span.va { color: #19177c; } /* Variable */
- code span.vs { color: #4070a0; } /* VerbatimString */
- code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  /* CSS for syntax highlighting */
+  code span.al {
+    color: rgb(231, 44, 42);
+}
+code span.an {
+    color: rgb(121, 166, 174);
+}
+code span.at {
+    color: rgb(196, 208, 122);
+}
+code span.bn {
+    color: rgb(120, 190, 149);
+}
+code span.bu {
+    color: rgb(129, 241, 121);
+}
+code span.cf {
+    color: rgb(140, 242, 162);
+}
+code span.ch {
+    color: rgb(132, 165, 190);
+}
+code span.cn {
+    color: rgb(238, 118, 114);
+}
+code span.co {
+    color: rgb(121, 166, 174);
+}
+code span.cv {
+    color: rgb(121, 166, 174);
+}
+code span.do {
+    color: rgb(210, 92, 89);
+}
+code span.dt {
+    color: rgb(240, 142, 110);
+}
+code span.dv {
+    color: rgb(120, 190, 149);
+}
+code span.er {
+    color: rgb(231, 44, 42);
+}
+code span.fl {
+    color: rgb(120, 190, 149);
+}
+code span.fu {
+    color: rgb(141, 183, 229);
+}
+code span.im {
+    color: rgb(129, 241, 121);
+}
+code span.in {
+    color: rgb(121, 166, 174);
+}
+code span.kw {
+    color: rgb(140, 242, 162);
+}
+code span.op {
+    color: rgb(169, 160, 147);
+}
+code span.ot {
+    color: rgb(140, 242, 162);
+}
+code span.pp {
+    color: rgb(243, 189, 87);
+}
+code span.sc {
+    color: rgb(132, 165, 190);
+}
+code span.ss {
+    color: rgb(186, 120, 141);
+}
+code span.st {
+    color: rgb(132, 165, 190);
+}
+code span.va {
+    color: rgb(146, 171, 216);
+}
+code span.vs {
+    color: rgb(132, 165, 190);
+}
+code span.wa {
+    color: rgb(121, 166, 174);
+}
  /* CSS for citations */
  div.csl-bib-body { }
  div.csl-entry {
