@@ -27,12 +27,12 @@ padding-bottom: 0.5rem;
 }
 
   nav[role="banner"] {
-    padding: 1.8rem 1rem;
-      border-bottom: 1px solid var(--border-bottom-color, #e5e5e5);
-      margin-bottom: 2rem;
-      justify-content: flex-start;
+  padding: 1.8rem 1rem;
+  border-bottom: 1px solid var(--border-bottom-color, #e5e5e5);
+  margin-bottom: 2rem;
+  justify-content: flex-start;
 font-size: 1.3rem; 
-    display: flex;
+  display: flex;
   }
   
   nav[role="banner"] a { 
@@ -177,7 +177,8 @@ padding: 0;
 }
 
 footer {
-border-top: 1px solid #eee;
+border-top: 1px solid var(--border-bottom-color, #eee);
+/* why #eee? it looks not so wide (?) */
 font-size: 12px;
 /*! border-top: 1.5px solid var(--border-bottom-color); */
 padding-top: calc(1.8rem + 1.6vw);
