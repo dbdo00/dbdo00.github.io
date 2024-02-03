@@ -42,9 +42,6 @@ body{
         text-decoration: none;
     }
     
-
-
-    
       
 nav[role="banner"] a:hover{
     box-shadow: 0px 0px 1px 0px var(--font-color);
@@ -415,7 +412,7 @@ code span.wa {
     color: rgb(121, 166, 174);
 }
  /* CSS for citations */
- div.csl-bib-body { }
+
  div.csl-entry {
    clear: both;
    margin-bottom: 0em;
