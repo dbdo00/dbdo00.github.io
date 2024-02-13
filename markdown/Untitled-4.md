@@ -16,7 +16,6 @@ title: 周记 8-7 ~ 8-13
 
 试着用http shortcut 朗读喵窝公共时间线。朗读的内容常常听不懂在说什么。下划线被直接读出来。因为文字转换成声音以后听不懂在说什么，我感叹道:
 
-<iframe src="https://mas.to/@cxwh/110857347189432415/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe><script src="https://mas.to/embed.js" async="async"></script>
 
 用了几周 [table habit](https://github.com/FriesI23/mhabit)。感觉不错。我设置的习惯之一是每天至少看一会书。没超过30分钟，甚至不到30分钟。一开始锻炼身体的项目很单调。后来决定有了跳舞, 做操几个选项. 客观地说，感觉还好。 
 

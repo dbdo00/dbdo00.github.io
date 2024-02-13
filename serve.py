@@ -28,6 +28,7 @@ def build():
     global old_markdown_dir
     import time
     start_time = time.time()
+    # TODO. when templates are updated, all pages need to be rebuilt
     render_html_for_each_post(
         
         template_name="post.html", 
@@ -38,6 +39,11 @@ def build():
 
         updated = updated
     ) 
+    # TODO. need a better condition for updating the index
+    # visibility change
+    # title change
+    # etc... 
+    # or just rebuild index in the background... how?
     if len(os.listdir(markdown_dir)) != len(old_markdown_dir):
         old_markdown_dir = os.listdir(markdown_dir)
         print("index changed")
