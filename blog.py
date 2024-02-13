@@ -213,7 +213,6 @@ def render_html_for_each_post(template_name, md_dir, post_dir, updated:callable=
                 markdown_content = text_file_to_string(f'{md_dir}/{md}') 
                 
                 output = render_html(template_name, markdown_content) 
-                
 
                 # write the rendered html to a file
                 # print("filename", name_a_file(f'{md_dir}/{md}'))
@@ -225,7 +224,7 @@ def render_html_for_each_post(template_name, md_dir, post_dir, updated:callable=
                 pubimg = linked_images(markdown_content)
                 pubimg = [
                     f'{md_dir}/{convert_path(img)}' for img in pubimg
-                    ]
+                ]
                 publish_images(pubimg, post_dir)
             elif visibility == 'draft':
                 post_file = f'{post_dir}/{name_a_file(f"{md_dir}/{file}")}'
@@ -233,11 +232,14 @@ def render_html_for_each_post(template_name, md_dir, post_dir, updated:callable=
                 delete_post(post_file +'.html')
                 
 
-# render data for index page to a list of links to each post 
-# written in markown 
 
 def render_index_page(data_json, index_page_path) -> None:
-    
+    """
+    render data for index page to a list of links to each post 
+    written in markown 
+
+    relies on data.json. so to properly update index page, update data.json in advance
+    """    
     # data_json : the json file containing data for each post
     # render a markdown file for index page
     # each post is a link to the post
@@ -273,7 +275,7 @@ def render_index_page(data_json, index_page_path) -> None:
         with open(f'{index_page_path}', 'w', encoding='utf-8') as file:
             file.write(output)
 
-def rss_time(time):
+def rss_time(time) -> str:
     input_datetime_str = ' '.join(time.split(' ')[:2]).strip()
     input_datetime = datetime.strptime(input_datetime_str, r'%Y-%m-%d %H:%M:%S')
     input_offset = time.split(' ')[-1]
@@ -356,11 +358,11 @@ def create_rss(data_json, rss_path):
     with open(rss_path, 'w') as file:
         file.write(rss_content)
 
-md_sample = """
-    title: test
-    tags: test
+# md_sample = """
+#     title: test
+#     tags: test
 
-"""
+# """
 # TEST
 # print("generate metadata")
 # print(generate_metadata(md_sample, '2020-01-01 00:00:00 +0800'))
@@ -399,8 +401,9 @@ def process_metadata(markdown_content) -> dict:
         """
         parse yaml string to a dictionary
         """
-        return yaml.load(yamlstring, Loader=yaml.FullLoader)
-    
+        data: dict = yaml.load(yamlstring, Loader=yaml.FullLoader)
+        data['title'] = str(data['title'])
+        return data
     
 #     def generate_metadata(markdown_content : str, file_date : str) -> str:
 #             """
