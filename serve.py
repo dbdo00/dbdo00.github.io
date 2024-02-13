@@ -25,6 +25,7 @@ def updated( file):
 
 
 def build():
+    global old_markdown_dir
     import time
     start_time = time.time()
     render_html_for_each_post(
@@ -38,6 +39,7 @@ def build():
         updated = updated
     ) 
     if len(os.listdir(markdown_dir)) != len(old_markdown_dir):
+        old_markdown_dir = os.listdir(markdown_dir)
         print("index changed")
         execute('git add *')
         execute(f'git commit -a -m "{str(time.time())}"')
