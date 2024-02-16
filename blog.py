@@ -215,7 +215,7 @@ def render_html_for_each_post(template_name, md_dir, post_dir, updated:callable=
                 output = render_html(template_name, markdown_content) 
 
                 # write the rendered html to a file
-                # print("filename", name_a_file(f'{md_dir}/{md}'))
+                print("filename", name_a_file(f'{md_dir}/{md}'))
                 write_html(output=output, post_dir=post_dir,title=  name_a_file(f'{md_dir}/{md}')) 
 
                 # publish images in the markdown file to the post directory
@@ -568,13 +568,16 @@ def main():
     create_rss(data_json=f'{root_dir}/data.json', rss_path = f'{root_dir}/public/rss.xml')
 
 if __name__ == '__main__':
-    main()
-    # if --debug is specified, open a http server to view the generated html
-    try: 
-        if sys.argv[1] == '--debug':
-            os.system('python -m http.server -d ./public 5000')
-    except IndexError:
-        pass
+    render_html_for_each_post(
+        
+        template_name="post.html", 
+        
+        md_dir = markdown_dir, 
+        
+        post_dir=post_dir, 
+
+        updated = lambda x: True 
+    )
 
 
         
