@@ -24,6 +24,8 @@ max-width: 60rem;
 margin: 0 auto; 
 font-size: var(--font-size, 17px);
 padding-bottom: 0.5rem;
+padding-inline: 2.5rem;
+box-sizing: border-box;
 }
 
   nav[role="banner"] {
