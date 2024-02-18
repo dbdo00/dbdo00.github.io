@@ -160,12 +160,12 @@ hyphens: manual;
 
 pre {
 /* background-color: rgb(45, 46, 46); */
- background-image: none; 
+background-image: none; 
 /* color: rgb(229, 224, 216); */
- color: inherit;
-  padding: 10px 20px;
-  font-size: inherit;
-  line-height: 1.5;
+color: inherit;
+padding: 10px 20px;
+font-size: inherit;
+line-height: 1.5;
 overflow: auto;
 }
 
