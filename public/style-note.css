@@ -166,7 +166,7 @@ pre {
   padding: 10px 20px;
   font-size: inherit;
   line-height: 1.5;
-overflow: scroll;
+overflow: auto;
 }
 
 
