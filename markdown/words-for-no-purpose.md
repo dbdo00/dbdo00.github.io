@@ -9,6 +9,8 @@ last year i noticed that a warmer editor color scheme make people want to write.
 
 recently i have been trying a smoother workflow for writing blog on github pages. The problem is with the editor. the method now i use is type `nvim -c 'e $blog/markdown'` in terminal and then it will open the directory of my markdown files. in neovim, i can then press `%` to create a new file. 
 
+i also wrote a vimscript to let nvim  add, commit and push on saving a markdown file in my blog folder. 
+
 
 
 
