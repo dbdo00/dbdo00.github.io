@@ -4,7 +4,76 @@
  <title>Diary</title>
  <link>diary/diary.html</link>
  <description>Diary</description>
- <pubDate>周二, 30 1月 2024 04:52:33 -0500</pubDate>
+ <pubDate>周一, 19 2月 2024 08:49:58 -0500</pubDate>
  <atom:link href="rss.xml" rel="self" type="application/rss+xml" />
+ <item>
+  <title>2024-02-18</title>
+  <link>diary/2024-02-18.html</link>
+  <guid isPermaLink="false">2024-02-18</guid>
+  <description><![CDATA[
+<p>
+ i fear
+</p>
+]]></description>
+  <pubDate>周日, 18 2月 2024 11:28:02 -0500</pubDate>
+ </item>
+ <item>
+  <title>2024-02-16</title>
+  <link>diary/2024-02-16.html</link>
+  <guid isPermaLink="false">2024-02-16</guid>
+  <description><![CDATA[
+<p>
+感觉崩溃
+</p>
+
+<p>
+<a href="extend_if_possible.html">extend_if_possible</a>
+</p>
+]]></description>
+  <pubDate>周五, 16 2月 2024 11:31:17 -0500</pubDate>
+ </item>
+ <item>
+  <title>2024-02-14</title>
+  <link>diary/2024-02-14.html</link>
+  <guid isPermaLink="false">2024-02-14</guid>
+  <description><![CDATA[
+<p>
+transitive subgroup of \(S_5\)
+</p>
+]]></description>
+  <pubDate>周三, 14 2月 2024 10:23:26 -0500</pubDate>
+ </item>
+ <item>
+  <title>2024-02-13</title>
+  <link>diary/2024-02-13.html</link>
+  <guid isPermaLink="false">2024-02-13</guid>
+  <description><![CDATA[
+<p>
+摇曳露营 
+富士山 露营 
+</p>
+
+<p>
+<a href="deg-5-poly.html">deg-5-poly</a>
+</p>
+]]></description>
+  <pubDate>周二, 13 2月 2024 23:46:28 -0500</pubDate>
+ </item>
+ <item>
+  <title>2024-02-01</title>
+  <link>diary/2024-02-01.html</link>
+  <guid isPermaLink="false">2024-02-01</guid>
+  <description><![CDATA[
+]]></description>
+  <pubDate>周日, 04 2月 2024 15:16:19 -0500</pubDate>
+ </item>
+ <item>
+  <title>2024-01-31</title>
+  <link>diary/2024-01-31.html</link>
+  <guid isPermaLink="false">2024-01-31</guid>
+  <description><![CDATA[
+]]></description>
+  <pubDate>周三, 31 1月 2024 18:45:01 -0500</pubDate>
+ </item>
 </channel>
 </rss>
