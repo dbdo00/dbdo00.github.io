@@ -24,7 +24,7 @@ def updated(file):
     return not hash_same(file)
 
 
-def build(update_func):
+def build():
     global old_markdown_dir
     import time
     start_time = time.time()
@@ -33,10 +33,10 @@ def build(update_func):
         template_name="post.html", 
         
         md_dir = markdown_dir, 
-        
+
         post_dir= post_dir,
 
-        updated = update_func
+        updated = updated   
     ) 
     # TODO. need a better condition for updating the index
     # visibility change
@@ -64,11 +64,11 @@ def update_exclusively(x):
 def run( ):
     server = Server()
     # TODO. incorporate template path into the glob patter
-    # server.watch( 'markdown/*',
-    #             build(updated)
-    # )
+    server.watch( 'markdown/*',
+                 build
+     )
     
-    server.watch(filepath='template/*', func = build(lambda x: True), ignore=None)
+    server.watch(filepath='template/*', func = build, ignore=None)
     
     server.serve(
         root = 'public'
