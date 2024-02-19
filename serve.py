@@ -90,6 +90,8 @@ def main():
     # probably also update the index page on exit
     run()
     
+
+    
 if __name__ == "__main__":
     main()
 
