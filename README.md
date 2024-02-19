@@ -2,12 +2,12 @@
 
 ## build
 ```
-python blog.py
+make
 ```
 
 ## debug 
 ```
-python blog.py --debug
+make serve
 ```
 
 
