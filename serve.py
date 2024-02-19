@@ -57,18 +57,20 @@ def execute(cmd: str):
     # execute a command
     os.system(cmd)
 
-def update_exclusively(x):
-        print('yes')
-        return True
-
-def run( ):
+def build_exclusively():
+    render_html_for_each_post(
+         template_name="post.html", 
+        md_dir = markdown_dir, 
+        post_dir= post_dir,
+    )
+def run():
     server = Server()
     # TODO. incorporate template path into the glob patter
     server.watch( 'markdown/*',
                  build
      )
     
-    server.watch(filepath='template/*', func = build, ignore=None)
+    server.watch(filepath='template/*', func = build_exclusively, ignore=None)
     
     server.serve(
         root = 'public'
@@ -84,11 +86,8 @@ def main():
     
     global old_markdown_dir
     old_markdown_dir = os.listdir(markdown_dir)
-
-
     # TODO. 
     # probably also update the index page on exit
-
     run()
     
 if __name__ == "__main__":
