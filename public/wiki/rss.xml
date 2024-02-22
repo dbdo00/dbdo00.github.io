@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
  <title>Diary</title>
- <link>diary/diary.html</link>
+ <link>/wiki/diary/diary.html</link>
  <description>Diary</description>
- <pubDate>周一, 19 2月 2024 08:49:58 -0500</pubDate>
- <atom:link href="rss.xml" rel="self" type="application/rss+xml" />
+ <pubDate>周三, 21 2月 2024 20:08:12 -0500</pubDate>
+ <atom:link href="/wiki/rss.xml" rel="self" type="application/rss+xml" />
  <item>
   <title>2024-02-18</title>
-  <link>diary/2024-02-18.html</link>
+  <link>/wiki/diary/2024-02-18.html</link>
   <guid isPermaLink="false">2024-02-18</guid>
   <description><![CDATA[
 <p>
@@ -19,22 +19,18 @@
  </item>
  <item>
   <title>2024-02-16</title>
-  <link>diary/2024-02-16.html</link>
+  <link>/wiki/diary/2024-02-16.html</link>
   <guid isPermaLink="false">2024-02-16</guid>
   <description><![CDATA[
 <p>
 感觉崩溃
 </p>
-
-<p>
-<a href="extend_if_possible.html">extend_if_possible</a>
-</p>
 ]]></description>
-  <pubDate>周五, 16 2月 2024 11:31:17 -0500</pubDate>
+  <pubDate>周三, 21 2月 2024 19:35:01 -0500</pubDate>
  </item>
  <item>
   <title>2024-02-14</title>
-  <link>diary/2024-02-14.html</link>
+  <link>/wiki/diary/2024-02-14.html</link>
   <guid isPermaLink="false">2024-02-14</guid>
   <description><![CDATA[
 <p>
@@ -45,7 +41,7 @@ transitive subgroup of \(S_5\)
  </item>
  <item>
   <title>2024-02-13</title>
-  <link>diary/2024-02-13.html</link>
+  <link>/wiki/diary/2024-02-13.html</link>
   <guid isPermaLink="false">2024-02-13</guid>
   <description><![CDATA[
 <p>
@@ -61,19 +57,11 @@ transitive subgroup of \(S_5\)
  </item>
  <item>
   <title>2024-02-01</title>
-  <link>diary/2024-02-01.html</link>
+  <link>/wiki/diary/2024-02-01.html</link>
   <guid isPermaLink="false">2024-02-01</guid>
   <description><![CDATA[
 ]]></description>
   <pubDate>周日, 04 2月 2024 15:16:19 -0500</pubDate>
- </item>
- <item>
-  <title>2024-01-31</title>
-  <link>diary/2024-01-31.html</link>
-  <guid isPermaLink="false">2024-01-31</guid>
-  <description><![CDATA[
-]]></description>
-  <pubDate>周三, 31 1月 2024 18:45:01 -0500</pubDate>
  </item>
 </channel>
 </rss>
