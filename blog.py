@@ -272,6 +272,8 @@ def render_index_page(data_json, index_page_path) -> None:
         output = template.render(posts=posts, title="Dbdo")
 
         # write the rendered html to a file
+        print("write the rendered html to a file")
+ 
         with open(f'{index_page_path}', 'w', encoding='utf-8') as file:
             file.write(output)
 
