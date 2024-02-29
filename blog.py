@@ -156,7 +156,7 @@ def update_data(md_dir):
                 'title': title,
                 'tags': get_tags(markdown_content),
                 # concatenate the directory to specify the path of markdown and html files 
-                'html_path' : f"{html_filename}.html",
+                'html_path' : f"/post/{html_filename}.html",
                 'md_path' : f"markdown/{md}", 
                 'ctime' : file_ctime(f'{md_dir}/{md}'), # the date of the initial commit
                 'publish' : post_vivsibility(process_metadata(markdown_content))
