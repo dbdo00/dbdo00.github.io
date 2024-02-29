@@ -207,9 +207,13 @@ svg {
 
 
 footer a {
-	color: var(--footer-link-color, #00c);
+	color: var(--footer-link-color);
 	text-decoration: none;
 }
+
+
+
+
 
 
 
