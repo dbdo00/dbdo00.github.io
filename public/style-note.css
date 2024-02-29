@@ -285,7 +285,7 @@ color: rgb(172, 164, 150);
 --content-link-color: #63a0c1;
 --border-bottom-color: #546181;
 --link-hover-dark: var(--font-color);
---footer-link-color: #e5e0d8;
+--footer-link-color: var(--link-decoration-dark);
 --link-decoration-dark: #3cffd0;
 }
 
