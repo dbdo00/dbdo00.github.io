@@ -134,7 +134,7 @@ h4 {
 	text-rendering: optimizeLegibility;
 	margin: 1.5rem 0;
 	letter-spacing: calc(1vw/8);
-	text-align: justify;
+/*	text-align: justify; */
 
 }
 
