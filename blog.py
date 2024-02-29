@@ -310,7 +310,7 @@ def create_rss(data_json, rss_path):
     <description>Dbdo 主页</description>
     <link > http://dbdo.website/post </link>
     <title>Dbdo 的主页 </title>
-     <atom:link href="http://dbdo.website" rel="self" type="application/rss+xml" />
+     <atom:link href="http://dbdo.website/post" rel="self" type="application/rss+xml" />
     @@@ 
     </channel>
     </rss>
