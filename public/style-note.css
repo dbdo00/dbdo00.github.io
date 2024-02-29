@@ -465,5 +465,5 @@ div.csl-indent {
 }
 
 footer .svgicon {
-	stroke: var(--footer-link-color)
+	stroke: var(--footer-link-color); 
 }
