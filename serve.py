@@ -63,6 +63,7 @@ def build_exclusively():
         md_dir = markdown_dir, 
         post_dir= post_dir,
     )
+    
 def run():
     server = Server()
     # TODO. incorporate template path into the glob patter
