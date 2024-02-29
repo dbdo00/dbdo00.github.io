@@ -463,3 +463,7 @@ div.csl-indent {
 	text-align: left;
 	word-break: break-word;
 }
+
+.svgicon {
+	stroke: var(--footer-link-colo)
+}
