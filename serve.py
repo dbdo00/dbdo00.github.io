@@ -63,6 +63,9 @@ def build_exclusively():
         md_dir = markdown_dir, 
         post_dir= post_dir,
     )
+    # just render index again without updating the data json
+    render_index_page('./data.json', index_page_path)
+
     
 def run():
     server = Server()
