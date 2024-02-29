@@ -2,7 +2,7 @@
 	--background-color: #ffffcc;
 	--font-color: #000;
 	--nav-link-color: var(--font-color);
-	--footer-link-color: unset;
+	--footer-link-color: #00c;
 	--content-link-color: #000;
 	--font-size: 1.2rem;
 }
@@ -207,13 +207,9 @@ svg {
 
 
 footer a {
-	color: var(--footer-link-color);
+	color: var(--footer-link-color, );
 	text-decoration: none;
 }
-
-
-
-
 
 
 
