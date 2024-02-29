@@ -465,5 +465,5 @@ div.csl-indent {
 }
 
 .svgicon {
-	stroke: var(--link-decoration-dark)
+	stroke: var(--link-decoration-dark); 
 }
