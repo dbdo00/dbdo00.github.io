@@ -464,6 +464,6 @@ div.csl-indent {
 	word-break: break-word;
 }
 
-.svgicon {
+footer .svgicon {
 	stroke: var(--footer-link-colo)
 }
