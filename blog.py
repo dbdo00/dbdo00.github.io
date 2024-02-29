@@ -274,7 +274,7 @@ def render_index_page(data_json, index_page_path) -> None:
         # write the rendered html to a file
         print("write the rendered html to a file")
         print("information")
-        print(f"{index_page_path")
+        print(f"{index_page_path}")
  
         with open(f'{index_page_path}', 'w', encoding='utf-8') as file:
             file.write(output)
