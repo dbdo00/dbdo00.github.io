@@ -307,8 +307,8 @@ def create_rss(data_json, rss_path):
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     >
     <channel>
-    <description>Dbdo 的网站</description>
-    <link > http://dbdo.website </link>
+    <description>Dbdo 主页</description>
+    <link > http://dbdo.website/post </link>
     <title>Dbdo 的网站</title>
      <atom:link href="http://dbdo.website" rel="self" type="application/rss+xml" />
     @@@ 
