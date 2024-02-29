@@ -13,7 +13,7 @@ root_dir = os.getcwd()
 markdown_dir = f'{root_dir}/markdown'
 template_dir = f'{root_dir}/template'
 post_dir = f'{root_dir}/public/post' 
-index_page_path = f'{root_dir}/public/post/index.html'
+index_page_path = f'{root_dir}/public/index.html'
 
 def pandoc(content:str, flags:list) -> str:
    
@@ -272,10 +272,6 @@ def render_index_page(data_json, index_page_path) -> None:
         output = template.render(posts=posts, title="Dbdo")
 
         # write the rendered html to a file
-        print("write the rendered html to a file")
-        print("information")
-        print(f"{index_page_path}")
- 
         with open(f'{index_page_path}', 'w', encoding='utf-8') as file:
             file.write(output)
 
@@ -546,7 +542,7 @@ def main():
     markdown_dir = f'{root_dir}/markdown'
     template_dir = f'{root_dir}/template'
     post_dir = f'{root_dir}/public/post' 
-    index_page_path = f'{root_dir}/public/post/index.html'
+    index_page_path = f'{root_dir}/public/index.html'
     # for i in os.listdir(markdown_dir):
     #     print("file is: ", i)
     #     if not i.endswith('.md'):
@@ -583,7 +579,6 @@ if __name__ == '__main__':
 
         updated = lambda x: True 
     )
-
 
 
         
