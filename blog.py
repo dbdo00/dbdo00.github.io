@@ -572,6 +572,7 @@ def main():
     create_rss(data_json=f'{root_dir}/data.json', rss_path = f'{root_dir}/public/rss.xml')
 
 if __name__ == '__main__':
+    main()
     render_html_for_each_post(
         
         template_name="post.html", 
@@ -582,6 +583,7 @@ if __name__ == '__main__':
 
         updated = lambda x: True 
     )
+
 
 
         
