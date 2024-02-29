@@ -13,7 +13,7 @@ root_dir = os.getcwd()
 markdown_dir = f'{root_dir}/markdown'
 template_dir = f'{root_dir}/template'
 post_dir = f'{root_dir}/public/post' 
-index_page_path = f'{root_dir}/public/index.html'
+index_page_path = f'{root_dir}/public/post/index.html'
 
 def pandoc(content:str, flags:list) -> str:
    
@@ -542,7 +542,7 @@ def main():
     markdown_dir = f'{root_dir}/markdown'
     template_dir = f'{root_dir}/template'
     post_dir = f'{root_dir}/public/post' 
-    index_page_path = f'{root_dir}/public/index.html'
+    index_page_path = f'{root_dir}/public/post/index.html'
     # for i in os.listdir(markdown_dir):
     #     print("file is: ", i)
     #     if not i.endswith('.md'):
