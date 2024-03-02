@@ -7,6 +7,18 @@ publish : unlisted
 
 ## 近况 
 
+### 2024-3-1  
+
+It's been two months!   
+Rime input method is broken again.   
+I set the leader key in vim as `' '`. I find it much easier to press than the default `\`. So I feel a little happy now. and also set 
+
+```lua
+vim.g.mapleader = " "
+vim.api.nvim_set_keymap("n", "<Leader>w", "<C-w>", { noremap = true })
+```
+
+
 ### 2024-1-12
 
 
