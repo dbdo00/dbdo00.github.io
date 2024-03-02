@@ -25,8 +25,14 @@ vim.api.nvim_set_keymap("n", "<Leader>w", "<C-w>", { noremap = true })
 Rime 输入法又坏了。  
 我把 vim 中的领导键设置为 `' '`。我发现它比默认的 `\` 更容易按。所以我现在有点高兴了。还设置了 
 
-[^1]：问题是 vimwiki 已经有了很多使用领导键的绑定键。例如，在 vimwiki 中，我不能用 `<Leader>wn` 水平分割窗口，因为这个组合键与 "打开维基页面 "绑定。 
 
+```lua
+vim.g.mapleader = " "
+vim.api.nvim_set_keymap("n", "<Leader>w", "<C-w>", { noremap = true })
+```
+
+
+[^1]：问题是 vimwiki 已经有了很多使用领导键的绑定键。例如，在 vimwiki 中，我不能用 `<Leader>wn` 水平分割窗口，因为这个组合键与 "打开维基页面 "绑定。 
 
 
 
