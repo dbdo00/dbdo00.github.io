@@ -11,7 +11,9 @@ publish : unlisted
 
 It's been two months!   
 Rime input method is broken again.   
-I set the leader key in vim as `' '`. I find it much easier to press than the default `\`. So I feel a bit happy now. and also set 
+I set the leader key in vim as `' '`. I find it much easier to press than the default `\`. So I feel a bit happy now. and also set [^1]
+
+[^1]: a problem is vimwiki already had a many keybindins using leader key. so, 
 
 ```lua
 vim.g.mapleader = " "
