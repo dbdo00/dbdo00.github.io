@@ -32,7 +32,7 @@ vim.api.nvim_set_keymap("n", "<Leader>w", "<C-w>", { noremap = true })
 ```
 
 
-[^2]：问题是 vimwiki 已经有了很多使用领导键的绑定键。例如，在 vimwiki 中，我不能用 `<Leader>wn` 水平分割窗口，因为这个组合键与 "打开维基页面 "绑定。 
+[^2]: 问题是 vimwiki 已经有了很多使用领导键的绑定键。例如，在 vimwiki 中，我不能用 `<Leader>wn` 水平分割窗口，因为这个组合键与 "打开维基页面 "绑定。 
 
 
 
