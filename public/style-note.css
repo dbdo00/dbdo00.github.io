@@ -464,3 +464,36 @@ div.csl-indent {
 footer .svgicon {
 	stroke: var(--footer-link-color); 
 }
+
+@font-face {
+    font-family: 'icons';
+    src:
+        url('../fonts/CustomIcons.ttf'),
+        url('../fonts/CustomIcons.eot');
+}
+
+a.myLink-icon {
+    font-family: 'CustomIcons';
+}
+
+a.myLink-icon::before {
+    color: #ed3820;   /* Custom colour. */
+    content: "\e000"; /* The custom Unicode (aka. PUA) for the icon you want. */
+}
+
+
+
+#path2 {
+  fill: var(--footer-link-color);
+}
+
+
+#path2 {
+  fill-opacity: 0;
+}
+
+
+#path2:hover {
+  fill-opacity: 1;
+}
+
