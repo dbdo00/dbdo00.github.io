@@ -85,6 +85,9 @@ h4 {
 	padding: 1rem;
 }
 
+.blog {
+	padding:   calc(1.8rem + 1.6vw) 1rem;
+}
 
 
 .article-section a {
