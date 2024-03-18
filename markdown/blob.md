@@ -14,5 +14,5 @@ title: git 里 file object 的使用
 
 	- ` git log --find-object=`
 
-- 参考：`git log --help`
+- 参考：`git log --help`, [Git-Internals-Git-Object](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects)
 
