@@ -15,6 +15,13 @@ template_dir = f'{root_dir}/template'
 post_dir = f'{root_dir}/public/post' 
 index_page_path = f'{root_dir}/public/index.html'
 
+def get_command_output(cmd:str) -> str:
+    return subprocess.run(cmd, capture_output=True, text=True).stdout
+
+def object_id(file:str) -> str:
+    return get_command_output(f"git hash-object -w {file}").split('\n')[0] 
+
+
 def pandoc(content:str, flags:list) -> str:
    
         
@@ -119,7 +126,8 @@ def get_file_date(file_path):
     print("file_path:", file_path)
     try:
         # 运行 git log 命令获取文件的最后修改日期
-        command = ["git", "log","--reverse", r"--date=format:%Y-%m-%d %H:%M", "--date=iso-local", file_path]
+        id = object_id(file_path)
+        command = ["git", "log", f"--find-object={id}", "--reverse", r"--date=format:%Y-%m-%d %H:%M", "--date=iso-local", file_path]
         result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
         modified_date = result.stdout.strip().split('\n')
         for line in modified_date:
