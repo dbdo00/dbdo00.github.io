@@ -19,7 +19,7 @@ def get_command_output(cmd:str) -> str:
     return subprocess.run(cmd, capture_output=True, text=True).stdout
 
 def object_id(file:str) -> str:
-    return get_command_output(f"git hash-object -w {file}").split('\n')[0] 
+    return get_command_output(f"git hash-object -w {file}".split()).split('\n')[0] 
 
 
 def pandoc(content:str, flags:list) -> str:
