@@ -127,7 +127,7 @@ def get_file_date(file_path):
     try:
         # 运行 git log 命令获取文件的最后修改日期
         id = object_id(file_path)
-        command = ["git", "log", f"--find-object={id}", "--reverse", r"--date=format:%Y-%m-%d %H:%M", "--date=iso-local"]
+        command = ["git", "log", f"--find-object={id}", "-c", "--reverse", r"--date=format:%Y-%m-%d %H:%M", "--date=iso-local"]
         print(command)
         result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
         modified_date = result.stdout.strip().split('\n')
