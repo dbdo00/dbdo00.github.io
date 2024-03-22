@@ -3,7 +3,7 @@
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-     <title> about | Dbdowjfb  </title>
+     <title> git 里 file object 的使用 | Dbdowjfb  </title>
      <script>
       // Render blocking JS:
       if (localStorage.darkMode === "enabled") 
@@ -28,16 +28,20 @@ href="/rss.xml" title="RSS">
    
     <p>
 <header id="title-block-header">
-<h1 class="title">about</h1>
+<h1 class="title">git 里 file object 的使用</h1>
 </header>
 
 
-<nav id="TOC">
-    <ul>
-    <li><a href="#近况" id="toc-近况">近况</a></li>
-    </ul>
-</nav>
-<h2 id="近况">近况</h2>
+<ul>
+<li><pre><code>git hash-object -w &lt;FILENAME&gt;</code></pre></li>
+<li><p>会打印文件Object id。这个 id 不会因为该文件名改变而改变</p></li>
+<li><p>用 object id 来看log</p>
+<ul>
+<li><code>git log --find-object=&lt;object id&gt;</code></li>
+</ul></li>
+<li><p>参考：<code>git log --help</code>, <a
+href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git-Internals-Git-Object</a></p></li>
+</ul>
 </p>
    
 </div>
