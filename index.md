@@ -2,7 +2,7 @@
 
 - [mastodon](https://mas.to/@cxwh)
 - [twitter](https://twitter.com/SPZKzJ90e7Vsi)
-- [bear](https://bearblog.dev/spinach/)
+- [bear](https://spinach.bearblog.dev)
 - [weblog](./post)
 - [neodb](https://neodb.social/users/cxwh/)
 
