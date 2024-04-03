@@ -22,6 +22,25 @@ def object_id(file:str) -> str:
     return get_command_output(f"git hash-object -w {file}".split()).split('\n')[0] 
 
 
+def record_file_createtime(file:str):
+    file_content = text_file_to_string(file)
+    id = process_metadata(file_content)['id']
+    time = datetime.now()
+    try:
+        stored = False 
+        for line in open('.data/data.txt', 'r').readlines():
+            if line.startswith(str(id)):   
+                stored = True 
+        
+        if stored != True:
+            with open('.data/data.txt','a') as f:
+                f.write(f"{id}, {time}\n")
+            f.close() 
+    
+    except Exception as e:
+        print(e)
+        open('.data/data.txt','w').write(' ')
+
 def pandoc(content:str, flags:list) -> str:
    
         
@@ -589,7 +608,8 @@ if __name__ == '__main__':
 
         updated = lambda x: True 
     )
-
+    # record_file_createtime('markdown/2309301506.md')
+    # record_file_createtime('markdown/2023-12-26.md')
 
         
 
