@@ -1,5 +1,5 @@
 * da 
 
 #+latex_begin
-$1/2$
+1/2
 #+latex_end
