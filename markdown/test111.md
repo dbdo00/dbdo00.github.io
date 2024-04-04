@@ -8,4 +8,4 @@ publish: public
 
 ![圣诞](shengdan.webp)
 
-![alt text](__hina抱枕头.jpg)
+![hina抱枕头](__hina抱枕头.jpg)

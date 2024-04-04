@@ -12,9 +12,9 @@
      <atom:link href="http://dbdo.website/post" rel="self" type="application/rss+xml" />
     
                     <item>
-                        <title>test 111</title>
-                        <link>https://dbdo.website//post/test-111.html</link>
-                        <description>test 111</description>
+                        <title>测试图片</title>
+                        <link>https://dbdo.website//post/测试图片.html</link>
+                        <description>测试图片</description>
                         <content:encoded><![CDATA[
                         
 
@@ -22,7 +22,7 @@
 <table>
 <tbody>
 <tr class="odd">
-<td>title: test 111</td>
+<td>title: 测试图片</td>
 </tr>
 <tr class="even">
 <td>publish: public</td>
@@ -30,14 +30,22 @@
 </tbody>
 </table>
 <figure>
-<img src="bo.webp" alt="alt text" />
-<figcaption aria-hidden="true">alt text</figcaption>
+<img src="bo.webp" alt="bo" />
+<figcaption aria-hidden="true">bo</figcaption>
+</figure>
+<figure>
+<img src="shengdan.webp" alt="圣诞" />
+<figcaption aria-hidden="true">圣诞</figcaption>
+</figure>
+<figure>
+<img src="__hina抱枕头.jpg" alt="hina抱枕头" />
+<figcaption aria-hidden="true">hina抱枕头</figcaption>
 </figure>
 
                         ]]>
                          </content:encoded>
                         <pubDate>Thu, 04 Apr 2024 10:57:21 GMT</pubDate>
-                        <guid>https://dbdo.website//post/test-111.html</guid>
+                        <guid>https://dbdo.website//post/测试图片.html</guid>
                     </item>
                     
                     <item>
