@@ -264,21 +264,29 @@ def render_html_for_each_post(template_name, md_dir, post_dir, updated:callable=
                 # concatenate the directory to specify the path of markdown file 
                 convert_path = lambda x: os.path.basename(x)
                 privimage = linked_images(markdown_content)
-                pubimg = [
-                    f'{md_dir}/{convert_path(img)}' for img in privimage
-                ]
-                publish_images(pubimg, post_dir)
+                
+                publish_images(list_of_images= privimage, public_dir=post_dir)
 
-                # replace the paths by public paths
+                # replace the paths in texts by public paths
                 for i in privimage:
-                    print('replace',i, 'by', f"{assests_folder_name}/{i.strip('./')}")
-                    markdown_content = markdown_content.replace(i, f"{assests_folder_name}/{i.strip('./')}")
+                    print('replace',i, 'by', f"{assests_folder_name}/{convert_path(i)}")
+                    markdown_content = markdown_content.replace(i, 
+                                                                f"{assests_folder_name}/{convert_path(i)}"
+                                                                )
 
                 output = render_html(template_name, markdown_content) 
 
                 # write the rendered html to a file
-                print("filename", name_a_file(f'{md_dir}/{md}'))
-                write_html(output=output, post_dir=post_dir,title=  name_a_file(f'{md_dir}/{md}')) 
+                print(
+                    "filename", 
+                    name_a_file(f'{md_dir}/{md}')
+                    )
+                
+                write_html(
+                    output=output, 
+                    post_dir=post_dir,
+                    title= name_a_file(f'{md_dir}/{md}')
+                    ) 
 
             elif visibility == 'draft':
                 post_file = f'{post_dir}/{name_a_file(f"{md_dir}/{file}")}'
@@ -531,6 +539,7 @@ def post_vivsibility(metadata : dict) -> str:
 
 
 def linked_images(markdown_content : str) -> list:
+    """return the image paths as is in the human written markdown file"""
     data = json.loads(pandoc_json(
             markdown_content
     ))
@@ -543,8 +552,13 @@ def linked_images(markdown_content : str) -> list:
 
 def publish_images(list_of_images : list, public_dir : str) -> None:
     """
-    list_of_images : a list of images in the markdown file
-    (each image is in the form of 'assets/image.png')
+    list_of_images : a list of images in the markdown file folder. these 
+    are existing images. the file names only contain the basename
+    for example. `a.png`.  `./a.png` isn't a basename
+    
+    It will be fine if the images file in markdown folder is located in a deeper place
+    than the first level. i.e. if they are in a subfolder of `/markdown` folder
+    
     public_dir : the directory of the generated html files
     publish images in the markdown file to the post directory
     """
@@ -559,14 +573,7 @@ def publish_images(list_of_images : list, public_dir : str) -> None:
             # if the operating system is windows, use powershell to copy the image
             # if the operating system is linux, use cp to copy the image
             try:
-                if os.name == 'nt':
-                    shutil.copy(image, f"{public_dir}/assets")
-                    print('finished copying image', image)
-                    
-                elif os.name == 'posix':
-                    os.system(f'cp {image} {public_dir}/assets')
-                else:
-                    raise OSError('Unsupported operating system')
+                shutil.copy(f"{markdown_dir}/{image}", f"{public_dir}/assets")
             except Exception as e:
                 print('error occurs:', e)
                 continue

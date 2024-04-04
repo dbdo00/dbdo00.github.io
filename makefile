@@ -5,5 +5,5 @@ serve:
 	python serve.py
 
 index:
-	pandoc index.md -t html -s --css="" -o .\public\index.html
+	pandoc index.md -t html  -o .\public\index.html --template=.pandoc/index_template.html
 	
