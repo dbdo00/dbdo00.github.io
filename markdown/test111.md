@@ -1,7 +1,7 @@
 ---
-title: 测试图片
-publish: public
-----
+title: test pic
+publish: unlisted
+---
 
           
 ![bo](bo.webp)    
@@ -9,3 +9,7 @@ publish: public
 ![圣诞](shengdan.webp)
 
 ![hina抱枕头](__hina抱枕头.jpg)
+     
+![hello hello](<hello hello (2).png>)
+
+  

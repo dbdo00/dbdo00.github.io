@@ -9,6 +9,8 @@ import pytz
 import subprocess
 import yaml
 import shutil
+from tool.pandoc_images import *
+import urllib.parse
 
 root_dir = os.getcwd()
 markdown_dir = f'{root_dir}/markdown'
@@ -66,13 +68,27 @@ $body$
         f.write(template)
 
 
-    pandoc_process = subprocess.Popen(['pandoc', *flags,'--template=web_blank_pandoctemp.html'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    pandoc_process = subprocess.Popen(['pandoc', *flags,'--template=web_blank_pandoctemp.html'], 
+                                      stdin=subprocess.PIPE, stdout=subprocess.PIPE, 
+                                      stderr=subprocess.PIPE, text=True)
     stdout, stderr = pandoc_process.communicate(input=content)
 
     # delete template file
     os.remove("web_blank_pandoctemp.html")
     
     return stdout 
+
+def pandoc_json(content:str) -> str:
+    pandoc_process = subprocess.Popen(
+                                    ['pandoc', '-t', 'json'], 
+                                    stdin=subprocess.PIPE, 
+                                    stdout=subprocess.PIPE, 
+                                    stderr=subprocess.PIPE, 
+                                    text=True
+                                    )
+    
+    stdout, stderr = pandoc_process.communicate(input=content)
+    return stdout
 
 def render_html(template_name,content):    
     """    
@@ -512,9 +528,18 @@ def post_vivsibility(metadata : dict) -> str:
     except KeyError:
         return 'public'
 
+
+
 def linked_images(markdown_content : str) -> list:
-    list_of_images = re.findall(r'!\[.*?\]\((.*?)\)', markdown_content)
-    return list_of_images
+    data = json.loads(pandoc_json(
+            markdown_content
+    ))
+    return [urllib.parse.unquote(
+            pandoc_img_name(i)
+        )
+        for i in img_rec_json(data)
+        ]
+
 
 def publish_images(list_of_images : list, public_dir : str) -> None:
     """
