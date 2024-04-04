@@ -8,12 +8,14 @@ from datetime import datetime
 import pytz
 import subprocess
 import yaml
+import shutil
 
 root_dir = os.getcwd()
 markdown_dir = f'{root_dir}/markdown'
 template_dir = f'{root_dir}/template'
 post_dir = f'{root_dir}/public/post' 
 index_page_path = f'{root_dir}/public/index.html'
+assests_folder_name = 'assets'
 
 def get_command_output(cmd:str) -> str:
     return subprocess.run(cmd, capture_output=True, text=True).stdout
@@ -72,13 +74,15 @@ $body$
     
     return stdout 
 
-def render_html(template_name,content):        
-    # template_name : the complete path of the template file  
-    # content : the string of the markdown file
-    # post_dir : the directory of the generated html files
+def render_html(template_name,content):    
+    """    
+    template_name : the complete path of the template file  
+    content : the string of the markdown file
+    post_dir : the directory of the generated html files
 
-    # render html for each post
-    # env = Environment(loader= FileSystemLoader('./template'))
+    render html for each post
+    """
+    env = Environment(loader= FileSystemLoader('./template'))
     template = Environment(loader= FileSystemLoader('./template')).get_template(template_name) 
 
     # get title and tags from the markdown file
@@ -240,21 +244,26 @@ def render_html_for_each_post(template_name, md_dir, post_dir, updated:callable=
                 md = file 
                 # put markdown file into a string 
                 markdown_content = text_file_to_string(f'{md_dir}/{md}') 
-                
+                # publish images in the markdown file to the post directory
+                # concatenate the directory to specify the path of markdown file 
+                convert_path = lambda x: os.path.basename(x)
+                privimage = linked_images(markdown_content)
+                pubimg = [
+                    f'{md_dir}/{convert_path(img)}' for img in privimage
+                ]
+                publish_images(pubimg, post_dir)
+
+                # replace the paths by public paths
+                for i in privimage:
+                    print('replace',i, 'by', f"{assests_folder_name}/{i}")
+                    markdown_content = markdown_content.replace(i, f"{assests_folder_name}/{i}")
+
                 output = render_html(template_name, markdown_content) 
 
                 # write the rendered html to a file
                 print("filename", name_a_file(f'{md_dir}/{md}'))
                 write_html(output=output, post_dir=post_dir,title=  name_a_file(f'{md_dir}/{md}')) 
 
-                # publish images in the markdown file to the post directory
-                # concatenate the directory to specify the path of markdown file 
-                convert_path = lambda x: os.path.basename(x)
-                pubimg = linked_images(markdown_content)
-                pubimg = [
-                    f'{md_dir}/{convert_path(img)}' for img in pubimg
-                ]
-                publish_images(pubimg, post_dir)
             elif visibility == 'draft':
                 post_file = f'{post_dir}/{name_a_file(f"{md_dir}/{file}")}'
                 delete_post(post_file)
@@ -524,13 +533,18 @@ def publish_images(list_of_images : list, public_dir : str) -> None:
         else:
             # if the operating system is windows, use powershell to copy the image
             # if the operating system is linux, use cp to copy the image
-            if os.name == 'nt':
-                os.copy(image, f"{public_dir}/assets")
-                
-            elif os.name == 'posix':
-                os.system(f'cp {image} {public_dir}/assets')
-            else:
-                raise OSError('Unsupported operating system')
+            try:
+                if os.name == 'nt':
+                    shutil.copy(image, f"{public_dir}/assets")
+                    print('finished copying image', image)
+                    
+                elif os.name == 'posix':
+                    os.system(f'cp {image} {public_dir}/assets')
+                else:
+                    raise OSError('Unsupported operating system')
+            except Exception as e:
+                print('error occurs:', e)
+                continue
 
 def delete_post(post_path : str) -> None:
     """
