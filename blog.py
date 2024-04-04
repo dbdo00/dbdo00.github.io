@@ -553,8 +553,7 @@ def linked_images(markdown_content : str) -> list:
 def publish_images(list_of_images : list, public_dir : str) -> None:
     """
     list_of_images : a list of images in the markdown file folder. these 
-    are existing images. the file names only contain the basename
-    for example. `a.png`.  `./a.png` isn't a basename
+    are existing images. the file path is relative to the markdown path. 
     
     It will be fine if the images file in markdown folder is located in a deeper place
     than the first level. i.e. if they are in a subfolder of `/markdown` folder
@@ -574,6 +573,7 @@ def publish_images(list_of_images : list, public_dir : str) -> None:
             # if the operating system is linux, use cp to copy the image
             try:
                 shutil.copy(f"{markdown_dir}/{image}", f"{public_dir}/assets")
+                print("copied", f"{markdown_dir}/{image}", f"to {public_dir}/assets")
             except Exception as e:
                 print('error occurs:', e)
                 continue
