@@ -1,9 +1,11 @@
 ---
-title: test 111
+title: 测试图片
 publish: public
 ----
 
           
-![alt text](bo.webp)    
+![bo](bo.webp)    
 
-![alt text](shengdan.webp)
+![圣诞](shengdan.webp)
+
+![alt text](__hina抱枕头.jpg)
