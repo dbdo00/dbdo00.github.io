@@ -271,8 +271,8 @@ def render_html_for_each_post(template_name, md_dir, post_dir, updated:callable=
 
                 # replace the paths by public paths
                 for i in privimage:
-                    print('replace',i, 'by', f"{assests_folder_name}/{i}")
-                    markdown_content = markdown_content.replace(i, f"{assests_folder_name}/{i}")
+                    print('replace',i, 'by', f"{assests_folder_name}/{i.strip('./')}")
+                    markdown_content = markdown_content.replace(i, f"{assests_folder_name}/{i.strip('./')}")
 
                 output = render_html(template_name, markdown_content) 
 

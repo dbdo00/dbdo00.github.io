@@ -38,7 +38,7 @@ def img_rec_json(json_input):
 if __name__ == "__main__":
 
 # test json
-#     import sys 
+         import sys 
 #     import json 
 #     a = sys.stdin.read()
 #     print(a)
