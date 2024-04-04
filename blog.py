@@ -525,7 +525,8 @@ def publish_images(list_of_images : list, public_dir : str) -> None:
             # if the operating system is windows, use powershell to copy the image
             # if the operating system is linux, use cp to copy the image
             if os.name == 'nt':
-                os.system(f'powershell -c " cp {image} {public_dir}/assets" ')
+                os.copy(image, f"{public_dir}/assets")
+                
             elif os.name == 'posix':
                 os.system(f'cp {image} {public_dir}/assets')
             else:
