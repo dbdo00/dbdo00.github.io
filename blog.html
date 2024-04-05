@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module blog</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>blog</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cjjj%5Ccodes%5Cblog%5Cblog.py">c:\users\jjj\codes\blog\blog.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="json.html">json</a><br>
+<a href="os.html">os</a><br>
+<a href="pytz.html">pytz</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+<a href="shutil.html">shutil</a><br>
+<a href="subprocess.html">subprocess</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+<a href="urllib.html">urllib</a><br>
+<a href="yaml.html">yaml</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-create_rss"><strong>create_rss</strong></a>(data_json, rss_path)</dt></dl>
+ <dl><dt><a name="-delete_post"><strong>delete_post</strong></a>(post_path: str) -&gt; None</dt><dd><tt>post_path&nbsp;:&nbsp;the&nbsp;path&nbsp;of&nbsp;a&nbsp;post<br>
+delete&nbsp;the&nbsp;post</tt></dd></dl>
+ <dl><dt><a name="-file_ctime"><strong>file_ctime</strong></a>(filename)</dt></dl>
+ <dl><dt><a name="-get_command_output"><strong>get_command_output</strong></a>(cmd: str) -&gt; str</dt></dl>
+ <dl><dt><a name="-get_file_date"><strong>get_file_date</strong></a>(file_path)</dt><dd><tt>TODO:&nbsp;error&nbsp;occurs&nbsp;when&nbsp;the&nbsp;file&nbsp;is&nbsp;not&nbsp;committed</tt></dd></dl>
+ <dl><dt><a name="-get_metadata"><strong>get_metadata</strong></a>(markdown_content: str) -&gt; str</dt><dd><tt>#&nbsp;"""<br>
+#&nbsp;TEST<br>
+#&nbsp;print("generate&nbsp;metadata")<br>
+#&nbsp;print(generate_metadata(md_sample,&nbsp;'2020-01-01&nbsp;00:00:00&nbsp;+0800'))</tt></dd></dl>
+ <dl><dt><a name="-get_tags"><strong>get_tags</strong></a>(content: str) -&gt; list</dt></dl>
+ <dl><dt><a name="-get_title"><strong>get_title</strong></a>(content)</dt></dl>
+ <dl><dt><a name="-linked_images"><strong>linked_images</strong></a>(markdown_content: str) -&gt; list</dt><dd><tt>return&nbsp;the&nbsp;image&nbsp;paths&nbsp;as&nbsp;is&nbsp;in&nbsp;the&nbsp;human&nbsp;written&nbsp;markdown&nbsp;file</tt></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>()</dt></dl>
+ <dl><dt><a name="-name_a_file"><strong>name_a_file</strong></a>(filename)</dt></dl>
+ <dl><dt><a name="-object_id"><strong>object_id</strong></a>(file: str) -&gt; str</dt></dl>
+ <dl><dt><a name="-pandoc"><strong>pandoc</strong></a>(content: str, flags: list) -&gt; str</dt></dl>
+ <dl><dt><a name="-pandoc_json"><strong>pandoc_json</strong></a>(content: str) -&gt; str</dt></dl>
+ <dl><dt><a name="-post_vivsibility"><strong>post_vivsibility</strong></a>(metadata: dict) -&gt; str</dt><dd><tt>dict&nbsp;:&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;a&nbsp;post's&nbsp;metadata<br>
+return&nbsp;the&nbsp;visibility&nbsp;of&nbsp;the&nbsp;post<br>
+default&nbsp;visibility&nbsp;is&nbsp;public</tt></dd></dl>
+ <dl><dt><a name="-process_metadata"><strong>process_metadata</strong></a>(markdown_content) -&gt; dict</dt></dl>
+ <dl><dt><a name="-publish_images"><strong>publish_images</strong></a>(list_of_images: list, public_dir: str) -&gt; None</dt><dd><tt>list_of_images&nbsp;:&nbsp;a&nbsp;list&nbsp;of&nbsp;images&nbsp;in&nbsp;the&nbsp;markdown&nbsp;file&nbsp;folder.&nbsp;these&nbsp;<br>
+are&nbsp;existing&nbsp;images.&nbsp;the&nbsp;file&nbsp;path&nbsp;is&nbsp;relative&nbsp;to&nbsp;the&nbsp;markdown&nbsp;path.&nbsp;<br>
+&nbsp;<br>
+It&nbsp;will&nbsp;be&nbsp;fine&nbsp;if&nbsp;the&nbsp;images&nbsp;file&nbsp;in&nbsp;markdown&nbsp;folder&nbsp;is&nbsp;located&nbsp;in&nbsp;a&nbsp;deeper&nbsp;place<br>
+than&nbsp;the&nbsp;first&nbsp;level.&nbsp;i.e.&nbsp;if&nbsp;they&nbsp;are&nbsp;in&nbsp;a&nbsp;subfolder&nbsp;of&nbsp;`/markdown`&nbsp;folder<br>
+&nbsp;<br>
+public_dir&nbsp;:&nbsp;the&nbsp;directory&nbsp;of&nbsp;the&nbsp;generated&nbsp;html&nbsp;files<br>
+publish&nbsp;images&nbsp;in&nbsp;the&nbsp;markdown&nbsp;file&nbsp;to&nbsp;the&nbsp;post&nbsp;directory</tt></dd></dl>
+ <dl><dt><a name="-record_file_createtime"><strong>record_file_createtime</strong></a>(file: str)</dt></dl>
+ <dl><dt><a name="-render_html"><strong>render_html</strong></a>(template_name, content)</dt><dd><tt>template_name&nbsp;:&nbsp;the&nbsp;complete&nbsp;path&nbsp;of&nbsp;the&nbsp;template&nbsp;file&nbsp;&nbsp;<br>
+content&nbsp;:&nbsp;the&nbsp;string&nbsp;of&nbsp;the&nbsp;markdown&nbsp;file<br>
+post_dir&nbsp;:&nbsp;the&nbsp;directory&nbsp;of&nbsp;the&nbsp;generated&nbsp;html&nbsp;files<br>
+&nbsp;<br>
+render&nbsp;html&nbsp;for&nbsp;each&nbsp;post</tt></dd></dl>
+ <dl><dt><a name="-render_html_for_each_post"><strong>render_html_for_each_post</strong></a>(template_name, md_dir, post_dir, updated: &lt;built-in function callable&gt; = &lt;function &lt;lambda&gt; at 0x0000012FA1204280&gt;)</dt><dd><tt>#&nbsp;render&nbsp;html&nbsp;for&nbsp;each&nbsp;post</tt></dd></dl>
+ <dl><dt><a name="-render_index_page"><strong>render_index_page</strong></a>(data_json, index_page_path) -&gt; None</dt><dd><tt>render&nbsp;data&nbsp;for&nbsp;index&nbsp;page&nbsp;to&nbsp;a&nbsp;list&nbsp;of&nbsp;links&nbsp;to&nbsp;each&nbsp;post&nbsp;<br>
+written&nbsp;in&nbsp;markown&nbsp;<br>
+&nbsp;<br>
+relies&nbsp;on&nbsp;data.json.&nbsp;so&nbsp;to&nbsp;properly&nbsp;update&nbsp;index&nbsp;page,&nbsp;update&nbsp;data.json&nbsp;in&nbsp;advance</tt></dd></dl>
+ <dl><dt><a name="-rss_time"><strong>rss_time</strong></a>(time) -&gt; str</dt></dl>
+ <dl><dt><a name="-text_file_to_string"><strong>text_file_to_string</strong></a>(filename)</dt></dl>
+ <dl><dt><a name="-update_data"><strong>update_data</strong></a>(md_dir)</dt><dd><tt>#&nbsp;update&nbsp;data&nbsp;for&nbsp;each&nbsp;post</tt></dd></dl>
+ <dl><dt><a name="-write_html"><strong>write_html</strong></a>(output, post_dir, title)</dt></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>assests_folder_name</strong> = 'assets'<br>
+<strong>index_page_path</strong> = r'C:\Users\jjj\codes\blog/public/index.html'<br>
+<strong>markdown_dir</strong> = r'C:\Users\jjj\codes\blog/markdown'<br>
+<strong>post_dir</strong> = r'C:\Users\jjj\codes\blog/public/post'<br>
+<strong>root_dir</strong> = r'C:\Users\jjj\codes\blog'<br>
+<strong>template_dir</strong> = r'C:\Users\jjj\codes\blog/template'</td></tr></table>
+</body></html>
