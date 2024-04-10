@@ -1,11 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-    <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-  xmlns:content="http://purl.org/rss/1.0/modules/content/"
-  xmlns:admin="http://webns.net/mvcb/"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    >
-    <xml-stylesheet type="text/xsl" href="https://raw.githubusercontent.com/fileformat/feed.style/main/docs/xslt/simple-rss.xslt">
+<?xml-stylesheet  encoding="UTF-8" href="https://raw.githubusercontent.com/fileformat/feed.style/main/docs/xslt/simple-rss.xslt"?>
+
     <channel>
     <description>Dbdo 主页</description>
     <link > http://dbdo.website/post </link>
