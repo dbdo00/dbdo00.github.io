@@ -361,7 +361,8 @@ def rss_time(time) -> str:
 
 
 def create_rss(data_json, rss_path):
-    rss_content = f'''<?xml-stylesheet  encoding="UTF-8" href="https://raw.githubusercontent.com/fileformat/feed.style/main/docs/xslt/simple-rss.xslt"?>
+    rss_content = f'''<?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet href="https://raw.githubusercontent.com/fileformat/feed.style/main/docs/xslt/simple-rss.xslt" type="text/xsl"?>
     <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
   xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -371,7 +372,7 @@ def create_rss(data_json, rss_path):
     <description>Dbdo 主页</description>
     <link > http://dbdo.website/post </link>
     <title>Dbdo 的主页 </title>
-     <atom:link href="http://dbdo.website/post" rel="self" type="application/rss+xml" />
+     <atom:link href="http://dbdo.website/rss.xml" rel="self" type="application/rss+xml" />
     @@@ 
     </channel>
     </rss>
@@ -642,7 +643,7 @@ def main():
     # generate rss.xml
     create_rss(data_json=f'{root_dir}/data.json', rss_path = f'{root_dir}/public/rss.xml')
 
-if __name__ == '__main__':
+if __name__ == 'aaa':
     main()
     render_html_for_each_post(
         
@@ -657,5 +658,7 @@ if __name__ == '__main__':
     # record_file_createtime('markdown/2309301506.md')
     # record_file_createtime('markdown/2023-12-26.md')
 
+if __name__ == '__main__':
+    create_rss(data_json=f'{root_dir}/data.json', rss_path = f'{root_dir}/public/rss.xml')
         
 
