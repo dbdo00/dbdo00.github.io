@@ -366,8 +366,7 @@ def create_rss(data_json, rss_path):
     xmlns:dc="http://purl.org/dc/elements/1.1/"
   xmlns:content="http://purl.org/rss/1.0/modules/content/"
   xmlns:admin="http://webns.net/mvcb/"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    >
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <xml-stylesheet type="text/xsl" href="https://raw.githubusercontent.com/fileformat/feed.style/main/docs/xslt/simple-rss.xslt">
     <channel>
     <description>Dbdo 主页</description>
