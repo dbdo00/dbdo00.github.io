@@ -361,8 +361,7 @@ def rss_time(time) -> str:
 
 
 def create_rss(data_json, rss_path):
-    rss_content = f'''<?xml version="1.0" encoding="UTF-8"?>
-
+    rss_content = f'''<?xml-stylesheet  encoding="UTF-8" href="https://raw.githubusercontent.com/fileformat/feed.style/main/docs/xslt/simple-rss.xslt"?>
     <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
   xmlns:content="http://purl.org/rss/1.0/modules/content/"
