@@ -362,12 +362,13 @@ def rss_time(time) -> str:
 
 def create_rss(data_json, rss_path):
     rss_content = f'''<?xml version="1.0" encoding="UTF-8"?>
+    <xml-stylesheet type="text/xsl" href="https://raw.githubusercontent.com/fileformat/feed.style/main/docs/xslt/simple-rss.xslt">
     <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
   xmlns:content="http://purl.org/rss/1.0/modules/content/"
   xmlns:admin="http://webns.net/mvcb/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <xml-stylesheet type="text/xsl" href="https://raw.githubusercontent.com/fileformat/feed.style/main/docs/xslt/simple-rss.xslt">
+
     <channel>
     <description>Dbdo 主页</description>
     <link > http://dbdo.website/post </link>
