@@ -368,7 +368,7 @@ def create_rss(data_json, rss_path):
   xmlns:admin="http://webns.net/mvcb/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     >
-     <?xml-stylesheet type="text/xsl" href="https://raw.githubusercontent.com/fileformat/feed.style/main/docs/xslt/simple-rss.xslt" ?>
+    <!?xml-stylesheet type="text/xsl" href="https://raw.githubusercontent.com/fileformat/feed.style/main/docs/xslt/simple-rss.xslt"?>
     <channel>
     <description>Dbdo 主页</description>
     <link > http://dbdo.website/post </link>
