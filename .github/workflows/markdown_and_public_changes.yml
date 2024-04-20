@@ -34,10 +34,10 @@ jobs:
         run: 
           make
 
-      # - name: Deploy
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY}} 
-      #     external_repository: dbdowjfb/dbdowjfb.github.io
-      #     publish_branch: main # default: gh-pages
-      #     publish_dir: ./public
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY}} 
+          external_repository: dbdowjfb/writeblog/public
+          publish_branch: main #default: gh-pages
+          publish_dir: ./public
