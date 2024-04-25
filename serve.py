@@ -46,8 +46,8 @@ def build():
     if len(os.listdir(markdown_dir)) != len(old_markdown_dir):
         old_markdown_dir = os.listdir(markdown_dir)
         print("index changed")
-        execute('git add *')
-        execute(f'git commit -a -m "{str(time.time())}"')
+        # execute('git add *')
+        # execute(f'git commit -a -m "{str(time.time())}"')
         update_data(md_dir=markdown_dir)
         render_index_page('./data.json', index_page_path)
     end_time = time.time()
