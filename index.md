@@ -1,7 +1,7 @@
 # dbdo
 
-- [mastodon](https://mas.to/@cxwh)
-- [twitter](https://twitter.com/SPZKzJ90e7Vsi)
+- [mastodon](https://mas.to/@dbdo)
+- [twitter](https://twitter.com/__dbdo_)
 - [bearblog](https://spinach.bearblog.dev)
 - [weblog](./post)
 - [neodb](https://neodb.social/users/cxwh/)
