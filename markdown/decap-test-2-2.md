@@ -9,3 +9,7 @@ the feeling of writing is terrible... far from bearblog.
 doesn't allow me to manually break lines
 
 no autosave...
+
+
+
+dfa
