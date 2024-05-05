@@ -4,4 +4,4 @@ backend:
 
   # This line should *not* be indented
 media_folder: "markdown/assets" # Media files will be stored in the repo under images/uploads
-public_folder: "/public/" # The src attribute for uploaded media will begin with /images/uploads
+public_folder: "/public/assets" # The src attribute for uploaded media will begin with /images/uploads
