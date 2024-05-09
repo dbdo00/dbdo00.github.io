@@ -306,14 +306,16 @@ const autoSave = () => {
 // 4) the content is changed
 
 function handleContentChange() {
+    const postState = document.getElementById('content').getAttribute('post-type');
+    if (postState !== 'draft') {
     contentChanged = true;
     clearTimeout(autosaveTimer);
 
     autosaveTimer = setTimeout(autoSave, 5000);
-
+    }
 }
 
-await document.getElementById('content').addEventListener('input', handleContentChange)
+await document.getElementById('content').addEventListener('input', handleContentChange);
 
 function repoName() {
     return document.getElementById('repoName').value.trim() || localStorage.getItem('repoName');
@@ -323,6 +325,7 @@ function repoName() {
 
 
 function createNewFile() {
+
     const updateDraft = async (fileName) => {
         const sha = '';
         const repoName = document.getElementById('repoName').value.trim() || localStorage.getItem('repoName');
@@ -355,16 +358,17 @@ function createNewFile() {
             }
         }).then(() => {
             showMessageBox('File updated successfully!');
-            document.getElementById('content').setAttribute('draft-state') =  'saved';
+            document.getElementById('content').setAttribute('draft-state', 'saved')
         }).catch(err => {
             console.error(err);
         });
     };
 
-    const draftState = document.getElementById('content').getAttribute('draft-state');
+    
     const autoSave = () => {
         // Get the content of the textarea with id 'content'
         const content = document.getElementById('content').value;
+        const draftState = document.getElementById('content').getAttribute('draft-state');
         if (draftState === 'saved') {
             // If the draft is already saved, update the content
             
