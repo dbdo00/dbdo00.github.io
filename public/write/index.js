@@ -61,7 +61,6 @@ async function login(token) {
 }
 
 function createNewFile() {
-    const newFileButton = document.getElementById('newPost');
     
 } 
 
@@ -215,6 +214,11 @@ const showMessageBox = (message) => {
     }, 3000);
 };
 
+async function user() {
+    return await octokit.request('GET /user');
+}
+
+
 async function updateOrCreateContent() {
     const repoName = document.getElementById('repoName').value.trim() || localStorage.getItem('repoName');
     const filePath = document.getElementById('filePath').value.trim() || localStorage.getItem('filePath');
@@ -315,3 +319,59 @@ function handleContentChange() {
 
 await document.getElementById('content').addEventListener('input', handleContentChange)
 
+function repoName() {
+    return document.getElementById('repoName').value.trim() || localStorage.getItem('repoName');
+}
+
+function createNewFile() {
+    
+
+    // Display blank in the textarea with id 'content'
+    document.getElementById("content").value = "";
+
+    // Add the 'post-type=draft' selector for the 'content' textarea
+    document.getElementById("content").setAttribute("post-type", "draft");
+
+    // Add event listener to textarea for auto-saving
+    // TODO: THE FOLLOWING IS NOT YET IMPLEMENTED !
+    document.getElementById("content").addEventListener("input", handleContentChange);
+
+    
+    
+
+    // Create a new file with a random hash name in the 'drafts' folder
+    const fileName = generateRandomFileName();
+    const fileContent = ""; // Initial content is empty
+    const path = "drafts/" + fileName;
+
+    const owner = user().login;
+    const repoName = repoName();
+    
+    octokit.repos.createOrUpdateFileContents({
+        owner,
+        repo: repoName,
+        path: path,
+        message: "Create new file",
+        content: encode64(fileContent),
+    }).then(response => {
+        console.log("File created:", response.data.content.path);
+    }).catch(err => {
+        console.error("Error creating file:", err);
+    });
+
+}
+
+
+
+// Function to generate random file name
+function generateRandomFileName() {
+    const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    const charactersLength = characters.length;
+    for (let i = 0; i < 10; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result + ".md"; // Assuming Markdown file
+}
+
+document.getElementById('createNewFile').addEventListener('click', createNewFile);
