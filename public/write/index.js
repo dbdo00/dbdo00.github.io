@@ -324,19 +324,25 @@ function repoName() {
 
 function createNewFile() {
     const updateDraft = async (fileName) => {
+        const sha;
         const repoName = document.getElementById('repoName').value.trim() || localStorage.getItem('repoName');
         const filePath = 'drafts/' + fileName;
         const content = encode64(document.getElementById('content').value.trim()); // Base64 encoding content
         const { data: user } = await octokit.request('GET /user');
         const owner = user.login; // Username of the logged-in user
-
+        const draftState = document.getElementById('content').getAttribute('draft-state');
         const message = 'Update/Create contnt ' + filePath;
         const committer = {
             name: user.login,
             email: user.email 
         };
 
-        const sha = await computeSha(filePath);
+        try {
+        sha = await computeSha(filePath);}
+        catch (error) {
+            console.error(error);
+        }
+
         octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
             owner,
             repo: repoName,
@@ -350,6 +356,7 @@ function createNewFile() {
             }
         }).then(() => {
             showMessageBox('File updated successfully!');
+            draftState === 'saved'
         }).catch(err => {
             console.error(err);
         });
@@ -361,12 +368,12 @@ function createNewFile() {
         const content = document.getElementById('content').value;
         if (draftState === 'saved') {
             // If the draft is already saved, update the content
+            
             updateDraft(fileName);
         } else {
             // Create a new file with a random hash name in the 'drafts' folder
             const fileName = generateRandomFileName();
             updateDraft(fileName);
-            document.getElementById("content").setAttribute("draft-state", "saved");
         }
     };
 
