@@ -4,6 +4,8 @@ title: Test 2
 tags: test, test2, test3
 ---
 
+中文内容
+
 chinese input just doensn't work
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis velit non vestibulum condimentum. Quisque turpis quam, congue vitae ipsum a, commodo suscipit enim. Sed ac fermentum ante, eu lacinia odio. Cras vel sodales lorem. Sed sollicitudin nisl in elit ornare dapibus. Aliquam erat volutpat. Integer scelerisque consequat libero, sit amet porta dolor ultrices vitae. Etiam luctus sodales cursus. Aenean a turpis pretium, ultrices turpis ut, vestibulum eros. Praesent nec sem eleifend, tincidunt lacus et, dictum eros.
