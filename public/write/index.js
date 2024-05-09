@@ -6,6 +6,8 @@ const outputEmail = document.getElementById("output-email");
 // try to log in, if fail, then use the netlify authenticator to login
 
 const authenticator = new netlify.default({})
+let token;
+
 
 authenticator.authenticate(
     // Set the OAuth provider and token scope
@@ -16,14 +18,14 @@ authenticator.authenticate(
         if (error) {
             console.error(error);
         } else {
-            const token = data.token;
+            token = data.token;
            
         }
     }
 );
 
 try {
-    const token = localStorage.getItem("token");
+    token = localStorage.getItem("token");
     if (token) {
         login(token);
     }
