@@ -18,7 +18,7 @@ authenticator.authenticate(
         if (error) {
             console.error(error);
         } else {
-            token = data.token;
+            token = await data.token
            
         }
     }
