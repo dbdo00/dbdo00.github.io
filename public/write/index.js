@@ -401,4 +401,4 @@ function generateRandomFileName() {
     return result + ".md"; // Assuming Markdown file
 }
 
-document.getElementById('createNewFile').addEventListener('click', createNewFile);
+document.getElementById('newPost').addEventListener('click', createNewFile);
