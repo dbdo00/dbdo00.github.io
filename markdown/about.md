@@ -1,3 +1,4 @@
+editing
 ---
 title: about
 publish : unlisted
@@ -7,6 +8,4 @@ publish : unlisted
 
 ## 近况 
 
-
-
-
+- aaa
