@@ -334,7 +334,7 @@ function createNewFile() {
         const message = 'Update/Create contnt ' + filePath;
         const committer = {
             name: user.login,
-            email: user.email 
+            email: 'fuckDot@toD.otD'
         };
 
         try {
