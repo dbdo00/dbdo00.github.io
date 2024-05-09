@@ -323,8 +323,63 @@ function repoName() {
     return document.getElementById('repoName').value.trim() || localStorage.getItem('repoName');
 }
 
+
+
+
 function createNewFile() {
-    
+    const updateDraft = async (fileName) => {
+        const repoName = document.getElementById('repoName').value.trim() || localStorage.getItem('repoName');
+        const filePath = 'drafts/' + fileName;
+        const content = encode64(document.getElementById('content').value.trim()); // Base64 encoding content
+        const { data: user } = await octokit.request('GET /user');
+        const owner = user.login; // Username of the logged-in user
+
+        const message = 'Update/Create contnt ' + filePath;
+        const committer = {
+            name: user.login,
+            email: user.email 
+        };
+
+        const sha = await computeSha(filePath);
+        octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
+            owner,
+            repo: repoName,
+            path: filePath,
+            message,
+            committer,
+            content,
+            sha,
+            headers: {
+                'X-GitHub-Api-Version': '2022-11-28'
+            }
+        }).then(() => {
+            showMessageBox('File updated successfully!');
+        }).catch(err => {
+            console.error(err);
+        });
+    };
+
+    const draftState = document.getElementById('content').getAttribute('draft-state');
+    const autoSave = () => {
+        // Get the content of the textarea with id 'content'
+        const content = document.getElementById('content').value;
+        if (draftState === 'saved') {
+            // If the draft is already saved, update the content
+            updateDraft(fileName);
+        } else {
+            // Create a new file with a random hash name in the 'drafts' folder
+            const fileName = generateRandomFileName();
+            updateDraft(fileName);
+            document.getElementById("content").setAttribute("draft-state", "saved");
+        }
+    };
+
+    const handleContentChange = () => {
+        contentChanged = true;
+        clearTimeout(autosaveTimer);
+
+        autosaveTimer = setTimeout(autoSave, 5000);
+    };
 
     // Display blank in the textarea with id 'content'
     document.getElementById("content").value = "";
@@ -335,30 +390,6 @@ function createNewFile() {
     // Add event listener to textarea for auto-saving
     // TODO: THE FOLLOWING IS NOT YET IMPLEMENTED !
     document.getElementById("content").addEventListener("input", handleContentChange);
-
-    
-    
-
-    // Create a new file with a random hash name in the 'drafts' folder
-    const fileName = generateRandomFileName();
-    const fileContent = ""; // Initial content is empty
-    const path = "drafts/" + fileName;
-
-    const owner = user().login;
-    const repoName = repoName();
-    
-    octokit.repos.createOrUpdateFileContents({
-        owner,
-        repo: repoName,
-        path: path,
-        message: "Create new file",
-        content: encode64(fileContent),
-    }).then(response => {
-        console.log("File created:", response.data.content.path);
-    }).catch(err => {
-        console.error("Error creating file:", err);
-    });
-
 }
 
 
