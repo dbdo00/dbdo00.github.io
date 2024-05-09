@@ -60,10 +60,6 @@ async function login(token) {
     }
 }
 
-function createNewFile() {
-    
-} 
-
 function encode64(text) {
     return btoa(String.fromCharCode(...new TextEncoder().encode(text)))
 }
