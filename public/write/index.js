@@ -19,7 +19,7 @@ anchorTag.addEventListener("click", (event) => {
                 console.error(error);
             } else {
                 const token = data.token;
-                login();   
+                login(token);   
             }
         }
     );
