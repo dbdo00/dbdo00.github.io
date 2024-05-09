@@ -13,7 +13,7 @@ anchorTag.addEventListener("click", (event) => {
         // Set the OAuth provider and token scope
         // Provider can be "github", "gitlab", or "bitbucket"
         // The scopes available depend on your OAuth provider
-        { provider: "github", scope: "repo, user"  },
+        { provider: "github", scope: "repo user"  },
         async function (error, data) {
             if (error) {
                 console.error(error);
