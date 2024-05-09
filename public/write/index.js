@@ -7,7 +7,7 @@ anchorTag.addEventListener("click", (event) => {
     event.preventDefault();
 
     const authenticator = new netlify.default({})
-    // netlify.configure({site_id: "94385d69-9efa-4e94-9d52-5c34b1afc240"});
+   
 
     authenticator.authenticate(
         // Set the OAuth provider and token scope
