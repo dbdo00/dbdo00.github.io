@@ -355,7 +355,7 @@ function createNewFile() {
             }
         }).then(() => {
             showMessageBox('File updated successfully!');
-            document.getElementById('content').getAttribute('draft-state') =  'saved';
+            document.getElementById('content').setAttribute('draft-state') =  'saved';
         }).catch(err => {
             console.error(err);
         });
