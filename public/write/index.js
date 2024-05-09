@@ -25,10 +25,7 @@ authenticator.authenticate(
 );
 
 try {
-    token = localStorage.getItem("token");
-    if (token) {
-        login(token);
-    }
+    login(token);
 } catch (error) {
     console.error(error);
 } 
