@@ -330,7 +330,6 @@ function createNewFile() {
         const content = encode64(document.getElementById('content').value.trim()); // Base64 encoding content
         const { data: user } = await octokit.request('GET /user');
         const owner = user.login; // Username of the logged-in user
-        const draftState = document.getElementById('content').getAttribute('draft-state');
         const message = 'Update/Create contnt ' + filePath;
         const committer = {
             name: user.login,
@@ -356,7 +355,7 @@ function createNewFile() {
             }
         }).then(() => {
             showMessageBox('File updated successfully!');
-            draftState === 'saved'
+            document.getElementById('content').getAttribute('draft-state') =  'saved';
         }).catch(err => {
             console.error(err);
         });
@@ -374,6 +373,7 @@ function createNewFile() {
             // Create a new file with a random hash name in the 'drafts' folder
             const fileName = generateRandomFileName();
             updateDraft(fileName);
+            
         }
     };
 
