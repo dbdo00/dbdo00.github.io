@@ -60,6 +60,11 @@ async function login(token) {
     }
 }
 
+function createNewFile() {
+    const newFileButton = document.getElementById('newPost');
+    
+} 
+
 function encode64(text) {
     return btoa(String.fromCharCode(...new TextEncoder().encode(text)))
 }
