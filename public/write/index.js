@@ -325,7 +325,7 @@ function repoName() {
 
 
 function createNewFile() {
-    const fileName = '';
+    let fileName; 
     const updateDraft = async (fileName) => {
         const sha = '';
         const repoName = document.getElementById('repoName').value.trim() || localStorage.getItem('repoName');
