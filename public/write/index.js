@@ -327,7 +327,7 @@ function repoName() {
 function createNewFile() {
     let fileName; 
     const updateDraft = async (fileName) => {
-        const sha = '';
+        let sha = '';
         const repoName = document.getElementById('repoName').value.trim() || localStorage.getItem('repoName');
         const filePath = 'drafts/' + fileName;
         const content = encode64(document.getElementById('content').value.trim()); // Base64 encoding content
