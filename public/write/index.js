@@ -325,7 +325,7 @@ function repoName() {
 
 
 function createNewFile() {
-
+    const fileName = '';
     const updateDraft = async (fileName) => {
         const sha = '';
         const repoName = document.getElementById('repoName').value.trim() || localStorage.getItem('repoName');
@@ -371,11 +371,10 @@ function createNewFile() {
         const draftState = document.getElementById('content').getAttribute('draft-state');
         if (draftState === 'saved') {
             // If the draft is already saved, update the content
-            
             updateDraft(fileName);
         } else {
             // Create a new file with a random hash name in the 'drafts' folder
-            const fileName = generateRandomFileName();
+            fileName = generateRandomFileName();
             updateDraft(fileName);
             
         }
