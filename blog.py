@@ -158,40 +158,32 @@ def file_ctime(filename):
     return get_file_date(filename)
 
 
-# def get_file_date(file_path):
-#     """
-#     TODO: error occurs when the file is not committed
-#     """
-#     print("file_path:", file_path)
-#     try:
-#         # 运行 git log 命令获取文件的最后修改日期
-#         # id = object_id(file_path)
-#         command = ["git", "log", "--reverse", r"--date=format:%Y-%m-%d %H:%M", "--date=iso-local", file_path]
-#         print(command)
-#         result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
-#         modified_date = result.stdout.strip().split('\n')
-#         for line in modified_date:
-#             if line.startswith('Date:'):
-#                 print("listified_line:", line.split('Date:')[1].strip().split(' '))
-#                 listified_line = line.split('Date:')[1].strip().split(' ') # dates and tzone after 'Date:
-#                 print("listified_line2:", listified_line)        
-#                 break     
-#         # print("file:", file_path)
-#         # print("listified_line3:", listified_line)
-#         return ' '.join(listified_line).strip()
-#     except subprocess.CalledProcessError as e:
-#         print("Error:", e)
-#         print("Error:", e.stderr)
-#         print("file:", file_path)
-#         return None
-
 def get_file_date(file_path):
     """
-    get date from the yaml metadata
-    in the format of '2024-05-05 03:12:00 UTC'
+    TODO: error occurs when the file is not committed
     """
-    date_string = process_metadata(text_file_to_string(file_path))['date']
-    
+    print("file_path:", file_path)
+    try:
+        # 运行 git log 命令获取文件的最后修改日期
+        # id = object_id(file_path)
+        command = ["git", "log", "--reverse", r"--date=format:%Y-%m-%d %H:%M", "--date=iso-local", file_path]
+        print(command)
+        result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
+        modified_date = result.stdout.strip().split('\n')
+        for line in modified_date:
+            if line.startswith('Date:'):
+                print("listified_line:", line.split('Date:')[1].strip().split(' '))
+                listified_line = line.split('Date:')[1].strip().split(' ') # dates and tzone after 'Date:
+                print("listified_line2:", listified_line)        
+                break     
+        # print("file:", file_path)
+        # print("listified_line3:", listified_line)
+        return ' '.join(listified_line).strip()
+    except subprocess.CalledProcessError as e:
+        print("Error:", e)
+        print("Error:", e.stderr)
+        print("file:", file_path)
+        return None
     
 # update data for each post
 def update_data(md_dir):

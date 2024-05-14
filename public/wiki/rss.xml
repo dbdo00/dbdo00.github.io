@@ -4,8 +4,24 @@
  <title>Diary</title>
  <link>/wiki/diary/diary.html</link>
  <description>Diary</description>
- <pubDate>周五, 22 3月 2024 00:29:18 -0400</pubDate>
+ <pubDate>Mon, 13 May 2024 12:17:28 -0400</pubDate>
  <atom:link href="/wiki/rss.xml" rel="self" type="application/rss+xml" />
+ <item>
+  <title>2024-05-13</title>
+  <link>/wiki/diary/2024-05-13.html</link>
+  <guid isPermaLink="false">2024-05-13</guid>
+  <description><![CDATA[
+]]></description>
+  <pubDate>Mon, 13 May 2024 12:15:27 -0400</pubDate>
+ </item>
+ <item>
+  <title>2024-03-27</title>
+  <link>/wiki/diary/2024-03-27.html</link>
+  <guid isPermaLink="false">2024-03-27</guid>
+  <description><![CDATA[
+]]></description>
+  <pubDate>Wed, 27 Mar 2024 13:38:23 -0400</pubDate>
+ </item>
  <item>
   <title>2024-03-09</title>
   <link>/wiki/diary/2024-03-09.html</link>
@@ -15,7 +31,7 @@
 迷宫饭 
 </p>
 ]]></description>
-  <pubDate>周六, 09 3月 2024 03:27:52 -0500</pubDate>
+  <pubDate>Sat, 09 Mar 2024 03:27:52 -0500</pubDate>
  </item>
  <item>
   <title>2024-02-18</title>
@@ -26,7 +42,7 @@
  i fear
 </p>
 ]]></description>
-  <pubDate>周日, 18 2月 2024 11:28:02 -0500</pubDate>
+  <pubDate>Sun, 18 Feb 2024 11:28:02 -0500</pubDate>
  </item>
  <item>
   <title>2024-02-16</title>
@@ -37,7 +53,7 @@
 感觉崩溃
 </p>
 ]]></description>
-  <pubDate>周四, 21 3月 2024 18:57:08 -0400</pubDate>
+  <pubDate>Thu, 21 Mar 2024 18:57:08 -0400</pubDate>
  </item>
  <item>
   <title>2024-02-14</title>
@@ -48,7 +64,7 @@
 transitive subgroup of \(S_5\)
 </p>
 ]]></description>
-  <pubDate>周三, 14 2月 2024 10:23:26 -0500</pubDate>
+  <pubDate>Wed, 14 Feb 2024 10:23:26 -0500</pubDate>
  </item>
  <item>
   <title>2024-02-13</title>
@@ -64,7 +80,7 @@ transitive subgroup of \(S_5\)
 <a href="deg-5-poly.html">deg-5-poly</a>
 </p>
 ]]></description>
-  <pubDate>周二, 13 2月 2024 23:46:28 -0500</pubDate>
+  <pubDate>Tue, 13 Feb 2024 23:46:28 -0500</pubDate>
  </item>
  <item>
   <title>2024-02-01</title>
@@ -72,7 +88,7 @@ transitive subgroup of \(S_5\)
   <guid isPermaLink="false">2024-02-01</guid>
   <description><![CDATA[
 ]]></description>
-  <pubDate>周日, 04 2月 2024 15:16:19 -0500</pubDate>
+  <pubDate>Sun, 04 Feb 2024 15:16:19 -0500</pubDate>
  </item>
 </channel>
 </rss>

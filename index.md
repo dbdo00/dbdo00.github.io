@@ -1,6 +1,4 @@
-# dbdo
-
-- [mastodon](https://mas.to/@dbdo)
+- [mastodon](https://mas.to/@dbdo)  [rss](![syndicated-feed-icon](syndicated-feed-icon.gif))
 - [twitter](https://twitter.com/__dbdo_)
 - [bearblog](https://spinach.bearblog.dev)
 - [weblog](./post)
