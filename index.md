@@ -1,4 +1,4 @@
-- [mastodon](https://mas.to/@dbdo){.hasrss} 
+- [mastodon](https://mas.to/@dbdo){.hasrss rel="me"}
 - [twitter](https://twitter.com/__dbdo_)
 - [paper.wf](https://paper.wf/dbdo/){.hasrss}
 - [bearblog](https://spinach.bearblog.dev){.hasrss}
