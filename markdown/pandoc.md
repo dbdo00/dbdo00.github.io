@@ -24,3 +24,5 @@ https://github.com/jgm/pandoc/issues/6122
 
 使用例子: 
 https://github.com/jgm/pandoc/issues/6122#issuecomment-1377891056
+
+如果是旧版本，也可以输出成 epub 之后解压。解压以后，`EPUB/text` 文件夹下面是每个标题下内容（包含标题）的 xhtml 输出。
