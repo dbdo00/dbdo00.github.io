@@ -17,3 +17,10 @@ pandoc_process = subprocess.Popen(['pandoc', flags,'--template=web_blank_pandoct
 stdout, stderr = pandoc_process.communicate(input=content)
 ```
 
+## 多文件输出
+
+https://github.com/jgm/pandoc/issues/6122 
+#pandoc  支持多个文件输出 (一个标题下内容是一个文件）。输出文件类型选项是 -t chunkedhtml
+
+使用例子: 
+https://github.com/jgm/pandoc/issues/6122#issuecomment-1377891056

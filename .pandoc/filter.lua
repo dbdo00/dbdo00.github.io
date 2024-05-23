@@ -1,11 +1,11 @@
 function remove_class_from_element(elem, class_to_remove)
 	if elem.classes then
-		for i, class in ipairs(elem.classes) do
-			if class == class_to_remove then
-				table.remove(elem.classes, i)
-				break
-			end
+	   for i, class in ipairs(elem.classes) do
+	       if class == class_to_remove then
+		  table.remove(elem.classes, i)
+		  break
 		end
+	    end
 	end
 	return elem
 end
