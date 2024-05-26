@@ -49,7 +49,6 @@ def build():
         # execute('git add *')
         # execute(f'git commit -a -m "{str(time.time())}"')
         update_data(md_dir=markdown_dir)
-        render_index_page('./data.json', index_page_path)
     end_time = time.time()
     print(f"Build time: {end_time - start_time} seconds")
 
@@ -64,7 +63,6 @@ def build_exclusively():
         post_dir= post_dir,
     )
     # just render index again without updating the data json
-    render_index_page('./data.json', index_page_path)
 
     
 def run():
