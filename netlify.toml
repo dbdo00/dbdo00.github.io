@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/rss.xml"
+  to = "https://dbdo.codeberg.page/feeds/all.rss.xml"
+  status = 302
+  force = false
