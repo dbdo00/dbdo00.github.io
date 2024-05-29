@@ -1,21 +1,46 @@
-from blog import * 
+import os 
+import re 
+import utils
 
-root_dir = os.getcwd()
-markdown_dir = f'{root_dir}/markdown'
-template_dir = f'{root_dir}/template'
-post_dir = f'{root_dir}/public/post' 
-index_page_path = f'{root_dir}/public/post/index.html'
-render_html_for_each_post(
-        
-        template_name="post.html", 
-        
-        md_dir = markdown_dir, 
-        
-        post_dir=post_dir, 
+input_path = "mkd"
+output_path = "output"
 
-        updated = lambda x: True 
-    )
-render_index_page(f'{root_dir}/data.json',index_page_path=index_page_path)
-    # generate rss.xml
-create_rss(data_json=f'{root_dir}/data.json', rss_path = f'{root_dir}/public/rss.xml')
-print("Build complete")
+dir = os.listdir(input_path)
+print(dir)
+
+data = open("index.txt", 'r').read().splitlines()
+
+class Entry:
+    def __init__(self, name):
+        self.name = name
+        self.uri = self.uri()
+
+    def uri(self):
+        for line in data:
+            if utils.is_comment(line): continue     
+            current_name, current_title, current_uri = line.split(',')
+            if current_name == self.name:
+                return current_uri.strip()
+    
+    def title(self):
+        for line in data:
+            if utils.is_comment(line): continue     
+            current_name, current_title, current_uri = line.split(',')
+            if current_name == self.name:
+                return current_title.strip()
+
+a = Entry("page")
+print(a.name, a.uri)
+
+for i in dir:
+    if i.endswith(".md"):
+        # the parsed html content 
+        print(f"parsing {i}...")
+        parsed = os.popen(f"python parser.py {input_path}/{i}").read()
+        # name of the markdown file without extension
+        name = i.split('.md')[0] 
+        entry = Entry(name)
+        open(f"{output_path}/{entry.uri}.html", 'w').write(parsed)
+        print(f"finished writing to {output_path}/{entry.uri}.html")
+
+

@@ -157,8 +157,13 @@ def file_ctime(filename):
     # return time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime(os.path.getmtime(filename))) 
     return get_file_date(filename)
 
-
 def get_file_date(file_path):
+    return get_metadata(text_file_to_string(file_path))
+
+
+
+
+def get_file_date_bygit(file_path):
     """
     TODO: error occurs when the file is not committed
     """
@@ -454,6 +459,7 @@ def get_metadata(markdown_content : str) -> str:
 
             return yaml_metadata
 
+
 def process_metadata(markdown_content) -> dict:
     
 
@@ -657,9 +663,8 @@ if __name__ == 'aaa':
     )
     # record_file_createtime('markdown/2309301506.md')
     # record_file_createtime('markdown/2023-12-26.md')
-    
+
 
 if __name__ == '__main__':
-    create_rss(data_json=f'{root_dir}/data.json', rss_path = f'{root_dir}/public/rss.xml')
-            
-
+    print(process_metadata(text_file_to_string("./markdown/links.md")))
+    
