@@ -1,6 +1,6 @@
 - [mastodon](https://mas.to/@dbdo){.hasrss rel="me"}
 - [twitter](https://twitter.com/__dbdo_)
-- [paper.wf](https://paper.wf/dbdo/){.hasrss}
+- [paper.wf](https://wf.dbdo.website){.hasrss}
 - [bearblog](https://spinach.bearblog.dev){.hasrss}
 - [weblog](./post){.hasrss}
 - [neodb](https://neodb.social/@dbdo){.hasrss}
