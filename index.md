@@ -6,8 +6,7 @@
 - 📝[blog 2](https://spinach.bearblog.dev){.hasrss}
 - 📝 [blog 3](./post){.hasrss}
 - 🎬 [neodb](https://neodb.social/@dbdo){.hasrss}
-- 👀 [向dbdo提出任何问题](https://peing.net/zh-CN/0e40df165ae885)
+- 👀 [ Try asking dbdo a question! ](https://peing.net/en/me/home)
 
-> 我不知道说什么！
 
 :::
