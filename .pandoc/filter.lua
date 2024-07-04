@@ -10,6 +10,7 @@ function remove_class_from_element(elem, class_to_remove)
 	return elem
 end
 
+
 function add_rss_icon(el)
   if el.classes:includes("hasrss") then
     -- Create an img element

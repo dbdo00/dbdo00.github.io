@@ -72,9 +72,15 @@ select:-webkit-autofill {
    --darkreader-neutral-text: #d6d0c6;
    --darkreader-selection-background: #15539c;
    --darkreader-selection-text: #e5e0d8;
+   --borderColor: #8ec07c;
 }
 img {
     margin: 0 0 0 2px;
+}
+.typography h1 {
+	padding-bottom: .3em;
+	font-size: 2em;
+	border-bottom: 1px solid var(--borderColor);
 }
 </style>
 </head>
@@ -87,6 +93,7 @@ $if(title)$
 <header id="title-block-header">
 <h1 class="title">$title$</h1>
 $endif$ 
+
 
 $body$
 $for(include-after)$
