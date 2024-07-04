@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
 <style>
-/* User-Agent Style */
+/* color : https://github.com/morhetz/gruvbox */
 html {
     background-color: #282828 !important;
     font-size: 1rem
@@ -18,13 +18,11 @@ html, body {
     background-color: #282828;
 }
 html, body {
-    margin: 0 auto;
-    max-width: 36em;
-    border-color: #776f62;
-    color: #fbf1c7;
+    color: #fbf1c7; /* fg0 */
 }
 a {
-    color: #8ec07c;
+    color: #8ec07c; 
+    /* aqua dark 2 */
 }
 table {
     border-color: #5c6060;
@@ -72,7 +70,7 @@ select:-webkit-autofill {
    --darkreader-neutral-text: #d6d0c6;
    --darkreader-selection-background: #15539c;
    --darkreader-selection-text: #e5e0d8;
-   --borderColor: #8ec07c;
+   --borderColor: #ebdbb2; /* fg1 */
 }
 img {
     margin: 0 0 0 2px;
@@ -81,11 +79,18 @@ img {
 	padding-bottom: .3em;
 	font-size: 2em;
 	border-bottom: 1px solid var(--borderColor);
+	font-family: monospace;
 }
+
+ main  {
+	margin: 0 auto;
+	max-width: 36em;
+}
+
 </style>
 </head>
-<body>
-
+<body class="typography">
+<main>
 $for(include-before)$
 $include-before$
 $endfor$
@@ -93,11 +98,10 @@ $if(title)$
 <header id="title-block-header">
 <h1 class="title">$title$</h1>
 $endif$ 
-
-
 $body$
 $for(include-after)$
 $include-after$
 $endfor$
+</main>
 </body>
 </html>

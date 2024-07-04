@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>index</title>
 <style>
-/* User-Agent Style */
+/* color : https://github.com/morhetz/gruvbox */
 html {
     background-color: #282828 !important;
     font-size: 1rem
@@ -18,13 +18,11 @@ html, body {
     background-color: #282828;
 }
 html, body {
-    margin: 0 auto;
-    max-width: 36em;
-    border-color: #776f62;
-    color: #fbf1c7;
+    color: #fbf1c7; /* fg0 */
 }
 a {
-    color: #8ec07c;
+    color: #8ec07c; 
+    /* aqua dark 2 */
 }
 table {
     border-color: #5c6060;
@@ -72,7 +70,7 @@ select:-webkit-autofill {
    --darkreader-neutral-text: #d6d0c6;
    --darkreader-selection-background: #15539c;
    --darkreader-selection-text: #e5e0d8;
-   --borderColor: #8ec07c;
+   --borderColor: #ebdbb2; /* fg1 */
 }
 img {
     margin: 0 0 0 2px;
@@ -81,35 +79,38 @@ img {
 	padding-bottom: .3em;
 	font-size: 2em;
 	border-bottom: 1px solid var(--borderColor);
+	font-family: monospace;
 }
+
+ main  {
+	margin: 0 auto;
+	max-width: 36em;
+}
+
 </style>
 </head>
-<body>
-
+<body class="typography">
+<main>
  
-
-
-<section id="links" class="typography">
-<h1>Links</h1>
+<h1 id="links">Links</h1>
 <ul>
 <li><a href="https://mas.to/@dbdo"
 rel="me">mastodon</a><img src="syndicated-feed-icon.gif"> </img></li>
 <li><a href="https://twitter.com/__dbdo_">twitter</a></li>
-<li>📝 <a href="https://wf.dbdo.website/dbdo">blog
-1</a><img src="syndicated-feed-icon.gif"> </img><br />
+<li>📝 <a href="https://wf.dbdo.website/dbdo">blog 1 (main
+blog)</a><img src="syndicated-feed-icon.gif"> </img><br />
 </li>
-<li>📝<a href="https://spinach.bearblog.dev">blog
-2</a><img src="syndicated-feed-icon.gif"> </img></li>
-<li>📝 <a href="./post">blog
+<li>📝<a href="https://spinach.bearblog.dev">blog 2
+(Spinach)</a><img src="syndicated-feed-icon.gif"> </img></li>
+<li>📝<a href="https://dbdo.codeberg.page">blog
 3</a><img src="syndicated-feed-icon.gif"> </img></li>
+<li>📝 <a href="./post">blog 4
+(abandoned)</a><img src="syndicated-feed-icon.gif"> </img></li>
 <li>🎬 <a
 href="https://neodb.social/@dbdo">neodb</a><img src="syndicated-feed-icon.gif"> </img></li>
-<li>👀 <a
-href="https://peing.net/zh-CN/0e40df165ae885">向dbdo提出任何问题</a></li>
+<li>👀 <a href="https://peing.net/en/me/home">Try asking dbdo a
+question!</a></li>
 </ul>
-<blockquote>
-<p>我不知道说什么！</p>
-</blockquote>
-</section>
+</main>
 </body>
 </html>
