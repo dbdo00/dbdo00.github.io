@@ -15,7 +15,7 @@ function add_rss_icon(el)
   if el.classes:includes("hasrss") then
     -- Create an img element
     remove_class_from_element(el, "hasrss")
-    local img = pandoc.RawInline('html', '<img src="syndicated-feed-icon.gif"> </img>')
+    local img = pandoc.RawInline('html', '<img src="syndicated-feed-icon.gif">')
     
     -- Append the img element after the current element
     return {el, img}
