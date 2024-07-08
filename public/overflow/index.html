@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* strange padding of <html> */
+
+body{
+  margin: 0;
+    /* problem: still margins exist ? */
+  background: #fbfbfb;
+  color: #0f0f0f;
+display: grid;
+justify-items:center;
+  align-items: center;
+}
+
+
+
+img:not(.overflow) {
+width: 50%;
+margin: 1em auto;
+display:block;
+}
+
+.overflow-wrap {
+display: grid;
+justify-items:center;
+  align-items: center;
+}
+
+img.overflow {
+max-width: 40rem ;
+margin: 1em auto;
+text-align: center;
+}
+
+img.overflow-bigger {
+	max-width: 1000px !important;
+	width: 100rem;
+
+}
+
+
+
+p {
+	margin: 1.25em auto;
+	max-width: 30rem;
+}
+</style>
+</head>
+<body>
+  <main>
+<h2> Overflow Img Test</h2>
+
+
+      <img src="test.png"> </img>
+
+  <div class="overflow-wrap">
+      <img class="overflow" src="test.png"> </img>
+  </div>
+
+  <p class="class">  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan tortor libero, sed vehicula eros elementum in. Mauris sollicitudin ipsum et tortor mattis, et posuere est semper. Praesent vel facilisis metus, a luctus eros. Integer vestibulum elit in ligula volutpat, non consectetur neque pellentesque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus commodo nisl nulla, at feugiat nunc bibendum nec. Sed a sollicitudin dui, nec porta nulla. In faucibus neque ut scelerisque aliquam. Maecenas nec augue nec augue egestas eleifend non eu magna. Morbi in pulvinar turpis. Maecenas consequat, ex sed blandit cursus, ante sem lacinia purus, vitae blandit elit ante sit amet tortor. Ut tincidunt sed velit eget rhoncus. Duis eleifend tempus lacus, a feugiat dui lacinia ut. Suspendisse sollicitudin sagittis semper. Maecenas tincidunt condimentum faucibus.  </p>
+  <div class="overflow-wrap">
+      <img class="overflow overflow-bigger" src="Screenshot_20240703_131626.png"> </img>
+  </div>
+  </main>
+
+</body>
+</html>
