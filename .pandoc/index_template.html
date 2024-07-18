@@ -73,25 +73,35 @@ select:-webkit-autofill {
 img {
     margin: 0 0 0 2px;
 }
+
 .typography h1 {
 	padding-bottom: .3em;
 	font-size: 2em;
 	border-bottom: 1px solid var(--borderColor);
 	font-family: monospace;
 }
-
+.typography h2 {
+	padding-bottom: .3em;
+	font-size: 1.5em;
+	font-family: monospace;
+}
  main  {
 	margin: 0 auto;
 }
 
-main ul , main p,  main h1:not(#links)  {
+main ul , main p, main h2 {
   max-width: 36em;
   margin: auto;
+}
+
+main h2 {
+padding-bottom: .3em;
 }
 
 li {
   margin: max(0.5vh, calc(14px - 1vw)); /* ,,,, */
 }
+
 </style>
 </head>
 <body class="typography">
