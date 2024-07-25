@@ -1,9 +1,13 @@
 [dev]
+base = "public"
 publish  = "public/"
+
 [functions]
   external_node_modules = ["express"]
   node_bundler = "esbuild"
   directory = "functions"
+ included_files = ["public/static/*"]
+
 [[redirects]]
   force = true
   from = "/api/*"
