@@ -1,14 +1,23 @@
-
+[dev]
+publish  = "public/"
 [functions]
   external_node_modules = ["express"]
   node_bundler = "esbuild"
+  directory = "functions"
 [[redirects]]
   force = true
   from = "/api/*"
   status = 200
   to = "/.netlify/functions/api/:splat"
+
 [[redirects]]
-  from = "/rss.xml"
-  to = "https://dbdo.codeberg.page/feeds/all.rss.xml"
-  status = 301
-  force = true
+ force = true
+ from = "/f/*"
+ status = 200
+ to = "/.netlify/functions/:splat"
+
+[[redirects]]
+ force = true
+ from = "/"
+ status = 200
+ to = "/.netlify/functions/lang"
