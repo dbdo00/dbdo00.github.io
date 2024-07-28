@@ -23,7 +23,7 @@ body{
 	margin: 0 auto; 
 	font-size: var(--font-size, 17px);
 	padding-bottom: 0.5rem;
-	padding-inline: 1vw; 
+	padding-inline: 2.5rem; 
 	box-sizing: border-box;
 }
 
