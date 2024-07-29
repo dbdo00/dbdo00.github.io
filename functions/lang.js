@@ -26,6 +26,10 @@ const index_zh =  fs.readFileSync('public/static/index_zh.html', 'utf8', (err, d
 
 export default async (request, context) => {
 	console.log("the accept-language header is: " + request.headers.get("accept-language"));
+	console.log("the visitor is from: " + context.geo.country.name 
+		+ ", " 
+		+ context.geo.city 
+		+ " city");
 	var lang = request.headers.get("accept-language");
 	if (!lang){
 		return Response.json({
