@@ -15,6 +15,7 @@ render_html_for_each_post(
 
         updated = lambda x: True 
     )
+update_data(md_dir=markdown_dir)
 render_index_page(f'{root_dir}/data.json',index_page_path=index_page_path)
     # generate rss.xml
 create_rss(data_json=f'{root_dir}/data.json', rss_path = f'{root_dir}/public/rss.xml')

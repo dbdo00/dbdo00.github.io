@@ -20,6 +20,7 @@
       <ul >
     {% for post in posts %}
     
+ <a href="{{ post.html_path }}" >
     <li>
         <span>
             <i > 
@@ -27,7 +28,8 @@
 
             </i>
         </span> 
-    <a href="{{ post.html_path }}" > {{ post.title }} </a>  </li>
+    {{ post.title }}  </li> 
+  </a> 
     {% endfor %}
   </ul> 
 </div>

@@ -155,7 +155,8 @@ def file_ctime(filename):
     # return the creation time of the file
     # the format is year-month-day-hour-minute-second 
     # return time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime(os.path.getmtime(filename))) 
-    return get_file_date(filename)
+    # return get_file_date(filename)
+    return get_file_date_bygit(file_path=filename)
 
 def get_file_date(file_path):
     return get_metadata(text_file_to_string(file_path))
@@ -165,6 +166,7 @@ def get_file_date(file_path):
 
 def get_file_date_bygit(file_path):
     """
+    Get the date strng
     TODO: error occurs when the file is not committed
     """
     print("file_path:", file_path)
@@ -177,16 +179,14 @@ def get_file_date_bygit(file_path):
         modified_date = result.stdout.strip().split('\n')
         for line in modified_date:
             if line.startswith('Date:'):
-                print("listified_line:", line.split('Date:')[1].strip().split(' '))
                 listified_line = line.split('Date:')[1].strip().split(' ') # dates and tzone after 'Date:
-                print("listified_line2:", listified_line)        
+                print("Date parsed:", listified_line)        
                 break     
         # print("file:", file_path)
         # print("listified_line3:", listified_line)
         return ' '.join(listified_line).strip()
     except subprocess.CalledProcessError as e:
         print("Error:", e)
-        print("Error:", e.stderr)
         print("file:", file_path)
         return None
     
