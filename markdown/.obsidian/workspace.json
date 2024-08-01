@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "nkqu.md",
+                "file": "words-for-no-purpose.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "nkqu.md",
+                "file": "words-for-no-purpose.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "nkqu.md",
+                "file": "words-for-no-purpose.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "nkqu.md"
+                "file": "words-for-no-purpose.md"
               }
             }
           }
@@ -148,19 +148,22 @@
   },
   "active": "95c6c2dfeeca4b5c",
   "lastOpenFiles": [
-    "beyond-limits.md",
+    "webmention-from-mastodon.md",
+    "test111.md",
+    "sl2rep.md",
+    "shengdan.webp",
+    "lushangdeyueliang-2024.02.05.md",
+    "NYN wink.png",
+    "7432.md",
+    "2023-12-26.md",
+    "2023-8-31-1.md",
     "nkqu.md",
+    "beyond-limits.md",
     "c1089c83c1203ca9.jpg",
     "test2.md",
     "decap-test-2-2.md",
     "test-decap.md",
-    "lushangdeyueliang-2024.02.05.md",
-    "NYN wink.png",
-    "shengdan.webp",
-    "sl2rep.md",
-    "test111.md",
     "Untitled-4.md",
-    "webmention-from-mastodon.md",
     "words-for-no-purpose.md",
     "habit.md",
     "freepc.md",
@@ -171,15 +174,11 @@
     "blob.md",
     "bo.webp",
     "230920722.md",
-    "7432.md",
     "2023-10-01.md",
-    "2023-12-26.md",
     "2023-09-10.md",
     "2e5982ad4416624d-1.png",
     "comments-plan.md",
     "Do Relation.md",
-    "links.md",
-    "w.md",
     "__hina抱枕头.jpg",
     "2e5982ad4416624d.png",
     "img/277fd55a22f6a9187e1eaa9574488661.jpg",
