@@ -8,12 +8,14 @@
         "type": "tabs",
         "children": [
           {
-            "id": "69b24257411eed07",
+            "id": "95c6c2dfeeca4b5c",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "c1089c83c1203ca9.jpg"
+                "file": "nkqu.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "c1089c83c1203ca9.jpg",
+                "file": "nkqu.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "c1089c83c1203ca9.jpg",
+                "file": "nkqu.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "c1089c83c1203ca9.jpg"
+                "file": "nkqu.md"
               }
             }
           }
@@ -144,8 +146,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "69b24257411eed07",
+  "active": "95c6c2dfeeca4b5c",
   "lastOpenFiles": [
+    "beyond-limits.md",
+    "nkqu.md",
+    "c1089c83c1203ca9.jpg",
     "test2.md",
     "decap-test-2-2.md",
     "test-decap.md",
@@ -162,9 +167,7 @@
     "hello hello (2).png",
     "links231212.md",
     "pandoc.md",
-    "c1089c83c1203ca9.jpg",
     "2309301506.md",
-    "beyond-limits.md",
     "blob.md",
     "bo.webp",
     "230920722.md",
