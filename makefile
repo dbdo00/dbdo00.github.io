@@ -15,6 +15,7 @@ index: index.md .pandoc/*
 	pandoc index_zh.md -t html  -o ./public/index_zh.html -o ./public/static/index_zh.html --template=.pandoc/index_template.html --lua-filter=.pandoc/filter.lua 
 
 
-new: 
+deploy:
+	netlify deploy
 	
 
