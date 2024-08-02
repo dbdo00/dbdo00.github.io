@@ -1,63 +1,25 @@
-/*
-:root {
-	--background-color: rgb(90.0% 72.00000000000001% 77.93863423447988%);
-	--font-color: #000;
-	--nav-link-color: var(--font-color);
-	--footer-link-color: #00c;
-	--content-link-color: #000;
-	--font-size: 1.2rem;
-	--para-font-size: 1.15rem;
-	--date-dark: rgb(168, 161, 149); 
-	--article-light-bg: rgb(93.94513916394203% 100% 90.0%);
-}
-*/
-
-
-
 body{
 	font-family: system-ui,-apple-system,BlinkMacSystemFont,Iosevka, Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
-	max-width: 38rem;
-	margin: 0 auto; 
 	font-size: var(--font-size, 17px);
 	padding-inline: 1rem; 
 }
+* {
+   color: black;
+}
 nav#TOC {
-	padding: 0 0 1rem 0;
+	/* TODO */
+	background: #f5f5f5;
 }
-header {
-	margin-bottom: 4em;
-	text-align: center;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	margin-top: 0.4em;
-	font-weight: normal;
-}
-
-
-
-h2, h3 {
-	padding-left: 20px;
-	padding-right: 20px;
-}
-
-h4 {
-	border-top: 1px;
-}
-
-.article-section a {
-	hyphens: auto;
-	overflow-wrap: break-word;
+nav#TOC::before{
+	content: "目录："
 }
 .article-section i{
 	text-align: left;
-	display: flex;
 	text-wrap: nowrap;
+	color: #4f4f4f
 }
 .article-section a{
-	color: var(--font-color);
-	text-decoration: none;
-	text-justify: justify;
+	hyphens: auto;
 }
 
 .blog p {
@@ -89,11 +51,6 @@ pre {
 	overflow: auto;
 }
 
-.article-section span {
-	color: var(--date-color, #6F6F6F);
-	font-size: 1.2rem;
-}
-
 ul {
 	padding: 0;
 	list-style:none;
@@ -102,64 +59,7 @@ ul {
 img {
 	max-width: 100%;
 }
-a:hover, 
- {
-	text-decoration: underline;
-}
 
-code.sourceCode > span {
-	color: inherit;
-	text-decoration-color: inherit;
-}
-pre.numberSource code > span > a:first-child::before {
-	border-color: currentcolor;
-	color: rgb(178, 171, 158);
-}
-pre.numberSource {
-	border-left-color: rgb(81, 84, 85);
-}
-@media screen {
-	pre > code.sourceCode > span > a:first-child::before {
-		text-decoration-color: currentcolor;
-	}
-}
-
-
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-	div.sourceCode { overflow: auto; }
-}
-@media print {
-	pre > code.sourceCode { white-space: pre-wrap; }
-	pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-{ counter-reset: source-line 0; }
-pre.numberSource code > span
-{ position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-{ content: counter(source-line);
-	position: relative; left: -1em; text-align: right; vertical-align: baseline;
-	border: none; display: inline-block;
-	-webkit-touch-callout: none; -webkit-user-select: none;
-	-khtml-user-select: none; -moz-user-select: none;
-	-ms-user-select: none; user-select: none;
-	padding: 0 4px; width: 4em;
-	/* color: #aaaaaa; */
-	color: rgb(178, 171, 158);
-}
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-
-@media screen {
-	pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 /* CSS for syntax highlighting */
 code span.al {
 	color: rgb(231, 44, 42);
