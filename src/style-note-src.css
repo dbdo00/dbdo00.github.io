@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+	font-family: system-ui,-apple-system,BlinkMacSystemFont,Iosevka, Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
+	font-size: var(--font-size, 17px);
+	padding-inline: 1rem; 
+}
+* {
+   color: black;
+}
+nav#TOC {
+	/* TODO */
+	background: #f5f5f5;
+}
+nav#TOC::before{
+	content: "目录："
+}
+.article-section i{
+	text-align: left;
+	text-wrap: nowrap;
+	color: #4f4f4f
+}
+.article-section a{
+	hyphens: auto;
+}
+
+.blog p {
+	hyphens: auto;
+	overflow-wrap: break-word;
+}
+
+ul {
+	padding-left: 1.7em;
+	margin-top: 1em;
+	line-height: 1.8;
+}
+
+
+blockquote {
+	margin: 1em 0 1em 1.7em;
+	padding-left: 1em;
+	border-left: 2px solid #e6e6e6;
+	color: #606060;
+}
+code {
+	font-family: 'Sarasa Mono SC', Iosevka, Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+	font-size: 85%;
+	margin: 0;
+}
+
+pre {
+	line-height: 1.5;
+	overflow: auto;
+}
+
+ul {
+	padding: 0;
+	list-style:none;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* CSS for syntax highlighting */
+code span.al {
+	color: rgb(231, 44, 42);
+}
+code span.an {
+	color: rgb(121, 166, 174);
+}
+code span.at {
+	color: rgb(196, 208, 122);
+}
+code span.bn {
+	color: rgb(120, 190, 149);
+}
+code span.bu {
+	color: rgb(129, 241, 121);
+}
+code span.cf {
+	color: rgb(140, 242, 162);
+}
+code span.ch {
+	color: rgb(132, 165, 190);
+}
+code span.cn {
+	color: rgb(238, 118, 114);
+}
+code span.co {
+	color: rgb(121, 166, 174);
+}
+code span.cv {
+	color: rgb(121, 166, 174);
+}
+code span.do {
+	color: rgb(210, 92, 89);
+}
+code span.dt {
+	color: rgb(240, 142, 110);
+}
+code span.dv {
+	color: rgb(120, 190, 149);
+}
+code span.er {
+	color: rgb(231, 44, 42);
+}
+code span.fl {
+	color: rgb(120, 190, 149);
+}
+code span.fu {
+	color: rgb(141, 183, 229);
+}
+code span.im {
+	color: rgb(129, 241, 121);
+}
+code span.in {
+	color: rgb(121, 166, 174);
+}
+code span.kw {
+	color: rgb(140, 242, 162);
+}
+code span.op {
+	color: rgb(169, 160, 147);
+}
+code span.ot {
+	color: rgb(140, 242, 162);
+}
+code span.pp {
+	color: rgb(243, 189, 87);
+}
+code span.sc {
+	color: rgb(132, 165, 190);
+}
+code span.ss {
+	color: rgb(186, 120, 141);
+}
+code span.st {
+	color: rgb(132, 165, 190);
+}
+code span.va {
+	color: rgb(146, 171, 216);
+}
+code span.vs {
+	color: rgb(132, 165, 190);
+}
+code span.wa {
+	color: rgb(121, 166, 174);
+}
+
+.article-section i::before {
+  content: "<";
+}
+.article-section i::after {
+  content: ">";
+}
+
