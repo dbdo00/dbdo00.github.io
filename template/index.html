@@ -20,16 +20,18 @@
       <ul >
     {% for post in posts %}
     
- <a href="{{ post.html_path }}" >
     <li>
+ <a href="{{ post.html_path }}" >
+
         <span>
             <i > 
             {{ post.ctime }} 
 
             </i>
         </span> 
-    {{ post.title }}  </li> 
+    {{ post.title }}  
   </a> 
+</li> 
     {% endfor %}
   </ul> 
 </div>
