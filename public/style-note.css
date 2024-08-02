@@ -45,12 +45,6 @@ h4 {
 	border-top: 1px;
 }
 
-.article-section {
-	/*! padding: 1rem; */
-}
-
-
-
 .article-section a {
 	hyphens: auto;
 	overflow-wrap: break-word;
@@ -60,15 +54,11 @@ h4 {
 	display: flex;
 	text-wrap: nowrap;
 }
-
 .article-section a{
 	color: var(--font-color);
 	text-decoration: none;
 	text-justify: justify;
 }
-
-
-
 
 .blog p {
 	hyphens: auto;
