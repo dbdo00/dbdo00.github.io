@@ -1,5 +1,6 @@
 ---
 title: 用了几天 emacs
+publish: draft
 ---
 
 古人说过 

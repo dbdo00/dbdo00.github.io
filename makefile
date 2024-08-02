@@ -1,4 +1,6 @@
 all: blog.py 
+	git add markdown/*
+	git commit -a -m "update"
 	python build.py
 	
 serve: 

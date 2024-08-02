@@ -7,11 +7,11 @@
   
  <nav role="banner">
     
-<a href="/">主页</a>
+<a href="">Generic Freeness</a>
     
     
-      <a href="/post/about.html"> 关于</a>
-      <a href="/post/links.html">链接</a>
+      <a href="/post/about.html"> </a>
+      <a href="/post/links.html"></a>
       <button id="dark-mode" >🌙</button>
   </nav>
 
@@ -35,16 +35,5 @@
 </div>
 {% include "footer.html" %} 
 <script src="/script.js"></script>
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", (user) => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
 </body>
 </html>
