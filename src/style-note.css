@@ -1074,10 +1074,6 @@ body{
   padding-inline: 1rem;
 }
 
-* {
-  color: black;
-}
-
 nav#TOC {
   /* TODO */
   background: #f5f5f5;
@@ -1102,6 +1098,7 @@ nav#TOC::before{
   -webkit-hyphens: auto;
           hyphens: auto;
   overflow-wrap: break-word;
+  color: black;
 }
 
 ul {
