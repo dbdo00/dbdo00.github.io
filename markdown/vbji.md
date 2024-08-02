@@ -1,5 +1,6 @@
 ---
 title: 周记 8-7 ~ 8-13
+publish: draft
 ---
 
 # 周记

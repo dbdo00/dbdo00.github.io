@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "words-for-no-purpose.md",
+                "file": "vbji.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "words-for-no-purpose.md",
+                "file": "vbji.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "words-for-no-purpose.md",
+                "file": "vbji.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "words-for-no-purpose.md"
+                "file": "vbji.md"
               }
             }
           }
@@ -148,10 +148,11 @@
   },
   "active": "95c6c2dfeeca4b5c",
   "lastOpenFiles": [
+    "test111.md",
+    "vbji.md",
+    "words-for-no-purpose.md",
     "webmention-reality.md",
     "webmention-from-mastodon.md",
-    "Untitled-4.md",
-    "test111.md",
     "test2.md",
     "links231212.md",
     "links.md",
@@ -177,7 +178,6 @@
     "nkqu.md",
     "pandoc.md",
     "shengdan.webp",
-    "2023-8-31-1.md",
     "NYN wink.png",
     "hello hello (2).png",
     "bo.webp",
