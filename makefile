@@ -1,4 +1,6 @@
 all: blog.py 
+	git rm -rf public/post --cache
+	rm -rf public/post 
 	git add markdown/*
 	git commit -a -m "update"
 	python build.py
