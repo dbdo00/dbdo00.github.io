@@ -1,6 +1,6 @@
 all: blog.py 
-	git rm -rf public/post/* --cache || true
-	git add markdown/*
+	rm -rf public/post/*  || true
+	git add markdown/* 
 	git commit -a -m "update"
 	python build.py
 	
