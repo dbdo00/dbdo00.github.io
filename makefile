@@ -19,3 +19,6 @@ deploy:
 	netlify deploy
 	
 
+style: 
+	npx tailwindcss -i ./src/style-note-src.css -o ./src/style-note.css 
+	cp ./src/style-note.css ./public/style-note.css
