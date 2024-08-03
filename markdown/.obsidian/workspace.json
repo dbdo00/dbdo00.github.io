@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vbji.md",
+                "file": "emacs.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "vbji.md",
+                "file": "emacs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "vbji.md",
+                "file": "emacs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "vbji.md"
+                "file": "emacs.md"
               }
             }
           }
@@ -148,8 +148,10 @@
   },
   "active": "95c6c2dfeeca4b5c",
   "lastOpenFiles": [
-    "test111.md",
+    "beyond-limits.md",
+    "2023-09-10.md",
     "vbji.md",
+    "test111.md",
     "words-for-no-purpose.md",
     "webmention-reality.md",
     "webmention-from-mastodon.md",
@@ -162,7 +164,6 @@
     "comments-plan.md",
     "c1089c83c1203ca9.jpg",
     "blob.md",
-    "beyond-limits.md",
     "about.md",
     "7432.md",
     "2309301506.md",
@@ -172,7 +173,6 @@
     "2024-1-3-0.md",
     "2023-12-26.md",
     "2023-10-01.md",
-    "2023-09-10.md",
     "2e5982ad4416624d.png",
     "2e5982ad4416624d-1.png",
     "nkqu.md",
