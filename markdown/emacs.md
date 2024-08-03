@@ -1,6 +1,7 @@
 ---
 title: 用了几天 emacs
 date: 2023-09-10 00:30:19
+publish: draft
 ---
 
 古人说过 
