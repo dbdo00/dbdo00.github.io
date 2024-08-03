@@ -11,6 +11,9 @@ nav#TOC {
 	/* TODO */
 	background: #f5f5f5;
 }
+
+h1 { line-height: 1.05 }
+
 nav#TOC::before{
 	content: "目录："
 }
