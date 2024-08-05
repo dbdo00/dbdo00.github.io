@@ -11,11 +11,9 @@
             "id": "95c6c2dfeeca4b5c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "emacs.md",
-                "mode": "source",
-                "source": false
+                "file": "shengdan.webp"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "emacs.md",
+                "file": "shengdan.webp",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "emacs.md",
+                "file": "shengdan.webp",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "emacs.md"
+                "file": "shengdan.webp"
               }
             }
           }
@@ -148,41 +146,41 @@
   },
   "active": "95c6c2dfeeca4b5c",
   "lastOpenFiles": [
-    "nkqu.md",
+    "pandoc.md",
     "links231212.md",
-    "links.md",
-    "emacs.md",
-    "blob.md",
-    "sl2rep.md",
-    "test111.md",
-    "vbji.md",
-    "beyond-limits.md",
-    "2023-09-10.md",
-    "words-for-no-purpose.md",
-    "webmention-reality.md",
-    "webmention-from-mastodon.md",
-    "test2.md",
-    "habit.md",
-    "freepc.md",
+    "NYN wink.png",
     "comments-plan.md",
     "c1089c83c1203ca9.jpg",
+    "emacs.md",
+    "beyond-limits.md",
+    "bo.webp",
+    "blob.md",
+    "2023-12-26.md",
+    "2023-09-10.md",
+    "2e5982ad4416624d.png",
+    "2e5982ad4416624d-1.png",
+    "__hina抱枕头.jpg",
+    "assets/c1089c83c1203ca9.jpg",
+    "diary/2024-02-16.md",
+    "assets/2e5982ad4416624d-1.png",
+    "assets/2e5982ad4416624d.png",
+    "freepc.md",
+    "hello hello (2).png",
+    "test2.md",
+    "nkqu.md",
+    "webmention-from-mastodon.md",
+    "vbji.md",
+    "test111.md",
+    "sl2rep.md",
+    "habit.md",
+    "lushangdeyueliang-2024.02.05.md",
+    "links.md",
+    "words-for-no-purpose.md",
+    "webmention-reality.md",
     "about.md",
     "7432.md",
     "2309301506.md",
     "230920722.md",
-    "2023824.md",
-    "231007.md",
-    "2024-1-3-0.md",
-    "2023-12-26.md",
-    "2023-10-01.md",
-    "2e5982ad4416624d.png",
-    "2e5982ad4416624d-1.png",
-    "shengdan.webp",
-    "NYN wink.png",
-    "hello hello (2).png",
-    "bo.webp",
-    "__hina抱枕头.jpg",
-    "img/277fd55a22f6a9187e1eaa9574488661.jpg",
-    "img/blue_NG.png"
+    "2023824.md"
   ]
 }

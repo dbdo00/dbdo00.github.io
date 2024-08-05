@@ -51,7 +51,7 @@ def pandoc(content:str, flags:list) -> str:
     template = """
 $if(title)$
 <header id="title-block-header">
-<h1 class="title">$title$</h1>
+<h1 class="leading-8">$title$</h1>
 </header>
 $endif$
 
