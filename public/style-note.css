@@ -1064,8 +1064,8 @@ video {
   display: inline;
 }
 
-.leading-8 {
-  line-height: 2rem;
+.leading-loose {
+  line-height: 2;
 }
 
 .underline {
