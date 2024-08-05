@@ -1064,6 +1064,10 @@ video {
   display: inline;
 }
 
+.leading-8 {
+  line-height: 2rem;
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -1076,10 +1080,6 @@ body{
 
 nav#TOC {
   background: #f5f5f5;
-}
-
-h1,h2,h3,h4,h5 {
-  line-height: 1.05 !important
 }
 
 nav#TOC::before{
