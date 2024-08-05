@@ -1,6 +1,6 @@
 ---
 title: 路上的月亮
-publish: unlisted
+publish: public
 ---
 
 
