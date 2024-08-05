@@ -3,6 +3,7 @@ all: blog.py
 	git add markdown/*  
 	git commit -a -m "rebuild with makefile" || true
 	python build.py
+	git add public/post/*
 	
 serve: 
 	python serve.py
