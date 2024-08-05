@@ -26,7 +26,6 @@ nav#TOC::before{
 .blog p {
 	hyphens: auto;
 	overflow-wrap: break-word;
-	color: black;
 }
 
 ul {
