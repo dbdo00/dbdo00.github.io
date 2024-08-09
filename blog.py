@@ -203,14 +203,14 @@ def update_data(md_dir):
             title = get_title(markdown_content) 
             html_filename = f'{name_a_file(f"{md_dir}/{md}")}'  
             print("MAKE SURE THAT:")
-            print('The current post directory is `post`')
+            print('The current post directory is `posts`')
             print('The current markdown directory is `markdown`')
             
             file_data={ 
                 'title': title,
                 'tags': get_tags(markdown_content),
                 # concatenate the directory to specify the path of markdown and html files 
-                'html_path' : f"/post/{html_filename}.html",
+                'html_path' : f"/posts/{html_filename}.html",
                 'md_path' : f"markdown/{md}", 
                 'ctime' : file_ctime(f'{md_dir}/{md}'), # the date of the initial commit
                 'publish' : post_vivsibility(process_metadata(markdown_content))
