@@ -1,9 +1,9 @@
 all: blog.py 
-	rm -rf public/post/*  || true
+	rm -rf public/posts/*  || true
 	git add markdown/*  
 	git commit -a -m "rebuild with makefile" || true
 	python build.py
-	git add public/post/*
+	git add public/posts/*
 	
 serve: 
 	python serve.py
