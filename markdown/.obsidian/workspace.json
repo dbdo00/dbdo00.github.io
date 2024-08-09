@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Feeds.md",
+                "file": "web essaying manifesto.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Feeds.md",
+                "file": "web essaying manifesto.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Feeds.md",
+                "file": "web essaying manifesto.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Feeds.md"
+                "file": "web essaying manifesto.md"
               }
             }
           }
@@ -159,13 +159,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "085fde4b346190ec",
+  "active": "a34a804ef9bbacaa",
   "lastOpenFiles": [
-    "freepc.md",
     "Feeds.md",
-    "blob.md",
-    "beyond-limits.md",
+    "shengdan.webp",
     "comments-plan.md",
+    "blob.md",
+    "habit.md",
+    "freepc.md",
+    "beyond-limits.md",
     "emacs.md",
     "web essaying manifesto.md",
     "lushangdeyueliang-2024.02.05.md",
@@ -180,7 +182,6 @@
     "231007.md",
     "2024-1-3-0.md",
     "bo.webp",
-    "shengdan.webp",
     "pandoc.md",
     "NYN wink.png",
     "c1089c83c1203ca9.jpg",
@@ -194,8 +195,6 @@
     "assets/2e5982ad4416624d-1.png",
     "test2.md",
     "nkqu.md",
-    "test111.md",
-    "sl2rep.md",
-    "habit.md"
+    "test111.md"
   ]
 }
