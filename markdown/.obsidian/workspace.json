@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "web essaying manifesto.md",
+                "file": "Feeds.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "web essaying manifesto.md",
+                "file": "Feeds.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "web essaying manifesto.md",
+                "file": "Feeds.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "web essaying manifesto.md"
+                "file": "Feeds.md"
               }
             }
           }
@@ -161,15 +161,15 @@
   },
   "active": "a34a804ef9bbacaa",
   "lastOpenFiles": [
+    "web essaying manifesto.md",
     "Feeds.md",
+    "freepc.md",
     "shengdan.webp",
     "comments-plan.md",
     "blob.md",
     "habit.md",
-    "freepc.md",
     "beyond-limits.md",
     "emacs.md",
-    "web essaying manifesto.md",
     "lushangdeyueliang-2024.02.05.md",
     "links231212.md",
     "links.md",

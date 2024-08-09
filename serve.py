@@ -75,7 +75,7 @@ def run():
     server.watch(filepath='template/*', func = build_exclusively, ignore=None)
     
     server.serve(
-        root = 'public/post'
+        root = 'public'
     )
 
 def main():
