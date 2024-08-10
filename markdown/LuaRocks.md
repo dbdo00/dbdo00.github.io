@@ -1,3 +1,7 @@
+---
+title: LuaRocks
+---
+
 LuaRocks is the package manager for Lua. You can install  lua modules with it. 
 
 As people often say, to write Lua, you need to eat C as breakfast. 
