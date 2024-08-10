@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">  
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title> LuaRocks | Dbdowjfb  </title>
+    <link rel="stylesheet" href="/style-note.css">
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="RSS">
+</head>
+<body>
+<div class="prose " >
+    
+<header id="title-block-header">
+<h1 class="leading-loose">LuaRocks</h1>
+</header>
+
+
+<nav id="TOC">
+    <ul>
+    <li><a href="#what-is-luarocks" id="toc-what-is-luarocks">What is
+    LuaRocks</a></li>
+    <li><a href="#building-module-lua-cjson-with-luarocks"
+    id="toc-building-module-lua-cjson-with-luarocks">Building Module
+    <code>lua-cjson</code> With LuaRocks</a></li>
+    </ul>
+</nav>
+<h2 id="what-is-luarocks">What is LuaRocks</h2>
+<p>LuaRocks is the package manager for Lua. You can install lua modules
+with it.</p>
+<p>As people often say, to write Lua, you need to eat C as
+breakfast.</p>
+<p>LuaRocks manages the installation process for Lua modules, including
+the complex tasks associated with C modules, such as handling makefiles
+and interacting with C compilers.</p>
+<p>By automating these tasks, LuaRocks simplifies the installation
+process and reduces the hassle.</p>
+<h2 id="building-module-lua-cjson-with-luarocks">Building Module
+<code>lua-cjson</code> With LuaRocks</h2>
+<ol type="1">
+<li><h3 id="download-the-source-file">Download the source file</h3>
+Go to <a href="https://kyne.au/%7Emark/software/lua-cjson.php"
+class="uri">https://kyne.au/%7Emark/software/lua-cjson.php</a> and click
+<code>lua-cjson-x.y.z.zip</code> to download. <img
+src="assets/Pasted%20image%2020240809234324.png" /></li>
+<li><h3 id="build-from-the-source">Build from the source</h3>
+Change to the directory:</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> lua-cjson-2.1.0</span></code></pre></div>
+<p>Then uncompress the zip file. Use the command
+<code>unzip lua-cjson-2.1.0.zip</code>.</p>
+<p>Install the module globally:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> luarock make</span></code></pre></div>
+<p>If you want to specify the version of lua, say lua 5.3, use</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> luarock-5.3 make</span></code></pre></div>
+<p>instead.</p>
+<p>11</p>
+
+</div>
+
+
+<script src="/script.js"></script>
+
+<footer >
+	<h1><a href="/posts">
+			<code> &lt; </code>
+		</a>
+	</h1> 
+</footer>
+
+</body>
+</html>

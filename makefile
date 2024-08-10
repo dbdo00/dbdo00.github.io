@@ -14,6 +14,7 @@ test: blog.py
 index: 
 	rm -r public/index.html public/styles || true
 	cd Landing; make>/dev/null ; cp build/* ../public -r
+	git add public/*
 
 
 deploy:
