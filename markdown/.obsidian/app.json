@@ -1,5 +1,5 @@
 {
   "vimMode": false,
-  "useMarkdownLinks": false,
+  "useMarkdownLinks": true,
   "alwaysUpdateLinks": true
 }
