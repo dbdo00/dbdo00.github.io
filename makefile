@@ -12,8 +12,8 @@ test: blog.py
 	python blog.py
 
 index: index.md .pandoc/*
-	cd Landing
-	make 
+	cd Landing; make
+	pwd
 	cp build ../public -r
 
 
