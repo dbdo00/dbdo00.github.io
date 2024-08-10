@@ -18,7 +18,7 @@ Go to <https://kyne.au/%7Emark/software/lua-cjson.php> and click `lua-cjson-x.y.
 2. ### Build from the source
 First, uncompress the zip file. Use the command
 `unzip lua-cjson-2.1.0.zip`. 
-Then enter the directory:
+Then change to the directory:
 ```sh
 cd lua-cjson-2.1.0
 ```
@@ -26,9 +26,8 @@ Install the module globally:
 ```sh
 sudo luarock make
 ```
-If you want to specify the version of lua, say lua5.3, use:
+If you want to specify the version of lua, say lua 5.3, use
 ```sh
 sudo luarock-5.3 make
 ```
 instead. 
-
