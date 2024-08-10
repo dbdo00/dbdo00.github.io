@@ -2,7 +2,7 @@
 title: LuaRocks
 ---
 ## What is LuaRocks
-LuaRocks is the package manager for Lua. You can install  lua modules with it. 
+LuaRocks is a package manager for Lua. You can install  lua modules with it. 
 
 As people often say, to write Lua, you need to eat C as breakfast. 
 
@@ -32,3 +32,4 @@ If you want to specify the version of lua, say lua 5.3, use
 sudo luarock-5.3 make
 ```
 instead. 
+

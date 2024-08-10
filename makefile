@@ -12,9 +12,9 @@ test: blog.py
 	python blog.py
 
 index: index.md .pandoc/*
-	pandoc index.md -t html  -o ./public/index.html -o ./public/static/index.html --template=.pandoc/index_template.html --lua-filter=.pandoc/filter.lua 
-	pandoc index.md -t html  -o ./public/index.html  --template=.pandoc/index_template.html --lua-filter=.pandoc/filter.lua 
-	pandoc index_zh.md -t html  -o ./public/index_zh.html -o ./public/static/index_zh.html --template=.pandoc/index_template.html --lua-filter=.pandoc/filter.lua 
+	cd Landing
+	make 
+	cp build ../public -r
 
 
 deploy:
