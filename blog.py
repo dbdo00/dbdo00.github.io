@@ -15,7 +15,7 @@ import urllib.parse
 root_dir = os.getcwd()
 markdown_dir = f'{root_dir}/markdown'
 template_dir = f'{root_dir}/template'
-post_dir = f'{root_dir}/public/post' 
+post_dir = f'{root_dir}/public/posts' 
 index_page_path = f'{root_dir}/public/index.html'
 assests_folder_name = 'assets'
 

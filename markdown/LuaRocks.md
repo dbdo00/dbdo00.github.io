@@ -32,5 +32,3 @@ If you want to specify the version of lua, say lua 5.3, use
 sudo luarock-5.3 make
 ```
 instead. 
-
-$\sqrt{x+y}$
