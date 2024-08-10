@@ -1,5 +1,5 @@
 all: blog.py 
-	rm -rf public/posts/*  || true
+	rm -r public/posts/*  || true
 	git add markdown/*  
 	git commit -a -m "rebuild with makefile" || true
 	python build.py
@@ -12,8 +12,8 @@ test: blog.py
 	python blog.py
 
 index: 
-	rm public/index.html public/styles || true
-	cd Landing; make ; cp build/* ../public -r
+	rm -r public/index.html public/styles || true
+	cd Landing; make>/dev/null ; cp build/* ../public -r
 
 
 deploy:
