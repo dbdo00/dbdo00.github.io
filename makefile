@@ -11,8 +11,9 @@ serve:
 test: blog.py 
 	python blog.py
 
-index: index.md .pandoc/*
-	cd Landing; make; cp build ../public -r
+index: 
+	rm public/index.html public/styles || true
+	cd Landing; make ; cp build/* ../public -r
 
 
 deploy:

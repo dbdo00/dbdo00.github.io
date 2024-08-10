@@ -19,8 +19,3 @@ publish  = "public/"
  status = 200
  to = "/.netlify/functions/:splat"
 
-[[redirects]]
- force = true
- from = "/"
- status = 200
- to = "/build/"
