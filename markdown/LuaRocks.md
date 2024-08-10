@@ -7,6 +7,7 @@ LuaRocks is the package manager for Lua. You can install  lua modules with it.
 As people often say, to write Lua, you need to eat C as breakfast. 
 
 LuaRocks manages the installation process for Lua modules, including the complex tasks associated with C modules, such as handling makefiles and interacting with C compilers. By automating these tasks, LuaRocks simplifies the installation process and reduces the hassle.
+
 ## Building Module `lua-cjson` With LuaRocks 
 
 1. ### Download the source file 
