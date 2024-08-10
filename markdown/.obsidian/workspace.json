@@ -30,9 +30,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "3ed6132bf1654763",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "LuaRocks.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "164cf88953e98002",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "LuaRocks.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -61,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "deca",
+                "query": "luaro",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +102,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -98,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Feeds.md",
+                "file": "LuaRocks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Feeds.md",
+                "file": "LuaRocks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Feeds.md"
+                "file": "LuaRocks.md"
               }
             }
           }
@@ -159,10 +184,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a34a804ef9bbacaa",
+  "active": "3ed6132bf1654763",
   "lastOpenFiles": [
-    "web essaying manifesto.md",
+    "Pasted image 20240809234324.png",
+    "uuxt.md",
+    "LuaRocks.md",
     "Feeds.md",
+    "web essaying manifesto.md",
     "freepc.md",
     "shengdan.webp",
     "comments-plan.md",
@@ -193,8 +221,6 @@
     "assets/c1089c83c1203ca9.jpg",
     "diary/2024-02-16.md",
     "assets/2e5982ad4416624d-1.png",
-    "test2.md",
-    "nkqu.md",
-    "test111.md"
+    "test2.md"
   ]
 }
