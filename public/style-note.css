@@ -1081,7 +1081,7 @@ video {
 }
 
 body{
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,Iosevka, Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont, Helvetica, PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
   font-size: var(--font-size, 17px);
   padding-inline: 1rem;
 }
