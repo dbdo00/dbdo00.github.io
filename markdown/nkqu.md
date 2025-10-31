@@ -1,6 +1,6 @@
 ---
 title: 脑区
-publish: draft
+publish: public
 ---
 
 
