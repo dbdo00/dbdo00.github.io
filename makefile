@@ -1,12 +1,12 @@
-all: style
-	rm public/posts/* -r
+all: clean style
 	git add markdown/*  
 	git commit -a -m "rebuild with makefile" || true
 	python build.py
 	#git add public/posts/*
 	
 
-publish:
+clean:
+	rm -rf public
 
 serve: 
 	python serve.py
