@@ -375,7 +375,6 @@ def create_rss(data_json, rss_path):
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <channel>
     <description>Dbdo 主页</description>
-    <link > http://dbdo.website/post </link>
     <title>Dbdo 的主页 </title>
      <atom:link href="http://dbdo.website/rss.xml" rel="self" type="application/rss+xml" />
     @@@ 
@@ -384,7 +383,7 @@ def create_rss(data_json, rss_path):
     '''
     items = ''
     with open(data_json, 'r') as file:
-        site_url = 'https://dbdo.website'
+        site_url = 'https://dbdo00.github.io'
         data = json.load(file)
         # the link in the json file is the form "html_path": "/post/mdtest.html"
         # the link in the markdown file is the form "[title](html_path)"
