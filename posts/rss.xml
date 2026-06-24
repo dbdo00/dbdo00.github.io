@@ -1,50 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <?xml-stylesheet href="../rss.xslt" type="text/xsl"?>
     <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
   xmlns:content="http://purl.org/rss/1.0/modules/content/"
   xmlns:admin="http://webns.net/mvcb/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <channel>
-    <description>Dbdo 主页</description>
-    <title>Dbdo 的主页 </title>
-     <atom:link href="http://dbdo.website/rss.xml" rel="self" type="application/rss+xml" />
+    <title>https://dbdo00.github.io</title>
+     <atom:link href="https://dbdo00.github.io/rss.xml" rel="self" type="application/rss+xml" />
     
                     <item>
-                        <title>我的图标制作</title>
-                        <link>https://dbdo00.github.io//posts/我的图标制作.html</link>
-                        <description>我的图标制作</description>
+                        <title>LuaRocks</title>
+                        <link>https://dbdo00.github.io//posts/LuaRocks.html</link>
+                        <description>LuaRocks</description>
                         <content:encoded><![CDATA[
                         
 
 
-<pre><code>&gt; convert   -background lightblue  -fill blue  -font /usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf  -pointsize 200
--size 80x80 -gravity center  -pointsize 200  label:&#39;D&#39; caption.gif </code></pre>
-<p>使用 ctrl + F5 去除缓存看dbdo.website 的图标.</p>
+<h2 id="what-is-luarocks">What is LuaRocks</h2>
+<p>LuaRocks is a package manager for Lua. You can install lua modules
+with it.</p>
+<p>As people often say, to write Lua, you need to eat C as
+breakfast.</p>
+<p>LuaRocks manages the installation process for Lua modules, including
+the complex tasks associated with C modules, such as handling makefiles
+and interacting with C compilers.</p>
+<p>By automating these tasks, LuaRocks simplifies the installation
+process and reduces the hassle.</p>
+<h2 id="building-module-lua-cjson-with-luarocks">Building Module
+<code>lua-cjson</code> With LuaRocks</h2>
+<ol type="1">
+<li><h3 id="download-the-source-file">Download the source file</h3>
+<p>Go to <a href="https://kyne.au/%7Emark/software/lua-cjson.php"
+class="uri">https://kyne.au/%7Emark/software/lua-cjson.php</a> and click
+<code>lua-cjson-x.y.z.zip</code> to download. <img
+src="Pasted%20image%2020240809234324.png" /></p></li>
+<li><h3 id="build-from-the-source">Build from the source</h3>
+<p>Change to the directory:</p></li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> lua-cjson-2.1.0</span></code></pre></div>
+<p>Then uncompress the zip file. Use the command
+<code>unzip lua-cjson-2.1.0.zip</code>.</p>
+<p>Install the module globally:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> luarock make</span></code></pre></div>
+<p>If you want to specify the version of lua, say lua 5.3, use</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> luarock-5.3 make</span></code></pre></div>
+<p>instead.</p>
 
                         ]]>
                          </content:encoded>
-                        <pubDate>Wed, 24 Jun 2026 19:40:41 GMT</pubDate>
-                        <guid>https://dbdo00.github.io//posts/我的图标制作.html</guid>
+                        <pubDate>2024-08-09 00:00:00</pubDate>
+                        <guid>https://dbdo00.github.io//posts/LuaRocks.html</guid>
                     </item>
                     
                     <item>
-                        <title>通过写邮件评论</title>
-                        <link>https://dbdo00.github.io//posts/通过写邮件评论.html</link>
-                        <description>通过写邮件评论</description>
+                        <title>Feeds</title>
+                        <link>https://dbdo00.github.io//posts/Feeds.html</link>
+                        <description>Feeds</description>
                         <content:encoded><![CDATA[
                         
 
 
-<p><a href="https://testmail.app">testmail.app</a>
-有学生一年免费使用。</p>
-<p>一个账户有无限个邮箱地址。</p>
-<p>能不能给每个文章分配一个邮箱地址，允许通过给邮箱写信发评论？</p>
+<p>In past a few months, my frequency in checking rss feeds has been
+decreasing. I guess it is because rss feeds are not satisfying enough
+for me. I need the comfort that only other types of Internet services
+can provide.</p>
 
                         ]]>
                          </content:encoded>
-                        <pubDate>Wed, 24 Jun 2026 19:40:41 GMT</pubDate>
-                        <guid>https://dbdo00.github.io//posts/通过写邮件评论.html</guid>
+                        <pubDate>2024-08-08 00:00:00</pubDate>
+                        <guid>https://dbdo00.github.io//posts/Feeds.html</guid>
                     </item>
                     
                     <item>
@@ -55,8 +79,8 @@
                         
 
 
-<p>神经科学有所谓“脑区”的概念。也就是大脑有不同区域，不同的工作使用不同的区域，而非不管什么活动都调动所有脑区。
-脑区对人休息的意义是，尽量使用和工作时不同的脑区，这样工作使用的脑区就会“沉睡”，达到更好的休息。</p>
+<p>神经科学有所谓”脑区”的概念。也就是大脑有不同区域，不同的工作使用不同的区域，而非不管什么活动都调动所有脑区。
+脑区对人休息的意义是，尽量使用和工作时不同的脑区，这样工作使用的脑区就会”沉睡”，达到更好的休息。</p>
 <p>如何判断一个活动用了什么样的脑区，我并不能说得十分确定。但是据说视觉活动会用到一部分和非视觉活动
 不一样的脑区。所以有人建议如果工作时一直在用眼，休息时就不要进行看视频或者看书一类需要用眼的活动，
 以休息视觉会调用的脑区。</p>
@@ -70,50 +94,126 @@
 
                         ]]>
                          </content:encoded>
-                        <pubDate>Wed, 24 Jun 2026 19:40:41 GMT</pubDate>
+                        <pubDate>2024-08-01 00:00:00</pubDate>
                         <guid>https://dbdo00.github.io//posts/脑区.html</guid>
                     </item>
                     
                     <item>
-                        <title>随记 2023-8-31</title>
-                        <link>https://dbdo00.github.io//posts/随记-2023-8-31.html</link>
-                        <description>随记 2023-8-31</description>
+                        <title>忘记和延续</title>
+                        <link>https://dbdo00.github.io//posts/忘记和延续.html</link>
+                        <description>忘记和延续</description>
                         <content:encoded><![CDATA[
                         
 
 
-<p>如果活着而没有这些东西，那我的快乐就是一种占有的快乐，一种拥有我的生命的快乐，一种占有我自己生命的快乐。</p>
-<p>占有我自己生命的快乐也没有所谓的精神分析批评的那么不堪。</p>
-<p>如果一个人拥有占有着自己的生命的快乐，这也没什么不好的，而且是可以理解的。</p>
-<p>可以体验出来这种倾向我觉得这是可以理解的.</p>
-<p>如何过得很“好”，然后死掉，这样好像首先會更加超越一些。它是一個超越自我的選項。其實它不是一種圓滿的回答，能感覺到它是一個好的答案。但是問題是冲动然後並不現實。更现实的是，只有活下去，接下来才有<strong>可能</strong>得到更多。而不存在活不下去了，只要牺牲一点就能得到的选项。</p>
-<p>这个选项只是一种妄想。在整个半年甚至一年中我是在这种妄想中度过的。也是一种基于对别人的误读，或者说对一种想象的误读，对自身想象的误解。</p>
-<p>有一種類似於“認知酸雨”一类說法。這種价值观就是一種認知上的酸雨。它會讓人心智不清楚。</p>
+<p>很短的时间, 就会忘记。 容易忘记以前发生的事情。 把现在的情况。
+当成一直以来有的情况。 但实际上并不是。 是记性不好.</p>
+<p>记性不好就像一段时间以前和现在是两个人。
+虽然是一个肉体是一致的，但是意识里好像是完全两个人。
+有部分记忆，也是印象式的记忆。但是记忆不太多。</p>
+<p>最重要的东西，记住一些一些部分。很多重要的部分都忘记。</p>
+<p>不同时间。 一个人会感觉想过的像两个人。</p>
+<p>我觉得延续稳固的就是——某种习惯。你觉得很方便的地方，就会习惯。</p>
+<p>仔细想想，除了每个人必须的基本生命维持行为，唯一直每天坚持的习惯是刷牙。每天刷牙看起来很简单，但是得知过有人会因为疾病懒得刷牙，很久不刷牙。</p>
+<p>最近的习惯,
+没事干就收拾桌面和地板上的垃圾。收拾桌面，桌子和地板上的垃圾，然后扔到垃圾袋里面。这个习惯的形成可能是因为方便。
+开始做的事情，可以的维持是因为方便。</p>
+<p>还有一些事情是。 断了续续的在做。
+差不多了续续的四年，我印象中，有时候会断了上几个月（没有统计过）总会重新开始做上几天的事情,
+就是多邻国。 从大一开始，断断续续的。 现在,
+突然就已经做了四年了,完全没有意识到的事情。 虽然它的中断很经常,
+也有很长的时间中断。
+这个有间断的坚持的结果是没有学会一个语言，最多是日语的平假名大概有些认识.</p>
 
                         ]]>
                          </content:encoded>
-                        <pubDate>Wed, 24 Jun 2026 19:40:41 GMT</pubDate>
-                        <guid>https://dbdo00.github.io//posts/随记-2023-8-31.html</guid>
+                        <pubDate>2024-04-19 00:00:00</pubDate>
+                        <guid>https://dbdo00.github.io//posts/忘记和延续.html</guid>
                     </item>
                     
                     <item>
-                        <title>2023-9-10 梦</title>
-                        <link>https://dbdo00.github.io//posts/2023-9-10-梦.html</link>
-                        <description>2023-9-10 梦</description>
+                        <title>git 里 file object 的使用</title>
+                        <link>https://dbdo00.github.io//posts/git-里-file-object-的使用.html</link>
+                        <description>git 里 file object 的使用</description>
                         <content:encoded><![CDATA[
                         
 
 
-<p>梦里有人唱歌，我觉得比ta更寂寞。然后演示闹鬼片段，有点教学范例的风格，笑着演示。有一段是和另一个人贴着，头突然摸不到了，只剩下布。不觉得恐怖，只是格外孤独。然后
-醒来
-，觉得孤独感淹没，是咖啡喝的多，把心脏和胃的感觉解释成‘孤独’了。</p>
-<p><img src="./assets/2e5982ad4416624d-1.png" /></p>
-<p><img src="./assets/c1089c83c1203ca9.jpg" /></p>
+<ul>
+<li><p>git hash-object -w <FILENAME></p></li>
+<li><p>会打印文件Object id。这个 id 不会因为该文件名改变而改变</p></li>
+<li><p>用 object id 来看log</p>
+<ul>
+<li><code>git log --find-object=&lt;object id&gt;</code></li>
+</ul></li>
+<li><p>参考：<code>git log --help</code>, <a
+href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git-Internals-Git-Object</a></p></li>
+</ul>
 
                         ]]>
                          </content:encoded>
-                        <pubDate>Wed, 24 Jun 2026 19:40:41 GMT</pubDate>
-                        <guid>https://dbdo00.github.io//posts/2023-9-10-梦.html</guid>
+                        <pubDate>2024-03-17 00:00:00</pubDate>
+                        <guid>https://dbdo00.github.io//posts/git-里-file-object-的使用.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>路上的月亮</title>
+                        <link>https://dbdo00.github.io//posts/路上的月亮.html</link>
+                        <description>路上的月亮</description>
+                        <content:encoded><![CDATA[
+                        
+
+
+<h2>
+路上的月亮
+</h2>
+<p>
+</p>
+<pre>1
+
+月亮陪着我走回家。
+我想把她带到将来的日子里去。
+一路静悄悄……
+
+2
+
+咪、咪、咪……
+请你不要把我打搅。
+你是人吗？
+也许你比人还可靠。
+
+3
+
+当然了，
+没有比做人更值得骄傲。
+而你呢？
+你是猫。
+猫生下来就是贸。
+
+4
+
+我想把她带到将来的日子里去！
+不论怎样，
+想想总比不想好。
+
+5
+
+生活真是这样美好。
+睡觉！
+
+6
+
+月亮独自在荒野上飘。
+她是什么时候失掉的，
+我一点儿也不知道。
+</pre>
+<br>
+<hr>
+
+                        ]]>
+                         </content:encoded>
+                        <pubDate>2024-02-17 00:00:00</pubDate>
+                        <guid>https://dbdo00.github.io//posts/路上的月亮.html</guid>
                     </item>
                     
                     <item>
@@ -193,88 +293,164 @@ href="https://zh.wikipedia.org/zh-cn/%E5%85%94%E7%8C%BB">兔狲</a>。我很喜�
 
                         ]]>
                          </content:encoded>
-                        <pubDate>Wed, 24 Jun 2026 19:40:41 GMT</pubDate>
+                        <pubDate>2023-12-26 00:00:00</pubDate>
                         <guid>https://dbdo00.github.io//posts/2023-12-26.html</guid>
                     </item>
                     
                     <item>
-                        <title>LuaRocks</title>
-                        <link>https://dbdo00.github.io//posts/LuaRocks.html</link>
-                        <description>LuaRocks</description>
+                        <title>links 2023-12-12</title>
+                        <link>https://dbdo00.github.io//posts/links-2023-12-12.html</link>
+                        <description>links 2023-12-12</description>
                         <content:encoded><![CDATA[
                         
 
 
-<h2 id="what-is-luarocks">What is LuaRocks</h2>
-<p>LuaRocks is a package manager for Lua. You can install lua modules
-with it.</p>
-<p>As people often say, to write Lua, you need to eat C as
-breakfast.</p>
-<p>LuaRocks manages the installation process for Lua modules, including
-the complex tasks associated with C modules, such as handling makefiles
-and interacting with C compilers.</p>
-<p>By automating these tasks, LuaRocks simplifies the installation
-process and reduces the hassle.</p>
-<h2 id="building-module-lua-cjson-with-luarocks">Building Module
-<code>lua-cjson</code> With LuaRocks</h2>
-<ol type="1">
-<li><h3 id="download-the-source-file">Download the source file</h3>
-Go to <a href="https://kyne.au/%7Emark/software/lua-cjson.php"
-class="uri">https://kyne.au/%7Emark/software/lua-cjson.php</a> and click
-<code>lua-cjson-x.y.z.zip</code> to download. <img
-src="Pasted%20image%2020240809234324.png" /></li>
-<li><h3 id="build-from-the-source">Build from the source</h3>
-Change to the directory:</li>
-</ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> lua-cjson-2.1.0</span></code></pre></div>
-<p>Then uncompress the zip file. Use the command
-<code>unzip lua-cjson-2.1.0.zip</code>.</p>
-<p>Install the module globally:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> luarock make</span></code></pre></div>
-<p>If you want to specify the version of lua, say lua 5.3, use</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> luarock-5.3 make</span></code></pre></div>
-<p>instead.</p>
+<p><a href="https://toobnix.org/w/vV7qtK176DVE6RLXrZ18Ee">EmacsConf
+2023: Using Koutline for stream of thought journaling - Matthew
+Jorgensen (PlasmaStrike)</a></p>
+<p><a href="https://toobnix.org/w/1t3hLzUmaNqtjE9aQXFbad">EmacsConf 2023
+Q&amp;A: Bringing joy to Scheme programming</a></p>
+<p><a href="https://toobnix.org/w/4DeRkvJyKFdCBLWnHtsZW2">EmacsConf
+2023: Windows into Freedom - Corwin Brust</a></p>
+<p><a href="https://toobnix.org/w/4moUfTEo2G8we5JuLGArWx"
+class="uri">https://toobnix.org/w/4moUfTEo2G8we5JuLGArWx</a></p>
+<p><a href="https://www.youtube.com/watch?v=lGjfzfC1CH0">EmacsConf 2023:
+REPLs in strange places: Lua, LaTeX, LPeg, LPegRex, TikZ - Eduardo
+Ochs</a></p>
 
                         ]]>
                          </content:encoded>
-                        <pubDate>Wed, 24 Jun 2026 19:40:41 GMT</pubDate>
-                        <guid>https://dbdo00.github.io//posts/LuaRocks.html</guid>
+                        <pubDate>2023-12-12 00:00:00</pubDate>
+                        <guid>https://dbdo00.github.io//posts/links-2023-12-12.html</guid>
                     </item>
                     
                     <item>
-                        <title>journal 2023-08-24</title>
-                        <link>https://dbdo00.github.io//posts/journal-2023-08-24.html</link>
-                        <description>journal 2023-08-24</description>
+                        <title>通过写邮件评论</title>
+                        <link>https://dbdo00.github.io//posts/通过写邮件评论.html</link>
+                        <description>通过写邮件评论</description>
                         <content:encoded><![CDATA[
                         
 
 
-<p>I’ve just got up. Everything is still quiet.</p>
-<p>I should have started with these habits back in May, especially
-getting up at 7 in the morning. It gives me what I want: silence, and it
-also gives me what the night doesn’t offer: the rising sun.</p>
-<p>My head is suddenly empty.</p>
-<p>Bottled water is handy and also tasty. Tap water tastes bad (hard). I
-cannot bear it.</p>
-<p>Let us return to the subject of habits. When do I feel that habits
-are bullshit and don’t want to bother with daily routines? When I am in
-a hurry. I want the sweetness to come quickly and waiting means failure
-to me. Mindset changes. One day I asked myself why people choose
-hardships, is it because they like to endure? Not quite. I realised that
-hardship promises a future in which we win what we dream of. Foolishly,
-I thought that fun was the reason people put in the effort, which it is,
-but for many things the result is the main motivation.</p>
-<p>Recently I also learned Javascript. Promise is a key concept in
-Javascript. In javascript, we often wait for a function to finish and do
-the next thing only after the function has finished. Waiting takes time,
-but in the end we get what we want. Waiting also has its advantages:
-priorities, optimising the use of limited resources… Life is really the
-same.</p>
+<p><a href="https://testmail.app">testmail.app</a>
+有学生一年免费使用。</p>
+<p>一个账户有无限个邮箱地址。</p>
+<p>能不能给每个文章分配一个邮箱地址，允许通过给邮箱写信发评论？</p>
 
                         ]]>
                          </content:encoded>
-                        <pubDate>Wed, 24 Jun 2026 19:40:41 GMT</pubDate>
-                        <guid>https://dbdo00.github.io//posts/journal-2023-08-24.html</guid>
+                        <pubDate>2023-11-16 00:00:00</pubDate>
+                        <guid>https://dbdo00.github.io//posts/通过写邮件评论.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>free programming courses</title>
+                        <link>https://dbdo00.github.io//posts/free-programming-courses.html</link>
+                        <description>free programming courses</description>
+                        <content:encoded><![CDATA[
+                        
+
+
+<p>学生免费60小时</p>
+<p>课程：<a
+href="https://frontendmasters.com/welcome/github-student-developers/">frontendmasters.</a><br />
+如果对前端不感兴趣的话也有用js做别的事情（arduino，虚拟机）的课</p>
+
+                        ]]>
+                         </content:encoded>
+                        <pubDate>2023-11-16 00:00:00</pubDate>
+                        <guid>https://dbdo00.github.io//posts/free-programming-courses.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>new keyboard</title>
+                        <link>https://dbdo00.github.io//posts/new-keyboard.html</link>
+                        <description>new keyboard</description>
+                        <content:encoded><![CDATA[
+                        
+
+
+<p>the first blog post from my new keyboard</p>
+
+                        ]]>
+                         </content:encoded>
+                        <pubDate>2023-10-07 00:00:00</pubDate>
+                        <guid>https://dbdo00.github.io//posts/new-keyboard.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>社交媒体</title>
+                        <link>https://dbdo00.github.io//posts/社交媒体.html</link>
+                        <description>社交媒体</description>
+                        <content:encoded><![CDATA[
+                        
+
+
+<p>社交媒体这个词根本不恰当，是不是那些记者只知道抄推特，推特对他们就是媒体，他们作为记者有发言权，所以推特对所有人就都是媒体?</p>
+
+                        ]]>
+                         </content:encoded>
+                        <pubDate>2023-10-01 00:00:00</pubDate>
+                        <guid>https://dbdo00.github.io//posts/社交媒体.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>night walk</title>
+                        <link>https://dbdo00.github.io//posts/night-walk.html</link>
+                        <description>night walk</description>
+                        <content:encoded><![CDATA[
+                        
+
+
+<p>i walked through campus tonight to reach my goal of 10,000 steps,
+suprised by how bright it was on the street (the campus is still dark
+though). i even fear my small braid (something i never tried wearing
+outside as a male-presenting person) would be too noticeable .</p>
+<p>my patience in walking changes over time. initially i walked a lot
+and had fun doing it, but then it became less satisfying for me, perhaps
+because i expected more. now i can appreciate it better when i don’t
+expect it to be a perfect hobby choice. Since i want to walk for a long
+time, i came to a place which is far but still close to the edge of the
+campus. the lighting for the paths is dark there, but the court nearby
+is bright. i saw some old buildings, and weird stairs everywhere. i
+don’t remeber how many stairs i went through just to walk forword. the
+light was dimmer as i moved forward. the only light around caught my
+attention, comming from the entrance of three old buildings to my left.
+i saw students with long hairs and skirts entered one of the buildings
+together but they seemed not to be talking.</p>
+<p>this place wasn’t that familiar to me and so i decided to leave. i
+needed some time to find my way back to the paths i had walked more
+often and had become more familiar with. but this wasn’t so hard. i
+found a familiar path very soon and i walked on it.</p>
+<pre><code>1 
+ \
+  ---  \
+        \
+         \
+          3    人</code></pre>
+
+                        ]]>
+                         </content:encoded>
+                        <pubDate>2023-10-01 00:00:00</pubDate>
+                        <guid>https://dbdo00.github.io//posts/night-walk.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>我的图标制作</title>
+                        <link>https://dbdo00.github.io//posts/我的图标制作.html</link>
+                        <description>我的图标制作</description>
+                        <content:encoded><![CDATA[
+                        
+
+
+<pre><code>&gt; convert   -background lightblue  -fill blue  -font /usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf  -pointsize 200
+-size 80x80 -gravity center  -pointsize 200  label:&#39;D&#39; caption.gif </code></pre>
+<p>使用 ctrl + F5 去除缓存看dbdo.website 的图标.</p>
+
+                        ]]>
+                         </content:encoded>
+                        <pubDate>2023-09-29 00:00:00</pubDate>
+                        <guid>https://dbdo00.github.io//posts/我的图标制作.html</guid>
                     </item>
                     
                     <item>
@@ -318,68 +494,86 @@ appreciated.</p>
 
                         ]]>
                          </content:encoded>
-                        <pubDate>Wed, 24 Jun 2026 19:40:41 GMT</pubDate>
+                        <pubDate>2023-09-20 00:00:00</pubDate>
                         <guid>https://dbdo00.github.io//posts/Journal-230920722.html</guid>
                     </item>
                     
                     <item>
-                        <title>links 2023-12-12</title>
-                        <link>https://dbdo00.github.io//posts/links-2023-12-12.html</link>
-                        <description>links 2023-12-12</description>
+                        <title>2023-9-10 梦</title>
+                        <link>https://dbdo00.github.io//posts/2023-9-10-梦.html</link>
+                        <description>2023-9-10 梦</description>
                         <content:encoded><![CDATA[
                         
 
 
-<p><a href="https://toobnix.org/w/vV7qtK176DVE6RLXrZ18Ee">EmacsConf
-2023: Using Koutline for stream of thought journaling - Matthew
-Jorgensen (PlasmaStrike)</a></p>
-<p><a href="https://toobnix.org/w/1t3hLzUmaNqtjE9aQXFbad">EmacsConf 2023
-Q&amp;A: Bringing joy to Scheme programming</a></p>
-<p><a href="https://toobnix.org/w/4DeRkvJyKFdCBLWnHtsZW2">EmacsConf
-2023: Windows into Freedom - Corwin Brust</a></p>
-<p><a
-href="https://toobnix.org/w/4moUfTEo2G8we5JuLGArWx">https://toobnix.org/w/4moUfTEo2G8we5JuLGArWx</a></p>
-<p><a href="https://www.youtube.com/watch?v=lGjfzfC1CH0">EmacsConf 2023:
-REPLs in strange places: Lua, LaTeX, LPeg, LPegRex, TikZ - Eduardo
-Ochs</a></p>
+<p>梦里有人唱歌，我觉得比ta更寂寞。然后演示闹鬼片段，有点教学范例的风格，笑着演示。有一段是和另一个人贴着，头突然摸不到了，只剩下布。不觉得恐怖，只是格外孤独。然后
+醒来
+，觉得孤独感淹没，是咖啡喝的多，把心脏和胃的感觉解释成’孤独’了。</p>
+<p><img src="./assets/2e5982ad4416624d-1.png" /></p>
+<p><img src="./assets/c1089c83c1203ca9.jpg" /></p>
 
                         ]]>
                          </content:encoded>
-                        <pubDate>Wed, 24 Jun 2026 19:40:41 GMT</pubDate>
-                        <guid>https://dbdo00.github.io//posts/links-2023-12-12.html</guid>
+                        <pubDate>2023-09-10 00:00:00</pubDate>
+                        <guid>https://dbdo00.github.io//posts/2023-9-10-梦.html</guid>
                     </item>
                     
                     <item>
-                        <title>忘记和延续</title>
-                        <link>https://dbdo00.github.io//posts/忘记和延续.html</link>
-                        <description>忘记和延续</description>
+                        <title>随记 2023-8-31</title>
+                        <link>https://dbdo00.github.io//posts/随记-2023-8-31.html</link>
+                        <description>随记 2023-8-31</description>
                         <content:encoded><![CDATA[
                         
 
 
-<p>很短的时间, 就会忘记。 容易忘记以前发生的事情。 把现在的情况。
-当成一直以来有的情况。 但实际上并不是。 是记性不好.</p>
-<p>记性不好就像一段时间以前和现在是两个人。
-虽然是一个肉体是一致的，但是意识里好像是完全两个人。
-有部分记忆，也是印象式的记忆。但是记忆不太多。</p>
-<p>最重要的东西，记住一些一些部分。很多重要的部分都忘记。</p>
-<p>不同时间。 一个人会感觉想过的像两个人。</p>
-<p>我觉得延续稳固的就是——某种习惯。你觉得很方便的地方，就会习惯。</p>
-<p>仔细想想，除了每个人必须的基本生命维持行为，唯一直每天坚持的习惯是刷牙。每天刷牙看起来很简单，但是得知过有人会因为疾病懒得刷牙，很久不刷牙。</p>
-<p>最近的习惯,
-没事干就收拾桌面和地板上的垃圾。收拾桌面，桌子和地板上的垃圾，然后扔到垃圾袋里面。这个习惯的形成可能是因为方便。
-开始做的事情，可以的维持是因为方便。</p>
-<p>还有一些事情是。 断了续续的在做。
-差不多了续续的四年，我印象中，有时候会断了上几个月（没有统计过）总会重新开始做上几天的事情,
-就是多邻国。 从大一开始，断断续续的。 现在,
-突然就已经做了四年了,完全没有意识到的事情。 虽然它的中断很经常,
-也有很长的时间中断。
-这个有间断的坚持的结果是没有学会一个语言，最多是日语的平假名大概有些认识.</p>
+<p>如果活着而没有这些东西，那我的快乐就是一种占有的快乐，一种拥有我的生命的快乐，一种占有我自己生命的快乐。</p>
+<p>占有我自己生命的快乐也没有所谓的精神分析批评的那么不堪。</p>
+<p>如果一个人拥有占有着自己的生命的快乐，这也没什么不好的，而且是可以理解的。</p>
+<p>可以体验出来这种倾向我觉得这是可以理解的.</p>
+<p>如何过得很”好”，然后死掉，这样好像首先會更加超越一些。它是一個超越自我的選項。其實它不是一種圓滿的回答，能感覺到它是一個好的答案。但是問題是冲动然後並不現實。更现实的是，只有活下去，接下来才有<strong>可能</strong>得到更多。而不存在活不下去了，只要牺牲一点就能得到的选项。</p>
+<p>这个选项只是一种妄想。在整个半年甚至一年中我是在这种妄想中度过的。也是一种基于对别人的误读，或者说对一种想象的误读，对自身想象的误解。</p>
+<p>有一種類似於”認知酸雨”一类說法。這種价值观就是一種認知上的酸雨。它會讓人心智不清楚。</p>
 
                         ]]>
                          </content:encoded>
-                        <pubDate>Wed, 24 Jun 2026 19:40:41 GMT</pubDate>
-                        <guid>https://dbdo00.github.io//posts/忘记和延续.html</guid>
+                        <pubDate>2023-08-31 00:00:00</pubDate>
+                        <guid>https://dbdo00.github.io//posts/随记-2023-8-31.html</guid>
+                    </item>
+                    
+                    <item>
+                        <title>journal 2023-08-24</title>
+                        <link>https://dbdo00.github.io//posts/journal-2023-08-24.html</link>
+                        <description>journal 2023-08-24</description>
+                        <content:encoded><![CDATA[
+                        
+
+
+<p>I’ve just got up. Everything is still quiet.</p>
+<p>I should have started with these habits back in May, especially
+getting up at 7 in the morning. It gives me what I want: silence, and it
+also gives me what the night doesn’t offer: the rising sun.</p>
+<p>My head is suddenly empty.</p>
+<p>Bottled water is handy and also tasty. Tap water tastes bad (hard). I
+cannot bear it.</p>
+<p>Let us return to the subject of habits. When do I feel that habits
+are bullshit and don’t want to bother with daily routines? When I am in
+a hurry. I want the sweetness to come quickly and waiting means failure
+to me. Mindset changes. One day I asked myself why people choose
+hardships, is it because they like to endure? Not quite. I realised that
+hardship promises a future in which we win what we dream of. Foolishly,
+I thought that fun was the reason people put in the effort, which it is,
+but for many things the result is the main motivation.</p>
+<p>Recently I also learned Javascript. Promise is a key concept in
+Javascript. In javascript, we often wait for a function to finish and do
+the next thing only after the function has finished. Waiting takes time,
+but in the end we get what we want. Waiting also has its advantages:
+priorities, optimising the use of limited resources… Life is really the
+same.</p>
+
+                        ]]>
+                         </content:encoded>
+                        <pubDate>2023-08-24 00:00:00</pubDate>
+                        <guid>https://dbdo00.github.io//posts/journal-2023-08-24.html</guid>
                     </item>
                     
                     <item>
@@ -408,43 +602,8 @@ Ochs</a></p>
 
                         ]]>
                          </content:encoded>
-                        <pubDate>Wed, 24 Jun 2026 19:40:41 GMT</pubDate>
+                        <pubDate>2023-08-07 00:00:00</pubDate>
                         <guid>https://dbdo00.github.io//posts/摸鱼儿.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>Feeds</title>
-                        <link>https://dbdo00.github.io//posts/Feeds.html</link>
-                        <description>Feeds</description>
-                        <content:encoded><![CDATA[
-                        
-
-
-<p>In past a few months, my frequency in checking rss feeds has been
-decreasing. I guess it is because rss feeds are not satisfying enough
-for me. I need the comfort that only other types of Internet services
-can provide.</p>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>Wed, 24 Jun 2026 19:40:41 GMT</pubDate>
-                        <guid>https://dbdo00.github.io//posts/Feeds.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>社交媒体</title>
-                        <link>https://dbdo00.github.io//posts/社交媒体.html</link>
-                        <description>社交媒体</description>
-                        <content:encoded><![CDATA[
-                        
-
-
-<p>社交媒体这个词根本不恰当，是不是那些记者只知道抄推特，推特对他们就是媒体，他们作为记者有发言权，所以推特对所有人就都是媒体?</p>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>Wed, 24 Jun 2026 19:40:41 GMT</pubDate>
-                        <guid>https://dbdo00.github.io//posts/社交媒体.html</guid>
                     </item>
                     
                     <item>
@@ -560,169 +719,8 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
 
                         ]]>
                          </content:encoded>
-                        <pubDate>Wed, 24 Jun 2026 19:40:41 GMT</pubDate>
+                        <pubDate>2023-08-07 00:00:00</pubDate>
                         <guid>https://dbdo00.github.io//posts/Test-2.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>free programming courses</title>
-                        <link>https://dbdo00.github.io//posts/free-programming-courses.html</link>
-                        <description>free programming courses</description>
-                        <content:encoded><![CDATA[
-                        
-
-
-<p>学生免费60小时</p>
-<p>课程：<a
-href="https://frontendmasters.com/welcome/github-student-developers/">frontendmasters.</a><br />
-如果对前端不感兴趣的话也有用js做别的事情（arduino，虚拟机）的课</p>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>Wed, 24 Jun 2026 19:40:41 GMT</pubDate>
-                        <guid>https://dbdo00.github.io//posts/free-programming-courses.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>night walk</title>
-                        <link>https://dbdo00.github.io//posts/night-walk.html</link>
-                        <description>night walk</description>
-                        <content:encoded><![CDATA[
-                        
-
-
-<p>i walked through campus tonight to reach my goal of 10,000 steps,
-suprised by how bright it was on the street (the campus is still dark
-though). i even fear my small braid (something i never tried wearing
-outside as a male-presenting person) would be too noticeable .</p>
-<p>my patience in walking changes over time. initially i walked a lot
-and had fun doing it, but then it became less satisfying for me, perhaps
-because i expected more. now i can appreciate it better when i don’t
-expect it to be a perfect hobby choice. Since i want to walk for a long
-time, i came to a place which is far but still close to the edge of the
-campus. the lighting for the paths is dark there, but the court nearby
-is bright. i saw some old buildings, and weird stairs everywhere. i
-don’t remeber how many stairs i went through just to walk forword. the
-light was dimmer as i moved forward. the only light around caught my
-attention, comming from the entrance of three old buildings to my left.
-i saw students with long hairs and skirts entered one of the buildings
-together but they seemed not to be talking.</p>
-<p>this place wasn’t that familiar to me and so i decided to leave. i
-needed some time to find my way back to the paths i had walked more
-often and had become more familiar with. but this wasn’t so hard. i
-found a familiar path very soon and i walked on it.</p>
-<pre><code>1 
- \
-  ---  \
-        \
-         \
-          3    人</code></pre>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>Wed, 24 Jun 2026 19:40:41 GMT</pubDate>
-                        <guid>https://dbdo00.github.io//posts/night-walk.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>git 里 file object 的使用</title>
-                        <link>https://dbdo00.github.io//posts/git-里-file-object-的使用.html</link>
-                        <description>git 里 file object 的使用</description>
-                        <content:encoded><![CDATA[
-                        
-
-
-<ul>
-<li><pre><code>git hash-object -w &lt;FILENAME&gt;</code></pre></li>
-<li><p>会打印文件Object id。这个 id 不会因为该文件名改变而改变</p></li>
-<li><p>用 object id 来看log</p>
-<ul>
-<li><code>git log --find-object=&lt;object id&gt;</code></li>
-</ul></li>
-<li><p>参考：<code>git log --help</code>, <a
-href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git-Internals-Git-Object</a></p></li>
-</ul>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>Wed, 24 Jun 2026 19:40:41 GMT</pubDate>
-                        <guid>https://dbdo00.github.io//posts/git-里-file-object-的使用.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>路上的月亮</title>
-                        <link>https://dbdo00.github.io//posts/路上的月亮.html</link>
-                        <description>路上的月亮</description>
-                        <content:encoded><![CDATA[
-                        
-
-
-<h2>
-路上的月亮
-</h2>
-<p>
-</p>
-<pre>1
-
-月亮陪着我走回家。
-我想把她带到将来的日子里去。
-一路静悄悄……
-
-2
-
-咪、咪、咪……
-请你不要把我打搅。
-你是人吗？
-也许你比人还可靠。
-
-3
-
-当然了，
-没有比做人更值得骄傲。
-而你呢？
-你是猫。
-猫生下来就是贸。
-
-4
-
-我想把她带到将来的日子里去！
-不论怎样，
-想想总比不想好。
-
-5
-
-生活真是这样美好。
-睡觉！
-
-6
-
-月亮独自在荒野上飘。
-她是什么时候失掉的，
-我一点儿也不知道。
-</pre>
-<br>
-<hr>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>Wed, 24 Jun 2026 19:40:41 GMT</pubDate>
-                        <guid>https://dbdo00.github.io//posts/路上的月亮.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>new keyboard</title>
-                        <link>https://dbdo00.github.io//posts/new-keyboard.html</link>
-                        <description>new keyboard</description>
-                        <content:encoded><![CDATA[
-                        
-
-
-<p>the first blog post from my new keyboard</p>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>Wed, 24 Jun 2026 19:40:41 GMT</pubDate>
-                        <guid>https://dbdo00.github.io//posts/new-keyboard.html</guid>
                     </item>
                     
  
