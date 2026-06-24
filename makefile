@@ -1,4 +1,5 @@
 all: style
+	rm public/posts/* -r
 	git add markdown/*  
 	git commit -a -m "rebuild with makefile" || true
 	python build.py
