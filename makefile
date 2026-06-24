@@ -1,10 +1,12 @@
-all: blog.py 
+all: test style
 	rm -r public/posts/*  || true
+	python build.py
 	git add markdown/*  
 	git commit -a -m "rebuild with makefile" || true
-	python build.py
 	#git add public/posts/*
 	
+publish:
+
 serve: 
 	python serve.py
 
@@ -22,5 +24,4 @@ deploy:
 	
 
 style: 
-	npx tailwindcss -i ./src/style-note-src.css -o ./src/style-note.css 
-	cp ./src/style-note.css ./public/style-note.css
+	cp ./src/style-note.css ./public/posts/style-note.css
