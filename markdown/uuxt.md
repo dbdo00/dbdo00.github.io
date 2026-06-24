@@ -1,6 +1,6 @@
 ---
 title: 上了四年数学课以后，我觉得我不喜欢数学
-publish: unlisted
+publish: draft
 ---
 上了四年数学课以后，我觉得我不喜欢数学。
 
