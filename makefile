@@ -24,4 +24,5 @@ deploy:
 	
 
 style: 
+	mkdir public/posts -p
 	cp ./src/style-note.css ./public/posts/style-note.css
