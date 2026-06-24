@@ -50,7 +50,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.MY_PERSONAL_TOKEN }} # 使用你刚才添加的 Secret
-          repository-name: your-username/dbdo00.github.io # 目标仓库
+          repository-name: dbdo00/dbdo00.github.io # 目标仓库
           branch: main # 或者 gh-pages
           folder: public # 这里填写你本地构建输出的文件夹名称
 
