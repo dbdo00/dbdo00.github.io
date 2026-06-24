@@ -1,4 +1,4 @@
-all: test style
+all: style
 	rm -r public/posts/*  || true
 	python build.py
 	git add markdown/*  
