@@ -124,29 +124,6 @@ can provide.</p>
                     </item>
                     
                     <item>
-                        <title>git 里 file object 的使用</title>
-                        <link>https://dbdo00.github.io//posts/25.html</link>
-                        <description>git 里 file object 的使用</description>
-                        <content:encoded><![CDATA[
-                        
-<ul>
-<li><p>git hash-object -w <FILENAME></p></li>
-<li><p>会打印文件Object id。这个 id 不会因为该文件名改变而改变</p></li>
-<li><p>用 object id 来看log</p>
-<ul>
-<li><code>git log --find-object=&lt;object id&gt;</code></li>
-</ul></li>
-<li><p>参考：<code>git log --help</code>, <a
-href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git-Internals-Git-Object</a></p></li>
-</ul>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>2024-03-17 00:00:00</pubDate>
-                        <guid>https://dbdo00.github.io//posts/25.html</guid>
-                    </item>
-                    
-                    <item>
                         <title>路上的月亮</title>
                         <link>https://dbdo00.github.io//posts/23.html</link>
                         <description>路上的月亮</description>
