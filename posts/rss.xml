@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
   xmlns:content="http://purl.org/rss/1.0/modules/content/"
   xmlns:admin="http://webns.net/mvcb/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <channel>
+  <channel>
     <title>https://dbdo00.github.io</title>
-     <atom:link href="https://dbdo00.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dbdo00.github.io/rss.xml" rel="self" type="application/rss+xml" />
     
-                    <item>
-                        <title>LuaRocks</title>
-                        <link>https://dbdo00.github.io//posts/33.html</link>
-                        <description>LuaRocks</description>
-                        <content:encoded><![CDATA[
-                        
-<h2 id="what-is-luarocks">What is LuaRocks</h2>
+            <item>
+                <title>LuaRocks</title>
+                <link>https://dbdo00.github.io//posts/33.html</link>
+                <description>LuaRocks</description>
+                <content:encoded><![CDATA[<h2 id="what-is-luarocks">What is LuaRocks</h2>
 <p>LuaRocks is a package manager for Lua. You can install lua modules
 with it.</p>
 <p>As people often say, to write Lua, you need to eat C as
@@ -43,37 +41,27 @@ src="assets/Pasted%20image%2020240809234324.png" /></p></li>
 <p>If you want to specify the version of lua, say lua 5.3, use</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> luarock-5.3 make</span></code></pre></div>
 <p>instead.</p>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>2024-08-09 00:00:00</pubDate>
-                        <guid>https://dbdo00.github.io//posts/33.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>Feeds</title>
-                        <link>https://dbdo00.github.io//posts/32.html</link>
-                        <description>Feeds</description>
-                        <content:encoded><![CDATA[
-                        
-<p>In past a few months, my frequency in checking rss feeds has been
+]]></content:encoded>
+                <pubDate>2024-08-09 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/33.html</guid>
+            </item>
+            <item>
+                <title>Feeds</title>
+                <link>https://dbdo00.github.io//posts/32.html</link>
+                <description>Feeds</description>
+                <content:encoded><![CDATA[<p>In past a few months, my frequency in checking rss feeds has been
 decreasing. I guess it is because rss feeds are not satisfying enough
 for me. I need the comfort that only other types of Internet services
 can provide.</p>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>2024-08-08 00:00:00</pubDate>
-                        <guid>https://dbdo00.github.io//posts/32.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>脑区</title>
-                        <link>https://dbdo00.github.io//posts/28.html</link>
-                        <description>脑区</description>
-                        <content:encoded><![CDATA[
-                        
-<p>神经科学有所谓”脑区”的概念。也就是大脑有不同区域，不同的工作使用不同的区域，而非不管什么活动都调动所有脑区。
+]]></content:encoded>
+                <pubDate>2024-08-08 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/32.html</guid>
+            </item>
+            <item>
+                <title>脑区</title>
+                <link>https://dbdo00.github.io//posts/28.html</link>
+                <description>脑区</description>
+                <content:encoded><![CDATA[<p>神经科学有所谓”脑区”的概念。也就是大脑有不同区域，不同的工作使用不同的区域，而非不管什么活动都调动所有脑区。
 脑区对人休息的意义是，尽量使用和工作时不同的脑区，这样工作使用的脑区就会”沉睡”，达到更好的休息。</p>
 <p>如何判断一个活动用了什么样的脑区，我并不能说得十分确定。但是据说视觉活动会用到一部分和非视觉活动
 不一样的脑区。所以有人建议如果工作时一直在用眼，休息时就不要进行看视频或者看书一类需要用眼的活动，
@@ -85,20 +73,15 @@ can provide.</p>
 放松联系在一起。</p>
 <p>我以前有段时间会晚上把灯关上，虽然没有明确的有意识地这么做。虽然放松，但是来自视觉的新鲜刺激太多了，
 夜间关灯的习惯最后也因为某种原因终止。</p>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>2024-08-01 00:00:00</pubDate>
-                        <guid>https://dbdo00.github.io//posts/28.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>忘记和延续</title>
-                        <link>https://dbdo00.github.io//posts/27.html</link>
-                        <description>忘记和延续</description>
-                        <content:encoded><![CDATA[
-                        
-<p>很短的时间, 就会忘记。 容易忘记以前发生的事情。 把现在的情况。
+]]></content:encoded>
+                <pubDate>2024-08-01 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/28.html</guid>
+            </item>
+            <item>
+                <title>忘记和延续</title>
+                <link>https://dbdo00.github.io//posts/27.html</link>
+                <description>忘记和延续</description>
+                <content:encoded><![CDATA[<p>很短的时间, 就会忘记。 容易忘记以前发生的事情。 把现在的情况。
 当成一直以来有的情况。 但实际上并不是。 是记性不好.</p>
 <p>记性不好就像一段时间以前和现在是两个人。
 虽然是一个肉体是一致的，但是意识里好像是完全两个人。
@@ -116,20 +99,15 @@ can provide.</p>
 突然就已经做了四年了,完全没有意识到的事情。 虽然它的中断很经常,
 也有很长的时间中断。
 这个有间断的坚持的结果是没有学会一个语言，最多是日语的平假名大概有些认识.</p>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>2024-04-19 00:00:00</pubDate>
-                        <guid>https://dbdo00.github.io//posts/27.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>路上的月亮</title>
-                        <link>https://dbdo00.github.io//posts/23.html</link>
-                        <description>路上的月亮</description>
-                        <content:encoded><![CDATA[
-                        
-<h2>
+]]></content:encoded>
+                <pubDate>2024-04-19 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/27.html</guid>
+            </item>
+            <item>
+                <title>路上的月亮</title>
+                <link>https://dbdo00.github.io//posts/23.html</link>
+                <description>路上的月亮</description>
+                <content:encoded><![CDATA[<h2>
 路上的月亮
 </h2>
 <p>
@@ -174,20 +152,15 @@ can provide.</p>
 </pre>
 <br>
 <hr>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>2024-02-17 00:00:00</pubDate>
-                        <guid>https://dbdo00.github.io//posts/23.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>2023 12 26</title>
-                        <link>https://dbdo00.github.io//posts/21.html</link>
-                        <description>2023 12 26</description>
-                        <content:encoded><![CDATA[
-                        
-<p>我想总结一下我的 2023 年。</p>
+]]></content:encoded>
+                <pubDate>2024-02-17 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/23.html</guid>
+            </item>
+            <item>
+                <title>2023 12 26</title>
+                <link>https://dbdo00.github.io//posts/21.html</link>
+                <description>2023 12 26</description>
+                <content:encoded><![CDATA[<p>我想总结一下我的 2023 年。</p>
 <p>从心理上讲，我更成熟了，事情很少超出预期。</p>
 <p>好了，先休息一下，过会儿再来……</p>
 <p>忏悔……这是我想要的。</p>
@@ -253,20 +226,15 @@ alternate html 标签中（如果有更正确的叫法，请告诉我）。</p>
 <p>开始采取戏谑和批评的态度。世界上很多制度都有值得批评的地方。制度下面的人也是批评的对象。这样想，在对一个东西不满的时候，可以看穿它，自己便能满足。虽然有些事情实在找不到批评讽刺的地方。这么想得太频繁，万能防御。有些实在找不到，就算了。</p>
 <p>知道了一种动物，叫<a
 href="https://zh.wikipedia.org/zh-cn/%E5%85%94%E7%8C%BB">兔狲</a>。我很喜欢。</p>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>2023-12-26 00:00:00</pubDate>
-                        <guid>https://dbdo00.github.io//posts/21.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>links 2023-12-12</title>
-                        <link>https://dbdo00.github.io//posts/20.html</link>
-                        <description>links 2023-12-12</description>
-                        <content:encoded><![CDATA[
-                        
-<p><a href="https://toobnix.org/w/vV7qtK176DVE6RLXrZ18Ee">EmacsConf
+]]></content:encoded>
+                <pubDate>2023-12-26 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/21.html</guid>
+            </item>
+            <item>
+                <title>links 2023-12-12</title>
+                <link>https://dbdo00.github.io//posts/20.html</link>
+                <description>links 2023-12-12</description>
+                <content:encoded><![CDATA[<p><a href="https://toobnix.org/w/vV7qtK176DVE6RLXrZ18Ee">EmacsConf
 2023: Using Koutline for stream of thought journaling - Matthew
 Jorgensen (PlasmaStrike)</a></p>
 <p><a href="https://toobnix.org/w/1t3hLzUmaNqtjE9aQXFbad">EmacsConf 2023
@@ -278,82 +246,57 @@ class="uri">https://toobnix.org/w/4moUfTEo2G8we5JuLGArWx</a></p>
 <p><a href="https://www.youtube.com/watch?v=lGjfzfC1CH0">EmacsConf 2023:
 REPLs in strange places: Lua, LaTeX, LPeg, LPegRex, TikZ - Eduardo
 Ochs</a></p>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>2023-12-12 00:00:00</pubDate>
-                        <guid>https://dbdo00.github.io//posts/20.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>通过写邮件评论</title>
-                        <link>https://dbdo00.github.io//posts/15.html</link>
-                        <description>通过写邮件评论</description>
-                        <content:encoded><![CDATA[
-                        
-<p><a href="https://testmail.app">testmail.app</a>
+]]></content:encoded>
+                <pubDate>2023-12-12 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/20.html</guid>
+            </item>
+            <item>
+                <title>通过写邮件评论</title>
+                <link>https://dbdo00.github.io//posts/15.html</link>
+                <description>通过写邮件评论</description>
+                <content:encoded><![CDATA[<p><a href="https://testmail.app">testmail.app</a>
 有学生一年免费使用。</p>
 <p>一个账户有无限个邮箱地址。</p>
 <p>能不能给每个文章分配一个邮箱地址，允许通过给邮箱写信发评论？</p>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>2023-11-16 00:00:00</pubDate>
-                        <guid>https://dbdo00.github.io//posts/15.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>free programming courses</title>
-                        <link>https://dbdo00.github.io//posts/16.html</link>
-                        <description>free programming courses</description>
-                        <content:encoded><![CDATA[
-                        
-<p>学生免费60小时</p>
+]]></content:encoded>
+                <pubDate>2023-11-16 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/15.html</guid>
+            </item>
+            <item>
+                <title>free programming courses</title>
+                <link>https://dbdo00.github.io//posts/16.html</link>
+                <description>free programming courses</description>
+                <content:encoded><![CDATA[<p>学生免费60小时</p>
 <p>课程：<a
 href="https://frontendmasters.com/welcome/github-student-developers/">frontendmasters.</a><br />
 如果对前端不感兴趣的话也有用js做别的事情（arduino，虚拟机）的课</p>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>2023-11-16 00:00:00</pubDate>
-                        <guid>https://dbdo00.github.io//posts/16.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>new keyboard</title>
-                        <link>https://dbdo00.github.io//posts/12.html</link>
-                        <description>new keyboard</description>
-                        <content:encoded><![CDATA[
-                        
-<p>the first blog post from my new keyboard</p>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>2023-10-07 00:00:00</pubDate>
-                        <guid>https://dbdo00.github.io//posts/12.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>社交媒体</title>
-                        <link>https://dbdo00.github.io//posts/10.html</link>
-                        <description>社交媒体</description>
-                        <content:encoded><![CDATA[
-                        
-<p>社交媒体这个词根本不恰当，是不是那些记者只知道抄推特，推特对他们就是媒体，他们作为记者有发言权，所以推特对所有人就都是媒体?</p>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>2023-10-01 00:00:00</pubDate>
-                        <guid>https://dbdo00.github.io//posts/10.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>night walk</title>
-                        <link>https://dbdo00.github.io//posts/11.html</link>
-                        <description>night walk</description>
-                        <content:encoded><![CDATA[
-                        
-<p>i walked through campus tonight to reach my goal of 10,000 steps,
+]]></content:encoded>
+                <pubDate>2023-11-16 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/16.html</guid>
+            </item>
+            <item>
+                <title>new keyboard</title>
+                <link>https://dbdo00.github.io//posts/12.html</link>
+                <description>new keyboard</description>
+                <content:encoded><![CDATA[<p>the first blog post from my new keyboard</p>
+]]></content:encoded>
+                <pubDate>2023-10-07 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/12.html</guid>
+            </item>
+            <item>
+                <title>社交媒体</title>
+                <link>https://dbdo00.github.io//posts/10.html</link>
+                <description>社交媒体</description>
+                <content:encoded><![CDATA[<p>社交媒体这个词根本不恰当，是不是那些记者只知道抄推特，推特对他们就是媒体，他们作为记者有发言权，所以推特对所有人就都是媒体?</p>
+]]></content:encoded>
+                <pubDate>2023-10-01 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/10.html</guid>
+            </item>
+            <item>
+                <title>night walk</title>
+                <link>https://dbdo00.github.io//posts/11.html</link>
+                <description>night walk</description>
+                <content:encoded><![CDATA[<p>i walked through campus tonight to reach my goal of 10,000 steps,
 suprised by how bright it was on the street (the campus is still dark
 though). i even fear my small braid (something i never tried wearing
 outside as a male-presenting person) would be too noticeable .</p>
@@ -379,36 +322,26 @@ found a familiar path very soon and i walked on it.</p>
         \
          \
           3    人</code></pre>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>2023-10-01 00:00:00</pubDate>
-                        <guid>https://dbdo00.github.io//posts/11.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>我的图标制作</title>
-                        <link>https://dbdo00.github.io//posts/9.html</link>
-                        <description>我的图标制作</description>
-                        <content:encoded><![CDATA[
-                        
-<pre><code>&gt; convert   -background lightblue  -fill blue  -font /usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf  -pointsize 200
+]]></content:encoded>
+                <pubDate>2023-10-01 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/11.html</guid>
+            </item>
+            <item>
+                <title>我的图标制作</title>
+                <link>https://dbdo00.github.io//posts/9.html</link>
+                <description>我的图标制作</description>
+                <content:encoded><![CDATA[<pre><code>&gt; convert   -background lightblue  -fill blue  -font /usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf  -pointsize 200
 -size 80x80 -gravity center  -pointsize 200  label:&#39;D&#39; caption.gif </code></pre>
 <p>使用 ctrl + F5 去除缓存看dbdo.website 的图标.</p>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>2023-09-29 00:00:00</pubDate>
-                        <guid>https://dbdo00.github.io//posts/9.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>Journal 230920722</title>
-                        <link>https://dbdo00.github.io//posts/8.html</link>
-                        <description>Journal 230920722</description>
-                        <content:encoded><![CDATA[
-                        
-<p>So, hi. It’s now September 20th. I just woke up, and it’s quite
+]]></content:encoded>
+                <pubDate>2023-09-29 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/9.html</guid>
+            </item>
+            <item>
+                <title>Journal 230920722</title>
+                <link>https://dbdo00.github.io//posts/8.html</link>
+                <description>Journal 230920722</description>
+                <content:encoded><![CDATA[<p>So, hi. It’s now September 20th. I just woke up, and it’s quite
 chilly as fall is approaching. I’ve only left social media for two days,
 and it feels still ok. It wasn’t until then that I realized how silly
 some of the things I’ve posted are.</p>
@@ -438,58 +371,43 @@ now. I perhaps will be able to do this in the future.</p>
 <p>If you, as the reader, feel inclined, please don’t hesitate to reach
 out via email or other means. Your input is welcomed and
 appreciated.</p>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>2023-09-20 00:00:00</pubDate>
-                        <guid>https://dbdo00.github.io//posts/8.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>2023-9-10 梦</title>
-                        <link>https://dbdo00.github.io//posts/7.html</link>
-                        <description>2023-9-10 梦</description>
-                        <content:encoded><![CDATA[
-                        
-<p>梦里有人唱歌，我觉得比ta更寂寞。然后演示闹鬼片段，有点教学范例的风格，笑着演示。有一段是和另一个人贴着，头突然摸不到了，只剩下布。不觉得恐怖，只是格外孤独。然后
+]]></content:encoded>
+                <pubDate>2023-09-20 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/8.html</guid>
+            </item>
+            <item>
+                <title>2023-9-10 梦</title>
+                <link>https://dbdo00.github.io//posts/7.html</link>
+                <description>2023-9-10 梦</description>
+                <content:encoded><![CDATA[<p>梦里有人唱歌，我觉得比ta更寂寞。然后演示闹鬼片段，有点教学范例的风格，笑着演示。有一段是和另一个人贴着，头突然摸不到了，只剩下布。不觉得恐怖，只是格外孤独。然后
 醒来
 ，觉得孤独感淹没，是咖啡喝的多，把心脏和胃的感觉解释成’孤独’了。</p>
 <p><img src="./assets/2e5982ad4416624d-1.png" /></p>
 <p><img src="./assets/c1089c83c1203ca9.jpg" /></p>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>2023-09-10 00:00:00</pubDate>
-                        <guid>https://dbdo00.github.io//posts/7.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>随记 2023-8-31</title>
-                        <link>https://dbdo00.github.io//posts/6.html</link>
-                        <description>随记 2023-8-31</description>
-                        <content:encoded><![CDATA[
-                        
-<p>如果活着而没有这些东西，那我的快乐就是一种占有的快乐，一种拥有我的生命的快乐，一种占有我自己生命的快乐。</p>
+]]></content:encoded>
+                <pubDate>2023-09-10 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/7.html</guid>
+            </item>
+            <item>
+                <title>随记 2023-8-31</title>
+                <link>https://dbdo00.github.io//posts/6.html</link>
+                <description>随记 2023-8-31</description>
+                <content:encoded><![CDATA[<p>如果活着而没有这些东西，那我的快乐就是一种占有的快乐，一种拥有我的生命的快乐，一种占有我自己生命的快乐。</p>
 <p>占有我自己生命的快乐也没有所谓的精神分析批评的那么不堪。</p>
 <p>如果一个人拥有占有着自己的生命的快乐，这也没什么不好的，而且是可以理解的。</p>
 <p>可以体验出来这种倾向我觉得这是可以理解的.</p>
 <p>如何过得很”好”，然后死掉，这样好像首先會更加超越一些。它是一個超越自我的選項。其實它不是一種圓滿的回答，能感覺到它是一個好的答案。但是問題是冲动然後並不現實。更现实的是，只有活下去，接下来才有<strong>可能</strong>得到更多。而不存在活不下去了，只要牺牲一点就能得到的选项。</p>
 <p>这个选项只是一种妄想。在整个半年甚至一年中我是在这种妄想中度过的。也是一种基于对别人的误读，或者说对一种想象的误读，对自身想象的误解。</p>
 <p>有一種類似於”認知酸雨”一类說法。這種价值观就是一種認知上的酸雨。它會讓人心智不清楚。</p>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>2023-08-31 00:00:00</pubDate>
-                        <guid>https://dbdo00.github.io//posts/6.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>journal 2023-08-24</title>
-                        <link>https://dbdo00.github.io//posts/5.html</link>
-                        <description>journal 2023-08-24</description>
-                        <content:encoded><![CDATA[
-                        
-<p>I’ve just got up. Everything is still quiet.</p>
+]]></content:encoded>
+                <pubDate>2023-08-31 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/6.html</guid>
+            </item>
+            <item>
+                <title>journal 2023-08-24</title>
+                <link>https://dbdo00.github.io//posts/5.html</link>
+                <description>journal 2023-08-24</description>
+                <content:encoded><![CDATA[<p>I’ve just got up. Everything is still quiet.</p>
 <p>I should have started with these habits back in May, especially
 getting up at 7 in the morning. It gives me what I want: silence, and it
 also gives me what the night doesn’t offer: the rising sun.</p>
@@ -510,20 +428,15 @@ the next thing only after the function has finished. Waiting takes time,
 but in the end we get what we want. Waiting also has its advantages:
 priorities, optimising the use of limited resources… Life is really the
 same.</p>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>2023-08-24 00:00:00</pubDate>
-                        <guid>https://dbdo00.github.io//posts/5.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>摸鱼儿</title>
-                        <link>https://dbdo00.github.io//posts/2.html</link>
-                        <description>摸鱼儿</description>
-                        <content:encoded><![CDATA[
-                        
-<p>宋・李演</p>
+]]></content:encoded>
+                <pubDate>2023-08-24 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/5.html</guid>
+            </item>
+            <item>
+                <title>摸鱼儿</title>
+                <link>https://dbdo00.github.io//posts/2.html</link>
+                <description>摸鱼儿</description>
+                <content:encoded><![CDATA[<p>宋・李演</p>
 <pre><code>又西风、四桥疏柳，惊蝉相对秋语。   
 琼荷万笠花云重，袅袅红衣如舞。  
 鸿北去  
@@ -538,20 +451,15 @@ same.</p>
 怕月冷吟魂，婉冉空江暮。  
 明灯暗浦。  
 更短笛衔风，长云弄晚，天际画秋句。</code></pre>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>2023-08-07 00:00:00</pubDate>
-                        <guid>https://dbdo00.github.io//posts/2.html</guid>
-                    </item>
-                    
-                    <item>
-                        <title>Test 2</title>
-                        <link>https://dbdo00.github.io//posts/4.html</link>
-                        <description>Test 2</description>
-                        <content:encoded><![CDATA[
-                        
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+]]></content:encoded>
+                <pubDate>2023-08-07 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/2.html</guid>
+            </item>
+            <item>
+                <title>Test 2</title>
+                <link>https://dbdo00.github.io//posts/4.html</link>
+                <description>Test 2</description>
+                <content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
 convallis velit non vestibulum condimentum. Quisque turpis quam, congue
 vitae ipsum a, commodo suscipit enim. Sed ac fermentum ante, eu lacinia
 odio. Cras vel sodales lorem. Sed sollicitudin nisl in elit ornare
@@ -653,14 +561,9 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
 <img src="./assets/c1089c83c1203ca9.jpg" alt="Alt text" />
 <figcaption aria-hidden="true">Alt text</figcaption>
 </figure>
-
-                        ]]>
-                         </content:encoded>
-                        <pubDate>2023-08-07 00:00:00</pubDate>
-                        <guid>https://dbdo00.github.io//posts/4.html</guid>
-                    </item>
-                    
- 
-    </channel>
-    </rss>
-    
+]]></content:encoded>
+                <pubDate>2023-08-07 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/4.html</guid>
+            </item>
+  </channel>
+</rss>
