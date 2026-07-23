@@ -47,7 +47,7 @@ src="assets/Pasted%20image%2020240809234324.png" /></p></li>
             </item>
             <item>
                 <title>Feeds</title>
-                <link>https://dbdo00.github.io//posts/32.html</link>
+                <link>https://dbdo00.github.io//posts/31.html</link>
                 <description>Feeds</description>
                 <content:encoded><![CDATA[<p>In past a few months, my frequency in checking rss feeds has been
 decreasing. I guess it is because rss feeds are not satisfying enough
@@ -55,7 +55,7 @@ for me. I need the comfort that only other types of Internet services
 can provide.</p>
 ]]></content:encoded>
                 <pubDate>2024-08-08 00:00:00</pubDate>
-                <guid>https://dbdo00.github.io//posts/32.html</guid>
+                <guid>https://dbdo00.github.io//posts/31.html</guid>
             </item>
             <item>
                 <title>脑区</title>
@@ -251,25 +251,25 @@ Ochs</a></p>
                 <guid>https://dbdo00.github.io//posts/20.html</guid>
             </item>
             <item>
-                <title>free programming courses</title>
-                <link>https://dbdo00.github.io//posts/15.html</link>
-                <description>free programming courses</description>
-                <content:encoded><![CDATA[<p>学生免费60小时</p>
-<p>课程：<a
-href="https://frontendmasters.com/welcome/github-student-developers/">frontendmasters.</a><br />
-如果对前端不感兴趣的话也有用js做别的事情（arduino，虚拟机）的课</p>
-]]></content:encoded>
-                <pubDate>2023-11-16 00:00:00</pubDate>
-                <guid>https://dbdo00.github.io//posts/15.html</guid>
-            </item>
-            <item>
                 <title>通过写邮件评论</title>
-                <link>https://dbdo00.github.io//posts/16.html</link>
+                <link>https://dbdo00.github.io//posts/15.html</link>
                 <description>通过写邮件评论</description>
                 <content:encoded><![CDATA[<p><a href="https://testmail.app">testmail.app</a>
 有学生一年免费使用。</p>
 <p>一个账户有无限个邮箱地址。</p>
 <p>能不能给每个文章分配一个邮箱地址，允许通过给邮箱写信发评论？</p>
+]]></content:encoded>
+                <pubDate>2023-11-16 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/15.html</guid>
+            </item>
+            <item>
+                <title>free programming courses</title>
+                <link>https://dbdo00.github.io//posts/16.html</link>
+                <description>free programming courses</description>
+                <content:encoded><![CDATA[<p>学生免费60小时</p>
+<p>课程：<a
+href="https://frontendmasters.com/welcome/github-student-developers/">frontendmasters.</a><br />
+如果对前端不感兴趣的话也有用js做别的事情（arduino，虚拟机）的课</p>
 ]]></content:encoded>
                 <pubDate>2023-11-16 00:00:00</pubDate>
                 <guid>https://dbdo00.github.io//posts/16.html</guid>
@@ -284,17 +284,8 @@ href="https://frontendmasters.com/welcome/github-student-developers/">frontendma
                 <guid>https://dbdo00.github.io//posts/12.html</guid>
             </item>
             <item>
-                <title>社交媒体</title>
-                <link>https://dbdo00.github.io//posts/10.html</link>
-                <description>社交媒体</description>
-                <content:encoded><![CDATA[<p>社交媒体这个词根本不恰当，是不是那些记者只知道抄推特，推特对他们就是媒体，他们作为记者有发言权，所以推特对所有人就都是媒体?</p>
-]]></content:encoded>
-                <pubDate>2023-10-01 00:00:00</pubDate>
-                <guid>https://dbdo00.github.io//posts/10.html</guid>
-            </item>
-            <item>
                 <title>night walk</title>
-                <link>https://dbdo00.github.io//posts/11.html</link>
+                <link>https://dbdo00.github.io//posts/10.html</link>
                 <description>night walk</description>
                 <content:encoded><![CDATA[<p>i walked through campus tonight to reach my goal of 10,000 steps,
 suprised by how bright it was on the street (the campus is still dark
@@ -322,6 +313,15 @@ found a familiar path very soon and i walked on it.</p>
         \
          \
           3    人</code></pre>
+]]></content:encoded>
+                <pubDate>2023-10-01 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/10.html</guid>
+            </item>
+            <item>
+                <title>社交媒体</title>
+                <link>https://dbdo00.github.io//posts/11.html</link>
+                <description>社交媒体</description>
+                <content:encoded><![CDATA[<p>社交媒体这个词根本不恰当，是不是那些记者只知道抄推特，推特对他们就是媒体，他们作为记者有发言权，所以推特对所有人就都是媒体?</p>
 ]]></content:encoded>
                 <pubDate>2023-10-01 00:00:00</pubDate>
                 <guid>https://dbdo00.github.io//posts/11.html</guid>
@@ -433,31 +433,8 @@ same.</p>
                 <guid>https://dbdo00.github.io//posts/5.html</guid>
             </item>
             <item>
-                <title>摸鱼儿</title>
-                <link>https://dbdo00.github.io//posts/3.html</link>
-                <description>摸鱼儿</description>
-                <content:encoded><![CDATA[<p>宋・李演</p>
-<pre><code>又西风、四桥疏柳，惊蝉相对秋语。   
-琼荷万笠花云重，袅袅红衣如舞。  
-鸿北去  
-渺岸芷汀芳，几点斜阳字。  
-吴亭旧树。  
-又系我扁舟，渔乡钓里，秋色淡归鹭。  
-长干路。  
-草莽疏烟断墅。  
-商歌如写羁旅。  
-丹溪翠岫登临事，苔屐尚黏苍土。  
-鸥且住。  
-怕月冷吟魂，婉冉空江暮。  
-明灯暗浦。  
-更短笛衔风，长云弄晚，天际画秋句。</code></pre>
-]]></content:encoded>
-                <pubDate>2023-08-07 00:00:00</pubDate>
-                <guid>https://dbdo00.github.io//posts/3.html</guid>
-            </item>
-            <item>
                 <title>Test 2</title>
-                <link>https://dbdo00.github.io//posts/4.html</link>
+                <link>https://dbdo00.github.io//posts/2.html</link>
                 <description>Test 2</description>
                 <content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
 convallis velit non vestibulum condimentum. Quisque turpis quam, congue
@@ -563,7 +540,30 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
 </figure>
 ]]></content:encoded>
                 <pubDate>2023-08-07 00:00:00</pubDate>
-                <guid>https://dbdo00.github.io//posts/4.html</guid>
+                <guid>https://dbdo00.github.io//posts/2.html</guid>
+            </item>
+            <item>
+                <title>摸鱼儿</title>
+                <link>https://dbdo00.github.io//posts/3.html</link>
+                <description>摸鱼儿</description>
+                <content:encoded><![CDATA[<p>宋・李演</p>
+<pre><code>又西风、四桥疏柳，惊蝉相对秋语。   
+琼荷万笠花云重，袅袅红衣如舞。  
+鸿北去  
+渺岸芷汀芳，几点斜阳字。  
+吴亭旧树。  
+又系我扁舟，渔乡钓里，秋色淡归鹭。  
+长干路。  
+草莽疏烟断墅。  
+商歌如写羁旅。  
+丹溪翠岫登临事，苔屐尚黏苍土。  
+鸥且住。  
+怕月冷吟魂，婉冉空江暮。  
+明灯暗浦。  
+更短笛衔风，长云弄晚，天际画秋句。</code></pre>
+]]></content:encoded>
+                <pubDate>2023-08-07 00:00:00</pubDate>
+                <guid>https://dbdo00.github.io//posts/3.html</guid>
             </item>
   </channel>
 </rss>
