@@ -794,6 +794,45 @@ code span.wa {
   color: #666;
   margin-top: .35em;
 }
+.post-nav {
+  display: flex;
+  gap: .75rem;
+  margin: 2.5rem 0 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e6e6e6;
+}
+.post-nav a, .post-nav span {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: .55em .85em;
+  border: 1px solid var(--font-color);
+  border-radius: .35em;
+  text-decoration: none;
+  color: var(--font-color);
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.post-nav a:hover {
+  background: var(--font-color);
+  color: var(--background-color);
+}
+.back-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4em;
+  height: 2.4em;
+  margin: 1.5rem auto 0;
+  border: 1px solid var(--font-color);
+  border-radius: 50%;
+  text-decoration: none;
+  color: var(--font-color);
+  line-height: 1;
+}
+.back-home:hover {
+  background: var(--font-color);
+  color: var(--background-color);
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
