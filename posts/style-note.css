@@ -816,6 +816,13 @@ code span.wa {
   background: var(--font-color);
   color: var(--background-color);
 }
+.post-nav .post-nav-placeholder {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0;
+  border: none;
+  pointer-events: none;
+}
 .back-home {
   display: flex;
   align-items: center;
