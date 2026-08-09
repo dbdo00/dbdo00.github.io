@@ -12,7 +12,36 @@
 <header id="title-block-header"> <h1 class="leading-loose" >
     Test 2 
 </h1> </header>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+    <style>
+.gallery {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1.5em 0;
+    gap: 8px;
+}
+.gallery figure {
+    margin: 0;
+    min-width: 0;
+}
+.gallery a {
+    display: block;
+}
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.gallery figcaption {
+    text-align: center;
+    font-size: .8em;
+    color: #666;
+    margin-top: .35em;
+}
+</style>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
 convallis velit non vestibulum condimentum. Quisque turpis quam, congue
 vitae ipsum a, commodo suscipit enim. Sed ac fermentum ante, eu lacinia
 odio. Cras vel sodales lorem. Sed sollicitudin nisl in elit ornare
@@ -106,14 +135,22 @@ Suspendisse et neque cursus, bibendum neque vitae, tempus dolor.</p>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f():</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span></code></pre></div>
-<figure>
-<img src="./assets/2e5982ad4416624d-1.png" alt="Alt text" />
-<figcaption aria-hidden="true">Alt text</figcaption>
+<div class="gallery">
+<figure class="gallery-image" style="flex-grow:100;flex-basis:240px">
+<a href="./assets/2e5982ad4416624d-1.png" target="_blank"><img
+src="./assets/2e5982ad4416624d-1.png" loading="lazy" width="64"
+height="64" alt="Alt text" /></a>
+<figcaption>Alt text</figcaption>
 </figure>
-<figure>
-<img src="./assets/c1089c83c1203ca9.jpg" alt="Alt text" />
-<figcaption aria-hidden="true">Alt text</figcaption>
+</div>
+<div class="gallery">
+<figure class="gallery-image" style="flex-grow:133;flex-basis:320px">
+<a href="./assets/c1089c83c1203ca9.jpg" target="_blank"><img
+src="./assets/c1089c83c1203ca9.jpg" loading="lazy" width="1280"
+height="960" alt="Alt text" /></a>
+<figcaption>Alt text</figcaption>
 </figure>
+</div>
 
 
 

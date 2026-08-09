@@ -29,26 +29,83 @@
     </ul></li>
     </ul>
 </nav>
+<style>
+.gallery {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1.5em 0;
+    gap: 8px;
+}
+.gallery figure {
+    margin: 0;
+    min-width: 0;
+}
+.gallery a {
+    display: block;
+}
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.gallery figcaption {
+    text-align: center;
+    font-size: .8em;
+    color: #666;
+    margin-top: .35em;
+}
+</style>
+
 <h1 id="pandoc-相册演示">Pandoc 相册演示</h1>
 <p>用 <code>--lua-filter=gallery.lua</code>
 转换本文档。下方两个”纯图片段落”会各自变成一组相册。</p>
 <h2 id="相册一三张并排">相册一（三张并排）</h2>
-<p><img src="img/1200x800.png" alt="蓝色横幅图" /> <img
-src="img/800x800.png" alt="正方形图" /> <img src="img/800x1200.png"
-title="竖构图" alt="竖构图图" /></p>
+<div class="gallery">
+<figure class="gallery-image" style="flex-grow:150;flex-basis:360px">
+<a href="img/1200x800.png" target="_blank"><img src="img/1200x800.png"
+loading="lazy" width="1200" height="800" alt="蓝色横幅图" /></a>
+<figcaption>蓝色横幅图</figcaption>
+</figure>
+<figure class="gallery-image" style="flex-grow:100;flex-basis:240px">
+<a href="img/800x800.png" target="_blank"><img src="img/800x800.png"
+loading="lazy" width="800" height="800" alt="正方形图" /></a>
+<figcaption>正方形图</figcaption>
+</figure>
+<figure class="gallery-image" style="flex-grow:67;flex-basis:160px">
+<a href="img/800x1200.png" target="_blank"><img src="img/800x1200.png"
+title="竖构图" loading="lazy" width="800" height="1200"
+alt="竖构图图" /></a>
+<figcaption>竖构图</figcaption>
+</figure>
+</div>
 <h2 id="相册二两张并排">相册二（两张并排）</h2>
-<p><img src="img/1600x900.png" alt="宽屏图" /> <img
-src="img/1200x800.png" alt="蓝色横幅图" /></p>
+<div class="gallery">
+<figure class="gallery-image" style="flex-grow:178;flex-basis:427px">
+<a href="img/1600x900.png" target="_blank"><img src="img/1600x900.png"
+loading="lazy" width="1600" height="900" alt="宽屏图" /></a>
+<figcaption>宽屏图</figcaption>
+</figure>
+<figure class="gallery-image" style="flex-grow:150;flex-basis:360px">
+<a href="img/1200x800.png" target="_blank"><img src="img/1200x800.png"
+loading="lazy" width="1200" height="800" alt="蓝色横幅图" /></a>
+<figcaption>蓝色横幅图</figcaption>
+</figure>
+</div>
 <h2
 id="普通段落里的图片不会变成相册">普通段落里的图片（不会变成相册）</h2>
 <p>这里有一张普通图片 <img src="img/1200x800.png" alt="蓝色横幅图" />
 混在文字中间，因为它所在的段落有文字，所以不会被包成相册。</p>
 <h2 id="单张图片段落默认-reader-会转成-figure">单张图片段落（默认 reader
 会转成 Figure）</h2>
-<figure>
-<img src="img/800x800.png" alt="正方形图" />
-<figcaption aria-hidden="true">正方形图</figcaption>
+<div class="gallery">
+<figure class="gallery-image" style="flex-grow:100;flex-basis:240px">
+<a href="img/800x800.png" target="_blank"><img src="img/800x800.png"
+loading="lazy" width="800" height="800" alt="正方形图" /></a>
+<figcaption>正方形图</figcaption>
 </figure>
+</div>
 
 
 

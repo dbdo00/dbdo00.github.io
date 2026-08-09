@@ -12,28 +12,73 @@
 <header id="title-block-header"> <h1 class="leading-loose" >
     test pic 
 </h1> </header>
-    <figure>
-<img src="bo.webp" alt="bo" />
-<figcaption aria-hidden="true">bo</figcaption>
+    <style>
+.gallery {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1.5em 0;
+    gap: 8px;
+}
+.gallery figure {
+    margin: 0;
+    min-width: 0;
+}
+.gallery a {
+    display: block;
+}
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.gallery figcaption {
+    text-align: center;
+    font-size: .8em;
+    color: #666;
+    margin-top: .35em;
+}
+</style>
+
+<div class="gallery">
+<figure class="gallery-image" style="flex-grow:138;flex-basis:331px">
+<a href="bo.webp" target="_blank"><img src="bo.webp" loading="lazy"
+width="551" height="400" alt="bo" /></a>
+<figcaption>bo</figcaption>
 </figure>
-<figure>
-<img src="shengdan.webp" alt="圣诞" />
-<figcaption aria-hidden="true">圣诞</figcaption>
+</div>
+<div class="gallery">
+<figure class="gallery-image" style="flex-grow:100;flex-basis:240px">
+<a href="shengdan.webp" target="_blank"><img src="shengdan.webp"
+loading="lazy" width="512" height="512" alt="圣诞" /></a>
+<figcaption>圣诞</figcaption>
 </figure>
-<figure>
-<img src="__hina抱枕头.jpg" alt="hina抱枕头" />
-<figcaption aria-hidden="true">hina抱枕头</figcaption>
+</div>
+<div class="gallery">
+<figure class="gallery-image">
+<a href="__hina抱枕头.jpg" target="_blank"><img src="__hina抱枕头.jpg"
+loading="lazy" alt="hina抱枕头" /></a>
+<figcaption>hina抱枕头</figcaption>
 </figure>
-<figure>
-<img src="hello%20hello%20(2).png" alt="hello hello" />
-<figcaption aria-hidden="true">hello hello</figcaption>
+</div>
+<div class="gallery">
+<figure class="gallery-image" style="flex-grow:79;flex-basis:190px">
+<a href="hello%20hello%20(2).png" target="_blank"><img
+src="hello%20hello%20(2).png" loading="lazy" width="2300" height="2910"
+alt="hello hello" /></a>
+<figcaption>hello hello</figcaption>
 </figure>
-<figure>
-<img src="NYN%20wink.png" alt="alt text" />
-<figcaption aria-hidden="true">alt text</figcaption>
+</div>
+<div class="gallery">
+<figure class="gallery-image" style="flex-grow:100;flex-basis:240px">
+<a href="NYN%20wink.png" target="_blank"><img src="NYN%20wink.png"
+loading="lazy" width="600" height="600" alt="alt text" /></a>
+<figcaption>alt text</figcaption>
 </figure>
+</div>
 <p>anyways i feel this will continue</p>
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mo>±</mo><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">c = \pm\sqrt{a^2 + b^2}</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mi>±</mi><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">c = \pm\sqrt{a^2 + b^2}</annotation></semantics></math></p>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><munder><mn>1</mn><mo accent="true">_</mo></munder><annotation encoding="application/x-tex">\underline{1}</annotation></semantics></math>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mi>A</mi></menclose><annotation encoding="application/x-tex">\boxed{A}</annotation></semantics></math></p>
 
