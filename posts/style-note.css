@@ -603,6 +603,9 @@
   .table {
     display: table;
   }
+  .max-w-prose {
+    max-width: 65ch;
+  }
   .flex-grow {
     flex-grow: 1;
   }
