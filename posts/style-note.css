@@ -173,6 +173,9 @@
   .static {
     position: static;
   }
+  .mx-auto {
+    margin-inline: auto;
+  }
   .prose {
     color: var(--tw-prose-body);
     max-width: 65ch;
