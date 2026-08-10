@@ -936,11 +936,12 @@ code span.wa {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.4em;
+  min-width: 2.4em;
   height: 2.4em;
-  margin: 1.5rem auto 0;
+  padding: 0 1em;
+  margin: 1.5rem auto 2.5rem;
   border: 1px solid var(--font-color);
-  border-radius: 50%;
+  border-radius: 9999px;
   text-decoration: none;
   color: var(--font-color);
   line-height: 1;
