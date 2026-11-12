@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<channel><title>><</title><atom:link href="https://example.com/posts/rss.xml" rel="self" type="application/rss+xml" />
+<item><title>Pandoc Gallery Demo</title><link>https://example.com/posts/35.html</link><description>Pandoc Gallery Demo</description><content:encoded><![CDATA[<h1 id="pandoc-相册演示">Pandoc 相册演示</h1>
+<p>用 <code>--lua-filter=gallery.lua</code>
+转换本文档。下方两个”纯图片段落”会各自变成一组相册。</p>
+<h2 id="相册一三张并排">相册一（三张并排）</h2>
+<p><img src="img/1200x800.png" alt="蓝色横幅图" /> <img
+src="img/800x800.png" alt="正方形图" /> <img src="img/800x1200.png"
+title="竖构图" alt="竖构图图" /></p>
+<h2 id="相册二两张并排">相册二（两张并排）</h2>
+<p><img src="img/1600x900.png" alt="宽屏图" /> <img
+src="img/1200x800.png" alt="蓝色横幅图" /></p>
+<h2
+id="普通段落里的图片不会变成相册">普通段落里的图片（不会变成相册）</h2>
+<p>这里有一张普通图片 <img src="img/1200x800.png" alt="蓝色横幅图" />
+混在文字中间，因为它所在的段落有文字，所以不会被包成相册。</p>
+<h2 id="单张图片段落默认-reader-会转成-figure">单张图片段落（默认 reader
+会转成 Figure）</h2>
+<figure>
+<img src="img/800x800.png" alt="正方形图" />
+<figcaption aria-hidden="true">正方形图</figcaption>
+</figure>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode lua"><code class="sourceCode lua"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- gallery.lua — pandoc Lua filter</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">--</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- 把 markdown 中&quot;纯图片段落&quot;的一组图片转换为相册：</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">--   同一段落内多张图片 -&gt; &lt;div class=&quot;gallery&quot;&gt; &lt;figure&gt;...&lt;/figure&gt; ... &lt;/div&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">-- 仿照 hugo-theme-stack 的相册功能：</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">--   - 构建期用 pandoc.image.size（pandoc &gt;= 3.1.13）解析图片宽高，</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">--     按宽高比计算 flex-grow/flex-basis，实现弹性等高排布（对应 layouts/_markup/render-image.html）</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">--   - 段落级别的&quot;纯图片&quot;判断在 AST 上完成（对应 assets/ts/gallery.ts 的 no-text 检查）</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">--   - 图片结构用原生 pandoc AST（Figure/Link/Image）生成，转义由 writer 负责，</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">--     无需手写 HTML 或 escape 函数</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">--   - 自动向文档注入 .gallery 的 CSS（无 JavaScript，不依赖外部资源）</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">--</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">-- 用法：</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">--   pandoc demo.md --lua-filter=gallery.lua -s -o demo.html</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">os.setlocale</span><span class="op">(</span><span class="st">&#39;C&#39;</span><span class="op">)</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">-- ---------------------------------------------------------------------------</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">-- 读取图片宽高</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">--</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">-- 用 pandoc.image.size（pandoc &gt;= 3.1.13）解析二进制内容，返回 {width, height}。</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">-- 失败（非图片 / 尺寸无法确定 / 资源获取失败）时返回 nil。</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">-- ---------------------------------------------------------------------------</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> <span class="kw">function</span> read_dimensions<span class="op">(</span><span class="va">src</span><span class="op">)</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- pandoc.mediabag.fetch: 先查 mediabag，再按 resource-path 从本地/远程获取；</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- 资源缺失时抛错，用 pcall 捕获后把错误信息打印到 stderr</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> <span class="va">ok_fetch</span><span class="op">,</span> <span class="va">mime</span><span class="op">,</span> <span class="va">contents</span> <span class="op">=</span> <span class="fu">pcall</span><span class="op">(</span><span class="va">pandoc</span><span class="op">.</span><span class="va">mediabag</span><span class="op">.</span><span class="va">fetch</span><span class="op">,</span> <span class="va">src</span><span class="op">)</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="kw">not</span> <span class="va">ok_fetch</span> <span class="cf">then</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">io.stderr</span><span class="op">:</span><span class="fu">write</span><span class="op">(</span><span class="st">&#39;[gallery] warning: fetch &quot;&#39;</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>      <span class="op">..</span> <span class="va">src</span> <span class="op">..</span> <span class="st">&#39;&quot; failed: &#39;</span> <span class="op">..</span> <span class="fu">tostring</span><span class="op">(</span><span class="va">mime</span><span class="op">)</span> <span class="op">..</span> <span class="st">&#39;</span><span class="sc">\n</span><span class="st">&#39;</span><span class="op">)</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">nil</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="kw">not</span> <span class="va">contents</span> <span class="cf">then</span> <span class="cf">return</span> <span class="kw">nil</span> <span class="cf">end</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> <span class="va">ok_size</span><span class="op">,</span> <span class="va">info</span> <span class="op">=</span> <span class="fu">pcall</span><span class="op">(</span><span class="va">pandoc</span><span class="op">.</span><span class="va">image</span><span class="op">.</span><span class="va">size</span><span class="op">,</span> <span class="va">contents</span><span class="op">)</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="kw">not</span> <span class="va">ok_size</span> <span class="cf">then</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="fu">io.stderr</span><span class="op">:</span><span class="fu">write</span><span class="op">(</span><span class="st">&#39;[gallery] warning: pandoc.image.size for &quot;&#39;</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>      <span class="op">..</span> <span class="va">src</span> <span class="op">..</span> <span class="st">&#39;&quot; failed: &#39;</span> <span class="op">..</span> <span class="fu">tostring</span><span class="op">(</span><span class="va">info</span><span class="op">)</span> <span class="op">..</span> <span class="st">&#39;</span><span class="sc">\n</span><span class="st">&#39;</span><span class="op">)</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">nil</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="va">info</span> <span class="kw">and</span> <span class="va">info</span><span class="op">.</span><span class="va">width</span> <span class="kw">and</span> <span class="va">info</span><span class="op">.</span><span class="va">height</span> <span class="cf">then</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">info</span><span class="op">.</span><span class="va">width</span><span class="op">,</span> <span class="va">info</span><span class="op">.</span><span class="va">height</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="kw">nil</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="co">-- ---------------------------------------------------------------------------</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="co">-- flex 值计算（对应 render-image.html: data-flex-grow / data-flex-basis）</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="co">--   flex-grow  = w * 100 / h</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="co">--   flex-basis = w * 240 / h  px</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="co">-- ---------------------------------------------------------------------------</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> <span class="kw">function</span> flex_grow<span class="op">(</span><span class="va">w</span><span class="op">,</span> <span class="va">h</span><span class="op">)</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="fu">math.floor</span><span class="op">(</span><span class="va">w</span> <span class="op">*</span> <span class="dv">100</span> <span class="op">/</span> <span class="va">h</span> <span class="op">+</span> <span class="dv">0.5</span><span class="op">)</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> <span class="kw">function</span> flex_basis<span class="op">(</span><span class="va">w</span><span class="op">,</span> <span class="va">h</span><span class="op">)</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="fu">math.floor</span><span class="op">(</span><span class="va">w</span> <span class="op">*</span> <span class="dv">240</span> <span class="op">/</span> <span class="va">h</span> <span class="op">+</span> <span class="dv">0.5</span><span class="op">)</span> <span class="op">..</span> <span class="st">&#39;px&#39;</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="co">-- ---------------------------------------------------------------------------</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="co">-- 单张图片 -&gt; pandoc.Figure（含 Link 包裹与 figcaption）</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="co">-- ---------------------------------------------------------------------------</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> <span class="kw">function</span> image_to_figure<span class="op">(</span><span class="va">img</span><span class="op">)</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> <span class="va">src</span> <span class="op">=</span> <span class="va">img</span><span class="op">.</span><span class="va">src</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> <span class="va">alt</span> <span class="op">=</span> <span class="va">pandoc</span><span class="op">.</span><span class="va">utils</span><span class="op">.</span>stringify<span class="op">(</span><span class="va">img</span><span class="op">.</span><span class="va">caption</span><span class="op">)</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> <span class="va">title</span> <span class="op">=</span> <span class="va">img</span><span class="op">.</span><span class="va">title</span> <span class="kw">or</span> <span class="st">&#39;&#39;</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> <span class="va">w</span><span class="op">,</span> <span class="va">h</span> <span class="op">=</span> read_dimensions<span class="op">(</span><span class="va">src</span><span class="op">)</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="kw">not</span> <span class="va">w</span> <span class="cf">then</span></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>    <span class="fu">io.stderr</span><span class="op">:</span><span class="fu">write</span><span class="op">(</span><span class="st">&#39;[gallery] warning: cannot get dimensions of &quot;&#39;</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>      <span class="op">..</span> <span class="va">src</span> <span class="op">..</span> <span class="st">&#39;&quot;, flex layout degraded</span><span class="sc">\n</span><span class="st">&#39;</span><span class="op">)</span></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- &lt;img ...&gt;：alt 作为 caption，title 作为 img 的 title 属性</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> <span class="va">img_attrs</span> <span class="op">=</span> <span class="op">{</span> <span class="va">loading</span> <span class="op">=</span> <span class="st">&#39;lazy&#39;</span> <span class="op">}</span></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="va">w</span> <span class="kw">and</span> <span class="va">h</span> <span class="cf">then</span></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>    <span class="va">img_attrs</span><span class="op">.</span><span class="va">width</span> <span class="op">=</span> <span class="fu">tostring</span><span class="op">(</span><span class="va">w</span><span class="op">)</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>    <span class="va">img_attrs</span><span class="op">.</span><span class="va">height</span> <span class="op">=</span> <span class="fu">tostring</span><span class="op">(</span><span class="va">h</span><span class="op">)</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> <span class="va">image</span> <span class="op">=</span> <span class="va">pandoc</span><span class="op">.</span>Image<span class="op">(</span><span class="va">pandoc</span><span class="op">.</span>Str<span class="op">(</span><span class="va">alt</span><span class="op">),</span> <span class="va">src</span><span class="op">,</span> <span class="va">title</span><span class="op">,</span> <span class="va">img_attrs</span><span class="op">)</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- 用 Link 包裹，点击看大图（target=_blank 由 writer 输出）</span></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> <span class="va">link</span> <span class="op">=</span> <span class="va">pandoc</span><span class="op">.</span>Link<span class="op">({</span> <span class="va">image</span> <span class="op">},</span> <span class="va">src</span><span class="op">,</span> <span class="st">&#39;&#39;</span><span class="op">,</span> <span class="op">{</span> <span class="va">target</span> <span class="op">=</span> <span class="st">&#39;_blank&#39;</span> <span class="op">})</span></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- figcaption：优先 title 否则 alt；都没有则不生成</span></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> <span class="va">caption</span> <span class="op">=</span> <span class="va">title</span> <span class="op">~=</span> <span class="st">&#39;&#39;</span> <span class="kw">and</span> <span class="va">title</span> <span class="kw">or</span> <span class="va">alt</span></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> <span class="va">cap</span> <span class="op">=</span> <span class="va">caption</span> <span class="op">~=</span> <span class="st">&#39;&#39;</span> <span class="kw">and</span> <span class="va">pandoc</span><span class="op">.</span>Caption<span class="op">(</span><span class="va">pandoc</span><span class="op">.</span>Str<span class="op">(</span><span class="va">caption</span><span class="op">))</span> <span class="kw">or</span> <span class="va">pandoc</span><span class="op">.</span>Caption<span class="op">{}</span></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- &lt;figure class=&quot;gallery-image&quot; style=&quot;flex-grow:..;flex-basis:..&quot;&gt;</span></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> <span class="va">fig_attrs</span> <span class="op">=</span> <span class="op">{</span> <span class="va">class</span> <span class="op">=</span> <span class="st">&#39;gallery-image&#39;</span> <span class="op">}</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="va">w</span> <span class="kw">and</span> <span class="va">h</span> <span class="cf">then</span></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>    <span class="va">fig_attrs</span><span class="op">.</span><span class="va">style</span> <span class="op">=</span> <span class="fu">string.format</span><span class="op">(</span><span class="st">&#39;flex-grow:%d;flex-basis:%s&#39;</span><span class="op">,</span> flex_grow<span class="op">(</span><span class="va">w</span><span class="op">,</span> <span class="va">h</span><span class="op">),</span> flex_basis<span class="op">(</span><span class="va">w</span><span class="op">,</span> <span class="va">h</span><span class="op">))</span></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="va">pandoc</span><span class="op">.</span>Figure<span class="op">({</span> <span class="va">pandoc</span><span class="op">.</span>Plain<span class="op">({</span> <span class="va">link</span> <span class="op">})</span> <span class="op">},</span> <span class="va">cap</span><span class="op">,</span> <span class="va">fig_attrs</span><span class="op">)</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="co">-- ---------------------------------------------------------------------------</span></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="co">-- 判断段落是否为&quot;纯图片&quot;（对应 gallery.ts 的 no-text 检查）</span></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="co">-- ---------------------------------------------------------------------------</span></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> <span class="va">pure_image_separators</span> <span class="op">=</span> <span class="op">{</span> <span class="va">Space</span> <span class="op">=</span> <span class="kw">true</span><span class="op">,</span> <span class="va">SoftBreak</span> <span class="op">=</span> <span class="kw">true</span><span class="op">,</span> <span class="va">LineBreak</span> <span class="op">=</span> <span class="kw">true</span> <span class="op">}</span></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> <span class="kw">function</span> is_pure_image_para<span class="op">(</span><span class="va">content</span><span class="op">)</span></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> <span class="va">count</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> <span class="cn">_</span><span class="op">,</span> <span class="va">item</span> <span class="kw">in</span> <span class="fu">ipairs</span><span class="op">(</span><span class="va">content</span><span class="op">)</span> <span class="cf">do</span></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="va">item</span><span class="op">.</span><span class="va">t</span> <span class="op">==</span> <span class="st">&#39;Image&#39;</span> <span class="cf">then</span></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>      <span class="va">count</span> <span class="op">=</span> <span class="va">count</span> <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elseif</span> <span class="kw">not</span> <span class="va">pure_image_separators</span><span class="op">[</span><span class="va">item</span><span class="op">.</span><span class="va">t</span><span class="op">]</span> <span class="cf">then</span></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> <span class="kw">false</span></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="va">count</span> <span class="op">&gt;</span> <span class="dv">0</span></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> <span class="kw">function</span> build_gallery<span class="op">(</span><span class="va">images</span><span class="op">)</span></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> <span class="va">figures</span> <span class="op">=</span> <span class="op">{}</span></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> <span class="cn">_</span><span class="op">,</span> <span class="va">img</span> <span class="kw">in</span> <span class="fu">ipairs</span><span class="op">(</span><span class="va">images</span><span class="op">)</span> <span class="cf">do</span></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>    <span class="va">figures</span><span class="op">[#</span><span class="va">figures</span> <span class="op">+</span> <span class="dv">1</span><span class="op">]</span> <span class="op">=</span> image_to_figure<span class="op">(</span><span class="va">img</span><span class="op">)</span></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="va">pandoc</span><span class="op">.</span>Div<span class="op">(</span><span class="va">figures</span><span class="op">,</span> <span class="op">{</span> <span class="va">class</span> <span class="op">=</span> <span class="st">&#39;gallery&#39;</span> <span class="op">})</span></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="co">-- ---------------------------------------------------------------------------</span></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="co">-- 注入的 CSS（移植自 assets/scss/partials/layout/article.scss）</span></span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="co">-- ---------------------------------------------------------------------------</span></span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> <span class="cn">GALLERY_CSS</span> <span class="op">=</span> <span class="vs">[[</span></span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;style&gt;</span></span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="vs">.gallery {</span></span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="vs">    position: relative;</span></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="vs">    display: flex;</span></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="vs">    flex-direction: row;</span></span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="vs">    justify-content: center;</span></span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="vs">    margin: 1.5em 0;</span></span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="vs">    gap: 8px;</span></span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="vs">}</span></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="vs">.gallery figure {</span></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="vs">    margin: 0;</span></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="vs">    min-width: 0;</span></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="vs">}</span></span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="vs">.gallery a {</span></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="vs">    display: block;</span></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="vs">}</span></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="vs">.gallery img {</span></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="vs">    max-width: 100%;</span></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a><span class="vs">    height: auto;</span></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="vs">    display: block;</span></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a><span class="vs">}</span></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="vs">.gallery figcaption {</span></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="vs">    text-align: center;</span></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a><span class="vs">    font-size: .8em;</span></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="vs">    color: #666;</span></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a><span class="vs">    margin-top: .35em;</span></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="vs">}</span></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/style&gt;</span></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="vs">]]</span></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="co">-- ---------------------------------------------------------------------------</span></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a><span class="co">-- filter 主体</span></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="co">-- ---------------------------------------------------------------------------</span></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> <span class="kw">function</span> is_html_format<span class="op">()</span></span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="cn">FORMAT</span> <span class="kw">and</span> <span class="cn">FORMAT</span><span class="op">:</span><span class="fu">match</span><span class="op">(</span><span class="st">&#39;html&#39;</span><span class="op">)</span></span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> Para<span class="op">(</span><span class="va">para</span><span class="op">)</span></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="kw">not</span> is_html_format<span class="op">()</span> <span class="cf">then</span> <span class="cf">return</span> <span class="kw">nil</span> <span class="cf">end</span></span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="kw">not</span> is_pure_image_para<span class="op">(</span><span class="va">para</span><span class="op">.</span><span class="va">content</span><span class="op">)</span> <span class="cf">then</span> <span class="cf">return</span> <span class="kw">nil</span> <span class="cf">end</span></span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> <span class="va">images</span> <span class="op">=</span> <span class="op">{}</span></span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> <span class="cn">_</span><span class="op">,</span> <span class="va">item</span> <span class="kw">in</span> <span class="fu">ipairs</span><span class="op">(</span><span class="va">para</span><span class="op">.</span><span class="va">content</span><span class="op">)</span> <span class="cf">do</span></span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="va">item</span><span class="op">.</span><span class="va">t</span> <span class="op">==</span> <span class="st">&#39;Image&#39;</span> <span class="cf">then</span></span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>      <span class="va">images</span><span class="op">[#</span><span class="va">images</span> <span class="op">+</span> <span class="dv">1</span><span class="op">]</span> <span class="op">=</span> <span class="va">item</span></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="op">{</span> build_gallery<span class="op">(</span><span class="va">images</span><span class="op">)</span> <span class="op">}</span></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="co">-- 兼容默认 reader：单图段落会被 implicit_figures 自动转成 Figure。</span></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a><span class="co">-- 把&quot;内容只含图片&quot;的 Figure 转成单图相册。</span></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> Figure<span class="op">(</span><span class="va">figure</span><span class="op">)</span></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="kw">not</span> is_html_format<span class="op">()</span> <span class="cf">then</span> <span class="cf">return</span> <span class="kw">nil</span> <span class="cf">end</span></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> <span class="va">images</span> <span class="op">=</span> <span class="op">{}</span></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> <span class="cn">_</span><span class="op">,</span> <span class="va">block</span> <span class="kw">in</span> <span class="fu">ipairs</span><span class="op">(</span><span class="va">figure</span><span class="op">.</span><span class="va">content</span><span class="op">)</span> <span class="cf">do</span></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span><span class="va">block</span><span class="op">.</span><span class="va">t</span> <span class="op">==</span> <span class="st">&#39;Plain&#39;</span> <span class="kw">or</span> <span class="va">block</span><span class="op">.</span><span class="va">t</span> <span class="op">==</span> <span class="st">&#39;Para&#39;</span><span class="op">)</span> <span class="kw">and</span> is_pure_image_para<span class="op">(</span><span class="va">block</span><span class="op">.</span><span class="va">content</span><span class="op">)</span> <span class="cf">then</span></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span> <span class="cn">_</span><span class="op">,</span> <span class="va">item</span> <span class="kw">in</span> <span class="fu">ipairs</span><span class="op">(</span><span class="va">block</span><span class="op">.</span><span class="va">content</span><span class="op">)</span> <span class="cf">do</span></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="va">item</span><span class="op">.</span><span class="va">t</span> <span class="op">==</span> <span class="st">&#39;Image&#39;</span> <span class="cf">then</span> <span class="va">images</span><span class="op">[#</span><span class="va">images</span> <span class="op">+</span> <span class="dv">1</span><span class="op">]</span> <span class="op">=</span> <span class="va">item</span> <span class="cf">end</span></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>      <span class="cf">end</span></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="op">#</span><span class="va">images</span> <span class="op">&gt;</span> <span class="dv">0</span> <span class="cf">then</span></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">{</span> build_gallery<span class="op">(</span><span class="va">images</span><span class="op">)</span> <span class="op">}</span></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="kw">nil</span></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> Pandoc<span class="op">(</span><span class="va">doc</span><span class="op">)</span></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="kw">not</span> is_html_format<span class="op">()</span> <span class="cf">then</span> <span class="cf">return</span> <span class="va">doc</span> <span class="cf">end</span></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>  <span class="va">doc</span><span class="op">.</span><span class="va">blocks</span><span class="op">:</span><span class="fu">insert</span><span class="op">(</span><span class="dv">1</span><span class="op">,</span> <span class="va">pandoc</span><span class="op">.</span>RawBlock<span class="op">(</span><span class="st">&#39;html&#39;</span><span class="op">,</span> <span class="cn">GALLERY_CSS</span><span class="op">))</span></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="va">doc</span></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> <span class="op">{</span> <span class="va">Para</span> <span class="op">=</span> <span class="va">Para</span><span class="op">,</span> <span class="va">Figure</span> <span class="op">=</span> <span class="va">Figure</span><span class="op">,</span> <span class="va">Pandoc</span> <span class="op">=</span> <span class="va">Pandoc</span> <span class="op">}</span></span></code></pre></div>
+]]></content:encoded><pubDate>2026-08-09 00:00:00</pubDate><guid>https://example.com/posts/35.html</guid></item>
+<item><title>LuaRocks</title><link>https://example.com/posts/33.html</link><description>LuaRocks</description><content:encoded><![CDATA[<h2 id="what-is-luarocks">What is LuaRocks</h2>
+<p>LuaRocks is a package manager for Lua. You can install lua modules
+with it.</p>
+<p>As people often say, to write Lua, you need to eat C as
+breakfast.</p>
+<p>LuaRocks manages the installation process for Lua modules, including
+the complex tasks associated with C modules, such as handling makefiles
+and interacting with C compilers.</p>
+<p>By automating these tasks, LuaRocks simplifies the installation
+process and reduces the hassle.</p>
+<h2 id="building-module-lua-cjson-with-luarocks">Building Module
+<code>lua-cjson</code> With LuaRocks</h2>
+<ol type="1">
+<li><h3 id="download-the-source-file">Download the source file</h3>
+<p>Go to <a href="https://kyne.au/%7Emark/software/lua-cjson.php"
+class="uri">https://kyne.au/%7Emark/software/lua-cjson.php</a> and click
+<code>lua-cjson-x.y.z.zip</code> to download. <img
+src="assets/Pasted%20image%2020240809234324.png" /></p></li>
+<li><h3 id="build-from-the-source">Build from the source</h3>
+<p>Change to the directory:</p></li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> lua-cjson-2.1.0</span></code></pre></div>
+<p>Then uncompress the zip file. Use the command
+<code>unzip lua-cjson-2.1.0.zip</code>.</p>
+<p>Install the module globally:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> luarock make</span></code></pre></div>
+<p>If you want to specify the version of lua, say lua 5.3, use</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> luarock-5.3 make</span></code></pre></div>
+<p>instead.</p>
+]]></content:encoded><pubDate>2024-08-09 00:00:00</pubDate><guid>https://example.com/posts/33.html</guid></item>
+<item><title>Feeds</title><link>https://example.com/posts/32.html</link><description>Feeds</description><content:encoded><![CDATA[<p>In past a few months, my frequency in checking rss feeds has been
+decreasing. I guess it is because rss feeds are not satisfying enough
+for me. I need the comfort that only other types of Internet services
+can provide.</p>
+]]></content:encoded><pubDate>2024-08-08 00:00:00</pubDate><guid>https://example.com/posts/32.html</guid></item>
+<item><title>脑区</title><link>https://example.com/posts/28.html</link><description>脑区</description><content:encoded><![CDATA[<p>神经科学有所谓”脑区”的概念。也就是大脑有不同区域，不同的工作使用不同的区域，而非不管什么活动都调动所有脑区。
+脑区对人休息的意义是，尽量使用和工作时不同的脑区，这样工作使用的脑区就会”沉睡”，达到更好的休息。</p>
+<p>如何判断一个活动用了什么样的脑区，我并不能说得十分确定。但是据说视觉活动会用到一部分和非视觉活动
+不一样的脑区。所以有人建议如果工作时一直在用眼，休息时就不要进行看视频或者看书一类需要用眼的活动，
+以休息视觉会调用的脑区。</p>
+<h2 id="休息和视觉关系的个人经历">休息和视觉关系的个人经历</h2>
+<p>我以前会在休息时听音乐并尽量不用眼，但有段时间里，每当我想要休息，总会伴随着注视电脑屏幕。因为这
+不能让我感到丝毫放松，我一度非常苦恼，但一直没有终止在休息时对着电脑的习惯。
+放假以后，我感觉这种不能放松和信息有关，所以会关掉电脑，对着墙不说话站着，仍没有把试图休息时用视觉和不能
+放松联系在一起。</p>
+<p>我以前有段时间会晚上把灯关上，虽然没有明确的有意识地这么做。虽然放松，但是来自视觉的新鲜刺激太多了，
+夜间关灯的习惯最后也因为某种原因终止。</p>
+]]></content:encoded><pubDate>2024-08-01 00:00:00</pubDate><guid>https://example.com/posts/28.html</guid></item>
+<item><title>忘记和延续</title><link>https://example.com/posts/27.html</link><description>忘记和延续</description><content:encoded><![CDATA[<p>很短的时间, 就会忘记。 容易忘记以前发生的事情。 把现在的情况。
+当成一直以来有的情况。 但实际上并不是。 是记性不好.</p>
+<p>记性不好就像一段时间以前和现在是两个人。
+虽然是一个肉体是一致的，但是意识里好像是完全两个人。
+有部分记忆，也是印象式的记忆。但是记忆不太多。</p>
+<p>最重要的东西，记住一些一些部分。很多重要的部分都忘记。</p>
+<p>不同时间。 一个人会感觉想过的像两个人。</p>
+<p>我觉得延续稳固的就是——某种习惯。你觉得很方便的地方，就会习惯。</p>
+<p>仔细想想，除了每个人必须的基本生命维持行为，唯一直每天坚持的习惯是刷牙。每天刷牙看起来很简单，但是得知过有人会因为疾病懒得刷牙，很久不刷牙。</p>
+<p>最近的习惯,
+没事干就收拾桌面和地板上的垃圾。收拾桌面，桌子和地板上的垃圾，然后扔到垃圾袋里面。这个习惯的形成可能是因为方便。
+开始做的事情，可以的维持是因为方便。</p>
+<p>还有一些事情是。 断了续续的在做。
+差不多了续续的四年，我印象中，有时候会断了上几个月（没有统计过）总会重新开始做上几天的事情,
+就是多邻国。 从大一开始，断断续续的。 现在,
+突然就已经做了四年了,完全没有意识到的事情。 虽然它的中断很经常,
+也有很长的时间中断。
+这个有间断的坚持的结果是没有学会一个语言，最多是日语的平假名大概有些认识.</p>
+]]></content:encoded><pubDate>2024-04-19 00:00:00</pubDate><guid>https://example.com/posts/27.html</guid></item>
+<item><title>test pic</title><link>https://example.com/posts/26.html</link><description>test pic</description><content:encoded><![CDATA[<figure>
+<img src="bo.webp" alt="bo" />
+<figcaption aria-hidden="true">bo</figcaption>
+</figure>
+<figure>
+<img src="shengdan.webp" alt="圣诞" />
+<figcaption aria-hidden="true">圣诞</figcaption>
+</figure>
+<figure>
+<img src="__hina抱枕头.jpg" alt="hina抱枕头" />
+<figcaption aria-hidden="true">hina抱枕头</figcaption>
+</figure>
+<figure>
+<img src="hello%20hello%20(2).png" alt="hello hello" />
+<figcaption aria-hidden="true">hello hello</figcaption>
+</figure>
+<figure>
+<img src="NYN%20wink.png" alt="alt text" />
+<figcaption aria-hidden="true">alt text</figcaption>
+</figure>
+<p>anyways i feel this will continue</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mi>±</mi><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">c = \pm\sqrt{a^2 + b^2}</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><munder><mn>1</mn><mo accent="true">_</mo></munder><annotation encoding="application/x-tex">\underline{1}</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><menclose notation="box"><mi>A</mi></menclose><annotation encoding="application/x-tex">\boxed{A}</annotation></semantics></math></p>
+]]></content:encoded><pubDate>2024-04-04 00:00:00</pubDate><guid>https://example.com/posts/26.html</guid></item>
+<item><title>git 里 file object 的使用</title><link>https://example.com/posts/25.html</link><description>git 里 file object 的使用</description><content:encoded><![CDATA[<ul>
+<li><p>git hash-object -w <FILENAME></p></li>
+<li><p>会打印文件Object id。这个 id 不会因为该文件名改变而改变</p></li>
+<li><p>用 object id 来看log</p>
+<ul>
+<li><code>git log --find-object=&lt;object id&gt;</code></li>
+</ul></li>
+<li><p>参考：<code>git log --help</code>, <a
+href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git-Internals-Git-Object</a></p></li>
+</ul>
+]]></content:encoded><pubDate>2024-03-17 00:00:00</pubDate><guid>https://example.com/posts/25.html</guid></item>
+<item><title>路上的月亮</title><link>https://example.com/posts/23.html</link><description>路上的月亮</description><content:encoded><![CDATA[<h2>
+路上的月亮
+</h2>
+<p>
+</p>
+<pre>1
+
+月亮陪着我走回家。
+我想把她带到将来的日子里去。
+一路静悄悄……
+
+2
+
+咪、咪、咪……
+请你不要把我打搅。
+你是人吗？
+也许你比人还可靠。
+
+3
+
+当然了，
+没有比做人更值得骄傲。
+而你呢？
+你是猫。
+猫生下来就是贸。
+
+4
+
+我想把她带到将来的日子里去！
+不论怎样，
+想想总比不想好。
+
+5
+
+生活真是这样美好。
+睡觉！
+
+6
+
+月亮独自在荒野上飘。
+她是什么时候失掉的，
+我一点儿也不知道。
+</pre>
+<br>
+<hr>
+]]></content:encoded><pubDate>2024-02-17 00:00:00</pubDate><guid>https://example.com/posts/23.html</guid></item>
+<item><title>2023 12 26</title><link>https://example.com/posts/21.html</link><description>2023 12 26</description><content:encoded><![CDATA[<p>我想总结一下我的 2023 年。</p>
+<p>从心理上讲，我更成熟了，事情很少超出预期。</p>
+<p>好了，先休息一下，过会儿再来……</p>
+<p>忏悔……这是我想要的。</p>
+<p>我想我需要减少我的精神损失。我本可以少操点心，多做点事，但我常常因为操心而耽误了实际工作。</p>
+<p>大多数事情都不应该成为痛苦。
+这听起来很可笑；恐惧占据了大部分时间。</p>
+<h2 id="春天">春天</h2>
+<p>春天不冷。 只是有一天风很大。那天以后就失去了大部分寒意。</p>
+<p>下了一场雨（冷）。4月底很热。</p>
+<h2 id="夏天">夏天</h2>
+<p>夏天过得很懒。以后可能再也没机会那么懒了。舍不得睡觉，也不愿意醒来。</p>
+<p>推特被封号了。当尝试恢复我的账号时，我感觉到自己似乎陷入了强迫症。我不断地想让客服处理我的问题，并且想要跟他们争辩和交涉。为了克服这种冲动，我试图努力集中注意力，但是却感到困惑和不确定，好像不清楚自己应该做什么。所以我每天都晚上不睡觉。推特的回应是电子邮件自动回复。</p>
+<p>报复性地在各种 fediverse
+站点注册帐号。不过不适应自说自话了，发现自己很寂寞。有一天遭到了 profile
+包含民主党的一个陌生人骚扰。心理防线崩塌了。</p>
+<p>现在想想觉得很不能理解。但是当时大概陷进去了。</p>
+<p>甚至没有一天是心安理得的废人生活。</p>
+<p>向网友发电子邮件（因为其他社交媒体帐号都失去了）。激动，但也迷茫，不知道自己在写什么。只是觉得对方很吸引人，抓住了一根稻草。孤独，也觉得一切都是孤独的问题，一切问题都是属于孤独。几年前的一天，断定自己得了绝症。心里很悲伤：没有人会在意。那一年我用痛苦得不行就自杀来支撑自己。</p>
+<p>夏天开始，生病了大概半年。和用眼，作息大概都有关系。</p>
+<h2 id="夏天以后">夏天以后</h2>
+<p>意识到生活方式有问题了，我尝试改变。有句话大概是，孤独不是因为没有人在身边，而是不能充分表达自己。这句话让我有些解放。发现自己没有表达的空间，也发现公开和私人的表达不同，但是都服务于同一个目的。重新找空间写下自言自语，没有这样写过这么多。主要是写在电脑上，因为还是觉得纸上不安全。。
+写过两次在纸上，都没有觉得不好，过后却没有心情再这么做。偶然有人告诉我
+openai whisper 以后也经常用 whisper。</p>
+<p>在 fediverse
+上遇到一个经常转发心理学文章的人。一度对这种文章不屑一顾，当时却觉得很有帮助。我觉得不管你采取什么样的态度，分清楚不同的东西，能获得更好的心情。没有形而上学的承诺，只有应对机制。精神止痛，在当前的时间里过得更舒服一些。不过这种文章看的太多也觉得没意思和迷惑，找到点击的地方还是很好的。</p>
+<p>吃了（止神经痛）药。结果一天到晚就想睡觉，至少睡15个小时。精力不足以后每天都过着很简单的生活。开学以后有个教授直接地对待我，有点接受不了。但是我因为不会写题，只能不停地找他。后来他似乎是尽量地对我好一点。我也很感谢他能选择这么做。</p>
+<h2 id="认识新朋友">认识新朋友。</h2>
+<p>今年，我认识了一些新朋友。他们与我在上一年里交往的大多数人都不一样。在互联网上，原因大概是无心的选择和机缘，而且我花更多时间的平台也不一样了。</p>
+<p>不仅是埃隆马斯克给 𝕏
+（推特）带来变化所致。学校里，我也遇到了不同的同学和老师。</p>
+<p>在网上和人自由交流，虽然我不能做好。我感动了。这是愉快的事。</p>
+<h2 id="电脑">电脑</h2>
+<p>上半年，我让 chatgpt
+写了很多代码。我对自己说，我只想让它完成工作。几个月后，意识到它是多么方便，也终于明白，让它写代码浪费了我太多时间。这是欺骗，让我觉得学到了些东西。</p>
+<p>实际上根本没有。</p>
+<p>我不知道该如何继续，也不知道该从哪里继续。</p>
+<p>我做的第一件事就是尝试阅读《SICP》这样的书、</p>
+<p>很快我就放弃了。生病自然是一个主要原因，但我不太喜欢阅读的内容。</p>
+<p>我还看了点 css
+的布局和排印学。我很喜欢这些概念，但发现它们很难完全理解。</p>
+<p>我选修了一门关于 OOP 的课程，虽然成绩不佳，但我开始欣赏它了。</p>
+<p>还发现 javascript 的语法非常有趣。</p>
+<p>今年年底，CS 没有什么长进。</p>
+<p>但不知何故，我期待着更多的奉献。</p>
+<h2 id="今年的最后几天">今年的最后几天</h2>
+<p>我发现了一篇关于 anki 的<a
+href="https://augmentingcognition.com/ltm.html">文章</a>。我在三月份尝试过
+anki，但印象不深。这篇文章讨论了有效制作卡片的困难，以及记忆被忽视的作用。我记忆力很不好，所以能体会到。</p>
+<h2 id="新习惯">新习惯</h2>
+<p>今年我开始做的一件新事情是阅读包括 Rss 和新闻网站在内的新闻源。</p>
+<p>我以前从来都不喜欢 Rss。</p>
+<p>但查看订阅的 feeds 成了我经常做的一件事。</p>
+<p>通过为我的 Github 页面博客创建 rss feed，我学到了一些东西。</p>
+<p>现在，我使用 inoreader 的浏览器插件，方便地订阅网站的 feed。</p>
+<p>很多网站都隐藏了 rss 链接，但奇怪的是，他们其实提供 rss，把它们放在
+alternate html 标签中（如果有更正确的叫法，请告诉我）。</p>
+<p>我讨厌过长的文章，一开始我用 tts 听，但最近发现 chatgpt
+的摘要效果更好。</p>
+<p>hackernews
+也经常访问。我不太喜欢，有些讨论和文章很难理解，读起来也很累。但正如我所说的，它们的质量吸引了我，让我在拖延时感觉好些。</p>
+<h2 id="结尾">结尾</h2>
+<p>倾倒完记忆，留出的空间可能可以回想起来更多的吧。到时候可以再谈谈。</p>
+<p>开始采取戏谑和批评的态度。世界上很多制度都有值得批评的地方。制度下面的人也是批评的对象。这样想，在对一个东西不满的时候，可以看穿它，自己便能满足。虽然有些事情实在找不到批评讽刺的地方。这么想得太频繁，万能防御。有些实在找不到，就算了。</p>
+<p>知道了一种动物，叫<a
+href="https://zh.wikipedia.org/zh-cn/%E5%85%94%E7%8C%BB">兔狲</a>。我很喜欢。</p>
+]]></content:encoded><pubDate>2023-12-26 00:00:00</pubDate><guid>https://example.com/posts/21.html</guid></item>
+<item><title>links 2023-12-12</title><link>https://example.com/posts/20.html</link><description>links 2023-12-12</description><content:encoded><![CDATA[<p><a href="https://toobnix.org/w/vV7qtK176DVE6RLXrZ18Ee">EmacsConf
+2023: Using Koutline for stream of thought journaling - Matthew
+Jorgensen (PlasmaStrike)</a></p>
+<p><a href="https://toobnix.org/w/1t3hLzUmaNqtjE9aQXFbad">EmacsConf 2023
+Q&amp;A: Bringing joy to Scheme programming</a></p>
+<p><a href="https://toobnix.org/w/4DeRkvJyKFdCBLWnHtsZW2">EmacsConf
+2023: Windows into Freedom - Corwin Brust</a></p>
+<p><a href="https://toobnix.org/w/4moUfTEo2G8we5JuLGArWx"
+class="uri">https://toobnix.org/w/4moUfTEo2G8we5JuLGArWx</a></p>
+<p><a href="https://www.youtube.com/watch?v=lGjfzfC1CH0">EmacsConf 2023:
+REPLs in strange places: Lua, LaTeX, LPeg, LPegRex, TikZ - Eduardo
+Ochs</a></p>
+]]></content:encoded><pubDate>2023-12-12 00:00:00</pubDate><guid>https://example.com/posts/20.html</guid></item>
+<item><title>通过写邮件评论</title><link>https://example.com/posts/15.html</link><description>通过写邮件评论</description><content:encoded><![CDATA[<p><a href="https://testmail.app">testmail.app</a>
+有学生一年免费使用。</p>
+<p>一个账户有无限个邮箱地址。</p>
+<p>能不能给每个文章分配一个邮箱地址，允许通过给邮箱写信发评论？</p>
+]]></content:encoded><pubDate>2023-11-16 00:00:00</pubDate><guid>https://example.com/posts/15.html</guid></item>
+<item><title>free programming courses</title><link>https://example.com/posts/16.html</link><description>free programming courses</description><content:encoded><![CDATA[<p>学生免费60小时</p>
+<p>课程：<a
+href="https://frontendmasters.com/welcome/github-student-developers/">frontendmasters.</a><br />
+如果对前端不感兴趣的话也有用js做别的事情（arduino，虚拟机）的课</p>
+]]></content:encoded><pubDate>2023-11-16 00:00:00</pubDate><guid>https://example.com/posts/16.html</guid></item>
+<item><title>从 mastodon 发 webmention</title><link>https://example.com/posts/14.html</link><description>从 mastodon 发 webmention</description><content:encoded><![CDATA[<p>应该可以（也许，通过改 HTTP header） 让 mastodon 认为我们是一个
+activitypub 服务器。 这是收的一方要实现的。</p>
+<p>[[nkqu]] Untitled</p>
+]]></content:encoded><pubDate>2023-11-14 00:00:00</pubDate><guid>https://example.com/posts/14.html</guid></item>
+<item><title>new keyboard</title><link>https://example.com/posts/12.html</link><description>new keyboard</description><content:encoded><![CDATA[<p>the first blog post from my new keyboard</p>
+]]></content:encoded><pubDate>2023-10-07 00:00:00</pubDate><guid>https://example.com/posts/12.html</guid></item>
+<item><title>社交媒体</title><link>https://example.com/posts/10.html</link><description>社交媒体</description><content:encoded><![CDATA[<p>社交媒体这个词根本不恰当，是不是那些记者只知道抄推特，推特对他们就是媒体，他们作为记者有发言权，所以推特对所有人就都是媒体?</p>
+]]></content:encoded><pubDate>2023-10-01 00:00:00</pubDate><guid>https://example.com/posts/10.html</guid></item>
+<item><title>night walk</title><link>https://example.com/posts/11.html</link><description>night walk</description><content:encoded><![CDATA[<p>i walked through campus tonight to reach my goal of 10,000 steps,
+suprised by how bright it was on the street (the campus is still dark
+though). i even fear my small braid (something i never tried wearing
+outside as a male-presenting person) would be too noticeable .</p>
+<p>my patience in walking changes over time. initially i walked a lot
+and had fun doing it, but then it became less satisfying for me, perhaps
+because i expected more. now i can appreciate it better when i don’t
+expect it to be a perfect hobby choice. Since i want to walk for a long
+time, i came to a place which is far but still close to the edge of the
+campus. the lighting for the paths is dark there, but the court nearby
+is bright. i saw some old buildings, and weird stairs everywhere. i
+don’t remeber how many stairs i went through just to walk forword. the
+light was dimmer as i moved forward. the only light around caught my
+attention, comming from the entrance of three old buildings to my left.
+i saw students with long hairs and skirts entered one of the buildings
+together but they seemed not to be talking.</p>
+<p>this place wasn’t that familiar to me and so i decided to leave. i
+needed some time to find my way back to the paths i had walked more
+often and had become more familiar with. but this wasn’t so hard. i
+found a familiar path very soon and i walked on it.</p>
+<pre><code>1 
+ \
+  ---  \
+        \
+         \
+          3    人</code></pre>
+]]></content:encoded><pubDate>2023-10-01 00:00:00</pubDate><guid>https://example.com/posts/11.html</guid></item>
+<item><title>我的图标制作</title><link>https://example.com/posts/9.html</link><description>我的图标制作</description><content:encoded><![CDATA[<pre><code>&gt; convert   -background lightblue  -fill blue  -font /usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf  -pointsize 200
+-size 80x80 -gravity center  -pointsize 200  label:&#39;D&#39; caption.gif </code></pre>
+<p>使用 ctrl + F5 去除缓存看dbdo.website 的图标.</p>
+]]></content:encoded><pubDate>2023-09-29 00:00:00</pubDate><guid>https://example.com/posts/9.html</guid></item>
+<item><title>Journal 230920722</title><link>https://example.com/posts/8.html</link><description>Journal 230920722</description><content:encoded><![CDATA[<p>So, hi. It’s now September 20th. I just woke up, and it’s quite
+chilly as fall is approaching. I’ve only left social media for two days,
+and it feels still ok. It wasn’t until then that I realized how silly
+some of the things I’ve posted are.</p>
+<p>Yesterday, I listened to a podcast discussing “yang sheng”. It was
+thought-provoking for me as it highlighted how people tend to judge
+those with health issues. The podcast pointed out that many people
+believe that those who are unwell somehow brought it upon themselves,
+which is not always the case. This raised an interesting point; it’s
+concerning that many others think this way.</p>
+<p>When i’m ill, I fear facing criticism because of my condition. I’m
+worried that people might say there’s something inherently wrong with me
+just because I’m unwell.</p>
+<p>The podcast also pointed out that the concept of life preservation is
+deeply cultural rather than universal. People cling to the idea of
+preserving their lives because they often feel helpless in controlling
+other aspects of their existence. This reveals that the notion of life
+preservation can be rather bleak and desperate, as it often arises when
+hope in other areas is dwindling.</p>
+<p>Consider daily habits, for instance, which can become almost
+ritualistic. Tracking these habits in an app can provide a sense of
+control. I’ve come to realize this about myself. I’ll likely continue
+with these habits for a while. Life is hectic right now, and there are
+other topics I’d like to discuss. Thank to Chatgpt to correct my
+grammar.</p>
+<p>For the ids of each entries, my static generator cannot handle them
+now. I perhaps will be able to do this in the future.</p>
+<p>If you, as the reader, feel inclined, please don’t hesitate to reach
+out via email or other means. Your input is welcomed and
+appreciated.</p>
+]]></content:encoded><pubDate>2023-09-20 00:00:00</pubDate><guid>https://example.com/posts/8.html</guid></item>
+<item><title>2023-9-10 梦</title><link>https://example.com/posts/7.html</link><description>2023-9-10 梦</description><content:encoded><![CDATA[<p>梦里有人唱歌，我觉得比ta更寂寞。然后演示闹鬼片段，有点教学范例的风格，笑着演示。有一段是和另一个人贴着，头突然摸不到了，只剩下布。不觉得恐怖，只是格外孤独。然后
+醒来
+，觉得孤独感淹没，是咖啡喝的多，把心脏和胃的感觉解释成’孤独’了。</p>
+<p><img src="./assets/2e5982ad4416624d-1.png" /></p>
+<p><img src="./assets/c1089c83c1203ca9.jpg" /></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>11</mn><annotation encoding="application/x-tex">11</annotation></semantics></math></p>
+]]></content:encoded><pubDate>2023-09-10 00:00:00</pubDate><guid>https://example.com/posts/7.html</guid></item>
+<item><title>随记 2023-8-31</title><link>https://example.com/posts/6.html</link><description>随记 2023-8-31</description><content:encoded><![CDATA[<p>如果活着而没有这些东西，那我的快乐就是一种占有的快乐，一种拥有我的生命的快乐，一种占有我自己生命的快乐。</p>
+<p>占有我自己生命的快乐也没有所谓的精神分析批评的那么不堪。</p>
+<p>如果一个人拥有占有着自己的生命的快乐，这也没什么不好的，而且是可以理解的。</p>
+<p>可以体验出来这种倾向我觉得这是可以理解的.</p>
+<p>如何过得很”好”，然后死掉，这样好像首先會更加超越一些。它是一個超越自我的選項。其實它不是一種圓滿的回答，能感覺到它是一個好的答案。但是問題是冲动然後並不現實。更现实的是，只有活下去，接下来才有<strong>可能</strong>得到更多。而不存在活不下去了，只要牺牲一点就能得到的选项。</p>
+<p>这个选项只是一种妄想。在整个半年甚至一年中我是在这种妄想中度过的。也是一种基于对别人的误读，或者说对一种想象的误读，对自身想象的误解。</p>
+<p>有一種類似於”認知酸雨”一类說法。這種价值观就是一種認知上的酸雨。它會讓人心智不清楚。</p>
+]]></content:encoded><pubDate>2023-08-31 00:00:00</pubDate><guid>https://example.com/posts/6.html</guid></item>
+<item><title>journal 2023-08-24</title><link>https://example.com/posts/5.html</link><description>journal 2023-08-24</description><content:encoded><![CDATA[<p>I’ve just got up. Everything is still quiet.</p>
+<p>I should have started with these habits back in May, especially
+getting up at 7 in the morning. It gives me what I want: silence, and it
+also gives me what the night doesn’t offer: the rising sun.</p>
+<p>My head is suddenly empty.</p>
+<p>Bottled water is handy and also tasty. Tap water tastes bad (hard). I
+cannot bear it.</p>
+<p>Let us return to the subject of habits. When do I feel that habits
+are bullshit and don’t want to bother with daily routines? When I am in
+a hurry. I want the sweetness to come quickly and waiting means failure
+to me. Mindset changes. One day I asked myself why people choose
+hardships, is it because they like to endure? Not quite. I realised that
+hardship promises a future in which we win what we dream of. Foolishly,
+I thought that fun was the reason people put in the effort, which it is,
+but for many things the result is the main motivation.</p>
+<p>Recently I also learned Javascript. Promise is a key concept in
+Javascript. In javascript, we often wait for a function to finish and do
+the next thing only after the function has finished. Waiting takes time,
+but in the end we get what we want. Waiting also has its advantages:
+priorities, optimising the use of limited resources… Life is really the
+same.</p>
+]]></content:encoded><pubDate>2023-08-24 00:00:00</pubDate><guid>https://example.com/posts/5.html</guid></item>
+<item><title>links</title><link>https://example.com/posts/1.html</link><description>links</description><content:encoded><![CDATA[<ul>
+<li><p><a
+href="https://dbdowjfb.notion.site/df001ecaffd14a0bbf806daee38ed1e3">看到想分享的链接</a></p></li>
+<li><p><a href="../logseq">logseq</a></p></li>
+<li><p><a href="../wiki">我的wiki</a></p></li>
+</ul>
+]]></content:encoded><pubDate>2023-08-07 00:00:00</pubDate><guid>https://example.com/posts/1.html</guid></item>
+<item><title>摸鱼儿</title><link>https://example.com/posts/2.html</link><description>摸鱼儿</description><content:encoded><![CDATA[<p>宋・李演</p>
+<pre><code>又西风、四桥疏柳，惊蝉相对秋语。   
+琼荷万笠花云重，袅袅红衣如舞。  
+鸿北去  
+渺岸芷汀芳，几点斜阳字。  
+吴亭旧树。  
+又系我扁舟，渔乡钓里，秋色淡归鹭。  
+长干路。  
+草莽疏烟断墅。  
+商歌如写羁旅。  
+丹溪翠岫登临事，苔屐尚黏苍土。  
+鸥且住。  
+怕月冷吟魂，婉冉空江暮。  
+明灯暗浦。  
+更短笛衔风，长云弄晚，天际画秋句。</code></pre>
+]]></content:encoded><pubDate>2023-08-07 00:00:00</pubDate><guid>https://example.com/posts/2.html</guid></item>
+<item><title>Test 2</title><link>https://example.com/posts/3.html</link><description>Test 2</description><content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+convallis velit non vestibulum condimentum. Quisque turpis quam, congue
+vitae ipsum a, commodo suscipit enim. Sed ac fermentum ante, eu lacinia
+odio. Cras vel sodales lorem. Sed sollicitudin nisl in elit ornare
+dapibus. Aliquam erat volutpat. Integer scelerisque consequat libero,
+sit amet porta dolor ultrices vitae. Etiam luctus sodales cursus. Aenean
+a turpis pretium, ultrices turpis ut, vestibulum eros. Praesent nec sem
+eleifend, tincidunt lacus et, dictum eros.</p>
+<p>Donec semper nisl a auctor laoreet. Integer risus elit, consequat
+consequat vehicula sed, maximus vitae dui. Quisque pretium convallis
+molestie. Nam ultricies, libero sed ultricies interdum, diam elit congue
+magna, et consectetur urna neque et elit. Pellentesque quis ligula in
+justo tincidunt imperdiet. Vivamus at nulla malesuada, sollicitudin
+tortor id, sagittis turpis. Aliquam erat volutpat. Ut laoreet sit amet
+tortor a faucibus. Suspendisse potenti.</p>
+<p>Mauris egestas, tellus eu congue cursus, erat orci porta arcu, a
+fermentum orci nunc nec elit. Maecenas eu mollis sem. Donec ac tempus
+nisi, quis sodales neque. Duis pharetra id urna eget semper. Nulla
+finibus molestie sem at rutrum. Curabitur auctor ut erat sed ornare.
+Praesent accumsan vulputate augue sed auctor.</p>
+<p>Morbi quis eros tempus, feugiat ipsum et, vestibulum massa. Vivamus
+scelerisque, nisl id faucibus faucibus, purus neque dictum risus, quis
+convallis lorem velit vitae justo. Aliquam vehicula justo non neque
+porttitor, et porta ipsum fringilla. Duis tempor pulvinar risus, mollis
+tincidunt nulla cursus ac. Curabitur molestie nisl quis diam volutpat,
+vitae commodo enim dignissim. Morbi vulputate ante nec neque ornare
+ullamcorper. Sed iaculis rhoncus velit, id placerat augue ultrices nec.
+Fusce condimentum velit ac est tempus condimentum.</p>
+<p>Vestibulum non odio ipsum. Nam lobortis at ante ut vehicula. Etiam
+dapibus justo ut feugiat fermentum. Mauris vitae consequat massa. Donec
+maximus ante velit, non mattis arcu commodo sit amet. Aenean vehicula
+dictum sapien, quis pretium ligula tincidunt ac. Sed risus ante,
+eleifend ac lacinia eget, euismod in diam. Phasellus nisl turpis,
+fermentum quis euismod vel, mattis non purus. Vivamus sed est id turpis
+blandit ullamcorper sed ut sapien. In hac habitasse platea dictumst.
+Cras volutpat augue maximus sapien interdum, sed facilisis augue
+mollis.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+sodales mauris dapibus nibh molestie, vitae aliquam odio dictum. Quisque
+tincidunt lacus vel sem mollis dignissim. Morbi sodales vel ipsum id
+tincidunt. Phasellus semper consectetur erat. Duis cursus, justo vel
+iaculis sollicitudin, tortor lacus consectetur metus, vestibulum aliquet
+massa leo quis mauris. Proin at imperdiet leo. Maecenas placerat, neque
+tempor mollis feugiat, odio felis euismod mauris, ac elementum purus
+justo et augue. Donec id erat dignissim, pellentesque orci vitae,
+venenatis tellus. Morbi eu aliquam odio. In sollicitudin nunc sed
+dignissim euismod. Integer magna odio, cursus id finibus in, molestie a
+orci. Maecenas sit amet dignissim ex, quis pharetra magna.</p>
+<p>Etiam risus metus, venenatis eget urna ultricies, tempor tristique
+mi. Maecenas non accumsan nisl. Mauris viverra, erat eu blandit
+vestibulum, felis lorem vulputate risus, nec luctus eros felis at
+ligula. Donec ullamcorper pulvinar lorem, non accumsan sem pharetra non.
+Duis posuere dolor id odio fringilla, sit amet egestas sem posuere.
+Praesent sit amet massa vitae ex imperdiet consectetur non sit amet
+augue. Phasellus volutpat facilisis eros, at lacinia mauris vestibulum
+sit amet. Nam id fringilla augue. Mauris condimentum, lorem ac dictum
+iaculis, nulla purus euismod ipsum, a hendrerit ipsum odio ut sem. Duis
+in posuere risus.</p>
+<p>Aliquam bibendum placerat nisl vitae eleifend. Mauris et consequat
+nulla, non cursus libero. Cras lacinia vulputate tortor sit amet
+scelerisque. Aliquam ac nibh eros. Ut at tristique metus. Sed pulvinar
+gravida mauris sit amet lacinia. Nulla pellentesque orci dictum dui
+varius, in feugiat ante hendrerit. Duis id ante ante. Maecenas semper,
+lacus sed semper molestie, ipsum quam imperdiet mi, at pharetra erat
+dolor id massa. Sed volutpat dapibus neque nec ultrices. Sed justo
+risus, pulvinar id fringilla at, congue a sem. Sed ac nibh mi. Maecenas
+vitae leo at ante ultricies tempor at id nisi. Mauris cursus dictum leo,
+at faucibus metus pulvinar nec. Praesent pretium sodales luctus. Mauris
+metus diam, varius elementum eros nec, faucibus maximus arcu.</p>
+<p>Phasellus vitae lacus bibendum, viverra dolor sed, commodo elit.
+Vivamus at orci nec arcu dignissim gravida. Aliquam porta ex nec felis
+tristique fermentum. Etiam quis justo a tellus vulputate egestas ut eu
+libero. Integer auctor tortor in semper blandit. Suspendisse porttitor
+massa viverra rhoncus accumsan. Phasellus lacus eros, ullamcorper eu
+ornare ac, suscipit id libero. Sed vulputate urna et mi commodo, tempus
+blandit tellus gravida. Suspendisse porttitor posuere magna eget mollis.
+Pellentesque sed lacus id orci fringilla pretium. Phasellus quis massa
+eget augue vestibulum blandit. Integer sollicitudin tortor quis eros
+semper tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Vivamus malesuada purus eget nunc faucibus iaculis. In nec molestie
+massa, vel finibus sem.</p>
+<p><img src="./img/277fd55a22f6a9187e1eaa9574488661.jpg" alt="Image" />
+Nam pharetra velit et ultricies congue. Nullam efficitur mollis odio in
+porta. Sed molestie tortor eu arcu mattis, quis bibendum orci feugiat.
+Vestibulum semper blandit felis non pellentesque. Pellentesque commodo
+ac velit ac ornare. Cras ac pellentesque leo. Mauris eget molestie quam.
+Phasellus lectus magna, condimentum semper mollis vitae, pretium vel
+turpis. Phasellus dapibus dolor in dui viverra, commodo elementum tortor
+aliquet. Quisque dapibus leo in arcu facilisis, sed rhoncus ipsum
+mollis. Etiam at neque fermentum, tempor enim pulvinar, posuere mi.
+Suspendisse et neque cursus, bibendum neque vitae, tempus dolor.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f():</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span></code></pre></div>
+<figure>
+<img src="./assets/2e5982ad4416624d-1.png" alt="Alt text" />
+<figcaption aria-hidden="true">Alt text</figcaption>
+</figure>
+<figure>
+<img src="./assets/c1089c83c1203ca9.jpg" alt="Alt text" />
+<figcaption aria-hidden="true">Alt text</figcaption>
+</figure>
+]]></content:encoded><pubDate>2023-08-07 00:00:00</pubDate><guid>https://example.com/posts/3.html</guid></item>
+<item><title>about</title><link>https://example.com/posts/4.html</link><description>about</description><content:encoded><![CDATA[<h2 id="近况">近况</h2>
+]]></content:encoded><pubDate>2023-08-07 00:00:00</pubDate><guid>https://example.com/posts/4.html</guid></item>
+</channel>
+</rss>
