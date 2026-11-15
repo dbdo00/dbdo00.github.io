@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta property="og:title" content="notes.billmill.org" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://notes.billmill.org" />
+  <meta property="article:modified_time" content="" />
+  <meta property="article:tag" content="Machine_Learning_5489 class notes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+  <link rel="stylesheet" href="/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="/_pagefind/pagefind-component-ui.css" />
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="/atom.xml" />
+  <link rel="alternate" type="application/atom+xml" title="Link blog" href="/link_blog.atom.xml" />
+  <link rel="alternate" type="application/atom+xml" title="Music blog" href="/music_blog.atom.xml" />
+  <link rel="alternate" type="application/atom+xml" title="blog" href="/blog.atom.xml" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗿</text></svg>">
+  <title>Class Notes - llimllib notes</title>
+</head>
+
+<body>
+  <pagefind-modal></pagefind-modal>
+  <main class="container">
+    <div class="dirlinks" style="margin-bottom: 20px">
+      <a href="/">notes.billmill.org</a> /
+      <a href="/Machine_Learning_5489.html">Machine_Learning_5489</a> /
+      <pagefind-modal-trigger class="search"></pagefind-modal-trigger>
+    </div>
+    <h1 class="title">Class Notes</h1>
+    <!-- digital ocean spaces has some sort of horrific cloudflare
+       shit enabled that automatically hides email addresses, and it detects
+       mastodon account names as an email address, so I have to put this utter
+       bullshit here -->
+    <!--email_off-->
+    <div class="time"><em>last updated: Oct 03, 2026</em></div>
+    <h1 id="precision-and-sensitivity">Precision and Sensitivity</h1>
+<p>Sensitivity is the rate in which we find the positive (e.g. a disease). False positive is not cared about.</p>
+<p>Precision is the rate in which we find the true positive.</p>
+<h1 id="beyes-classifier">Beyes Classifier</h1>
+<p>Learning:  Learning is done by computing $P(y|{ x})$, where $x$ is the data.<br />
+Classifying: $P(x^*|y)$ where $x$ is the new data.</p>
+<p>How these probability computations are done? By MLE. TO be specific,...</p>
+<p>For an event</p>
+<p>$p(y=c)= \frac{\sum^M_{i=1} \mathbb I [y^{(i)} = c ]  }{M}  \quad c \in {1,2}$</p>
+<p>平均有多少个样本落在类别 c 中。</p>
+<h1 id="maximal-likelihood">Maximal Likelihood</h1>
+<p>Functions are convex =&gt; derivative = 0 means global manimum</p>
+<p>TODO. proof of gaussian distribution's ML estimation.</p>
+<p><em>A1Q2</em>  用来估计的是三个iid随机变量。实际上是一个随机变量。</p>
+<h1 id="regression">Regression</h1>
+<p>How is noise defined -- when we have done the regression knowing the $w$, is noise known?</p>
+<p>噪音的参数是依赖于误差$r$ 的。</p>
+<h1 id="后验分布">后验分布</h1>
+<p>参数$\theta$ 的后验分布的密度是 $P(\theta |D)$。 这个是参数的分布</p>
+<p>$$ P(\theta |D ) = \frac{P(D \mid \theta) P(\theta)}{P(D)}$$<br />
+$P(D)$ 的定义是样本密度。类似于 <a href="/Machine_Learning_5489/Class_Notes.html#beyes-classifier" class="internal-link">Class Notes</a> 中的“平均有多少个样本落在类别 c 中”。</p>
+<h1 id="后验预测-pxstar-mid-theta-">后验预测 $P(x^\star \mid \theta )$</h1>
+<p>这只是给定参数$\theta$ 的$x$.  （意思是 $P(X = x^\star \mid \theta)$ , $X$ 有一个参数是$\theta$. 的分布）</p>
+<p>后验估计: $$p(x^\star | D) = \int P(x^\star \mid \theta)P(\theta |D)d\theta $$</p>
+<ul>
+<li>prior 的初始参数怎么选都可以吗？</li>
+</ul>
+<h1 id="map-和后验分布区别">MAP 和后验分布区别</h1>
+<p>后验分布是一个分布。MAP 是求出一个参数的数字。</p>
+<p>Example:  可以算这个 $y$ 的后验分布<br />
+<a href="/Pasted image 20260925223707.png"><img class="bodyimg" src="/Pasted image 20260925223707.png"></a></p>
+<h1 id="svm">SVM</h1>
+<p>Why should we penalize the weight ？</p>
+<pre><code class="language-python"><div class="highlight"><pre><span></span><span class="c1"># step size for the sliding window</span>
+<span class="n">step</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="c1"># extract window patches with step size of 4</span>
+<span class="n">patches</span> <span class="o">=</span> <span class="n">skimage</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">view_as_windows</span><span class="p">(</span><span class="n">testimg</span><span class="p">,</span> <span class="p">(</span><span class="mi">19</span><span class="p">,</span><span class="mi">19</span><span class="p">),</span> <span class="n">step</span><span class="o">=</span><span class="n">step</span><span class="p">)</span>
+<span class="n">psize</span> <span class="o">=</span> <span class="n">patches</span><span class="o">.</span><span class="n">shape</span>
+
+<span class="c1"># collapse the first 2 dimensions</span>
+<span class="n">patches2</span> <span class="o">=</span> <span class="n">patches</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">psize</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">psize</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">psize</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">psize</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">patches2</span><span class="o">.</span><span class="n">shape</span> <span class="p">)</span>
+
+<span class="c1"># histogram equalize patches (improves contrast)</span>
+<span class="n">patches3</span> <span class="o">=</span> <span class="n">empty</span><span class="p">(</span><span class="n">patches2</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">patches2</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+    <span class="n">patches3</span><span class="p">[</span><span class="n">i</span><span class="p">,:,:]</span> <span class="o">=</span> <span class="n">skimage</span><span class="o">.</span><span class="n">exposure</span><span class="o">.</span><span class="n">equalize_hist</span><span class="p">(</span><span class="n">patches2</span><span class="p">[</span><span class="n">i</span><span class="p">,:,:])</span>
+
+<span class="c1"># extract features</span>
+<span class="n">newXf</span> <span class="o">=</span> <span class="n">extract_features</span><span class="p">(</span><span class="n">patches3</span><span class="p">)</span>
+</pre></div>
+</code></pre>
+<p>view_as_windows extract  图像，通过滑动窗口。大小19$\times$ 19<br />
+pateches.shape   「原本」的形状<br />
+patches.reshape 重新塑形。 （应该是自动判断前两个怎么collapse？）<br />
+每个 <code>patches2[i,:,:]</code> 是一个小patch.<br />
+patches2 第一个维度是什么：是所有patch 的数量</p>
+<p>patches 前两个维度是什么？num_y_win (y方向窗口数量) 和 num_x_win (x方向窗口数量)。<br />
+num_y_win  窗口上下滑动一共能产生多少行窗口<br />
+num_x_win 窗口左右滑动一共能产生多少行窗口</p>
+<h1 id="后验分布-1">后验分布</h1>
+<h1 id="maximum-a-posterior">Maximum a posterior</h1>
+<p>如果在$\theta=t$ 时，数据$D$ 有分布$p(D|\theta =t)$. 并且我们也假设知道$\theta$ 是什么分布。那么MAP 就是计算<br />
+$$\arg \max_\theta p(\theta = t|D=x) = \arg \max_\theta \frac{p(D=x \mid \theta =t)p(\theta =t)}{\displaystyle\sum_s p(D=x|\theta=s)}$$<br />
+[修改] <strong>实际上</strong> 分母和$\theta$ 没关系，所以只要最大化分子就可以</p>
+<p>$$\arg \max_\theta p(\theta = t|D=x) = \arg \max_\theta p(D=x \mid \theta =t)p(\theta =t)$$<br />
+ML是反过来P 中 的 $\theta$ 和$D$</p>
+<h1 id="posterior-estimation">Posterior Estimation</h1>
+<p>用全部后验分布的全部概率产生的结果加权平均（？）</p>
+<h1 id="bernoulli-update">Bernoulli Update</h1>
+<p>一开始的先验是关于参数$\pi$ 的beta分布。<br />
+结果是一个伯努利分布中参数 $\pi$ 的分布。</p>
+<h1 id="k-means">K-means</h1>
+<p>$\pi_k$ 观察到第k堆的概率。这是一个隐变量 $Z= k$  的概率。</p>
+<p>观察到向量$x_i$ 的条件下，在第$k$ 堆的概率：<br />
+$$\gamma_{ik} = P(Z= k\mid x_i )$$<br />
+因为一个空间所有样本概率总和为$1$, 所以$$\sum_k \gamma_{ik} = 1. \tag{1}$$</p>
+<h2 id="k-means---soft-assignment">K means - Soft Assignment</h2>
+<p>$Z = k \mid x_i$  不是一个常数(即，不在任意一点概率是1)。</p>
+<p>$Z \sim N(\mu_k^{(0)}, \sigma_k^{(0)})$ 时<br />
+E-M step 可以更新$\mu_k$ 和$\sigma_k$.  分别有一个公式……</p>
+<h2 id="hard-assignment">Hard Assignment</h2>
+<p>$\gamma_{ik} \in {0,\ 1}$  。更新后的中心是一堆中所有点的平均<br />
+$$ \mu_{k}^{(1)}=\frac{\sum \gamma_{ik} x_i}{\sum_i\gamma_{ik}} =\frac{\sum_{i在第k堆中} x_i}{\sum_{i 在第k堆中} 1}$$</p>
+<h2 id="mle-和-map-区别">MLE 和 MAP 区别</h2>
+<h3 id="1-极大似然估计mle">1. 极大似然估计（MLE）</h3>
+<ul>
+<li><strong>不需要先验（No Prior）</strong>。</li>
+<li><strong>基本逻辑</strong>：只关注当前观察到的数据 $x$。它假设参数 $\theta$ 是一个固定但未知的真实常数，寻找能使数据 $x$ 出现概率（似然 $p(x \mid \theta)$）最大的那个 $\theta$。</li>
+<li><strong>数学表示</strong>：<br />
+$$\hat{\theta}<em>{\text{MLE}} = \arg\max</em>{\theta} p(x \mid \theta)$$</li>
+</ul>
+<h3 id="2-后验估计例如-最大后验估计-map">2. 后验估计（例如 最大后验估计 MAP）</h3>
+<ul>
+<li><strong>必须需要先验（Requires Prior）</strong>。</li>
+<li><strong>基本逻辑</strong>：基于贝叶斯学派的观点，参数 $\theta$ 本身也是一个随机变量，在观察到数据之前我们就对它有一定的认知或倾向（先验分布 $p(\theta)$）。后验估计通过贝叶斯公式将“先验”与“数据似然”结合，寻找使<strong>后验概率</strong> $p(\theta \mid x)$ 最大的 $\theta$。</li>
+<li><strong>数学表示</strong>：<br />
+$$\hat{\theta}<em>{\text{MAP}} = \arg\max</em>{\theta} p(\theta \mid x) = \arg\max_{\theta} \left[ \underbrace{p(x \mid \theta)}<em>{\text{似然}} \cdot \underbrace{p(\theta)}</em>{\text{先验}} \right]$$</li>
+</ul>
+<h3 id="总结对比">总结对比</h3>
+<ul>
+<li><strong>MLE</strong> = 纯粹看数据（$\text{数据似然}$）</li>
+<li><strong>后验估计（MAP）</strong> = 数据 + 经验（$\text{数据似然} \times \text{先验概率}$）<br />
+当先验分布 $p(\theta)$ 是均匀分布（即对所有可能的 $\theta$ 不偏不倚，等概率看待）时，MAP 的计算结果就会退化为与 MLE 完全一致。</li>
+</ul>
+<h1 id="full-posterior-distribution-vs-map">Full Posterior distribution vs. MAP</h1>
+<p><a href="/Pasted image 20261002141258.png"><img class="bodyimg" src="/Pasted image 20261002141258.png"></a></p>
+<p>class 1 with probability $p$<br />
+class  2 with probability $1-p$<br />
+The ratio is $\frac{p}{1 - p}$.<br />
+if both in the form exp, then $\log p/(1-p) = \log (exp (\cdot)) = \cdot$</p>
+<p><a href="/Pasted image 20261002204030.png"><img class="bodyimg" src="/Pasted image 20261002204030.png"></a><br />
+不太明白：求出来likelihood ，但是不知道参数是什么。用MLE 来计算吗？</p>
+
+    
+    <div class="backlinks">
+      <div class="backlinks-label">Backlinks</div>
+      <ul>
+        
+        <li><a href="/Machine_Learning_5489/Class_Notes.html">Class Notes</a></li>
+        
+      </ul>
+    </div>
+    <!--/email_off-->
+    
+    <div class="index"><a href="/">↑ up</a></div>
+  </main>
+  <footer>
+  <!-- holy shit, digital ocean spaces has some sort of horrific cloudflare
+       shit enabled that automatically hides email addresses, and it detects my
+       hachyderm account name as an email address, so I have to put this utter
+       bullshit here. I don't even use cloudflare! But I serve my static assets
+       through DigitalOcean, which does -->
+  <!-- https://developers.cloudflare.com/waf/tools/scrape-shield/email-address-obfuscation/ -->
+  <!--email_off-->
+  by <a href="https://billmill.org">Bill Mill</a>. Chat with me on <a
+    href="https://hachyderm.io/@llimllib/">mastodon</a> or <a href="https://bsky.app/profile/billmill.org">bluesky</a>.
+  Generated by <a href="https://github.com/llimllib/obsidian_notes/">obsidian_notes</a>
+  <!--/email_off-->
+</footer>
+  <script src="/_pagefind/pagefind-component-ui.js" type="module"></script>
+  <pagefind-config bundle-path="/_pagefind/"></pagefind-config>
+</body>
+
+</html>

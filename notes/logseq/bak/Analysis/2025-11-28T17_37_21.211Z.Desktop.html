@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta property="og:title" content="notes.billmill.org" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://notes.billmill.org" />
+  <meta property="article:modified_time" content="" />
+  <meta property="article:tag" content="logseq bak Analysis 2025-11-28t17_37_21.211z.desktop" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+  <link rel="stylesheet" href="/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="/_pagefind/pagefind-component-ui.css" />
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="/atom.xml" />
+  <link rel="alternate" type="application/atom+xml" title="Link blog" href="/link_blog.atom.xml" />
+  <link rel="alternate" type="application/atom+xml" title="Music blog" href="/music_blog.atom.xml" />
+  <link rel="alternate" type="application/atom+xml" title="blog" href="/blog.atom.xml" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗿</text></svg>">
+  <title>2025-11-28T17_37_21.211Z.Desktop - llimllib notes</title>
+</head>
+
+<body>
+  <pagefind-modal></pagefind-modal>
+  <main class="container">
+    <div class="dirlinks" style="margin-bottom: 20px">
+      <a href="/">notes.billmill.org</a> /
+      <a href="/logseq.html">logseq</a> /
+      <a href="/logseq/bak.html">bak</a> /
+      <a href="/logseq/bak/Analysis.html">Analysis</a> /
+      <pagefind-modal-trigger class="search"></pagefind-modal-trigger>
+    </div>
+    <h1 class="title">2025-11-28T17_37_21.211Z.Desktop</h1>
+    <!-- digital ocean spaces has some sort of horrific cloudflare
+       shit enabled that automatically hides email addresses, and it detects
+       mastodon account names as an email address, so I have to put this utter
+       bullshit here -->
+    <!--email_off-->
+    <div class="time"><em>last updated: Nov 29, 2025</em></div>
+    <p>#. $$\int_{x^2 +y^2 \leq 1} |3x + 4y|dxdy$$<br />
+Solution.<br />
+Let $\varphi=\arctan(3/4)$. Then $$\sin(\theta + \varphi)=\sin(\theta)\cos(\varphi) + \cos(\theta)\sin(\varphi)=\frac{1}{5}\bigg( 4 \sin(\theta) + 3 \cos(\theta)\bigg).$$</p>
+<ul>
+<li>
+<p>Use the polar coordinate $x=r\cos(\theta), y=r\sin(\theta)$.  Let $u=\theta + \varphi$.</p>
+</li>
+<li>
+<p>$$\begin{align*}<br />
+&amp; \int^1_0 \int^{2\pi}_0 |3 r cos(\theta) + 4 r \sin(\theta)| {\color{blue} r}d\theta dr \<br />
+= &amp;\int^1_0 \int^{2\pi}_0 5r^2 |\sin(\theta + \varphi)|d\theta dr\<br />
+= &amp;\frac{5}{3}\int^{2\pi}_0{\color{red}|\sin(u)|}du \<br />
+= &amp; \frac{20}{3}<br />
+\end{align*}<br />
+$$<br />
+Comments:</p>
+<ol>
+<li>$\int^{a+T}_{a} f(t)dt = \int^T_0 f(t)dt$ for a periodic function having period $T$ because $\int^{a}_0 f= \int^{a+T}_Tf$ .</li>
+<li>Let $u=\theta + \varphi$. Then $$\int^{2\pi}<em>0 |f(\theta + \varphi)|d\theta = \int^{2\pi + \varphi}</em>\varphi |f(u)|du=\int^{2\pi }_0 |f(u)|du$$ by the last comment.</li>
+</ol>
+</li>
+<li>
+<p>Consider to simplify the integrated function to avoid complicated integral regions.<br />
+<a href="/Integrals_involving_Absolute_Values.html" class="internal-link">Integrals involving Absolute Values</a></p>
+<h1 id="p-series">p-series</h1>
+<p>#. $$\lim_{n\to \infty} n^2 \int^{1/n}<em>0 x^{x+1}dx$$<br />
+<strong>solution.</strong> By l'hospital's rule, $$\lim</em>{x\to 0+} x^{\epsilon}\ln x =0$$ for all $\epsilon &gt;0$. So $\ln x = o(x^{-\epsilon})$ when $x\to 0+$. Taylor expansion gives<br />
+$$x^x = \exp(x\ln x) = 1 + x\ln x + O(x\ln x) = 1 + o(x^{1-\epsilon}) + o(x^{1-\epsilon}) =1 + o(x^{1-\epsilon}) $$ Note $\int^{1/n}_0 o(x^{2-\epsilon})dx \leq o(1)\int^{1/n}_0 x^{2-\epsilon}dx =o(1)\frac{1}{3 - \epsilon}1/n^{3-\epsilon}$.  Choose $0&lt; \epsilon &lt; 2$. Then $$\int^{\frac{1}{n}}_0 x^{x+1} dx =\int^{\frac{1}{n}}<em>0 x + o(1/n^{2-\epsilon}) dx  = \frac{1}{n^2} + o(\frac{1}{n^{3-\epsilon}})$$<br />
+So $$\lim</em>{n\to \infty} n \int^{1/n}<em>0 x^{x+1}dx =  \lim</em>{n\to \infty} 1 + o(\frac{1}{n^{1-\epsilon}}) = 1$$.<br />
+<strong>Comment:</strong> The $+1$ here in the exponent has the effect of making the function goes faster to 0 at $0$.</p>
+</li>
+<li>
+<p>If it is $+2$, then you would get smaller values (something like $\frac{C}{n^3} + \ldots$).</p>
+</li>
+</ul>
+
+    
+    <div class="index"><a href="/">↑ up</a></div>
+  </main>
+  <footer>
+  <!-- holy shit, digital ocean spaces has some sort of horrific cloudflare
+       shit enabled that automatically hides email addresses, and it detects my
+       hachyderm account name as an email address, so I have to put this utter
+       bullshit here. I don't even use cloudflare! But I serve my static assets
+       through DigitalOcean, which does -->
+  <!-- https://developers.cloudflare.com/waf/tools/scrape-shield/email-address-obfuscation/ -->
+  <!--email_off-->
+  by <a href="https://billmill.org">Bill Mill</a>. Chat with me on <a
+    href="https://hachyderm.io/@llimllib/">mastodon</a> or <a href="https://bsky.app/profile/billmill.org">bluesky</a>.
+  Generated by <a href="https://github.com/llimllib/obsidian_notes/">obsidian_notes</a>
+  <!--/email_off-->
+</footer>
+  <script src="/_pagefind/pagefind-component-ui.js" type="module"></script>
+  <pagefind-config bundle-path="/_pagefind/"></pagefind-config>
+</body>
+
+</html>

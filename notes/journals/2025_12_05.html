@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta property="og:title" content="notes.billmill.org" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://notes.billmill.org" />
+  <meta property="article:modified_time" content="" />
+  <meta property="article:tag" content="journals 2025_12_05" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+  <link rel="stylesheet" href="/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="/_pagefind/pagefind-component-ui.css" />
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="/atom.xml" />
+  <link rel="alternate" type="application/atom+xml" title="Link blog" href="/link_blog.atom.xml" />
+  <link rel="alternate" type="application/atom+xml" title="Music blog" href="/music_blog.atom.xml" />
+  <link rel="alternate" type="application/atom+xml" title="blog" href="/blog.atom.xml" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗿</text></svg>">
+  <title>2025_12_05 - llimllib notes</title>
+</head>
+
+<body>
+  <pagefind-modal></pagefind-modal>
+  <main class="container">
+    <div class="dirlinks" style="margin-bottom: 20px">
+      <a href="/">notes.billmill.org</a> /
+      <a href="/journals.html">journals</a> /
+      <pagefind-modal-trigger class="search"></pagefind-modal-trigger>
+    </div>
+    <h1 class="title">2025_12_05</h1>
+    <!-- digital ocean spaces has some sort of horrific cloudflare
+       shit enabled that automatically hides email addresses, and it detects
+       mastodon account names as an email address, so I have to put this utter
+       bullshit here -->
+    <!--email_off-->
+    <div class="time"><em>last updated: Dec 15, 2025</em></div>
+    <h1 id="invariant-space">Invariant Space</h1>
+<p>id:: 6932e5e1-39b7-450d-b428-3f1afad9e70e<br />
+- Every invariant Space of $T\in \mathcal L(T)$  is a direct sum of spaces spanned by eigenvectors if  $T$ is diagonalizable. Suppose $V$ is an invariant space of $T$.<br />
+- The idea is  to show $V=\oplus (V\cap V_\lambda)$<br />
+- Of course, $\subset$ is obvious.<br />
+- On the other hand, if $v = v_1 + \ldots + v_n$, where $v_i$ are eigenvectors with different eigenvalues, then we need to show $v_i \in V$ for each $i$. Use lagrange interpolation to construct  a polynomial. $f(\lambda_k)=1$ if $k=i$ and $0$ otherwise. Thus $f(T)v_k = f(\lambda_k)v_k$. This gives $f(A)v=v_i$. So $v_i \in V$ by the invariance of $V$.<br />
+- For a general $T\colon: V\to V$, an invariant space is a direct sum of spaces spanned by <strong>general eigenvectors</strong>. I do not know how this is done exactly.q</p>
+<ul>
+<li>
+<h1 id="lower-bound-of-unipotent-matrix">Lower Bound of Unipotent Matrix</h1>
+<ul>
+<li>For $A$ a matrix, if $A-I$ is nilpotent, then $A$ is said to be unipotent.</li>
+<li>Define $|A| = \max |a_{ij}|$. Then $|A|$ is lower bounded by $1$. Surprisingly, this can be proved using trace. In fact, there is at least one diagonal entry whose absolute value is not less than $1$.</li>
+<li>A thing I didn't grasp is that the trace is equal to the sum of eigenvalues counting the multiplicity. For the power, the trace is the sum of eigenvalues taken the power, counting the multiplicity.</li>
+<li>$$\mathrm{trace} A^n= \sum \lambda_i^n$$</li>
+<li>This is clear from the Jordan canonical form and I do not know how can one show this without JCF.</li>
+<li>The <strong>upper bound</strong> of $|A^j|$ is $Kj^m$, where $K$ is a positive constant.</li>
+</ul>
+</li>
+<li>
+<h1 id="gluing-lemma">Gluing Lemma</h1>
+<ul>
+<li>For $X\subset \mathbb R^n$, if $X=A\cap B$ and $A,B$ are closed sets, and $f\mid A$, $f\mid B$ are both continuous, then $f$ is continuous.</li>
+<li>I saw that this condition can be weakened to Hausdorff space, but I didn't look into it.</li>
+<li>This lemma is useful for algebraic topology.</li>
+<li></li>
+</ul>
+</li>
+</ul>
+
+    
+    <div class="index"><a href="/">↑ up</a></div>
+  </main>
+  <footer>
+  <!-- holy shit, digital ocean spaces has some sort of horrific cloudflare
+       shit enabled that automatically hides email addresses, and it detects my
+       hachyderm account name as an email address, so I have to put this utter
+       bullshit here. I don't even use cloudflare! But I serve my static assets
+       through DigitalOcean, which does -->
+  <!-- https://developers.cloudflare.com/waf/tools/scrape-shield/email-address-obfuscation/ -->
+  <!--email_off-->
+  by <a href="https://billmill.org">Bill Mill</a>. Chat with me on <a
+    href="https://hachyderm.io/@llimllib/">mastodon</a> or <a href="https://bsky.app/profile/billmill.org">bluesky</a>.
+  Generated by <a href="https://github.com/llimllib/obsidian_notes/">obsidian_notes</a>
+  <!--/email_off-->
+</footer>
+  <script src="/_pagefind/pagefind-component-ui.js" type="module"></script>
+  <pagefind-config bundle-path="/_pagefind/"></pagefind-config>
+</body>
+
+</html>

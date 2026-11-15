@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta property="og:title" content="notes.billmill.org" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://notes.billmill.org" />
+  <meta property="article:modified_time" content="" />
+  <meta property="article:tag" content="fields" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+  <link rel="stylesheet" href="/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="/_pagefind/pagefind-component-ui.css" />
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="/atom.xml" />
+  <link rel="alternate" type="application/atom+xml" title="Link blog" href="/link_blog.atom.xml" />
+  <link rel="alternate" type="application/atom+xml" title="Music blog" href="/music_blog.atom.xml" />
+  <link rel="alternate" type="application/atom+xml" title="blog" href="/blog.atom.xml" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗿</text></svg>">
+  <title>fields - llimllib notes</title>
+</head>
+
+<body>
+  <pagefind-modal></pagefind-modal>
+  <main class="container">
+    <div class="dirlinks" style="margin-bottom: 20px">
+      <a href="/">notes.billmill.org</a> /
+      <pagefind-modal-trigger class="search"></pagefind-modal-trigger>
+    </div>
+    <h1 class="title">fields</h1>
+    <!-- digital ocean spaces has some sort of horrific cloudflare
+       shit enabled that automatically hides email addresses, and it detects
+       mastodon account names as an email address, so I have to put this utter
+       bullshit here -->
+    <!--email_off-->
+    <div class="time"><em>last updated: Nov 23, 2025</em></div>
+    <h1 id="field-extension">Field Extension</h1>
+<h1 id="splitting-field">Splitting Field</h1>
+<h2 id="theory">Theory</h2>
+<p>Let $\sigma \colon E \to F^\prime$ be an isomorphism of fields, let $f(x) \in F[x]$, and</p>
+<h2 id="exercises">Exercises</h2>
+<!--
+<del> If $\sigma((P))= (P^\star)$, it can be shown that the map given by
+$c + (p) \mapsto \sigma(c) + (p^\star)$ for all $c \in F$ and
+$x + (p) \mapsto x + (p^\star)$ is an isomorphism. </del> 
+-->
+<h1 id="separability">Separability</h1>
+<ol>
+<li><em>If $F$ is a perfect field with characteristic $p&gt;0$, then every element<br />
+has a $p$-th root.</em></li>
+</ol>
+<p><em>Proof.</em> Let $a$ be an arbitary element in $F$.<br />
+Let $\alpha$ be a root of the polynomial $x^p -a$.<br />
+Since the field has characteristic $p$,<br />
+$x^p - a = x^p - \alpha^p = (x-\alpha)^p$.<br />
+So the polynomial has repeated roots, hence not irreducible in $F$,<br />
+because $F$ is a perfect field in which every irreducible polynomial<br />
+is separable, i.e. has no repeated roots. So, the minimal polynomial<br />
+$f(x)$ of $\alpha$ over $F$ has degree $d&lt; p$.<br />
+Since $f(x)\mid (x-\alpha)^p$, we conclude that $f(x)=(x-\alpha)^d =x^d + \ldots  + (-\alpha)^d$ is the minimal polynomial of $\alpha$, and so $\alpha^d \in F$.<br />
+Suppose $ap + bd =1$. Then $\alpha = \alpha^{ap+bd} =(\alpha^p)^a (\alpha^d)^b \in F$. So, the $p$-th root of $a$ is in $F$. $\square$</p>
+<blockquote>
+<p>Remark: <strong>I believe that the above argument also proves the following</strong>: Over a field $K$ (of any char), $x^p -a$ is either irreducible or has completely reducible (i.e. has the root in K).</p>
+</blockquote>
+<p>The converse proposition is also true:</p>
+<ol start="2">
+<li><em>In a field $F$ with characteristic $p&gt;0$, if every element has a $p$-th root, then $F$ is a perfect field.</em></li>
+</ol>
+<p><em>Proof.</em>  Let $f(x)\in F[x]$ be irreducible.<br />
+Suppose $f(x)$ has repeated roots, then $f^\prime(x)=0$.<br />
+But this means that $f(x)=[g(x)]^p$ for some $g(x)\in F[x]$. Suppose<br />
+$$g(x)=a_nx^n + \ldots a_1x + a_0.$$<br />
+Then $f(x)= (g(x))^p = (a_nx^n + \ldots a_1x^n + a_0)^p = a_n^px^{pn} + \ldots + a_1^px^{p} + a_0^p$. Since $a_k^{p}\in F$, $a_k\in F$. So $g(x)\in F[x]$.<br />
+This contradicts that $f(x)$ is irreducible. Q.E.D</p>
+<h1 id="the-galois-group">The Galois Group</h1>
+<h2 id="exercises-1">Exercises</h2>
+<ol>
+<li>
+<p><em>Give an example where $Gal(E/F)/Gal(E/B) \cong G$ where $G$ is a proper subgroup of Gal(B/F).</em></p>
+</li>
+<li>
+<p><em>Find the fixed field of the subgroup ${ \alpha_1, \alpha_4}$, where $\alpha_1(\xi) = \xi, \alpha_4(\xi)=\xi^4$. Check that Theorem that $[K:K^G] =|G|$.</em></p>
+</li>
+</ol>
+<p><em>Solution.</em>  Note that $$(x- (\xi + \xi^4))(x - (\xi^3 + \xi^2)) = x^2 + x + 1$$<br />
+from which we know that $[\mathbb Q (\xi + \xi^4): \mathbb Q ] =2$.<br />
+Since $[K^G: \mathbb Q] =2$ and $K^G \supset \mathbb Q (\xi + \xi^4)$,<br />
+we know that $K^G = \mathbb Q (\xi + \xi^4)$, from which $[K:K^G]=2=G$. $\square$</p>
+<ol start="3">
+<li>The Galois group of an irreducible polynomial $f$ is transitive on the set of zeros of $f$.</li>
+</ol>
+<p><em>Solution.</em> If $\alpha$ and $\beta$ are two zeros of $f$, then their minimal polynomials are equal. By theorem, there exists $\gamma$ in the Galois group of $f$ such that $\gamma (\alpha) = \beta$. $\square$</p>
+
+    
+    <div class="backlinks">
+      <div class="backlinks-label">Backlinks</div>
+      <ul>
+        
+        <li><a href="/README.html">README</a></li>
+        
+      </ul>
+    </div>
+    <!--/email_off-->
+    
+    <div class="index"><a href="/">↑ up</a></div>
+  </main>
+  <footer>
+  <!-- holy shit, digital ocean spaces has some sort of horrific cloudflare
+       shit enabled that automatically hides email addresses, and it detects my
+       hachyderm account name as an email address, so I have to put this utter
+       bullshit here. I don't even use cloudflare! But I serve my static assets
+       through DigitalOcean, which does -->
+  <!-- https://developers.cloudflare.com/waf/tools/scrape-shield/email-address-obfuscation/ -->
+  <!--email_off-->
+  by <a href="https://billmill.org">Bill Mill</a>. Chat with me on <a
+    href="https://hachyderm.io/@llimllib/">mastodon</a> or <a href="https://bsky.app/profile/billmill.org">bluesky</a>.
+  Generated by <a href="https://github.com/llimllib/obsidian_notes/">obsidian_notes</a>
+  <!--/email_off-->
+</footer>
+  <script src="/_pagefind/pagefind-component-ui.js" type="module"></script>
+  <pagefind-config bundle-path="/_pagefind/"></pagefind-config>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta property="og:title" content="notes.billmill.org" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://notes.billmill.org" />
+  <meta property="article:modified_time" content="" />
+  <meta property="article:tag" content="cs5489 home assignment 4" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+  <link rel="stylesheet" href="/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="/_pagefind/pagefind-component-ui.css" />
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="/atom.xml" />
+  <link rel="alternate" type="application/atom+xml" title="Link blog" href="/link_blog.atom.xml" />
+  <link rel="alternate" type="application/atom+xml" title="Music blog" href="/music_blog.atom.xml" />
+  <link rel="alternate" type="application/atom+xml" title="blog" href="/blog.atom.xml" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗿</text></svg>">
+  <title>CS5489 Home Assignment 4 - llimllib notes</title>
+</head>
+
+<body>
+  <pagefind-modal></pagefind-modal>
+  <main class="container">
+    <div class="dirlinks" style="margin-bottom: 20px">
+      <a href="/">notes.billmill.org</a> /
+      <pagefind-modal-trigger class="search"></pagefind-modal-trigger>
+    </div>
+    <h1 class="title">CS5489 Home Assignment 4</h1>
+    <!-- digital ocean spaces has some sort of horrific cloudflare
+       shit enabled that automatically hides email addresses, and it detects
+       mastodon account names as an email address, so I have to put this utter
+       bullshit here -->
+    <!--email_off-->
+    <div class="time"><em>last updated: Nov 14, 2026</em></div>
+    <p>Due on November 20, 2026, 11:59pm</p>
+<h3 id="exercise-1">Exercise 1</h3>
+<p>[2 points]. Prove that the eigenvalues of a real symmetric matrix $A \in R^{N ×N}$ ,<br />
+where $A = A^\top$ , are real-valued (i.e., not complex-valued). Prove also that<br />
+the eigenvectors of A corresponding to different eigenvalues are orthogonal<br />
+to each other</p>
+<p>Proof.</p>
+<p>For $v,\ w \in \mathbb C^N$, let $\langle v, w \rangle$ denote $v^\top \bar w$  , where $\bar w$ is the complex conjugate of the vector $w$.</p>
+<p>Let $t \in \mathbb C$. Then $$\begin{equation}<br />
+\bar t \langle v,\ w\rangle = \bar t v^\top \bar w = v^\top \bar t \bar w = v^\top \overline{t w} = \langle v,\ tw\rangle \end{equation}. $$<br />
+$$\begin{equation} t\langle v,\ w \rangle = tv^\top \bar w= (tv)^\top \overline w = \langle tv,\ w \rangle  \end{equation}<br />
+$$<br />
+$$\begin{equation} \langle v,\ v \rangle = v^\top \bar v= v_1 \overline v_1 + \ldots + v_N \overline v_N \geq 0\end{equation} $$<br />
+where $v = (v_1, \ \ldots ,\ v_N)^\top$.<br />
+Let $A^<em>$ denote the complex transpose of a matrix $A$.  Then $$\langle v, Av \rangle = v^\top \overline{Av}=v^\top \overline{A^\top}^\top v=v^\top (A^</em>)^\top v = (A^* v)^\top v = \langle A^* v ,\ v \rangle$$   Suppose $v$ is an eigenvector of $A$ associated with the eigenvalue $\lambda$.</p>
+<p>If $\langle v,\ v\rangle = 0$, then $v_1 \overline v_1 + \ldots + v_N \overline v_N =0$. Since $v_i \overline v_i \geq 0$ and $=0$ only when $v_i=0$,  we know $$v_i=0 \quad {\rm for \ each\ } i \in {1,\ldots,N}.$$Hence $v=0$.  In this case, the eigenvalue of $v$ is $0$, which is real valued.</p>
+<p>If $\langle v,\ v\rangle &gt;0$, then<br />
+$$\overline\lambda = \frac{1}{\langle v,\ v\rangle}\overline \lambda \langle v,\ v\rangle $$<br />
+By Eq   $\boxed{\overline t\langle v,\ w \rangle=\langle  v,\ tw \rangle}$, we get<br />
+$$\overline \lambda =\frac{1}{\langle v,\ v\rangle} \langle v,\ \lambda v\rangle =\frac{1}{\langle v,\ v\rangle} \langle v,\ Av \rangle$$ By $\boxed {\langle v, Av \rangle =  \langle A^* v ,\ v \rangle}$, we get<br />
+$$\overline \lambda  = \frac{1}{\langle v,\ v\rangle} \langle A^* v ,\ v \rangle=\frac{1}{\langle v,\ v\rangle} \langle \lambda v,\ v\rangle = \frac{1}{\langle v,\ v\rangle} \lambda  \langle v,\ v\rangle = \lambda$$<br />
+So we have derived that $\boxed{\overline \lambda = \lambda}$.  So any eigenvalue of $A$ is real-valued.</p>
+<p>Suppose $v,\ w$ are eigenvectors of $A$ associated with $\lambda_v$ and $\lambda_w$. Then $$\langle Av,\ w \rangle = \lambda_v \langle v,\ w \rangle$$ and since $A\in \mathbb R^{N\times N}$,  $$\langle Av,\ w \rangle =  \langle v,\ A^*w \rangle = \langle v,\ A^\top w \rangle=\langle v,\ Aw \rangle = \lambda_w \langle v,\ w \rangle.$$<br />
+So $$0 =\langle Av,\ w \rangle - \langle Av,\ w \rangle = (\lambda_v - \lambda_w) \langle v,\ w \rangle$$ which implies $\langle v,\ w \rangle = 0$ because $\lambda_v - \lambda_w \neq 0$.</p>
+<h3 id="exercises-2">Exercises 2</h3>
+<p>[5 points]. Derive the K-th largest direction of variance in principal component analysis (PCA).</p>
+<p>Solution.</p>
+
+    
+    <div class="index"><a href="/">↑ up</a></div>
+  </main>
+  <footer>
+  <!-- holy shit, digital ocean spaces has some sort of horrific cloudflare
+       shit enabled that automatically hides email addresses, and it detects my
+       hachyderm account name as an email address, so I have to put this utter
+       bullshit here. I don't even use cloudflare! But I serve my static assets
+       through DigitalOcean, which does -->
+  <!-- https://developers.cloudflare.com/waf/tools/scrape-shield/email-address-obfuscation/ -->
+  <!--email_off-->
+  by <a href="https://billmill.org">Bill Mill</a>. Chat with me on <a
+    href="https://hachyderm.io/@llimllib/">mastodon</a> or <a href="https://bsky.app/profile/billmill.org">bluesky</a>.
+  Generated by <a href="https://github.com/llimllib/obsidian_notes/">obsidian_notes</a>
+  <!--/email_off-->
+</footer>
+  <script src="/_pagefind/pagefind-component-ui.js" type="module"></script>
+  <pagefind-config bundle-path="/_pagefind/"></pagefind-config>
+</body>
+
+</html>

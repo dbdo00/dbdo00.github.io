@@ -1,0 +1,17 @@
+## pole/zero and response
+
+How to relate the pole/zero location and the response
+of a _system_?
+We now see a few examples of this engineering method.
+
+real pole
+==
+
+If the poles are real, then the response is either eventually decaying or
+unbounded. Intuitively, real poles do not contribute to the
+frequency.
+
+Next, we inspect pole at the origin.
+
+
+

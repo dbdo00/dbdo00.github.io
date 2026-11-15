@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta property="og:title" content="notes.billmill.org" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://notes.billmill.org" />
+  <meta property="article:modified_time" content="" />
+  <meta property="article:tag" content="logseq bak Gauss_Integer 2025-11-23t12_45_30.509z.desktop" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+  <link rel="stylesheet" href="/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="/_pagefind/pagefind-component-ui.css" />
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="/atom.xml" />
+  <link rel="alternate" type="application/atom+xml" title="Link blog" href="/link_blog.atom.xml" />
+  <link rel="alternate" type="application/atom+xml" title="Music blog" href="/music_blog.atom.xml" />
+  <link rel="alternate" type="application/atom+xml" title="blog" href="/blog.atom.xml" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗿</text></svg>">
+  <title>2025-11-23T12_45_30.509Z.Desktop - llimllib notes</title>
+</head>
+
+<body>
+  <pagefind-modal></pagefind-modal>
+  <main class="container">
+    <div class="dirlinks" style="margin-bottom: 20px">
+      <a href="/">notes.billmill.org</a> /
+      <a href="/logseq.html">logseq</a> /
+      <a href="/logseq/bak.html">bak</a> /
+      <a href="/logseq/bak/Gauss_Integer.html">Gauss_Integer</a> /
+      <pagefind-modal-trigger class="search"></pagefind-modal-trigger>
+    </div>
+    <h1 class="title">2025-11-23T12_45_30.509Z.Desktop</h1>
+    <!-- digital ocean spaces has some sort of horrific cloudflare
+       shit enabled that automatically hides email addresses, and it detects
+       mastodon account names as an email address, so I have to put this utter
+       bullshit here -->
+    <!--email_off-->
+    <div class="time"><em>last updated: Nov 23, 2025</em></div>
+    <ul>
+<li>
+<p>If the norm of a Gauss integer is the square $p^2$ of a prime number such that $p \equiv 3\pmod 4$, then this integer prime $p$ is a Gauss prime.</p>
+<p><em>Proof.</em> If it is not a Gauss prime, then it can be written as $p=\alpha\beta$, where $\alpha,\ \beta$ are non-units in the Gauss integers. So $$p^2=N(p)=N(\alpha)N(\beta)$$<br />
+Since $\alpha$ and $\beta$ are non-units, $N(\alpha)=p$ and so is $N(\beta)$.<br />
+Let $\alpha = a + bi$  ($a,b$ are ordinary integers). Then $p = a^2 +b^2 \equiv 1 \pmod 4$, which contradicts the assumption that $p\equiv 3 \pmod 4$. $\square$</p>
+</li>
+<li>
+<h1 id="description-of-irreducible-elements">Description of Irreducible Elements</h1>
+</li>
+<li>
+<p>If $\pi$ is a Gauss prime, then we can show that $N(\pi)$ is either an integer prime or the square of an integer prime.</p>
+<blockquote>
+<p>Proof. If $N(\pi) = p_1p_2$ for some integer primes $p_1,p_2$, then $p_1$ is either an associate of $\pi$ or $\bar \pi$. Suppose it is $\pi$, so that $p_1 = u\pi$ from which $p_2 = u^{-1}\pi$, where $u=\pm i, \pm 1$.<br />
+If $u=1$, then $u^{-1}=1$. If $u=\pm i$ or $-1$, then $u^{-1}=-u$. So, $N(\pi)=N(\pm p_1^2)=p_1^2$.<br />
+(By the way, we have shown that $p_1$ ($=p_2$) is a Gauss prime, too.)</p>
+</blockquote>
+</li>
+<li>
+<p>In other words, if the norm $N(a)$ is <em>not</em> one of these types, the number $a$ is not a Gauss prime.</p>
+</li>
+<li>
+<p>Suppose $N(\pi)$ is $p$ or $p^2$ ($p$ is an integer prime). If $N(\pi)=p$, then $\pi$ is a Gauss prime. Otherwise, if $N(\pi)=p^2$, then we consider $p\pmod 4$.</p>
+<ul>
+<li>if $p \equiv 1 \pmod 4$ (so $p=q \bar q$ for some Gauss prime $q$), then $\pi$ is not irreducible because if it is, then $p^2 = q^2\bar q^2$, from which we get know $p^2$ is not a product of $2$ prime factors, and instead $4$ prime factors in Gauss integers. So $\pi$ can not be a prime.</li>
+<li>if $p \equiv 3 \pmod 4$, then $\pi$ is a prime.</li>
+</ul>
+</li>
+<li>
+<h1 id="division-algorithm">Division Algorithm</h1>
+<p>We can round the real and imaginary part of $a+bi = \frac{a}{q}$ to the closest integer.</p>
+</li>
+</ul>
+
+    
+    <div class="index"><a href="/">↑ up</a></div>
+  </main>
+  <footer>
+  <!-- holy shit, digital ocean spaces has some sort of horrific cloudflare
+       shit enabled that automatically hides email addresses, and it detects my
+       hachyderm account name as an email address, so I have to put this utter
+       bullshit here. I don't even use cloudflare! But I serve my static assets
+       through DigitalOcean, which does -->
+  <!-- https://developers.cloudflare.com/waf/tools/scrape-shield/email-address-obfuscation/ -->
+  <!--email_off-->
+  by <a href="https://billmill.org">Bill Mill</a>. Chat with me on <a
+    href="https://hachyderm.io/@llimllib/">mastodon</a> or <a href="https://bsky.app/profile/billmill.org">bluesky</a>.
+  Generated by <a href="https://github.com/llimllib/obsidian_notes/">obsidian_notes</a>
+  <!--/email_off-->
+</footer>
+  <script src="/_pagefind/pagefind-component-ui.js" type="module"></script>
+  <pagefind-config bundle-path="/_pagefind/"></pagefind-config>
+</body>
+
+</html>
