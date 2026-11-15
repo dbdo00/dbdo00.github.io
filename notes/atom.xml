@@ -3,7 +3,7 @@
   <title>dbdo notes</title>
   <id>https://dbdo00.github.io/notes</id>
   <link href="https://dbdo00.github.io/notes/atom.xml" rel="self" />
-  <updated>2026-11-15T10:41:49.157951Z</updated>
+  <updated>2026-11-15T12:18:01.508362Z</updated>
   <generator uri="https://github.com/llimllib/obsidian_notes/" version="1.0">
     Obsidian Notes
   </generator>
@@ -26,9 +26,28 @@
 &lt;li&gt;So, the maximal number of pairwise &lt;span class=&quot;math inline&quot;&gt;$\ell_1$&lt;/span&gt;-equidistant points on &lt;span class=&quot;math inline&quot;&gt;$\mathbb R^2$&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;$\boxed 4$&lt;/span&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;TODO  dual and support vectors&lt;/li&gt;
+&lt;li&gt;dual and support vectors t10 task 4&lt;br /&gt;
+:LOGBOOK:&lt;br /&gt;
+CLOCK: [2026-11-15 Sun 20:06:21]--[2026-11-15 Sun 20:06:22] =&amp;gt;  00:00:01&lt;br /&gt;
+CLOCK: [2026-11-15 Sun 20:06:23]--[2026-11-15 Sun 20:06:23] =&amp;gt;  00:00:00&lt;br /&gt;
+CLOCK: [2026-11-15 Sun 20:06:24]--[2026-11-15 Sun 20:06:25] =&amp;gt;  00:00:01&lt;br /&gt;
+CLOCK: [2026-11-15 Sun 20:06:26]--[2026-11-15 Sun 20:06:27] =&amp;gt;  00:00:01&lt;br /&gt;
+CLOCK: [2026-11-15 Sun 20:06:28]--[2026-11-15 Sun 20:06:29] =&amp;gt;  00:00:01&lt;br /&gt;
+CLOCK: [2026-11-15 Sun 20:06:29]--[2026-11-15 Sun 20:06:30] =&amp;gt;  00:00:01&lt;br /&gt;
+CLOCK: [2026-11-15 Sun 20:06:31]--[2026-11-15 Sun 20:06:31] =&amp;gt;  00:00:00&lt;br /&gt;
+CLOCK: [2026-11-15 Sun 20:06:32]--[2026-11-15 Sun 20:06:32] =&amp;gt;  00:00:00&lt;br /&gt;
+CLOCK: [2026-11-15 Sun 20:06:33]--[2026-11-15 Sun 20:06:35] =&amp;gt;  00:00:02&lt;br /&gt;
+CLOCK: [2026-11-15 Sun 20:06:37]&lt;br /&gt;
+:END:
+&lt;ul&gt;
+&lt;li&gt;dual form. For SVM, &lt;span class=&quot;math inline&quot;&gt;$\bm w=\sum \alpha_i y_i  \bm x_i$&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;hessian is negative semi-definite =&amp;gt; function is concave&lt;/li&gt;
+&lt;li&gt;Hard margin SVM =&amp;gt; support vector is on the boundary. We can use this to compute &lt;span class=&quot;math inline&quot;&gt;$b$&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;full margin is &lt;span class=&quot;math inline&quot;&gt;$\frac{2}{\|w\|_2}$&lt;/span&gt;. Primal objective is &lt;span class=&quot;math inline&quot;&gt;$\frac{1}{2} \|w\|_2$&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;TODO &lt;a href=&quot;https://distill.pub/2019/paths-perspective-on-value-learning/&quot; class=&quot;external-link&quot;&gt;https://distill.pub/2019/paths-perspective-on-value-learning/&lt;/a&gt; 想一下怎么可视化自己的rl项目&lt;/li&gt;
-&lt;li&gt;/TODO pproximate 𝑄-learning&lt;/li&gt;
+&lt;li&gt;TODO approximate 𝑄-learning&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
