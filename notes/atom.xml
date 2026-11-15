@@ -3,125 +3,32 @@
   <title>dbdo notes</title>
   <id>https://dbdo00.github.io/notes</id>
   <link href="https://dbdo00.github.io/notes/atom.xml" rel="self" />
-  <updated>2026-11-15T09:48:48.036268Z</updated>
+  <updated>2026-11-15T10:23:21.580672Z</updated>
   <generator uri="https://github.com/llimllib/obsidian_notes/" version="1.0">
     Obsidian Notes
   </generator>
   <author><name>dbdo</name></author>
   <entry>
-    <id>https://dbdo00.github.io/notes/journals/2026_11_13.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_13.html" />
-    <title>2026_11_13</title>
-    <published>2026-11-13T05:07:40Z</published>
-    <updated>2026-11-15T09:31:24Z</updated>
+    <id>https://dbdo00.github.io/notes/journals/2026_11_15.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_15.html" />
+    <title>2026_11_15</title>
+    <published>2026-11-15T10:05:18Z</published>
+    <updated>2026-11-15T10:09:39Z</updated>
     <content type="html">&lt;ul&gt;
-&lt;li&gt;why #LinUCB works
+&lt;li&gt;Q: What is the largest number of points on the plain, each two of which have the equal &lt;span class=&quot;math inline&quot;&gt;$\ell_1$&lt;/span&gt; distance?
 &lt;ul&gt;
-&lt;li&gt;the exploration term comes from Cauchy inequality and covariance. Although it seems to ignore the ridge term (?)&lt;/li&gt;
-&lt;li&gt;the exploitation term comes from ridge regression&lt;/li&gt;
+&lt;li&gt;If &lt;span class=&quot;math inline&quot;&gt;$x \in B(y)$&lt;/span&gt;, then &lt;span class=&quot;math inline&quot;&gt;$B(x) \cap B(y) \leq 2$&lt;/span&gt;. Where &lt;span class=&quot;math inline&quot;&gt;$B()$&lt;/span&gt; is the &lt;span class=&quot;math inline&quot;&gt;$\ell_1$&lt;/span&gt; ball of the plane.
+&lt;ul&gt;
+&lt;li&gt;If &lt;span class=&quot;math inline&quot;&gt;$x,\ y$&lt;/span&gt;  have \ell 1 distance &lt;span class=&quot;math inline&quot;&gt;$d$&lt;/span&gt;, what is the number of other points having the equal distance from &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt; &lt;strong&gt;and&lt;/strong&gt; &lt;span class=&quot;math inline&quot;&gt;$y$&lt;/span&gt;?&lt;/li&gt;
+&lt;li&gt;The answer is &lt;span class=&quot;math inline&quot;&gt;$2$&lt;/span&gt;, as the inequality above asserts.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;So, the maximal number of pairwise &lt;span class=&quot;math inline&quot;&gt;$\ell_1$&lt;/span&gt;-equidistant points on &lt;span class=&quot;math inline&quot;&gt;$\mathbb R^2$&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;$\boxed 4$&lt;/span&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/CS5489_Home_Assignment_4.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/CS5489_Home_Assignment_4.html" />
-    <title>CS5489 Home Assignment 4</title>
-    <published>2026-11-15T09:31:24Z</published>
-    <updated>2026-11-15T09:31:24Z</updated>
-    <content type="html">&lt;p&gt;Due on November 20, 2026, 11:59pm&lt;/p&gt;
-&lt;h3 id=&quot;exercise-1&quot;&gt;Exercise 1&lt;/h3&gt;
-&lt;p&gt;[2 points]. Prove that the eigenvalues of a real symmetric matrix &lt;span class=&quot;math inline&quot;&gt;$A \in R^{N ×N}$&lt;/span&gt; ,&lt;br /&gt;
-where &lt;span class=&quot;math inline&quot;&gt;$A = A^\top$&lt;/span&gt; , are real-valued (i.e., not complex-valued). Prove also that&lt;br /&gt;
-the eigenvectors of A corresponding to different eigenvalues are orthogonal&lt;br /&gt;
-to each other&lt;/p&gt;
-&lt;p&gt;Proof.&lt;/p&gt;
-&lt;p&gt;For &lt;span class=&quot;math inline&quot;&gt;$v,\ w \in \mathbb C^N$&lt;/span&gt;, let &lt;span class=&quot;math inline&quot;&gt;$\langle v, w \rangle$&lt;/span&gt; denote &lt;span class=&quot;math inline&quot;&gt;$v^\top \bar w$&lt;/span&gt;  , where &lt;span class=&quot;math inline&quot;&gt;$\bar w$&lt;/span&gt; is the complex conjugate of the vector &lt;span class=&quot;math inline&quot;&gt;$w$&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Let &lt;span class=&quot;math inline&quot;&gt;$t \in \mathbb C$&lt;/span&gt;. Then &lt;div class=&quot;math inline&quot;&gt;$$\begin{equation}
-\bar t \langle v,\ w\rangle = \bar t v^\top \bar w = v^\top \bar t \bar w = v^\top \overline{t w} = \langle v,\ tw\rangle \end{equation}.$$&lt;/div&gt;&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$\begin{equation} t\langle v,\ w \rangle = tv^\top \bar w= (tv)^\top \overline w = \langle tv,\ w \rangle  \end{equation}$$&lt;/div&gt;&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$\begin{equation} \langle v,\ v \rangle = v^\top \bar v= v_1 \overline v_1 + \ldots + v_N \overline v_N \geq 0\end{equation}$$&lt;/div&gt;&lt;br /&gt;
-where &lt;span class=&quot;math inline&quot;&gt;$v = (v_1, \ \ldots ,\ v_N)^\top$&lt;/span&gt;.&lt;br /&gt;
-Let &lt;span class=&quot;math inline&quot;&gt;$A^*$&lt;/span&gt; denote the complex transpose of a matrix &lt;span class=&quot;math inline&quot;&gt;$A$&lt;/span&gt;.  Then &lt;div class=&quot;math inline&quot;&gt;$$\langle v, Av \rangle = v^\top \overline{Av}=v^\top \overline{A^\top}^\top v=v^\top (A^*)^\top v = (A^* v)^\top v = \langle A^* v ,\ v \rangle$$&lt;/div&gt;   Suppose &lt;span class=&quot;math inline&quot;&gt;$v$&lt;/span&gt; is an eigenvector of &lt;span class=&quot;math inline&quot;&gt;$A$&lt;/span&gt; associated with the eigenvalue &lt;span class=&quot;math inline&quot;&gt;$\lambda$&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;If &lt;span class=&quot;math inline&quot;&gt;$\langle v,\ v\rangle = 0$&lt;/span&gt;, then &lt;span class=&quot;math inline&quot;&gt;$v_1 \overline v_1 + \ldots + v_N \overline v_N =0$&lt;/span&gt;. Since &lt;span class=&quot;math inline&quot;&gt;$v_i \overline v_i \geq 0$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$=0$&lt;/span&gt; only when &lt;span class=&quot;math inline&quot;&gt;$v_i=0$&lt;/span&gt;,  we know &lt;div class=&quot;math inline&quot;&gt;$$v_i=0 \quad {\rm for \ each\ } i \in \{1,\ldots,N\}.$$&lt;/div&gt;Hence &lt;span class=&quot;math inline&quot;&gt;$v=0$&lt;/span&gt;.  In this case, the eigenvalue of &lt;span class=&quot;math inline&quot;&gt;$v$&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;$0$&lt;/span&gt;, which is real valued.&lt;/p&gt;
-&lt;p&gt;If &lt;span class=&quot;math inline&quot;&gt;$\langle v,\ v\rangle &gt;0$&lt;/span&gt;, then&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$\overline\lambda = \frac{1}{\langle v,\ v\rangle}\overline \lambda \langle v,\ v\rangle$$&lt;/div&gt;&lt;br /&gt;
-By Eq   &lt;span class=&quot;math inline&quot;&gt;$\boxed{\overline t\langle v,\ w \rangle=\langle  v,\ tw \rangle}$&lt;/span&gt;, we get&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$\overline \lambda =\frac{1}{\langle v,\ v\rangle} \langle v,\ \lambda v\rangle =\frac{1}{\langle v,\ v\rangle} \langle v,\ Av \rangle$$&lt;/div&gt; By &lt;span class=&quot;math inline&quot;&gt;$\boxed {\langle v, Av \rangle =  \langle A^* v ,\ v \rangle}$&lt;/span&gt;, we get&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$\overline \lambda  = \frac{1}{\langle v,\ v\rangle} \langle A^* v ,\ v \rangle=\frac{1}{\langle v,\ v\rangle} \langle \lambda v,\ v\rangle = \frac{1}{\langle v,\ v\rangle} \lambda  \langle v,\ v\rangle = \lambda$$&lt;/div&gt;&lt;br /&gt;
-So we have derived that &lt;span class=&quot;math inline&quot;&gt;$\boxed{\overline \lambda = \lambda}$&lt;/span&gt;.  So any eigenvalue of &lt;span class=&quot;math inline&quot;&gt;$A$&lt;/span&gt; is real-valued.&lt;/p&gt;
-&lt;p&gt;Suppose &lt;span class=&quot;math inline&quot;&gt;$v,\ w$&lt;/span&gt; are eigenvectors of &lt;span class=&quot;math inline&quot;&gt;$A$&lt;/span&gt; associated with &lt;span class=&quot;math inline&quot;&gt;$\lambda_v$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$\lambda_w$&lt;/span&gt;. Then &lt;div class=&quot;math inline&quot;&gt;$$\langle Av,\ w \rangle = \lambda_v \langle v,\ w \rangle$$&lt;/div&gt; and since &lt;span class=&quot;math inline&quot;&gt;$A\in \mathbb R^{N\times N}$&lt;/span&gt;,  &lt;div class=&quot;math inline&quot;&gt;$$\langle Av,\ w \rangle =  \langle v,\ A^*w \rangle = \langle v,\ A^\top w \rangle=\langle v,\ Aw \rangle = \lambda_w \langle v,\ w \rangle.$$&lt;/div&gt;&lt;br /&gt;
-So &lt;div class=&quot;math inline&quot;&gt;$$0 =\langle Av,\ w \rangle - \langle Av,\ w \rangle = (\lambda_v - \lambda_w) \langle v,\ w \rangle$$&lt;/div&gt; which implies &lt;span class=&quot;math inline&quot;&gt;$\langle v,\ w \rangle = 0$&lt;/span&gt; because &lt;span class=&quot;math inline&quot;&gt;$\lambda_v - \lambda_w \neq 0$&lt;/span&gt;.&lt;/p&gt;
-&lt;h3 id=&quot;exercises-2&quot;&gt;Exercises 2&lt;/h3&gt;
-&lt;p&gt;[5 points]. Derive the K-th largest direction of variance in principal component analysis (PCA).&lt;/p&gt;
-&lt;p&gt;Solution.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/journals/2026_06_27.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_06_27.html" />
-    <title>2026_06_27</title>
-    <published>2026-06-26T21:41:12Z</published>
-    <updated>2026-11-13T05:07:40Z</updated>
-    <content type="html">&lt;ul&gt;
-&lt;li&gt;Let ( p ) be a prime number and ( n ) a natural number such that ( \sqrt{n(n + p)} ) is an integer. Prove that ( n ) is a perfect square.&lt;/li&gt;
-&lt;li&gt;#machine-learning sigmoid nn rarely dies: we can continuously change the weight. constant linear layer + &lt;span class=&quot;math inline&quot;&gt;$\epsilon$&lt;/span&gt; change in weight along &lt;span class=&quot;math inline&quot;&gt;$x^{(\ell -1)}(x1) - x^{(\ell - 1)}(x_2) \neq 0$&lt;/span&gt; = non-constant linear layer&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/journals/2025_12_01.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_12_01.html" />
-    <title>2025_12_01</title>
-    <published>2025-11-30T22:16:53Z</published>
-    <updated>2026-11-12T12:13:24Z</updated>
-    <content type="html">&lt;h1 id=&quot;orthogonal-projection&quot;&gt;Orthogonal Projection&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;I computed matrix of the adjoin operator &lt;span class=&quot;math inline&quot;&gt;$T^*$&lt;/span&gt;  under an orthonormal matrix, showing that it is the transpose matrix of &lt;span class=&quot;math inline&quot;&gt;$T$&lt;/span&gt; under the same basis when they are over &lt;span class=&quot;math inline&quot;&gt;$\mathbb R$&lt;/span&gt; .&lt;/li&gt;
-&lt;li&gt;The adjoin operator of the restriction of an operator can be computed, too, via projection.
-&lt;ul&gt;
-&lt;li&gt;&lt;img src=&quot;../assets/image_1764541121516_0.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../assets/image_1764542272198_0.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/li&gt;
-&lt;li&gt;Two things I don&#x27;t understand
-&lt;ul&gt;
-&lt;li&gt;Why is &lt;span class=&quot;math inline&quot;&gt;$V$&lt;/span&gt; necessarily spanned by two eigenvectors, as the solution claims?&lt;br /&gt;
-logseq.order-list-type:: number
-&lt;ul&gt;
-&lt;li&gt;answer: ((6932e5e1-39b7-450d-b428-3f1afad9e70e))&lt;br /&gt;
-logseq.order-list-type:: number&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;How is the projection operator used? Did it simplify the calculation?&lt;br /&gt;
-logseq.order-list-type:: number
-&lt;ul&gt;
-&lt;li&gt;It computed the projection of &lt;span class=&quot;math inline&quot;&gt;$A^t \alpha$&lt;/span&gt; unto &lt;span class=&quot;math inline&quot;&gt;$V$&lt;/span&gt;. No.&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;2026-11-12: I just revisited this question. do not know what it says or the solution itself.&lt;br /&gt;
-Then i seem to realize what it means.&lt;br /&gt;
-&lt;span class=&quot;math inline&quot;&gt;$L_A \alpha - A^t \alpha$&lt;/span&gt; is orthogonal to &lt;span class=&quot;math inline&quot;&gt;$\beta_1,\,\beta_2$&lt;/span&gt;.&lt;br /&gt;
-So, it is in the space &lt;span class=&quot;math inline&quot;&gt;$V^\top$&lt;/span&gt; spanned by the vector orthogonal to both &lt;span class=&quot;math inline&quot;&gt;$\beta_1$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$\beta_2$&lt;/span&gt; .&lt;br /&gt;
-A spanning vector of &lt;span class=&quot;math inline&quot;&gt;$V^\top$&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;$(1 \quad -1\quad 0)^\top$&lt;/span&gt;.&lt;br /&gt;
-Let &lt;span class=&quot;math inline&quot;&gt;$v = (1 \quad -1  \quad 0)^\top$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$v_n = \frac{1}{\sqrt 2} (1 \quad -1  \quad 0)^\top$&lt;/span&gt; is its normalization.&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$\begin{align*}
-&amp; (1 \quad 3 \quad -1)\ v_n \cdot v_n \\
-=\ &amp; \frac{1}{2}\ (1 \quad 3 \quad -1)\ \begin{pmatrix}1 \\ -1 \\ 0 \end{pmatrix} \begin{pmatrix}1 \\ -1 \\ 0 \end{pmatrix} \\
-=\ &amp; \frac{1}{2} \times 2\ \begin{pmatrix}1 \\ -1 \\ 0 \end{pmatrix}  \\
-=\ &amp; \begin{pmatrix}1 \\ -1 \\ 0 \end{pmatrix}
-\end{align*}$$&lt;/div&gt;&lt;/p&gt;
-&lt;p&gt;So the answer is&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$\begin{pmatrix} 1 \\ 3 \\ -1 \end{pmatrix} - \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix} = \fbox {$\begin{pmatrix} 2 \\ 2 \\ -1 \end{pmatrix}$}.$$&lt;/div&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -129,7 +36,7 @@ Let &lt;span class=&quot;math inline&quot;&gt;$v = (1 \quad -1  \quad 0)^\top$&l
     <link type="text/html" href="https://dbdo00.github.io/notes/Reinforcement_Learning.html" />
     <title>Reinforcement Learning</title>
     <published>2026-11-12T07:15:55Z</published>
-    <updated>2026-11-12T07:15:55Z</updated>
+    <updated>2026-11-15T10:02:26Z</updated>
     <content type="html">&lt;h3 id=&quot;offline-learning&quot;&gt;Offline learning&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -150,580 +57,211 @@ Let &lt;span class=&quot;math inline&quot;&gt;$v = (1 \quad -1  \quad 0)^\top$&l
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/Perceptron.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/Perceptron.html" />
-    <title>Perceptron</title>
-    <published>2026-10-18T03:39:21Z</published>
-    <updated>2026-11-12T07:15:55Z</updated>
-    <content type="html">&lt;h1 id=&quot;为什么w-更新是加-更新是减&quot;&gt;为什么w 更新是加，&lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 更新是减&lt;/h1&gt;
-&lt;p&gt;以 ADALINE 为例，&lt;span class=&quot;math inline&quot;&gt;$y= w^Tx -\theta$&lt;/span&gt;，&lt;span class=&quot;math inline&quot;&gt;$E=\tfrac12(z-y)^2$&lt;/span&gt;，&lt;span class=&quot;math inline&quot;&gt;$\Delta=-\eta\,\partial E/\partial(\cdot)$&lt;/span&gt;：&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$\frac{\partial E}{\partial w_i}=\underbrace{\frac{\partial E}{\partial y}}_{-(z-y)}\cdot\underbrace{\frac{\partial y}{\partial u}}_{1}\cdot\underbrace{\frac{\partial u}{\partial w_i}}_{x_i}=-(z-y)x_i
-\quad\Rightarrow\quad
-\Delta w_i=+\eta(z-y)x_i$$&lt;/div&gt;&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$\frac{\partial E}{\partial \theta}=\underbrace{-(z-y)}_{\partial E/\partial y}\cdot\underbrace{(-1)}_{\partial u/\partial\theta}=+(z-y)
-\quad\Rightarrow\quad
-\Delta\theta=-\eta(z-y)$$&lt;/div&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;θ 就是一个&amp;quot;输入恒为 −1 的权重&amp;quot; &lt;code&gt;delta = lr * (z-y) * input&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&quot;xor-不能被单层网络划分&quot;&gt;XOR 不能被单层网络划分&lt;/h1&gt;
-&lt;p&gt;在 &lt;span class=&quot;math inline&quot;&gt;$\mathbb R^n$&lt;/span&gt; 里都成立：超平面 &lt;span class=&quot;math inline&quot;&gt;$H=\{x: w^{\mathsf T}x+\theta=0\}$&lt;/span&gt;（要求 &lt;span class=&quot;math inline&quot;&gt;$w\neq0$&lt;/span&gt;）把空间分成的两个闭半空间&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$H^{+}=\{x: w^{\mathsf T}x+\theta\ge 0\},\qquad H^{-}=\{x: w^{\mathsf T}x+\theta\le 0\}$$&lt;/div&gt;&lt;br /&gt;
-都是凸集。（&lt;span class=&quot;math inline&quot;&gt;$\mathbb R^2$&lt;/span&gt; 里超平面是直线，&lt;span class=&quot;math inline&quot;&gt;$\mathbb R^3$&lt;/span&gt; 里是平面。）&lt;br /&gt;
-注：这里按你的写法 &lt;span class=&quot;math inline&quot;&gt;$w^{\mathsf T}x+\theta=0$&lt;/span&gt;；本课程 slides 用 &lt;span class=&quot;math inline&quot;&gt;$u=\sum w_ix_i-\theta$&lt;/span&gt;，只是 θ 符号相反，不影响结论。&lt;br /&gt;
-证明&lt;br /&gt;
-凸集定义：&lt;span class=&quot;math inline&quot;&gt;$S$&lt;/span&gt; 凸 &lt;span class=&quot;math inline&quot;&gt;$\iff$&lt;/span&gt; &lt;span class=&quot;math inline&quot;&gt;$\forall x_1,x_2\in S,\ \forall\lambda\in[0,1]$&lt;/span&gt;，都有 &lt;span class=&quot;math inline&quot;&gt;$\lambda x_1+(1-\lambda)x_2\in S$&lt;/span&gt;。&lt;br /&gt;
-第 1 步：仿射函数保持凸组合（关键引理）&lt;br /&gt;
-令 &lt;span class=&quot;math inline&quot;&gt;$f(x)=w^{\mathsf T}x+\theta$&lt;/span&gt;，则对任意 &lt;span class=&quot;math inline&quot;&gt;$x_1,x_2$&lt;/span&gt; 和 &lt;span class=&quot;math inline&quot;&gt;$\lambda\in[0,1]$&lt;/span&gt;：&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$f\big(\lambda x_1+(1-\lambda)x_2\big)
-= w^{\mathsf T}\big(\lambda x_1+(1-\lambda)x_2\big)+\theta$$&lt;/div&gt;&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$= \lambda w^{\mathsf T}x_1+(1-\lambda)w^{\mathsf T}x_2+\underbrace{\lambda\theta+(1-\lambda)\theta}_{=\ \theta\ (\text{因为 }\lambda+(1-\lambda)=1)}
-= \lambda f(x_1)+(1-\lambda)f(x_2)$$&lt;/div&gt;&lt;br /&gt;
-（注意最后一步用了 &lt;span class=&quot;math inline&quot;&gt;$\lambda+(1-\lambda)=1$&lt;/span&gt;——这正是&amp;quot;仿射&amp;quot;（线性 + 常数）而非纯线性的地方。）&lt;br /&gt;
-第 2 步：半空间的定义立即给出凸性&lt;br /&gt;
-设 &lt;span class=&quot;math inline&quot;&gt;$x_1,x_2\in H^{+}$&lt;/span&gt;，即 &lt;span class=&quot;math inline&quot;&gt;$f(x_1)\ge0,\ f(x_2)\ge0$&lt;/span&gt;。因为 &lt;span class=&quot;math inline&quot;&gt;$\lambda\ge0$&lt;/span&gt;、&lt;span class=&quot;math inline&quot;&gt;$(1-\lambda)\ge0$&lt;/span&gt;：&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$f\big(\lambda x_1+(1-\lambda)x_2\big)=\lambda f(x_1)+(1-\lambda)f(x_2)\ \ge\ \lambda\cdot 0+(1-\lambda)\cdot 0=0$$&lt;/div&gt;&lt;br /&gt;
-所以线段上任一点仍属于 &lt;span class=&quot;math inline&quot;&gt;$H^{+}$&lt;/span&gt; ⟹ &lt;span class=&quot;math inline&quot;&gt;$H^{+}$&lt;/span&gt; 凸。&lt;span class=&quot;math inline&quot;&gt;$H^{-}$&lt;/span&gt; 把不等号反向，同理。&lt;span class=&quot;math inline&quot;&gt;$\blacksquare$&lt;/span&gt;&lt;br /&gt;
-三个补充&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;等价证法（更&amp;quot;现代&amp;quot;的写法）&lt;br /&gt;
-&lt;span class=&quot;math inline&quot;&gt;$f$&lt;/span&gt; 是仿射函数 ⟹ 既是凸函数也是凹函数 ⟹ &lt;span class=&quot;math inline&quot;&gt;$H^{+}=\{f\le -\theta&#x27;\}$&lt;/span&gt;… 即 凸函数的下水平集必为凸集，一行证完。（半空间 = 凸函数的 sublevel set。）&lt;/li&gt;
-&lt;li&gt;边界与划分的细节&lt;br /&gt;
-严格半空间 &lt;span class=&quot;math inline&quot;&gt;$\{f&gt;0\}$&lt;/span&gt;、&lt;span class=&quot;math inline&quot;&gt;$\{f&lt;0\}$&lt;/span&gt; 也是凸的（开集）；&lt;br /&gt;
-边界 &lt;span class=&quot;math inline&quot;&gt;$\{f=0\}$&lt;/span&gt; 本身是仿射子空间（维度 &lt;span class=&quot;math inline&quot;&gt;$n-1$&lt;/span&gt;），也凸，但内部为空；&lt;br /&gt;
-真正的&amp;quot;划分&amp;quot;是三分：&lt;span class=&quot;math inline&quot;&gt;$\{f&gt;0\}\ \dot\cup\ \{f=0\}\ \dot\cup\ \{f&lt;0\}$&lt;/span&gt;；两个闭半空间在边界上重叠。&lt;br /&gt;
-退化情形：若 &lt;span class=&quot;math inline&quot;&gt;$w=0$&lt;/span&gt;，则 &lt;span class=&quot;math inline&quot;&gt;$\theta=0$&lt;/span&gt; 时 &lt;span class=&quot;math inline&quot;&gt;$H^+=H^-=\mathbb R^n$&lt;/span&gt;（没切开），&lt;span class=&quot;math inline&quot;&gt;$\theta\neq0$&lt;/span&gt; 时一半为空——所以定理要求 &lt;span class=&quot;math inline&quot;&gt;$w\neq0$&lt;/span&gt;。&lt;/li&gt;
-&lt;li&gt;为什么这个凸性在课程里很重要&lt;br /&gt;
-XOR 的本质：单个超平面只能切出凸的（半空间型）区域，而 XOR 的每个类区域是两个不连通的象限（非凸）⟹ 必然切不开。这也是 Q1(b) 那问&amp;quot;用凸包重叠解释&amp;quot;的理论根据：存在分隔超平面 ⟺ 两类点集的凸包不相交（超平面分离定理）。&lt;br /&gt;
-SVM 的根基：约束 &lt;span class=&quot;math inline&quot;&gt;$y_i(w^{\mathsf T}x_i+b)\ge1$&lt;/span&gt; 是一族半空间，半空间的交仍是凸集 ⟹ SVM 原始问题的可行域是凸多面体，目标 &lt;span class=&quot;math inline&quot;&gt;$\tfrac12\lVert w\rVert^2$&lt;/span&gt; 是凸函数 ⟹ 整个原始问题是凸二次规划，有唯一全局最优（KKT 即为充要条件）——Q4(a)(b) 全部建立在这个性质上。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Q1（Midterm，共 10 分）&lt;br /&gt;
-设一维数据 &lt;span class=&quot;math inline&quot;&gt;$\{x_1,\dots,x_N\}$&lt;/span&gt; i.i.d. 来自高斯分布 &lt;span class=&quot;math inline&quot;&gt;$\mathcal{N}(x\mid \mu,\sigma^2)$&lt;/span&gt;，其中 &lt;span class=&quot;math inline&quot;&gt;$\sigma^2$&lt;/span&gt; 已知。&lt;br /&gt;
-(a) 求 &lt;span class=&quot;math inline&quot;&gt;$\mu$&lt;/span&gt; 的最大似然估计 &lt;span class=&quot;math inline&quot;&gt;$\hat{\mu}_{ML}$&lt;/span&gt;，写出完整推导。（3 分）&lt;br /&gt;
-(b) 现对 &lt;span class=&quot;math inline&quot;&gt;$\mu$&lt;/span&gt; 施加高斯先验 &lt;span class=&quot;math inline&quot;&gt;$p(\mu)=\mathcal{N}(\mu\mid m,s^2)$&lt;/span&gt;，求 &lt;span class=&quot;math inline&quot;&gt;$\mu$&lt;/span&gt; 的 MAP 估计 &lt;span class=&quot;math inline&quot;&gt;$\hat{\mu}_{MAP}$&lt;/span&gt;。（3 分）&lt;br /&gt;
-(c) 令 &lt;span class=&quot;math inline&quot;&gt;$s^2\to 0$&lt;/span&gt;（先验越来越尖锐），&lt;span class=&quot;math inline&quot;&gt;$\hat{\mu}_{MAP}$&lt;/span&gt; 趋向什么？请给出解释，并说明这体现了贝叶斯估计与 MLE 的什么关系。（2 分）&lt;br /&gt;
-(d) 若改用全贝叶斯方法对新样本 &lt;span class=&quot;math inline&quot;&gt;$x_*$&lt;/span&gt; 做预测，写出 predictive distribution &lt;span class=&quot;math inline&quot;&gt;$p(x_*\mid \mathcal{D})$&lt;/span&gt; 的形式（用共轭性），并说明它与直接用 &lt;span class=&quot;math inline&quot;&gt;$\hat{\mu}_{MAP}$&lt;/span&gt; 代入 &lt;span class=&quot;math inline&quot;&gt;$\mathcal{N}(x_*\mid\mu,\sigma^2)$&lt;/span&gt; 得到的分布有何区别。（2 分）&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/gossip_problem.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/gossip_problem.html" />
-    <title>gossip problem</title>
-    <published>2026-10-07T05:28:18Z</published>
-    <updated>2026-10-18T03:39:21Z</updated>
-    <content type="html">&lt;p&gt;假设&lt;em&gt;最小反例&lt;/em&gt;的存在。那么不可能有重复自己的item到自己。因为这样会给出更小的反例。（正常的情况允许自己到自己）&lt;/p&gt;
-&lt;p&gt;电话不可能重复。最后一次和第一次的电话ab对a,b都是最后一次/第一次。&lt;br /&gt;
-所以，不可能开始和最后一次和同一个人打电话。即第一次和最后一次肯定和不同的人打了电话。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;例&lt;/strong&gt;  12,34, 23,41&lt;/p&gt;
-&lt;h1 id=&quot;有多少个电话是最后开始的&quot;&gt;有多少个电话是最后/开始的？&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;在上面的例子中，12, 34 都是首次。23, 41 都是最后电话。&lt;br /&gt;
-可以看出，前两个中四个人用两次完成了。&lt;br /&gt;
-后两个中同样是，四个人用两次，每次两个人同时，完成了最后电话。&lt;/li&gt;
+    <id>https://dbdo00.github.io/notes/pages/contents.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/pages/contents.html" />
+    <title>contents</title>
+    <published>2025-11-19T18:57:45Z</published>
+    <updated>2026-11-15T10:02:03Z</updated>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;中间的电话&quot;&gt;中间的电话&lt;/h2&gt;
-&lt;p&gt;不是开始/最后的电话，叫做中间电话。&lt;/p&gt;
-&lt;p&gt;全体 n 个don当成节点，组成一个图。每个电话是一个边；没参与的人就是孤立点，自己算一个连通分支。&lt;/p&gt;
-&lt;p&gt;特殊地，在证明的前提内&amp;quot;0 条中间 call&amp;quot;是可能的，那就是 n=5（n−5 = 0）：H 是 5 个孤立点 = 恰好 5 个分支，&amp;quot;at least five&amp;quot; 正好取等。这一情形随后被 p(a) ≥ 5 排掉。&lt;/p&gt;
-&lt;p&gt;如果b &lt;em&gt;从a&lt;/em&gt;  传播信息，那么b 在a 的联通分量中。&lt;br /&gt;
-如果 b &lt;em&gt;向a&lt;/em&gt; 传播信息，那么b在c的联通分量中，这里 c是最后一个a的通话对象。&lt;/p&gt;
-&lt;p&gt;所以，至少有5-2=3 个连通分量，既没有来自a的信息，也没有向a传递信息。&lt;br /&gt;
-对这些分量中的边，对a而言v是&lt;strong&gt;无用的&lt;/strong&gt;。&lt;br /&gt;
-这些分量中的边数&lt;span class=&quot;math inline&quot;&gt;$\le$&lt;/span&gt; 对a而言无用的电话。&lt;/p&gt;
-&lt;p&gt;先区分“传递来自a信息”和“向a传递信息”两种电话。&lt;/p&gt;
-&lt;p&gt;在 AB, CD, AC, BD（k=4，取 a=A）里，标记两个方向：&lt;br /&gt;
-通话	from A（传 item A）	to A（信息流向 A）&lt;br /&gt;
-1 AB	✓（B 第一次知道 A）	✓（B 的 item 立刻到 A）&lt;br /&gt;
-2 CD	✗	                                   ✓（D 经后面 AC 到 A）&lt;br /&gt;
-3 AC	✓（C 第一次知道 A）	✓（C、D 的 item 到 A）&lt;br /&gt;
-4 BD	✓（D 第一次知道 A）	✗（之后没有通话能到达 A）&lt;br /&gt;
-所以&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;F = {AB, AC, BD}&lt;/li&gt;
-&lt;li&gt;T = {AB, CD, AC}&lt;/li&gt;
-&lt;li&gt;F∩T = {AB, AC}&lt;br /&gt;
-即 a=A 亲自打的那两通，正好都同时属于两个方向；而 p(A)=2，所以 |F∩T| = 2 = p(A)（满足 |F∩T| ≤ p(a)）。&lt;br /&gt;
-顺带验算一下这条式子：k=4，|F|=n−1=3，|T|=3，|F∩T|=2，w(a)=0（无浪费通话），&lt;br /&gt;
-4 ≥ 3 + 3 − 2 + 0 = 4 ✓&lt;br /&gt;
-这里取等号，因为它是可行的最优方案（k=2n−4），不是书中那个假想的 k=2n−5 反例。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;nohoi 导致，只有a本人参与的电话，才有可能同时符合两种。（为什么？）&lt;br /&gt;
-所以：# “传递来自a信息”&lt;span class=&quot;math inline&quot;&gt;$\cap$&lt;/span&gt;  #“向a传递信息” &lt;span class=&quot;math inline&quot;&gt;$\le$&lt;/span&gt;  # a 本人打的电话&lt;br /&gt;
-我不会&lt;/p&gt;
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/dynamic_programming.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/dynamic_programming.html" />
-    <title>dynamic programming</title>
-    <published>2026-10-18T03:39:21Z</published>
-    <updated>2026-10-18T03:39:21Z</updated>
-    <content type="html">&lt;p&gt;DP 需要把大的问题归结到小的问题。但是「大小」的定义取决于具体的问题。&lt;/p&gt;
-&lt;p&gt;在背包问题中，比较明显——大小是包的总重量。&lt;/p&gt;
-&lt;p&gt;在SPP中，是「最多」允许的步数&lt;span class=&quot;math inline&quot;&gt;$k$&lt;/span&gt;. 当&lt;span class=&quot;math inline&quot;&gt;$k$&lt;/span&gt; 小的时候，很多路径不存在，最小距离简单地变成&lt;span class=&quot;math inline&quot;&gt;$\infty$&lt;/span&gt; . 接下来，我们可以对下一个更大的&lt;span class=&quot;math inline&quot;&gt;$k+1$&lt;/span&gt; 步内的解进行寻找。&lt;/p&gt;
+    <id>https://dbdo00.github.io/notes/logseq/bak/sums/2025-11-29T16_58_19.296Z.Desktop.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/logseq/bak/sums/2025-11-29T16_58_19.296Z.Desktop.html" />
+    <title>2025-11-29T16_58_19.296Z.Desktop</title>
+    <published>2025-11-29T16:58:19Z</published>
+    <updated>2026-11-15T10:02:03Z</updated>
+    <content type="html">&lt;h1 id=&quot;estimation-of-summations&quot;&gt;Estimation of Summations&lt;/h1&gt;
+&lt;h2 id=&quot;&quot;&gt;&lt;span class=&quot;math inline&quot;&gt;$\frac{1}{n} \sum^n_{k=1} n^{1/k}$&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;By plotting, you can find that the &lt;span class=&quot;math inline&quot;&gt;$\frac{1}{n} \sum^\infty_{k=1} k^{1/k}$&lt;/span&gt; finnally goes to &lt;span class=&quot;math inline&quot;&gt;$1$&lt;/span&gt;, because &lt;span class=&quot;math inline&quot;&gt;$\{k^{1/k}\} \to 1$&lt;/span&gt;, from which the average goes to &lt;span class=&quot;math inline&quot;&gt;$1$&lt;/span&gt; by Cesaro-Stolz lemma. &lt;br /&gt;
+Now replacing this sum by &lt;span class=&quot;math inline&quot;&gt;$\frac{1}{n} \sum^\infty_{k=1} n^{1/k}$&lt;/span&gt;, it helps to&lt;br /&gt;
+estimate the new summation by splitting the sum into two pieces.&lt;/p&gt;
+&lt;p&gt;The summation is&lt;/p&gt;
+&lt;div class=&quot;math block&quot;&gt;
+$$n + n^{1/2} + n^{1/3} + \ldots n^{1/n}.$$
+&lt;/div&gt;
+&lt;p&gt;The first &lt;span class=&quot;math inline&quot;&gt;$\ln(n)$&lt;/span&gt; terms can be estimated by summing &lt;span class=&quot;math inline&quot;&gt;$\sqrt n$&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Why would the upper bound &lt;span class=&quot;math inline&quot;&gt;$n^{1/k} \leq \sqrt n$&lt;/span&gt; for the first &lt;span class=&quot;math inline&quot;&gt;$\ln(n)$&lt;/span&gt; work?? The reason is that we know the sum&lt;br /&gt;
+&lt;span class=&quot;math inline&quot;&gt;$\sum_{2 \leq k &lt; \ln n} n^{1/k} \leq \ln(n) \sqrt n = o(n)$&lt;/span&gt;, and so this upper bound is sufficient.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Now we estimate &lt;span class=&quot;math inline&quot;&gt;$\sum_{\ln n \leq k \leq n} n^{1/k}$&lt;/span&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;inequality&quot;&gt;Inequality&lt;/h2&gt;
+&lt;p&gt;The first inequality to use is&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$e^{\ln n /k} \leq \frac{\ln n}{k} + 1$$&lt;/div&gt; for &lt;span class=&quot;math inline&quot;&gt;$k\geq \ln n$&lt;/span&gt;.  (&lt;span class=&quot;math inline&quot;&gt;$e^x &lt; 3 \implies e^x &lt; 3x +1$&lt;/span&gt; for &lt;span class=&quot;math inline&quot;&gt;$x\in [0,1]$&lt;/span&gt;)&lt;/p&gt;
+&lt;p&gt;Also, for &lt;span class=&quot;math inline&quot;&gt;$k \geq 2$&lt;/span&gt;,&lt;div class=&quot;math inline&quot;&gt;$$1/k = \int^{k}_{k-1} \frac{1}{k} dt &lt;\int^{k}_{k-1} \frac{1}{t} dt$$&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;So &lt;div class=&quot;math inline&quot;&gt;$$\sum^n_{k=2} 1/k &lt; \sum^n_{k=2} \int^k_{k-1} \frac{1}{t}dt = \int^n_{1} \frac{1}{t}dt =\ln n \tag{1}$$&lt;/div&gt;&lt;/p&gt;
+&lt;h2 id=&quot;concluding-estimate&quot;&gt;Concluding Estimate&lt;/h2&gt;
+&lt;div class=&quot;math block&quot;&gt;
+$$\sum_{\ln n &lt; k \leq n} n^{1/k} = \sum_{\ln n &lt; k \leq n} e^{\ln n/k} &lt; 3 \ln n \left(\sum^n_{k=2} \frac{1}{k}\right) + n&lt; 3\ln n \ln n + n = o(n) + n$$
+&lt;/div&gt;
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/Untitled_4.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/Untitled_4.html" />
-    <title>Untitled 4</title>
-    <published>2026-10-07T05:28:18Z</published>
-    <updated>2026-10-07T05:28:18Z</updated>
+    <id>https://dbdo00.github.io/notes/logseq/bak/sums/2025-11-28T14_30_55.549Z.Desktop.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/logseq/bak/sums/2025-11-28T14_30_55.549Z.Desktop.html" />
+    <title>2025-11-28T14_30_55.549Z.Desktop</title>
+    <published>2025-11-28T17:37:25Z</published>
+    <updated>2026-11-15T10:02:03Z</updated>
+    <content type="html">&lt;h1 id=&quot;estimation-of-summations&quot;&gt;Estimation of Summations&lt;/h1&gt;
+&lt;h2 id=&quot;&quot;&gt;&lt;span class=&quot;math inline&quot;&gt;$\frac{1}{n} \sum^n_{k=1} n^{1/k}$&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;By plotting, you can find that the &lt;span class=&quot;math inline&quot;&gt;$\frac{1}{n} \sum^\infty_{k=1} k^{1/k}$&lt;/span&gt; finnally goes to &lt;span class=&quot;math inline&quot;&gt;$1$&lt;/span&gt;, because &lt;span class=&quot;math inline&quot;&gt;$\{k^{1/k}\} \to 1$&lt;/span&gt;, from which the average goes to &lt;span class=&quot;math inline&quot;&gt;$1$&lt;/span&gt; by Cesaro-Stolz lemma. &lt;br /&gt;
+Now replacing this sum by &lt;span class=&quot;math inline&quot;&gt;$\frac{1}{n} \sum^\infty_{k=1} n^{1/k}$&lt;/span&gt;, it helps to&lt;br /&gt;
+estimate the new summation by splitting the sum into two pieces.&lt;/p&gt;
+&lt;p&gt;The summation is&lt;/p&gt;
+&lt;div class=&quot;math block&quot;&gt;
+$$n + n^{1/2} + n^{1/3} + \ldots n^{1/n}.$$
+&lt;/div&gt;
+&lt;p&gt;The first &lt;span class=&quot;math inline&quot;&gt;$\ln(n)$&lt;/span&gt; terms can be estimated by summing &lt;span class=&quot;math inline&quot;&gt;$\sqrt n$&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Why would the upper bound &lt;span class=&quot;math inline&quot;&gt;$n^{1/k} \leq \sqrt n$&lt;/span&gt; for the first &lt;span class=&quot;math inline&quot;&gt;$\ln(n)$&lt;/span&gt; work?? The reason is that we know the sum&lt;br /&gt;
+&lt;span class=&quot;math inline&quot;&gt;$\sum_{2 \leq k &lt; \ln n} n^{1/k} \leq \ln(n) \sqrt n = o(n)$&lt;/span&gt;, and so this upper bound is sufficient.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Now we estimate &lt;span class=&quot;math inline&quot;&gt;$\sum_{\ln n \leq k \leq n} n^{1/k}$&lt;/span&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;inequality&quot;&gt;Inequality&lt;/h2&gt;
+&lt;p&gt;The first inequality to use is&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$e^{\ln n /k} \leq \frac{\ln n}{k} + 1$$&lt;/div&gt; for &lt;span class=&quot;math inline&quot;&gt;$k\geq \ln n$&lt;/span&gt;.  (&lt;span class=&quot;math inline&quot;&gt;$e^x &lt; 3 \implies e^x &lt; 3x +1$&lt;/span&gt; for &lt;span class=&quot;math inline&quot;&gt;$x\in [0,1]$&lt;/span&gt;)&lt;/p&gt;
+&lt;p&gt;Also, for &lt;span class=&quot;math inline&quot;&gt;$k \geq 2$&lt;/span&gt;,&lt;div class=&quot;math inline&quot;&gt;$$1/k = \int^{k}_{k-1} \frac{1}{k} dt &lt;\int^{k}_{k-1} \frac{1}{t} dt$$&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;So &lt;div class=&quot;math inline&quot;&gt;$$\sum^n_{k=2} 1/k &lt; \sum^n_{k=2} \int^k_{k-1} \frac{1}{t}dt = \int^n_{1} \frac{1}{t}dt =\ln n \tag{1}$$&lt;/div&gt;&lt;/p&gt;
+&lt;h2 id=&quot;concluding-estimate&quot;&gt;Concluding Estimate&lt;/h2&gt;
+&lt;div class=&quot;math block&quot;&gt;
+$$\sum_{\ln n &lt; k \leq n} n^{1/k} = \sum_{\ln n &lt; k \leq n} e^{\ln n/k} &lt; 3 \ln n \left(\sum^n_{k=2} \frac{1}{k}\right) + n&lt; 3\ln n \ln n + n = o(n) + n$$
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>https://dbdo00.github.io/notes/logseq/bak/sequences_series/2025-11-29T16_58_19.291Z.Desktop.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/logseq/bak/sequences_series/2025-11-29T16_58_19.291Z.Desktop.html" />
+    <title>2025-11-29T16_58_19.291Z.Desktop</title>
+    <published>2025-11-29T16:58:19Z</published>
+    <updated>2026-11-15T10:02:03Z</updated>
     <content type="html">&lt;ol&gt;
-&lt;li&gt;平移不变性  。存在d, 对任意两点。 d(T(p), T(p&#x27;) )= d(p,p&#x27;)&lt;/li&gt;
-&lt;li&gt;旋转不变性 存在 R, 对任意两点        d(R(p), R(p&#x27;))= d(p,p&#x27;)&lt;/li&gt;
-&lt;li&gt;d 是一个度量。&lt;br /&gt;
-证明这个d 满足勾股定理&lt;/li&gt;
+&lt;li&gt;Is &lt;div class=&quot;math inline&quot;&gt;$$\frac{1}{1 + z^n}$$&lt;/div&gt; convergent or divergent for complex number &lt;span class=&quot;math inline&quot;&gt;$z$&lt;/span&gt;?&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;Hints.&lt;/em&gt; &lt;strong&gt;Comparison test for positive series:&lt;/strong&gt; Suppose &lt;span class=&quot;math inline&quot;&gt;$\{a_n\}$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$\{b_n\}$&lt;/span&gt; are positive series. If &lt;span class=&quot;math inline&quot;&gt;$\lim_{n\to \infty} \frac{a_n}{b_n} = A (\neq 0)$&lt;/span&gt;, then &lt;span class=&quot;math inline&quot;&gt;$\sum a_n$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$\sum b_n$&lt;/span&gt; simutaneously convergent or divergent.&lt;br /&gt;
+&lt;strong&gt;Term Test&lt;/strong&gt;: If &lt;span class=&quot;math inline&quot;&gt;$\sum a_n$&lt;/span&gt; is convergent, then &lt;span class=&quot;math inline&quot;&gt;$\lim_{n\to \infty}a_n =0$&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Solution.&lt;/em&gt; If &lt;span class=&quot;math inline&quot;&gt;$|z|&lt;1$&lt;/span&gt;, then &lt;span class=&quot;math inline&quot;&gt;$\lim_{n\to \infty} \frac{1}{1 + z^n} = 1 \neq 0$&lt;/span&gt;. So the series &lt;span class=&quot;math inline&quot;&gt;$\sum \frac{1}{1 + z^n}$&lt;/span&gt; diverge. If &lt;span class=&quot;math inline&quot;&gt;$|z|=1$&lt;/span&gt;, then &lt;div class=&quot;math inline&quot;&gt;$$\left|\frac{1}{1 + z^n}\right| \geq \frac{1}{|1| + |z^n|} = \frac{1}{1 + 1} = \frac{1}{2}.$$&lt;/div&gt; from which &lt;span class=&quot;math inline&quot;&gt;$\sum \frac{1}{1 + z^n}$&lt;/span&gt; diverge when &lt;span class=&quot;math inline&quot;&gt;$|z| = 1$&lt;/span&gt;. If &lt;span class=&quot;math inline&quot;&gt;$|z| &gt;1$&lt;/span&gt;, then &lt;span class=&quot;math inline&quot;&gt;$\lim_{n\to \infty} \frac{1}{1 + \frac{1}{z^n}} = 1$&lt;/span&gt;. Let &lt;span class=&quot;math inline&quot;&gt;$b_n = \frac{1}{z^n}$&lt;/span&gt;. The series &lt;span class=&quot;math inline&quot;&gt;$\sum \frac{1}{1 + z^n}$&lt;/span&gt; converges because &lt;div class=&quot;math inline&quot;&gt;$$\lim \bigg(\frac{1}{1 + z^n}\bigg) \bigg/b_n = \lim_{n\to \infty} \frac{1}{1 + \frac{1}{z^n}} = 1$$&lt;/div&gt; from which the comparison test confirms the convergence. &lt;span class=&quot;math inline&quot;&gt;$\square$&lt;/span&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/lang_stat.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/lang_stat.html" />
-    <title>lang stat</title>
-    <published>2026-10-07T05:28:18Z</published>
-    <updated>2026-10-07T05:28:18Z</updated>
-    <content type="html">&lt;p&gt;The plan of &lt;em&gt;lang stat&lt;/em&gt; project.&lt;/p&gt;
-&lt;p&gt;Follow methods in &lt;a href=&quot;https://allendowney.github.io/ThinkBayes2/&quot; class=&quot;external-link&quot;&gt;https://allendowney.github.io/ThinkBayes2/&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;initialization&quot;&gt;Initialization&lt;/h1&gt;
-&lt;p&gt;Find a suitable data of language text and download it. Suitable for unsupervised data analysis, such as cluster etc.&lt;/p&gt;
-&lt;h1 id=&quot;problems&quot;&gt;Problems&lt;/h1&gt;
-&lt;p&gt;What are noticable features in the language corpus?&lt;/p&gt;
-&lt;h2 id=&quot;how-to-ask-good-stat-questions-key-principles--rules&quot;&gt;How to ask good stat questions (Key Principles &amp;amp; Rules)&lt;/h2&gt;
-&lt;p&gt;At its core, asking a good statistical question means &lt;strong&gt;translating real-world uncertainty or business needs into a measurable, testable, and decision-driven statistical proposition.&lt;/strong&gt; If the question itself is vague or biased, even the most advanced machine learning models or statistical tests will fail—a classic case of &amp;quot;Garbage in, garbage out.&amp;quot;&lt;/p&gt;
-&lt;p&gt;When formulating a statistical question, follow these 6 essential rules:&lt;/p&gt;
-&lt;h3 id=&quot;rule-1-make-it-specific--measurable&quot;&gt;Rule 1: Make it Specific &amp;amp; Measurable&lt;/h3&gt;
-&lt;p&gt;Avoid subjective, vague, or loose terms (such as &amp;quot;good,&amp;quot; &amp;quot;much,&amp;quot; or &amp;quot;significantly improved&amp;quot;). Define clear, quantitative metrics instead.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Poor Question:&lt;/strong&gt; &amp;quot;Is our new landing page doing well?&amp;quot;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Good Question:&lt;/strong&gt; &amp;quot;Over the 14 days following release, did the new landing page yield a statistically significant increase (&lt;span class=&quot;math inline&quot;&gt;$\ge 2\%$&lt;/span&gt;) in daily paid conversion rates among users aged 25–34 compared to the old page?&amp;quot;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;rule-2-clearly-define-the-population--sample-scope&quot;&gt;Rule 2: Clearly Define the Population &amp;amp; Sample Scope&lt;/h3&gt;
-&lt;p&gt;Statistical inferences apply only to the specific population under study. Explicitly define the target audience, timeframe, and geographical or platform bounds to avoid overgeneralization.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Poor Question:&lt;/strong&gt; &amp;quot;Which recommendation algorithm do users prefer?&amp;quot;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Good Question:&lt;/strong&gt; &amp;quot;Among active iOS mobile users over the past 30 days, does Algorithm A achieve a higher mean 1-day retention rate than Algorithm B?&amp;quot;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;rule-3-remain-unbiased--neutral&quot;&gt;Rule 3: Remain Unbiased &amp;amp; Neutral&lt;/h3&gt;
-&lt;p&gt;A well-formulated statistical question must not presuppose an answer or lead the data toward a specific conclusion.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Poor Question:&lt;/strong&gt; &amp;quot;Why are most users satisfied with our new feature?&amp;quot; &lt;em&gt;(Presupposes widespread satisfaction)&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Good Question:&lt;/strong&gt; &amp;quot;What is the distribution and median of overall satisfaction scores among a random sample of 1,000 users who tried the new feature?&amp;quot;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;rule-4-ensure-testability--falsifiability&quot;&gt;Rule 4: Ensure Testability &amp;amp; Falsifiability&lt;/h3&gt;
-&lt;p&gt;A statistical question should translate into formal null (&lt;span class=&quot;math inline&quot;&gt;$H_0$&lt;/span&gt;) and alternative (&lt;span class=&quot;math inline&quot;&gt;$H_1$&lt;/span&gt;) hypotheses that can be rejected or failed to be rejected based on observed data.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Poor Question:&lt;/strong&gt; &amp;quot;Is product quality the fundamental driver of sales volume?&amp;quot; &lt;em&gt;(Too broad and difficult to isolate)&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Good Question:&lt;/strong&gt; &amp;quot;After controlling for ad spend and seasonality, is there a statistically significant negative correlation (&lt;span class=&quot;math inline&quot;&gt;$p &lt; 0.05$&lt;/span&gt;) between product return rates (a proxy for quality) and repeat purchase rates?&amp;quot;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;rule-5-distinguish-association-from-causation&quot;&gt;Rule 5: Distinguish Association from Causation&lt;/h3&gt;
-&lt;p&gt;Clarify whether you are asking a descriptive question, looking for a statistical association, or attempting to establish a causal relationship. Causal questions require controlled experimental designs (e.g., A/B testing).&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Association:&lt;/strong&gt; &amp;quot;Is daily active time positively correlated with total monthly spend?&amp;quot;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Causation:&lt;/strong&gt; &amp;quot;Does issuing a $5 discount coupon (treatment) cause a statistically significant increase in average 30-day spending compared to the control group?&amp;quot;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;rule-6-aim-for-practical-significance--actionability&quot;&gt;Rule 6: Aim for Practical Significance &amp;amp; Actionability&lt;/h3&gt;
-&lt;p&gt;Statistical significance (&lt;span class=&quot;math inline&quot;&gt;$p &lt; 0.05$&lt;/span&gt;) does not always translate to practical business significance. The answer to a good statistical question should directly inform a specific decision or action.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Poor Question:&lt;/strong&gt; &amp;quot;Is the 0.001-second difference in click response time between Group A and Group B statistically significant?&amp;quot; &lt;em&gt;(Technically testable, but practically meaningless)&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Good Question:&lt;/strong&gt; &amp;quot;Does reducing page load time by 500ms using the new compression algorithm increase conversion rates by at least 0.5% with statistical significance?&amp;quot;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;checklist-for-evaluation&quot;&gt;Checklist for Evaluation&lt;/h3&gt;
-&lt;p&gt;Before finalizing your statistical question, evaluate it against this checklist:&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;strong&gt;Dimension&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;Self-Check Question&lt;/strong&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Metrics&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Are the independent (input) and dependent (output) variables clearly defined?&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Population&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Are the boundaries (time, user segment, platform) explicitly stated?&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Testability&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Can this be proved or disproved using a hypothesis test or mathematical model?&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Feasibility&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Do you have access to sufficient data and sample size to answer the question?&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Actionability&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Will the outcome (reject or fail to reject &lt;span class=&quot;math inline&quot;&gt;$H_0$&lt;/span&gt;) trigger a clear next action?&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h1 id=&quot;building&quot;&gt;Building&lt;/h1&gt;
-&lt;p&gt;Implement the code while leaving a few essential blanks for the user to fill, for the educational purpose.&lt;/p&gt;
-&lt;p&gt;Designing code completion exercises (fill-in-the-blank code) for statistics requires balancing &lt;strong&gt;pedagogical focus&lt;/strong&gt;, &lt;strong&gt;syntax constraints&lt;/strong&gt;, and &lt;strong&gt;statistical comprehension&lt;/strong&gt;. The goal is to test whether students understand the &lt;em&gt;statistical concept&lt;/em&gt; and &lt;em&gt;API logic&lt;/em&gt;, not whether they can guess arbitrary variable names.&lt;/p&gt;
-&lt;p&gt;Below are the core rules and strategies for creating effective fill-in-the-blank statistics exercises.&lt;/p&gt;
-&lt;h3 id=&quot;core-rules-for-designing-blank-spaces&quot;&gt;Core Rules for Designing Blank Spaces&lt;/h3&gt;
-&lt;h4 id=&quot;rule-1-target-statistical-logic-not-boilerplate&quot;&gt;Rule 1: Target Statistical Logic, Not Boilerplate&lt;/h4&gt;
-&lt;p&gt;Leave blanks where students must demonstrate understanding of statistical concepts (e.g., choosing the correct distribution function, formula, parameter, or evaluation metric). Keep setup, data loading, and syntax boilerplate intact.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Poor:&lt;/strong&gt; &lt;code&gt;import _____ as pd&lt;/code&gt; &lt;em&gt;(Tests basic Python syntax, not statistics)&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Better:&lt;/strong&gt; &lt;code&gt;ttest_ind(group_a, group_b, alternative=&#x27;_____&#x27;)&lt;/code&gt; &lt;em&gt;(Tests hypothesis directionality)&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;rule-2-ensure-unambiguous-answers&quot;&gt;Rule 2: Ensure Unambiguous Answers&lt;/h4&gt;
-&lt;p&gt;A blank should ideally have &lt;strong&gt;one canonical correct answer&lt;/strong&gt; (or a very narrow set of equivalents). Avoid blanks where multiple valid approaches could fit unless your grading system explicitly supports regular expressions or AST parsing.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Ambiguous:&lt;/strong&gt; &lt;code&gt;df[&#x27;height&#x27;].____()&lt;/code&gt; &lt;em&gt;(Could be &lt;code&gt;.mean()&lt;/code&gt;, &lt;code&gt;.median()&lt;/code&gt;, &lt;code&gt;.std()&lt;/code&gt;, etc.)&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Unambiguous:&lt;/strong&gt; &lt;code&gt;# Compute the 95th percentile&lt;/code&gt; &lt;span class=&quot;math inline&quot;&gt;$\rightarrow$&lt;/span&gt; &lt;code&gt;np.percentile(df[&#x27;height&#x27;], ____)&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;rule-3-maintain-code-structure--executability&quot;&gt;Rule 3: Maintain Code Structure &amp;amp; Executability&lt;/h4&gt;
-&lt;p&gt;The surrounding code should remain syntactically valid around the blank. Use consistent placeholder notation that indicates what type of input is expected.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Standard Placeholders:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;___&lt;/code&gt; (three underscores) for general code gaps.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;/* YOUR CODE HERE */&lt;/code&gt; for multi-character or expression-level gaps.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;None&lt;/code&gt; or &lt;code&gt;...&lt;/code&gt; (Ellipsis in Python) if the code needs to remain syntactically valid before student edits.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;key-categories-of-statistical-blanks-with-examples&quot;&gt;Key Categories of Statistical Blanks (With Examples)&lt;/h3&gt;
-&lt;h4 id=&quot;1-statistical-distributions--parameters&quot;&gt;1. Statistical Distributions &amp;amp; Parameters&lt;/h4&gt;
-&lt;p&gt;Test whether students understand which distribution function to use (&lt;code&gt;pdf&lt;/code&gt;/&lt;code&gt;pmf&lt;/code&gt;, &lt;code&gt;cdf&lt;/code&gt;, or &lt;code&gt;ppf&lt;/code&gt;/&lt;code&gt;qnorm&lt;/code&gt;) and how parameters map to theoretical concepts.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;R Example (Normal Distribution Quantiles):&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;R&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&lt;div class=&quot;highlight&quot;&gt;# Find the z-score corresponding to the 97.5th percentile of N(0,1)
-z_crit &amp;lt;- qnorm(p = ____, mean = 0, sd = 1)
-&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Python Example (Binomial PMF):&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Python&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&lt;div class=&quot;highlight&quot;&gt;from scipy.stats import binom
-# Probability of getting exactly 5 heads in 10 fair coin flips
-prob = binom.pmf(k=5, n=10, p=____)
-&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;2-hypothesis-testing--decisions&quot;&gt;2. Hypothesis Testing &amp;amp; Decisions&lt;/h4&gt;
-&lt;p&gt;Focus on test selection, hypothesis directionality (&lt;code&gt;alternative&lt;/code&gt;), or decision rules based on &lt;span class=&quot;math inline&quot;&gt;$\alpha$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$p$&lt;/span&gt;-values.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Python Example (T-Test Directionality):&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Python&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&lt;div class=&quot;highlight&quot;&gt;# Test if Group A mean is significantly GREATER than Group B
-stat, p_val = ttest_ind(group_a, group_b, alternative=&amp;#x27;____&amp;#x27;)
-&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;R Example (Decision Rule):&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;R&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&lt;div class=&quot;highlight&quot;&gt;alpha &amp;lt;- 0.05
-# Reject Null Hypothesis if p-value is below significance level
-if (p_val ____ alpha) {
-  print(&amp;quot;Reject H0&amp;quot;)
-}
-&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;3-formula-specifications-in-modeling&quot;&gt;3. Formula Specifications in Modeling&lt;/h4&gt;
-&lt;p&gt;In regression models, leave blanks for formula design (e.g., interaction terms, log transformations, or random effects).&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;R Example (Linear Model with Interaction):&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;R&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&lt;div class=&quot;highlight&quot;&gt;# Fit a model predicting yield using temp, fertilizer, and their interaction
-model &amp;lt;- lm(yield ~ temp ____ fertilizer, data = crop_data)
-&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;4-data-transformation--filtering&quot;&gt;4. Data Transformation &amp;amp; Filtering&lt;/h4&gt;
-&lt;p&gt;Target key statistical operations like standardizing (&lt;span class=&quot;math inline&quot;&gt;$Z$&lt;/span&gt;-score conversion), grouping, or pivoting.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Python Example (Standardization):&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Python&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&lt;div class=&quot;highlight&quot;&gt;# Standardize variable X: (X - mean) / std
-z_scores = (df[&amp;#x27;X&amp;#x27;] - df[&amp;#x27;X&amp;#x27;].mean()) / df[&amp;#x27;X&amp;#x27;].____()
-&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;best-practices-for-scaffolding--grading&quot;&gt;Best Practices for Scaffolding &amp;amp; Grading&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Provide Clear Context via Comments:&lt;/strong&gt; State the statistical goal directly above the code block. Do not force students to reverse-engineer the prompt from incomplete syntax.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;One Concept Per Line:&lt;/strong&gt; Avoid putting multiple blanks on a single line unless testing a closely coupled concept (e.g., &lt;code&gt;mean&lt;/code&gt; and &lt;code&gt;sd&lt;/code&gt; together).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Use Expected Output Annotations:&lt;/strong&gt; Include expected output or assertion tests directly below the exercise so students can self-check:&lt;/p&gt;
-&lt;p&gt;Python&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&lt;div class=&quot;highlight&quot;&gt;mean_val = df[&amp;#x27;age&amp;#x27;].____()
-# Assert for automated autograding environments
-assert np.isclose(mean_val, 34.25), &amp;quot;Check your calculation method!&amp;quot;
-&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
+    <id>https://dbdo00.github.io/notes/logseq/bak/sequences_series/2025-11-28T14_30_55.548Z.Desktop.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/logseq/bak/sequences_series/2025-11-28T14_30_55.548Z.Desktop.html" />
+    <title>2025-11-28T14_30_55.548Z.Desktop</title>
+    <published>2025-11-28T17:37:25Z</published>
+    <updated>2026-11-15T10:02:03Z</updated>
+    <content type="html">&lt;ol&gt;
+&lt;li&gt;Is &lt;div class=&quot;math inline&quot;&gt;$$\frac{1}{1 + z^n}$$&lt;/div&gt; convergent or divergent for complex number &lt;span class=&quot;math inline&quot;&gt;$z$&lt;/span&gt;?&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&quot;summary-checklist-for-instructors&quot;&gt;Summary Checklist for Instructors&lt;/h3&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;strong&gt;Criterion&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;Check&lt;/strong&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Focus&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Does the blank test a statistical concept rather than general programming syntax?&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Uniqueness&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Is there a single, unambiguous correct answer for the blank?&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Clarity&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Is the prompt comment explicit about what value/function is required?&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Scaffold&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Is all necessary data preprocessing provided prior to the blank?&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Validation&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Is there an automated check or expected output provided for student feedback?&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;&lt;em&gt;Hints.&lt;/em&gt; &lt;strong&gt;Comparison test for positive series:&lt;/strong&gt; Suppose &lt;span class=&quot;math inline&quot;&gt;$\{a_n\}$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$\{b_n\}$&lt;/span&gt; are positive series. If &lt;span class=&quot;math inline&quot;&gt;$\lim_{n\to \infty} \frac{a_n}{b_n} = A (\neq 0)$&lt;/span&gt;, then &lt;span class=&quot;math inline&quot;&gt;$\sum a_n$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$\sum b_n$&lt;/span&gt; simutaneously convergent or divergent.&lt;br /&gt;
+&lt;strong&gt;Term Test&lt;/strong&gt;: If &lt;span class=&quot;math inline&quot;&gt;$\sum a_n$&lt;/span&gt; is convergent, then &lt;span class=&quot;math inline&quot;&gt;$\lim_{n\to \infty}a_n =0$&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Solution.&lt;/em&gt; If &lt;span class=&quot;math inline&quot;&gt;$|z|&lt;1$&lt;/span&gt;, then &lt;span class=&quot;math inline&quot;&gt;$\lim_{n\to \infty} \frac{1}{1 + z^n} = 1 \neq 0$&lt;/span&gt;. So the series &lt;span class=&quot;math inline&quot;&gt;$\sum \frac{1}{1 + z^n}$&lt;/span&gt; diverge. If &lt;span class=&quot;math inline&quot;&gt;$|z|=1$&lt;/span&gt;, then &lt;div class=&quot;math inline&quot;&gt;$$\left|\frac{1}{1 + z^n}\right| \geq \frac{1}{|1| + |z^n|} = \frac{1}{1 + 1} = \frac{1}{2}.$$&lt;/div&gt; from which &lt;span class=&quot;math inline&quot;&gt;$\sum \frac{1}{1 + z^n}$&lt;/span&gt; diverge when &lt;span class=&quot;math inline&quot;&gt;$|z| = 1$&lt;/span&gt;. If &lt;span class=&quot;math inline&quot;&gt;$|z| &gt;1$&lt;/span&gt;, then &lt;span class=&quot;math inline&quot;&gt;$\lim_{n\to \infty} \frac{1}{1 + \frac{1}{z^n}} = 1$&lt;/span&gt;. Let &lt;span class=&quot;math inline&quot;&gt;$b_n = \frac{1}{z^n}$&lt;/span&gt;. The series &lt;span class=&quot;math inline&quot;&gt;$\sum \frac{1}{1 + z^n}$&lt;/span&gt; converges because &lt;div class=&quot;math inline&quot;&gt;$$\lim \bigg(\frac{1}{1 + z^n}\bigg) \bigg/b_n = \lim_{n\to \infty} \frac{1}{1 + \frac{1}{z^n}} = 1$$&lt;/div&gt; from which the comparison test confirms the convergence. &lt;span class=&quot;math inline&quot;&gt;$\square$&lt;/span&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/不同的指标意思.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/不同的指标意思.html" />
-    <title>不同的指标意思</title>
-    <published>2026-10-02T22:34:28Z</published>
-    <updated>2026-10-02T22:34:28Z</updated>
-    <content type="html">&lt;p&gt;FNR 召回率：正确找到的/所有的目标&lt;br /&gt;
-FPR 准确率：正确找到的/所有找到的&lt;/p&gt;
-&lt;p&gt;FN 拖累召回率&lt;br /&gt;
-FP 拖累精确率&lt;/p&gt;
+    <id>https://dbdo00.github.io/notes/logseq/bak/README/2025-12-12T02_49_55.383Z.Desktop.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/logseq/bak/README/2025-12-12T02_49_55.383Z.Desktop.html" />
+    <title>2025-12-12T02_49_55.383Z.Desktop</title>
+    <published>2025-12-12T03:02:44Z</published>
+    <updated>2026-11-15T10:02:03Z</updated>
+    <content type="html">&lt;h1 id=&quot;math-notes&quot;&gt;math-notes&lt;/h1&gt;
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/Machine_Learning_5489/Class_Notes.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/Machine_Learning_5489/Class_Notes.html" />
-    <title>Class Notes</title>
-    <published>2026-09-08T04:54:53Z</published>
-    <updated>2026-10-02T22:34:28Z</updated>
-    <content type="html">&lt;h1 id=&quot;precision-and-sensitivity&quot;&gt;Precision and Sensitivity&lt;/h1&gt;
-&lt;p&gt;Sensitivity is the rate in which we find the positive (e.g. a disease). False positive is not cared about.&lt;/p&gt;
-&lt;p&gt;Precision is the rate in which we find the true positive.&lt;/p&gt;
-&lt;h1 id=&quot;beyes-classifier&quot;&gt;Beyes Classifier&lt;/h1&gt;
-&lt;p&gt;Learning:  Learning is done by computing &lt;span class=&quot;math inline&quot;&gt;$P(y|{ x})$&lt;/span&gt;, where &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt; is the data.&lt;br /&gt;
-Classifying: &lt;span class=&quot;math inline&quot;&gt;$P(x^*|y)$&lt;/span&gt; where &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt; is the new data.&lt;/p&gt;
-&lt;p&gt;How these probability computations are done? By MLE. TO be specific,...&lt;/p&gt;
-&lt;p&gt;For an event&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$p(y=c)= \frac{\sum^M_{i=1} \mathbb I [y^{(i)} = c ]  }{M}  \quad c \in \{1,2\}$&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;平均有多少个样本落在类别 c 中。&lt;/p&gt;
-&lt;h1 id=&quot;maximal-likelihood&quot;&gt;Maximal Likelihood&lt;/h1&gt;
-&lt;p&gt;Functions are convex =&amp;gt; derivative = 0 means global manimum&lt;/p&gt;
-&lt;p&gt;TODO. proof of gaussian distribution&#x27;s ML estimation.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;A1Q2&lt;/em&gt;  用来估计的是三个iid随机变量。实际上是一个随机变量。&lt;/p&gt;
-&lt;h1 id=&quot;regression&quot;&gt;Regression&lt;/h1&gt;
-&lt;p&gt;How is noise defined -- when we have done the regression knowing the &lt;span class=&quot;math inline&quot;&gt;$w$&lt;/span&gt;, is noise known?&lt;/p&gt;
-&lt;p&gt;噪音的参数是依赖于误差&lt;span class=&quot;math inline&quot;&gt;$r$&lt;/span&gt; 的。&lt;/p&gt;
-&lt;h1 id=&quot;后验分布&quot;&gt;后验分布&lt;/h1&gt;
-&lt;p&gt;参数&lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 的后验分布的密度是 &lt;span class=&quot;math inline&quot;&gt;$P(\theta |D)$&lt;/span&gt;。 这个是参数的分布&lt;/p&gt;
-&lt;div class=&quot;math block&quot;&gt;
-$$P(\theta |D ) = \frac{P(D \mid \theta) P(\theta)}{P(D)}$$
-&lt;/div&gt;
-&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$P(D)$&lt;/span&gt; 的定义是样本密度。类似于 &lt;a href=&quot;/Machine_Learning_5489/Class_Notes.html#beyes-classifier&quot; class=&quot;internal-link&quot;&gt;Class Notes&lt;/a&gt; 中的“平均有多少个样本落在类别 c 中”。&lt;/p&gt;
-&lt;h1 id=&quot;后验预测&quot;&gt;后验预测 &lt;span class=&quot;math inline&quot;&gt;$P(x^\star \mid \theta )$&lt;/span&gt;&lt;/h1&gt;
-&lt;p&gt;这只是给定参数&lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 的&lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt;.  （意思是 &lt;span class=&quot;math inline&quot;&gt;$P(X = x^\star \mid \theta)$&lt;/span&gt; , &lt;span class=&quot;math inline&quot;&gt;$X$&lt;/span&gt; 有一个参数是&lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt;. 的分布）&lt;/p&gt;
-&lt;p&gt;后验估计: &lt;div class=&quot;math inline&quot;&gt;$$p(x^\star | D) = \int P(x^\star \mid \theta)P(\theta |D)d\theta$$&lt;/div&gt;&lt;/p&gt;
+    <id>https://dbdo00.github.io/notes/logseq/bak/journals/2025_12_12/2025-12-15T06_27_49.083Z.Desktop.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/logseq/bak/journals/2025_12_12/2025-12-15T06_27_49.083Z.Desktop.html" />
+    <title>2025-12-15T06_27_49.083Z.Desktop</title>
+    <published>2025-12-15T06:34:57Z</published>
+    <updated>2026-11-15T10:02:03Z</updated>
+    <content type="html">&lt;h1 id=&quot;limit-of-derivative-of-different-orders&quot;&gt;Limit of Derivative of Different Orders&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;prior 的初始参数怎么选都可以吗？&lt;/li&gt;
+&lt;li&gt;Without monotonicity, the limit of a function cannot be studied abstractly (i.e. using the certain existence theorems), because all existence theorems require monotonicity.&lt;/li&gt;
+&lt;li&gt;TODO I will translate The Odyssey # 350.&lt;/li&gt;
+&lt;li&gt;TODO Do the math question assigned by Gemini&lt;/li&gt;
+&lt;li&gt;TODO  Xiao p44-50 (goal). At least study it for 1h.&lt;br /&gt;
+:LOGBOOK:&lt;br /&gt;
+CLOCK: [2025-12-12 Fri 10:59:56]--[2025-12-12 Fri 10:59:57] =&amp;gt;  00:00:01&lt;br /&gt;
+:END:&lt;/li&gt;
+&lt;li&gt;TODO  Shower&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&quot;map-和后验分布区别&quot;&gt;MAP 和后验分布区别&lt;/h1&gt;
-&lt;p&gt;后验分布是一个分布。MAP 是求出一个参数的数字。&lt;/p&gt;
-&lt;p&gt;Example:  可以算这个 &lt;span class=&quot;math inline&quot;&gt;$y$&lt;/span&gt; 的后验分布&lt;br /&gt;
-&lt;a href=&quot;/Pasted image 20260925223707.png&quot;&gt;&lt;img class=&quot;bodyimg&quot; src=&quot;/Pasted image 20260925223707.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;svm&quot;&gt;SVM&lt;/h1&gt;
-&lt;p&gt;Why should we penalize the weight ？&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# step size for the sliding window&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;step&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# extract window patches with step size of 4&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;patches&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;skimage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view_as_windows&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;testimg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;psize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;patches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# collapse the first 2 dimensions&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;patches2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;patches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reshape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;psize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;psize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;psize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;psize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;patches2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# histogram equalize patches (improves contrast)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;patches3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;patches2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;patches2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;patches3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,:,:]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;skimage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exposure&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;equalize_hist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;patches2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,:,:])&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# extract features&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;newXf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;extract_features&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;patches3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;view_as_windows extract  图像，通过滑动窗口。大小19&lt;span class=&quot;math inline&quot;&gt;$\times$&lt;/span&gt; 19&lt;br /&gt;
-pateches.shape   「原本」的形状&lt;br /&gt;
-patches.reshape 重新塑形。 （应该是自动判断前两个怎么collapse？）&lt;br /&gt;
-每个 &lt;code&gt;patches2[i,:,:]&lt;/code&gt; 是一个小patch.&lt;br /&gt;
-patches2 第一个维度是什么：是所有patch 的数量&lt;/p&gt;
-&lt;p&gt;patches 前两个维度是什么？num_y_win (y方向窗口数量) 和 num_x_win (x方向窗口数量)。&lt;br /&gt;
-num_y_win  窗口上下滑动一共能产生多少行窗口&lt;br /&gt;
-num_x_win 窗口左右滑动一共能产生多少行窗口&lt;/p&gt;
-&lt;h1 id=&quot;后验分布-1&quot;&gt;后验分布&lt;/h1&gt;
-&lt;h1 id=&quot;maximum-a-posterior&quot;&gt;Maximum a posterior&lt;/h1&gt;
-&lt;p&gt;如果在&lt;span class=&quot;math inline&quot;&gt;$\theta=t$&lt;/span&gt; 时，数据&lt;span class=&quot;math inline&quot;&gt;$D$&lt;/span&gt; 有分布&lt;span class=&quot;math inline&quot;&gt;$p(D|\theta =t)$&lt;/span&gt;. 并且我们也假设知道&lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 是什么分布。那么MAP 就是计算&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$\arg \max_\theta p(\theta = t|D=x) = \arg \max_\theta \frac{p(D=x \mid \theta =t)p(\theta =t)}{\displaystyle\sum_s p(D=x|\theta=s)}$$&lt;/div&gt;&lt;br /&gt;
-[修改] &lt;strong&gt;实际上&lt;/strong&gt; 分母和&lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 没关系，所以只要最大化分子就可以&lt;/p&gt;
-&lt;div class=&quot;math block&quot;&gt;
-$$\arg \max_\theta p(\theta = t|D=x) = \arg \max_\theta p(D=x \mid \theta =t)p(\theta =t)$$
-&lt;/div&gt;
-&lt;p&gt;ML是反过来P 中 的 &lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 和&lt;span class=&quot;math inline&quot;&gt;$D$&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&quot;posterior-estimation&quot;&gt;Posterior Estimation&lt;/h1&gt;
-&lt;p&gt;用全部后验分布的全部概率产生的结果加权平均（？）&lt;/p&gt;
-&lt;h1 id=&quot;bernoulli-update&quot;&gt;Bernoulli Update&lt;/h1&gt;
-&lt;p&gt;一开始的先验是关于参数&lt;span class=&quot;math inline&quot;&gt;$\pi$&lt;/span&gt; 的beta分布。&lt;br /&gt;
-结果是一个伯努利分布中参数 &lt;span class=&quot;math inline&quot;&gt;$\pi$&lt;/span&gt; 的分布。&lt;/p&gt;
-&lt;h1 id=&quot;k-means&quot;&gt;K-means&lt;/h1&gt;
-&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$\pi_k$&lt;/span&gt; 观察到第k堆的概率。这是一个隐变量 &lt;span class=&quot;math inline&quot;&gt;$Z= k$&lt;/span&gt;  的概率。&lt;/p&gt;
-&lt;p&gt;观察到向量&lt;span class=&quot;math inline&quot;&gt;$x_i$&lt;/span&gt; 的条件下，在第&lt;span class=&quot;math inline&quot;&gt;$k$&lt;/span&gt; 堆的概率：&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$\gamma_{ik} = P(Z= k\mid x_i )$$&lt;/div&gt;&lt;br /&gt;
-因为一个空间所有样本概率总和为&lt;span class=&quot;math inline&quot;&gt;$1$&lt;/span&gt;, 所以&lt;div class=&quot;math inline&quot;&gt;$$\sum_k \gamma_{ik} = 1. \tag{1}$$&lt;/div&gt;&lt;/p&gt;
-&lt;h2 id=&quot;k-means---soft-assignment&quot;&gt;K means - Soft Assignment&lt;/h2&gt;
-&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$Z = k \mid x_i$&lt;/span&gt;  不是一个常数(即，不在任意一点概率是1)。&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$Z \sim N(\mu_k^{(0)}, \sigma_k^{(0)})$&lt;/span&gt; 时&lt;br /&gt;
-E-M step 可以更新&lt;span class=&quot;math inline&quot;&gt;$\mu_k$&lt;/span&gt; 和&lt;span class=&quot;math inline&quot;&gt;$\sigma_k$&lt;/span&gt;.  分别有一个公式……&lt;/p&gt;
-&lt;h2 id=&quot;hard-assignment&quot;&gt;Hard Assignment&lt;/h2&gt;
-&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$\gamma_{ik} \in \{0,\ 1\}$&lt;/span&gt;  。更新后的中心是一堆中所有点的平均&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$\mu_{k}^{(1)}=\frac{\sum \gamma_{ik} x_i}{\sum_i\gamma_{ik}} =\frac{\sum_{i在第k堆中} x_i}{\sum_{i 在第k堆中} 1}$$&lt;/div&gt;&lt;/p&gt;
-&lt;h2 id=&quot;mle-和-map-区别&quot;&gt;MLE 和 MAP 区别&lt;/h2&gt;
-&lt;h3 id=&quot;1-极大似然估计mle&quot;&gt;1. 极大似然估计（MLE）&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;不需要先验（No Prior）&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;基本逻辑&lt;/strong&gt;：只关注当前观察到的数据 &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt;。它假设参数 &lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 是一个固定但未知的真实常数，寻找能使数据 &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt; 出现概率（似然 &lt;span class=&quot;math inline&quot;&gt;$p(x \mid \theta)$&lt;/span&gt;）最大的那个 &lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;数学表示&lt;/strong&gt;：&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$\hat{\theta}_{\text{MLE}} = \arg\max_{\theta} p(x \mid \theta)$$&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;2-后验估计例如-最大后验估计-map&quot;&gt;2. 后验估计（例如 最大后验估计 MAP）&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;必须需要先验（Requires Prior）&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;基本逻辑&lt;/strong&gt;：基于贝叶斯学派的观点，参数 &lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 本身也是一个随机变量，在观察到数据之前我们就对它有一定的认知或倾向（先验分布 &lt;span class=&quot;math inline&quot;&gt;$p(\theta)$&lt;/span&gt;）。后验估计通过贝叶斯公式将“先验”与“数据似然”结合，寻找使&lt;strong&gt;后验概率&lt;/strong&gt; &lt;span class=&quot;math inline&quot;&gt;$p(\theta \mid x)$&lt;/span&gt; 最大的 &lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;数学表示&lt;/strong&gt;：&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$\hat{\theta}_{\text{MAP}} = \arg\max_{\theta} p(\theta \mid x) = \arg\max_{\theta} \left[ \underbrace{p(x \mid \theta)}_{\text{似然}} \cdot \underbrace{p(\theta)}_{\text{先验}} \right]$$&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;总结对比&quot;&gt;总结对比&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;MLE&lt;/strong&gt; = 纯粹看数据（&lt;span class=&quot;math inline&quot;&gt;$\text{数据似然}$&lt;/span&gt;）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;后验估计（MAP）&lt;/strong&gt; = 数据 + 经验（&lt;span class=&quot;math inline&quot;&gt;$\text{数据似然} \times \text{先验概率}$&lt;/span&gt;）&lt;br /&gt;
-当先验分布 &lt;span class=&quot;math inline&quot;&gt;$p(\theta)$&lt;/span&gt; 是均匀分布（即对所有可能的 &lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 不偏不倚，等概率看待）时，MAP 的计算结果就会退化为与 MLE 完全一致。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;full-posterior-distribution-vs-map&quot;&gt;Full Posterior distribution vs. MAP&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;/Pasted image 20261002141258.png&quot;&gt;&lt;img class=&quot;bodyimg&quot; src=&quot;/Pasted image 20261002141258.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;class 1 with probability &lt;span class=&quot;math inline&quot;&gt;$p$&lt;/span&gt;&lt;br /&gt;
-class  2 with probability &lt;span class=&quot;math inline&quot;&gt;$1-p$&lt;/span&gt;&lt;br /&gt;
-The ratio is &lt;span class=&quot;math inline&quot;&gt;$\frac{p}{1 - p}$&lt;/span&gt;.&lt;br /&gt;
-if both in the form exp, then &lt;span class=&quot;math inline&quot;&gt;$\log p/(1-p) = \log (exp (\cdot)) = \cdot$&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;/Pasted image 20261002204030.png&quot;&gt;&lt;img class=&quot;bodyimg&quot; src=&quot;/Pasted image 20261002204030.png&quot;&gt;&lt;/a&gt;&lt;br /&gt;
-不太明白：求出来likelihood ，但是不知道参数是什么。用MLE 来计算吗？&lt;/p&gt;
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/概率就是用各种方式计算加权和.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/概率就是用各种方式计算加权和.html" />
-    <title>概率就是用各种方式计算加权和</title>
-    <published>2026-09-08T04:54:53Z</published>
-    <updated>2026-09-08T04:54:53Z</updated>
-    <content type="html">&lt;p&gt;概率就是用各种方式计算加权和&lt;/p&gt;
-&lt;div class=&quot;math block&quot;&gt;
-$$E[g(X)]$$
-&lt;/div&gt;
-&lt;p&gt;信息论：加权和用对数单位&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/journals/2026_07_08.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_07_08.html" />
-    <title>2026_07_08</title>
-    <published>2026-09-08T04:54:53Z</published>
-    <updated>2026-09-08T04:54:53Z</updated>
+    <id>https://dbdo00.github.io/notes/logseq/bak/journals/2025_11_21/2025-12-05T14_01_54.846Z.Desktop.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/logseq/bak/journals/2025_11_21/2025-12-05T14_01_54.846Z.Desktop.html" />
+    <title>2025-12-05T14_01_54.846Z.Desktop</title>
+    <published>2025-12-05T14:10:53Z</published>
+    <updated>2026-11-15T10:02:03Z</updated>
     <content type="html">&lt;ul&gt;
-&lt;li&gt;design system &amp;amp; UI kit&lt;/li&gt;
-&lt;li&gt;atomic design&lt;/li&gt;
-&lt;li&gt;prototype&lt;/li&gt;
-&lt;li&gt;
-&lt;h1 id=&quot;component&quot;&gt;component&lt;/h1&gt;
+&lt;li&gt;Why is &lt;span class=&quot;math inline&quot;&gt;$\gamma[ab]$&lt;/span&gt; the identity when the fundamental group is abelian? [[algebraic topology]]
+&lt;ul&gt;
+&lt;li&gt;I understood that this is because &lt;span class=&quot;math inline&quot;&gt;$\gamma[ab]$&lt;/span&gt; is a fundamental group element..&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;master, instances. the characteristics of instances inherit the master&lt;/li&gt;
-&lt;li&gt;auto layout.&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/journals/2026_06_28.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_06_28.html" />
-    <title>2026_06_28</title>
-    <published>2026-09-08T04:54:53Z</published>
-    <updated>2026-09-08T04:54:53Z</updated>
-    <content type="html">&lt;ul&gt;
-&lt;li&gt;four quadrant: urgency&lt;/li&gt;
-&lt;li&gt;trigger, behaviour, reward,&lt;br /&gt;
-TBR strategy&lt;br /&gt;
-trigger strong&lt;br /&gt;
-earn the reward&lt;br /&gt;
-define the &#x27;done&#x27;&lt;/li&gt;
-&lt;li&gt;You can only do one thing at a tim&lt;/li&gt;
-&lt;/ul&gt;
+    <id>https://dbdo00.github.io/notes/logseq/bak/Invariant_Subspace/2025-12-15T06_34_39.722Z.Desktop.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/logseq/bak/Invariant_Subspace/2025-12-15T06_34_39.722Z.Desktop.html" />
+    <title>2025-12-15T06_34_39.722Z.Desktop</title>
+    <published>2025-12-15T06:34:57Z</published>
+    <updated>2026-11-15T10:02:03Z</updated>
+    <content type="html">&lt;p&gt;//&lt;/p&gt;
+&lt;p&gt;Let &lt;span class=&quot;math inline&quot;&gt;$e_1 = 1,\, e_2=x,\, e_3=x^2$&lt;/span&gt;. The invariant subspaces wrt &lt;span class=&quot;math inline&quot;&gt;$\Delta$&lt;/span&gt; of &lt;span class=&quot;math inline&quot;&gt;$V$&lt;/span&gt; are&lt;br /&gt;
+&lt;span class=&quot;math inline&quot;&gt;$W_1={\rm span}(e_1), W_2={\rm span}(e_1, e_2), W_3= {\rm span}(e_1, e_2, e_3)$&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; Let &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt; be an invariant space of &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt; wrt &lt;span class=&quot;math inline&quot;&gt;$\Delta$&lt;/span&gt;.&lt;br /&gt;
+Suppose &lt;span class=&quot;math inline&quot;&gt;$W_j$&lt;/span&gt; is the maximal subspace in &lt;span class=&quot;math inline&quot;&gt;$\{W_k\}_{k=1,2,3}$&lt;/span&gt; that contains &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt;. Then we can show that &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt; contains &lt;span class=&quot;math inline&quot;&gt;$W_j$&lt;/span&gt; as well. So &lt;span class=&quot;math inline&quot;&gt;$W=W_j$&lt;/span&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <id>https://dbdo00.github.io/notes/logseq/bak/Invariant_Subspace/2025-12-15T06_34_34.263Z.Desktop.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/logseq/bak/Invariant_Subspace/2025-12-15T06_34_34.263Z.Desktop.html" />
+    <title>2025-12-15T06_34_34.263Z.Desktop</title>
+    <published>2025-12-15T06:34:57Z</published>
+    <updated>2026-11-15T10:02:03Z</updated>
+    <content type="html">&lt;p&gt;// working&lt;/p&gt;
+&lt;p&gt;Let &lt;span class=&quot;math inline&quot;&gt;$e_1 = 1,\, e_2=x,\, e_3=x^2$&lt;/span&gt;. The invariant subspaces wrt &lt;span class=&quot;math inline&quot;&gt;$\Delta$&lt;/span&gt; of &lt;span class=&quot;math inline&quot;&gt;$V$&lt;/span&gt; are&lt;br /&gt;
+&lt;span class=&quot;math inline&quot;&gt;$W_1={\rm span}(e_1), W_2={\rm span}(e_1, e_2), W_3= {\rm span}(e_1, e_2, e_3)$&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; Let &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt; be an invariant space of &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt; wrt &lt;span class=&quot;math inline&quot;&gt;$\Delta$&lt;/span&gt;.&lt;br /&gt;
+Suppose &lt;span class=&quot;math inline&quot;&gt;$W_j$&lt;/span&gt; is the maximal subspace in &lt;span class=&quot;math inline&quot;&gt;$\{W_k\}_{k=1,2,3}$&lt;/span&gt; that contains &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt;. Then we can show that &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt; contains &lt;span class=&quot;math inline&quot;&gt;$W_j$&lt;/span&gt; as well. So &lt;span class=&quot;math inline&quot;&gt;$W=W_j$&lt;/span&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <id>https://dbdo00.github.io/notes/logseq/bak/Invariant_Subspace/2025-12-15T06_34_27.463Z.Desktop.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/logseq/bak/Invariant_Subspace/2025-12-15T06_34_27.463Z.Desktop.html" />
+    <title>2025-12-15T06_34_27.463Z.Desktop</title>
+    <published>2025-12-15T06:34:57Z</published>
+    <updated>2026-11-15T10:02:03Z</updated>
+    <content type="html">&lt;p&gt;///working&lt;/p&gt;
+&lt;p&gt;Let &lt;span class=&quot;math inline&quot;&gt;$e_1 = 1,\, e_2=x,\, e_3=x^2$&lt;/span&gt;. The invariant subspaces wrt &lt;span class=&quot;math inline&quot;&gt;$\Delta$&lt;/span&gt; of &lt;span class=&quot;math inline&quot;&gt;$V$&lt;/span&gt; are&lt;br /&gt;
+&lt;span class=&quot;math inline&quot;&gt;$W_1={\rm span}(e_1), W_2={\rm span}(e_1, e_2), W_3= {\rm span}(e_1, e_2, e_3)$&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; Let &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt; be an invariant space of &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt; wrt &lt;span class=&quot;math inline&quot;&gt;$\Delta$&lt;/span&gt;.&lt;br /&gt;
+Suppose &lt;span class=&quot;math inline&quot;&gt;$W_j$&lt;/span&gt; is the maximal subspace in &lt;span class=&quot;math inline&quot;&gt;$\{W_k\}_{k=1,2,3}$&lt;/span&gt; that contains &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt;. Then we can show that &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt; contains &lt;span class=&quot;math inline&quot;&gt;$W_j$&lt;/span&gt; as well. So &lt;span class=&quot;math inline&quot;&gt;$W=W_j$&lt;/span&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <id>https://dbdo00.github.io/notes/logseq/bak/Invariant_Subspace/2025-12-15T06_34_23.696Z.Desktop.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/logseq/bak/Invariant_Subspace/2025-12-15T06_34_23.696Z.Desktop.html" />
+    <title>2025-12-15T06_34_23.696Z.Desktop</title>
+    <published>2025-12-15T06:34:57Z</published>
+    <updated>2026-11-15T10:02:03Z</updated>
+    <content type="html">&lt;p&gt;///working]&lt;/p&gt;
+&lt;p&gt;Let &lt;span class=&quot;math inline&quot;&gt;$e_1 = 1,\, e_2=x,\, e_3=x^2$&lt;/span&gt;. The invariant subspaces wrt &lt;span class=&quot;math inline&quot;&gt;$\Delta$&lt;/span&gt; of &lt;span class=&quot;math inline&quot;&gt;$V$&lt;/span&gt; are&lt;br /&gt;
+&lt;span class=&quot;math inline&quot;&gt;$W_1={\rm span}(e_1), W_2={\rm span}(e_1, e_2), W_3= {\rm span}(e_1, e_2, e_3)$&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; Let &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt; be an invariant space of &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt; wrt &lt;span class=&quot;math inline&quot;&gt;$\Delta$&lt;/span&gt;.&lt;br /&gt;
+Suppose &lt;span class=&quot;math inline&quot;&gt;$W_j$&lt;/span&gt; is the maximal subspace in &lt;span class=&quot;math inline&quot;&gt;$\{W_k\}_{k=1,2,3}$&lt;/span&gt; that contains &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt;. Then we can show that &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt; contains &lt;span class=&quot;math inline&quot;&gt;$W_j$&lt;/span&gt; as well. So &lt;span class=&quot;math inline&quot;&gt;$W=W_j$&lt;/span&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <id>https://dbdo00.github.io/notes/logseq/bak/Invariant_Subspace/2025-12-15T06_34_21.257Z.Desktop.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/logseq/bak/Invariant_Subspace/2025-12-15T06_34_21.257Z.Desktop.html" />
+    <title>2025-12-15T06_34_21.257Z.Desktop</title>
+    <published>2025-12-15T06:34:57Z</published>
+    <updated>2026-11-15T10:02:03Z</updated>
+    <content type="html">&lt;p&gt;[working]&lt;/p&gt;
+&lt;p&gt;Let &lt;span class=&quot;math inline&quot;&gt;$e_1 = 1,\, e_2=x,\, e_3=x^2$&lt;/span&gt;. The invariant subspaces wrt &lt;span class=&quot;math inline&quot;&gt;$\Delta$&lt;/span&gt; of &lt;span class=&quot;math inline&quot;&gt;$V$&lt;/span&gt; are&lt;br /&gt;
+&lt;span class=&quot;math inline&quot;&gt;$W_1={\rm span}(e_1), W_2={\rm span}(e_1, e_2), W_3= {\rm span}(e_1, e_2, e_3)$&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; Let &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt; be an invariant space of &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt; wrt &lt;span class=&quot;math inline&quot;&gt;$\Delta$&lt;/span&gt;.&lt;br /&gt;
+Suppose &lt;span class=&quot;math inline&quot;&gt;$W_j$&lt;/span&gt; is the maximal subspace in &lt;span class=&quot;math inline&quot;&gt;$\{W_k\}_{k=1,2,3}$&lt;/span&gt; that contains &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt;. Then we can show that &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt; contains &lt;span class=&quot;math inline&quot;&gt;$W_j$&lt;/span&gt; as well. So &lt;span class=&quot;math inline&quot;&gt;$W=W_j$&lt;/span&gt;.&lt;/p&gt;
 </content>
   </entry>
 </feed>
