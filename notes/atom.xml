@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>llimllib's notes</title>
-  <id>http://notes.billmill.org/</id>
-  <link href="https://notes.billmill.org/atom.xml" rel="self" />
-  <updated>2026-11-15T08:26:22.152185Z</updated>
+  <title>dbdo notes</title>
+  <id>https://dbdo00.github.io/notes</id>
+  <link href="https://dbdo00.github.io/notes/atom.xml" rel="self" />
+  <updated>2026-11-15T08:43:32.021578Z</updated>
   <generator uri="https://github.com/llimllib/obsidian_notes/" version="1.0">
     Obsidian Notes
   </generator>
-  <author><name>Bill Mill</name></author>
+  <author><name>dbdo</name></author>
   <entry>
-    <id>https://notes.billmill.org/CS5489_Home_Assignment_4.html</id>
-    <link type="text/html" href="https://notes.billmill.org/CS5489_Home_Assignment_4.html" />
+    <id>https://dbdo00.github.io/notes/CS5489_Home_Assignment_4.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/CS5489_Home_Assignment_4.html" />
     <title>CS5489 Home Assignment 4</title>
     <published>2026-11-14T11:50:19.119976Z</published>
     <updated>2026-11-14T11:50:19.119976Z</updated>
@@ -44,8 +44,8 @@ So $$0 =\langle Av,\ w \rangle - \langle Av,\ w \rangle = (\lambda_v - \lambda_w
 </content>
   </entry>
   <entry>
-    <id>https://notes.billmill.org/journals/2026_11_13.html</id>
-    <link type="text/html" href="https://notes.billmill.org/journals/2026_11_13.html" />
+    <id>https://dbdo00.github.io/notes/journals/2026_11_13.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_13.html" />
     <title>2026_11_13</title>
     <published>2026-11-13T05:07:40Z</published>
     <updated>2026-11-13T05:07:40Z</updated>
@@ -62,8 +62,8 @@ So $$0 =\langle Av,\ w \rangle - \langle Av,\ w \rangle = (\lambda_v - \lambda_w
 </content>
   </entry>
   <entry>
-    <id>https://notes.billmill.org/journals/2026_06_27.html</id>
-    <link type="text/html" href="https://notes.billmill.org/journals/2026_06_27.html" />
+    <id>https://dbdo00.github.io/notes/journals/2026_06_27.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_06_27.html" />
     <title>2026_06_27</title>
     <published>2026-06-26T21:41:12Z</published>
     <updated>2026-11-13T05:07:40Z</updated>
@@ -76,8 +76,8 @@ So $$0 =\langle Av,\ w \rangle - \langle Av,\ w \rangle = (\lambda_v - \lambda_w
 </content>
   </entry>
   <entry>
-    <id>https://notes.billmill.org/journals/2025_12_01.html</id>
-    <link type="text/html" href="https://notes.billmill.org/journals/2025_12_01.html" />
+    <id>https://dbdo00.github.io/notes/journals/2025_12_01.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_12_01.html" />
     <title>2025_12_01</title>
     <published>2025-11-30T22:16:53Z</published>
     <updated>2026-11-12T12:13:24Z</updated>
@@ -130,8 +130,8 @@ $$&lt;/p&gt;
 </content>
   </entry>
   <entry>
-    <id>https://notes.billmill.org/Reinforcement_Learning.html</id>
-    <link type="text/html" href="https://notes.billmill.org/Reinforcement_Learning.html" />
+    <id>https://dbdo00.github.io/notes/Reinforcement_Learning.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/Reinforcement_Learning.html" />
     <title>Reinforcement Learning</title>
     <published>2026-11-12T07:15:55Z</published>
     <updated>2026-11-12T07:15:55Z</updated>
@@ -155,8 +155,8 @@ $$&lt;/p&gt;
 </content>
   </entry>
   <entry>
-    <id>https://notes.billmill.org/Perceptron.html</id>
-    <link type="text/html" href="https://notes.billmill.org/Perceptron.html" />
+    <id>https://dbdo00.github.io/notes/Perceptron.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/Perceptron.html" />
     <title>Perceptron</title>
     <published>2026-10-18T03:39:21Z</published>
     <updated>2026-11-12T07:15:55Z</updated>
@@ -215,8 +215,8 @@ SVM 的根基：约束 $y_i(w^{\mathsf T}x_i+b)\ge1$ 是一族半空间，半空
 </content>
   </entry>
   <entry>
-    <id>https://notes.billmill.org/gossip_problem.html</id>
-    <link type="text/html" href="https://notes.billmill.org/gossip_problem.html" />
+    <id>https://dbdo00.github.io/notes/gossip_problem.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/gossip_problem.html" />
     <title>gossip problem</title>
     <published>2026-10-07T05:28:18Z</published>
     <updated>2026-10-18T03:39:21Z</updated>
@@ -262,8 +262,8 @@ SVM 的根基：约束 $y_i(w^{\mathsf T}x_i+b)\ge1$ 是一族半空间，半空
 </content>
   </entry>
   <entry>
-    <id>https://notes.billmill.org/dynamic_programming.html</id>
-    <link type="text/html" href="https://notes.billmill.org/dynamic_programming.html" />
+    <id>https://dbdo00.github.io/notes/dynamic_programming.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/dynamic_programming.html" />
     <title>dynamic programming</title>
     <published>2026-10-18T03:39:21Z</published>
     <updated>2026-10-18T03:39:21Z</updated>
@@ -273,8 +273,8 @@ SVM 的根基：约束 $y_i(w^{\mathsf T}x_i+b)\ge1$ 是一族半空间，半空
 </content>
   </entry>
   <entry>
-    <id>https://notes.billmill.org/Untitled_4.html</id>
-    <link type="text/html" href="https://notes.billmill.org/Untitled_4.html" />
+    <id>https://dbdo00.github.io/notes/Untitled_4.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/Untitled_4.html" />
     <title>Untitled 4</title>
     <published>2026-10-07T05:28:18Z</published>
     <updated>2026-10-07T05:28:18Z</updated>
@@ -287,8 +287,8 @@ SVM 的根基：约束 $y_i(w^{\mathsf T}x_i+b)\ge1$ 是一族半空间，半空
 </content>
   </entry>
   <entry>
-    <id>https://notes.billmill.org/lang_stat.html</id>
-    <link type="text/html" href="https://notes.billmill.org/lang_stat.html" />
+    <id>https://dbdo00.github.io/notes/lang_stat.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/lang_stat.html" />
     <title>lang stat</title>
     <published>2026-10-07T05:28:18Z</published>
     <updated>2026-10-07T05:28:18Z</updated>
@@ -550,8 +550,8 @@ assert np.isclose(mean_val, 34.25), &amp;quot;Check your calculation method!&amp
 </content>
   </entry>
   <entry>
-    <id>https://notes.billmill.org/不同的指标意思.html</id>
-    <link type="text/html" href="https://notes.billmill.org/不同的指标意思.html" />
+    <id>https://dbdo00.github.io/notes/不同的指标意思.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/不同的指标意思.html" />
     <title>不同的指标意思</title>
     <published>2026-10-02T22:34:28Z</published>
     <updated>2026-10-02T22:34:28Z</updated>
@@ -562,8 +562,8 @@ FP 拖累精确率&lt;/p&gt;
 </content>
   </entry>
   <entry>
-    <id>https://notes.billmill.org/Machine_Learning_5489/Class_Notes.html</id>
-    <link type="text/html" href="https://notes.billmill.org/Machine_Learning_5489/Class_Notes.html" />
+    <id>https://dbdo00.github.io/notes/Machine_Learning_5489/Class_Notes.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/Machine_Learning_5489/Class_Notes.html" />
     <title>Class Notes</title>
     <published>2026-09-08T04:54:53Z</published>
     <updated>2026-10-02T22:34:28Z</updated>
@@ -684,8 +684,8 @@ if both in the form exp, then $\log p/(1-p) = \log (exp (\cdot)) = \cdot$&lt;/p&
 </content>
   </entry>
   <entry>
-    <id>https://notes.billmill.org/概率就是用各种方式计算加权和.html</id>
-    <link type="text/html" href="https://notes.billmill.org/概率就是用各种方式计算加权和.html" />
+    <id>https://dbdo00.github.io/notes/概率就是用各种方式计算加权和.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/概率就是用各种方式计算加权和.html" />
     <title>概率就是用各种方式计算加权和</title>
     <published>2026-09-08T04:54:53Z</published>
     <updated>2026-09-08T04:54:53Z</updated>
@@ -697,8 +697,8 @@ $$&lt;/p&gt;
 </content>
   </entry>
   <entry>
-    <id>https://notes.billmill.org/journals/2026_07_08.html</id>
-    <link type="text/html" href="https://notes.billmill.org/journals/2026_07_08.html" />
+    <id>https://dbdo00.github.io/notes/journals/2026_07_08.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_07_08.html" />
     <title>2026_07_08</title>
     <published>2026-09-08T04:54:53Z</published>
     <updated>2026-09-08T04:54:53Z</updated>
@@ -715,8 +715,8 @@ $$&lt;/p&gt;
 </content>
   </entry>
   <entry>
-    <id>https://notes.billmill.org/journals/2026_06_28.html</id>
-    <link type="text/html" href="https://notes.billmill.org/journals/2026_06_28.html" />
+    <id>https://dbdo00.github.io/notes/journals/2026_06_28.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_06_28.html" />
     <title>2026_06_28</title>
     <published>2026-09-08T04:54:53Z</published>
     <updated>2026-09-08T04:54:53Z</updated>
