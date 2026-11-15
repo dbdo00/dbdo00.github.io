@@ -12,7 +12,8 @@
   <script>
     MathJax = {
       tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
       },
       svg: {
         fontCache: 'global'
@@ -55,7 +56,7 @@
 <p><em>Solution.</em> If $|z|&lt;1$, then $\lim_{n\to \infty} \frac{1}{1 + z^n} = 1 \neq 0$. So the series $\sum \frac{1}{1 + z^n}$ diverge. If $|z|=1$, then $$\left|\frac{1}{1 + z^n}\right| \geq \frac{1}{|1| + |z^n|} = \frac{1}{1 + 1} = \frac{1}{2}.$$ from which $\sum \frac{1}{1 + z^n}$ diverge when $|z| = 1$. If $|z| &gt;1$, then $\lim_{n\to \infty} \frac{1}{1 + \frac{1}{z^n}} = 1$. Let $b_n = \frac{1}{z^n}$. The series $\sum \frac{1}{1 + z^n}$ converges because $$\lim \bigg(\frac{1}{1 + z^n}\bigg) \bigg/b_n = \lim_{n\to \infty} \frac{1}{1 + \frac{1}{z^n}} = 1$$ from which the comparison test confirms the convergence. $\square$</p>
 
     
-    <div class="index"><a href="/">↑ up</a></div>
+    <div class="index"><a href="/notes">↑ up</a></div>
   </main>
   <footer>
   <!-- holy shit, digital ocean spaces has some sort of horrific cloudflare

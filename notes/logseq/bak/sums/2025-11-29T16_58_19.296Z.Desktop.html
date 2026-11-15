@@ -12,7 +12,8 @@
   <script>
     MathJax = {
       tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
       },
       svg: {
         fontCache: 'global'
@@ -67,7 +68,7 @@ $$e^{\ln n /k} \leq \frac{\ln n}{k} + 1$$ for $k\geq \ln n$.  ($e^x &lt; 3 \impl
 <p>$$\sum_{\ln n &lt; k \leq n} n^{1/k} = \sum_{\ln n &lt; k \leq n} e^{\ln n/k} &lt; 3 \ln n \left(\sum^n_{k=2} \frac{1}{k}\right) + n&lt; 3\ln n \ln n + n = o(n) + n$$</p>
 
     
-    <div class="index"><a href="/">↑ up</a></div>
+    <div class="index"><a href="/notes">↑ up</a></div>
   </main>
   <footer>
   <!-- holy shit, digital ocean spaces has some sort of horrific cloudflare
