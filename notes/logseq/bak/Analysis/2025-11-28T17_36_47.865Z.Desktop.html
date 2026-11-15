@@ -48,39 +48,40 @@
        bullshit here -->
     <!--email_off-->
     <div class="time"><em>last updated: Nov 29, 2025</em></div>
-    <p>#. $$\int_{x^2 +y^2 \leq 1} |3x + 4y|dxdy$$<br />
+    <p>#. <div class="math inline">$$\int_{x^2 +y^2 \leq 1} |3x + 4y|dxdy$$</div><br />
 Solution.<br />
-Let $\varphi=\arctan(3/4)$. Then $$\sin(\theta + \varphi)=\sin(\theta)\cos(\varphi) + \cos(\theta)\sin(\varphi)=\frac{1}{5}\bigg( 4 \sin(\theta) + 3 \cos(\theta)\bigg).$$</p>
+Let <span class="math inline">$\varphi=\arctan(3/4)$</span>. Then <div class="math inline">$$\sin(\theta + \varphi)=\sin(\theta)\cos(\varphi) + \cos(\theta)\sin(\varphi)=\frac{1}{5}\bigg( 4 \sin(\theta) + 3 \cos(\theta)\bigg).$$</div></p>
 <ul>
 <li>
-<p>Use the polar coordinate $x=r\cos(\theta), y=r\sin(\theta)$.  Let $u=\theta + \varphi$.</p>
+<p>Use the polar coordinate <span class="math inline">$x=r\cos(\theta), y=r\sin(\theta)$</span>.  Let <span class="math inline">$u=\theta + \varphi$</span>.</p>
 </li>
 <li>
-<p>$$\begin{align*}<br />
-&amp; \int^1_0 \int^{2\pi}_0 |3 r cos(\theta) + 4 r \sin(\theta)| {\color{blue} r}d\theta dr \<br />
-= &amp;\int^1_0 \int^{2\pi}_0 5r^2 |\sin(\theta + \varphi)|d\theta dr\<br />
-= &amp;\frac{5}{3}\int^{2\pi}_0{\color{red}|\sin(u)|}du \<br />
-= &amp; \frac{20}{3}<br />
-\end{align*}<br />
-$$<br />
-Comments:</p>
+<div class="math block">
+$$\begin{align*}
+   & \int^1_0 \int^{2\pi}_0 |3 r cos(\theta) + 4 r \sin(\theta)| {\color{blue} r}d\theta dr \\
+   = &\int^1_0 \int^{2\pi}_0 5r^2 |\sin(\theta + \varphi)|d\theta dr\\
+  = &\frac{5}{3}\int^{2\pi}_0{\color{red}|\sin(u)|}du \\ 
+  = & \frac{20}{3}
+  \end{align*}$$
+</div>
+<p>Comments:</p>
 <ol>
-<li>$\int^{a+T}_{a} f(t)dt = \int^T_0 f(t)dt$ for a periodic function having period $T$ because $\int^{a}_0 f= \int^{a+T}_Tf$ .</li>
-<li>Let $u=\theta + \varphi$. Then $$\int^{2\pi}<em>0 |f(\theta + \varphi)|d\theta = \int^{2\pi + \varphi}</em>\varphi |f(u)|du=\int^{2\pi }_0 |f(u)|du$$ by the last comment.</li>
+<li><span class="math inline">$\int^{a+T}_{a} f(t)dt = \int^T_0 f(t)dt$</span> for a periodic function having period <span class="math inline">$T$</span> because <span class="math inline">$\int^{a}_0 f= \int^{a+T}_Tf$</span> .</li>
+<li>Let <span class="math inline">$u=\theta + \varphi$</span>. Then <div class="math inline">$$\int^{2\pi}_0 |f(\theta + \varphi)|d\theta = \int^{2\pi + \varphi}_\varphi |f(u)|du=\int^{2\pi }_0 |f(u)|du$$</div> by the last comment.</li>
 </ol>
 </li>
 <li>
 <p>Consider to simplify the integrated function to avoid complicated integral regions.<br />
 <a href="/Integrals_involving_Absolute_Values.html" class="internal-link">Integrals involving Absolute Values</a></p>
 <h1 id="p-series">p-series</h1>
-<p>#. $$\lim_{n\to \infty} n^2 \int^{1/n}<em>0 x^{x+1}dx$$<br />
-<strong>solution.</strong> By l'hospital's rule, $$\lim</em>{x\to 0+} x^{\epsilon}\ln x =0$$ for all $\epsilon &gt;0$. So $\ln x = o(x^{-\epsilon})$ when $x\to 0+$. Taylor expansion gives<br />
-$$x^x = \exp(x\ln x) = 1 + x\ln x + O(x\ln x) = 1 + o(x^{1-\epsilon}) + o(x^{1-\epsilon}) =1 + o(x^{1-\epsilon}) $$ Note $\int^{1/n}_0 o(x^{2-\epsilon})dx \leq o(1)\int^{1/n}_0 x^{2-\epsilon}dx =o(1)\frac{1}{3 - \epsilon}1/n^{3-\epsilon}$.  Choose $\epsilon =0.1$. Then $$\int^{\frac{1}{n}}_0 x^{x+1} dx =\int^{\frac{1}{n}}<em>0 x + o(1/n^{2-\epsilon}) dx  = \frac{1}{n^2} + o(\frac{1}{n^{3-\epsilon}})$$<br />
-So $$\lim</em>{n\to \infty} n \int^{1/n}<em>0 x^{x+1}dx =  \lim</em>{n\to \infty} 1 + o(\frac{1}{n^{1-\epsilon}}) = 1$$.<br />
-<strong>Comment:</strong> The $+1$ here in the exponent has the effect of making the function goes faster to 0 at $0$.</p>
+<p>#. <div class="math inline">$$\lim_{n\to \infty} n^2 \int^{1/n}_0 x^{x+1}dx$$</div><br />
+<strong>solution.</strong> By l'hospital's rule, <div class="math inline">$$\lim_{x\to 0+} x^{\epsilon}\ln x =0$$</div> for all <span class="math inline">$\epsilon >0$</span>. So <span class="math inline">$\ln x = o(x^{-\epsilon})$</span> when <span class="math inline">$x\to 0+$</span>. Taylor expansion gives<br />
+<div class="math inline">$$x^x = \exp(x\ln x) = 1 + x\ln x + O(x\ln x) = 1 + o(x^{1-\epsilon}) + o(x^{1-\epsilon}) =1 + o(x^{1-\epsilon})$$</div> Note <span class="math inline">$\int^{1/n}_0 o(x^{2-\epsilon})dx \leq o(1)\int^{1/n}_0 x^{2-\epsilon}dx =o(1)\frac{1}{3 - \epsilon}1/n^{3-\epsilon}$</span>.  Choose <span class="math inline">$\epsilon =0.1$</span>. Then <div class="math inline">$$\int^{\frac{1}{n}}_0 x^{x+1} dx =\int^{\frac{1}{n}}_0 x + o(1/n^{2-\epsilon}) dx  = \frac{1}{n^2} + o(\frac{1}{n^{3-\epsilon}})$$</div><br />
+So <div class="math inline">$$\lim_{n\to \infty} n \int^{1/n}_0 x^{x+1}dx =  \lim_{n\to \infty} 1 + o(\frac{1}{n^{1-\epsilon}}) = 1$$</div>.<br />
+<strong>Comment:</strong> The <span class="math inline">$+1$</span> here in the exponent has the effect of making the function goes faster to 0 at <span class="math inline">$0$</span>.</p>
 </li>
 <li>
-<p>If it is $+2$, then you would get smaller values (something like $\frac{C}{n^3} + \ldots$).</p>
+<p>If it is <span class="math inline">$+2$</span>, then you would get smaller values (something like <span class="math inline">$\frac{C}{n^3} + \ldots$</span>).</p>
 </li>
 </ul>
 

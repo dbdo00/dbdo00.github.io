@@ -47,16 +47,16 @@
     <div class="time"><em>last updated: Nov 23, 2025</em></div>
     <h2 id="probability">Probability</h2>
 <p>Theorem 1 (Markov's inequality)<br />
-$P(X\geq \lambda) \leq \frac{E(X)}{\lambda}$</p>
+<span class="math inline">$P(X\geq \lambda) \leq \frac{E(X)}{\lambda}$</span></p>
 <p>Proof.<br />
-$\int^\infty_0 xf_X(x)dx \geq \int^\infty_\lambda \lambda f_X(x)dx$<br />
-since $x f_X(x) &gt; \lambda f_X(x)$ for  $x &gt;\lambda$.</p>
+<span class="math inline">$\int^\infty_0 xf_X(x)dx \geq \int^\infty_\lambda \lambda f_X(x)dx$</span><br />
+since <span class="math inline">$x f_X(x) > \lambda f_X(x)$</span> for  <span class="math inline">$x >\lambda$</span>.</p>
 <p>The proof for the discrete case is similar and so omitted.</p>
-<p>Lemma 1.2 (Borel-Cantelli lemma) Let $E_1, E_2 \ldots$ be a sequence of events (possibly infinite or dependent),  such that $\sum_n P(E_n) &lt; \infty$. Then for any integer $M$, we have<br />
-$$P(\text{fewer than $M$ of the events} E_1, E_2, \ldots, \text{ hold}) \geq 1 - \frac{\sum_n P(E_n)}{M}$$<br />
-Proof. The value of $\sum_n I(E_n)$ is the number events in $E_1, E_2, \ldots$ that hold.  $E(\sum_n I(E)) = \sum_n P(E_n)$.  The result follows from markov inequality with $\lambda = M$.</p>
+<p>Lemma 1.2 (Borel-Cantelli lemma) Let <span class="math inline">$E_1, E_2 \ldots$</span> be a sequence of events (possibly infinite or dependent),  such that <span class="math inline">$\sum_n P(E_n) < \infty$</span>. Then for any integer <span class="math inline">$M$</span>, we have<br />
+<div class="math inline">$$P(\text{fewer than $M$ of the events} E_1, E_2, \ldots, \text{ hold}) \geq 1 - \frac{\sum_n P(E_n)}{M}$$</div><br />
+Proof. The value of <span class="math inline">$\sum_n I(E_n)$</span> is the number events in <span class="math inline">$E_1, E_2, \ldots$</span> that hold.  <span class="math inline">$E(\sum_n I(E)) = \sum_n P(E_n)$</span>.  The result follows from markov inequality with <span class="math inline">$\lambda = M$</span>.</p>
 <h2 id="sum-free">Sum-Free</h2>
-<p>The random variable $k$  and the value $a$ is assumed to be independent. It does not matter what the probability distribution is  — any distribution works.</p>
+<p>The random variable <span class="math inline">$k$</span>  and the value <span class="math inline">$a$</span> is assumed to be independent. It does not matter what the probability distribution is  — any distribution works.</p>
 
     
     <div class="index"><a href="/notes">↑ up</a></div>

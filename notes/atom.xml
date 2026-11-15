@@ -3,7 +3,7 @@
   <title>dbdo notes</title>
   <id>https://dbdo00.github.io/notes</id>
   <link href="https://dbdo00.github.io/notes/atom.xml" rel="self" />
-  <updated>2026-11-15T09:01:49.616421Z</updated>
+  <updated>2026-11-15T09:12:34.256682Z</updated>
   <generator uri="https://github.com/llimllib/obsidian_notes/" version="1.0">
     Obsidian Notes
   </generator>
@@ -16,28 +16,27 @@
     <updated>2026-11-14T11:50:19.119976Z</updated>
     <content type="html">&lt;p&gt;Due on November 20, 2026, 11:59pm&lt;/p&gt;
 &lt;h3 id=&quot;exercise-1&quot;&gt;Exercise 1&lt;/h3&gt;
-&lt;p&gt;[2 points]. Prove that the eigenvalues of a real symmetric matrix $A \in R^{N ×N}$ ,&lt;br /&gt;
-where $A = A^\top$ , are real-valued (i.e., not complex-valued). Prove also that&lt;br /&gt;
+&lt;p&gt;[2 points]. Prove that the eigenvalues of a real symmetric matrix &lt;span class=&quot;math inline&quot;&gt;$A \in R^{N ×N}$&lt;/span&gt; ,&lt;br /&gt;
+where &lt;span class=&quot;math inline&quot;&gt;$A = A^\top$&lt;/span&gt; , are real-valued (i.e., not complex-valued). Prove also that&lt;br /&gt;
 the eigenvectors of A corresponding to different eigenvalues are orthogonal&lt;br /&gt;
 to each other&lt;/p&gt;
 &lt;p&gt;Proof.&lt;/p&gt;
-&lt;p&gt;For $v,\ w \in \mathbb C^N$, let $\langle v, w \rangle$ denote $v^\top \bar w$  , where $\bar w$ is the complex conjugate of the vector $w$.&lt;/p&gt;
-&lt;p&gt;Let $t \in \mathbb C$. Then $$\begin{equation}&lt;br /&gt;
-\bar t \langle v,\ w\rangle = \bar t v^\top \bar w = v^\top \bar t \bar w = v^\top \overline{t w} = \langle v,\ tw\rangle \end{equation}. $$&lt;br /&gt;
-$$\begin{equation} t\langle v,\ w \rangle = tv^\top \bar w= (tv)^\top \overline w = \langle tv,\ w \rangle  \end{equation}&lt;br /&gt;
-$$&lt;br /&gt;
-$$\begin{equation} \langle v,\ v \rangle = v^\top \bar v= v_1 \overline v_1 + \ldots + v_N \overline v_N \geq 0\end{equation} $$&lt;br /&gt;
-where $v = (v_1, \ \ldots ,\ v_N)^\top$.&lt;br /&gt;
-Let $A^&lt;em&gt;$ denote the complex transpose of a matrix $A$.  Then $$\langle v, Av \rangle = v^\top \overline{Av}=v^\top \overline{A^\top}^\top v=v^\top (A^&lt;/em&gt;)^\top v = (A^* v)^\top v = \langle A^* v ,\ v \rangle$$   Suppose $v$ is an eigenvector of $A$ associated with the eigenvalue $\lambda$.&lt;/p&gt;
-&lt;p&gt;If $\langle v,\ v\rangle = 0$, then $v_1 \overline v_1 + \ldots + v_N \overline v_N =0$. Since $v_i \overline v_i \geq 0$ and $=0$ only when $v_i=0$,  we know $$v_i=0 \quad {\rm for \ each\ } i \in {1,\ldots,N}.$$Hence $v=0$.  In this case, the eigenvalue of $v$ is $0$, which is real valued.&lt;/p&gt;
-&lt;p&gt;If $\langle v,\ v\rangle &amp;gt;0$, then&lt;br /&gt;
-$$\overline\lambda = \frac{1}{\langle v,\ v\rangle}\overline \lambda \langle v,\ v\rangle $$&lt;br /&gt;
-By Eq   $\boxed{\overline t\langle v,\ w \rangle=\langle  v,\ tw \rangle}$, we get&lt;br /&gt;
-$$\overline \lambda =\frac{1}{\langle v,\ v\rangle} \langle v,\ \lambda v\rangle =\frac{1}{\langle v,\ v\rangle} \langle v,\ Av \rangle$$ By $\boxed {\langle v, Av \rangle =  \langle A^* v ,\ v \rangle}$, we get&lt;br /&gt;
-$$\overline \lambda  = \frac{1}{\langle v,\ v\rangle} \langle A^* v ,\ v \rangle=\frac{1}{\langle v,\ v\rangle} \langle \lambda v,\ v\rangle = \frac{1}{\langle v,\ v\rangle} \lambda  \langle v,\ v\rangle = \lambda$$&lt;br /&gt;
-So we have derived that $\boxed{\overline \lambda = \lambda}$.  So any eigenvalue of $A$ is real-valued.&lt;/p&gt;
-&lt;p&gt;Suppose $v,\ w$ are eigenvectors of $A$ associated with $\lambda_v$ and $\lambda_w$. Then $$\langle Av,\ w \rangle = \lambda_v \langle v,\ w \rangle$$ and since $A\in \mathbb R^{N\times N}$,  $$\langle Av,\ w \rangle =  \langle v,\ A^*w \rangle = \langle v,\ A^\top w \rangle=\langle v,\ Aw \rangle = \lambda_w \langle v,\ w \rangle.$$&lt;br /&gt;
-So $$0 =\langle Av,\ w \rangle - \langle Av,\ w \rangle = (\lambda_v - \lambda_w) \langle v,\ w \rangle$$ which implies $\langle v,\ w \rangle = 0$ because $\lambda_v - \lambda_w \neq 0$.&lt;/p&gt;
+&lt;p&gt;For &lt;span class=&quot;math inline&quot;&gt;$v,\ w \in \mathbb C^N$&lt;/span&gt;, let &lt;span class=&quot;math inline&quot;&gt;$\langle v, w \rangle$&lt;/span&gt; denote &lt;span class=&quot;math inline&quot;&gt;$v^\top \bar w$&lt;/span&gt;  , where &lt;span class=&quot;math inline&quot;&gt;$\bar w$&lt;/span&gt; is the complex conjugate of the vector &lt;span class=&quot;math inline&quot;&gt;$w$&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Let &lt;span class=&quot;math inline&quot;&gt;$t \in \mathbb C$&lt;/span&gt;. Then &lt;div class=&quot;math inline&quot;&gt;$$\begin{equation}
+\bar t \langle v,\ w\rangle = \bar t v^\top \bar w = v^\top \bar t \bar w = v^\top \overline{t w} = \langle v,\ tw\rangle \end{equation}.$$&lt;/div&gt;&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\begin{equation} t\langle v,\ w \rangle = tv^\top \bar w= (tv)^\top \overline w = \langle tv,\ w \rangle  \end{equation}$$&lt;/div&gt;&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\begin{equation} \langle v,\ v \rangle = v^\top \bar v= v_1 \overline v_1 + \ldots + v_N \overline v_N \geq 0\end{equation}$$&lt;/div&gt;&lt;br /&gt;
+where &lt;span class=&quot;math inline&quot;&gt;$v = (v_1, \ \ldots ,\ v_N)^\top$&lt;/span&gt;.&lt;br /&gt;
+Let &lt;span class=&quot;math inline&quot;&gt;$A^*$&lt;/span&gt; denote the complex transpose of a matrix &lt;span class=&quot;math inline&quot;&gt;$A$&lt;/span&gt;.  Then &lt;div class=&quot;math inline&quot;&gt;$$\langle v, Av \rangle = v^\top \overline{Av}=v^\top \overline{A^\top}^\top v=v^\top (A^*)^\top v = (A^* v)^\top v = \langle A^* v ,\ v \rangle$$&lt;/div&gt;   Suppose &lt;span class=&quot;math inline&quot;&gt;$v$&lt;/span&gt; is an eigenvector of &lt;span class=&quot;math inline&quot;&gt;$A$&lt;/span&gt; associated with the eigenvalue &lt;span class=&quot;math inline&quot;&gt;$\lambda$&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;If &lt;span class=&quot;math inline&quot;&gt;$\langle v,\ v\rangle = 0$&lt;/span&gt;, then &lt;span class=&quot;math inline&quot;&gt;$v_1 \overline v_1 + \ldots + v_N \overline v_N =0$&lt;/span&gt;. Since &lt;span class=&quot;math inline&quot;&gt;$v_i \overline v_i \geq 0$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$=0$&lt;/span&gt; only when &lt;span class=&quot;math inline&quot;&gt;$v_i=0$&lt;/span&gt;,  we know &lt;div class=&quot;math inline&quot;&gt;$$v_i=0 \quad {\rm for \ each\ } i \in \{1,\ldots,N\}.$$&lt;/div&gt;Hence &lt;span class=&quot;math inline&quot;&gt;$v=0$&lt;/span&gt;.  In this case, the eigenvalue of &lt;span class=&quot;math inline&quot;&gt;$v$&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;$0$&lt;/span&gt;, which is real valued.&lt;/p&gt;
+&lt;p&gt;If &lt;span class=&quot;math inline&quot;&gt;$\langle v,\ v\rangle &gt;0$&lt;/span&gt;, then&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\overline\lambda = \frac{1}{\langle v,\ v\rangle}\overline \lambda \langle v,\ v\rangle$$&lt;/div&gt;&lt;br /&gt;
+By Eq   &lt;span class=&quot;math inline&quot;&gt;$\boxed{\overline t\langle v,\ w \rangle=\langle  v,\ tw \rangle}$&lt;/span&gt;, we get&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\overline \lambda =\frac{1}{\langle v,\ v\rangle} \langle v,\ \lambda v\rangle =\frac{1}{\langle v,\ v\rangle} \langle v,\ Av \rangle$$&lt;/div&gt; By &lt;span class=&quot;math inline&quot;&gt;$\boxed {\langle v, Av \rangle =  \langle A^* v ,\ v \rangle}$&lt;/span&gt;, we get&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\overline \lambda  = \frac{1}{\langle v,\ v\rangle} \langle A^* v ,\ v \rangle=\frac{1}{\langle v,\ v\rangle} \langle \lambda v,\ v\rangle = \frac{1}{\langle v,\ v\rangle} \lambda  \langle v,\ v\rangle = \lambda$$&lt;/div&gt;&lt;br /&gt;
+So we have derived that &lt;span class=&quot;math inline&quot;&gt;$\boxed{\overline \lambda = \lambda}$&lt;/span&gt;.  So any eigenvalue of &lt;span class=&quot;math inline&quot;&gt;$A$&lt;/span&gt; is real-valued.&lt;/p&gt;
+&lt;p&gt;Suppose &lt;span class=&quot;math inline&quot;&gt;$v,\ w$&lt;/span&gt; are eigenvectors of &lt;span class=&quot;math inline&quot;&gt;$A$&lt;/span&gt; associated with &lt;span class=&quot;math inline&quot;&gt;$\lambda_v$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$\lambda_w$&lt;/span&gt;. Then &lt;div class=&quot;math inline&quot;&gt;$$\langle Av,\ w \rangle = \lambda_v \langle v,\ w \rangle$$&lt;/div&gt; and since &lt;span class=&quot;math inline&quot;&gt;$A\in \mathbb R^{N\times N}$&lt;/span&gt;,  &lt;div class=&quot;math inline&quot;&gt;$$\langle Av,\ w \rangle =  \langle v,\ A^*w \rangle = \langle v,\ A^\top w \rangle=\langle v,\ Aw \rangle = \lambda_w \langle v,\ w \rangle.$$&lt;/div&gt;&lt;br /&gt;
+So &lt;div class=&quot;math inline&quot;&gt;$$0 =\langle Av,\ w \rangle - \langle Av,\ w \rangle = (\lambda_v - \lambda_w) \langle v,\ w \rangle$$&lt;/div&gt; which implies &lt;span class=&quot;math inline&quot;&gt;$\langle v,\ w \rangle = 0$&lt;/span&gt; because &lt;span class=&quot;math inline&quot;&gt;$\lambda_v - \lambda_w \neq 0$&lt;/span&gt;.&lt;/p&gt;
 &lt;h3 id=&quot;exercises-2&quot;&gt;Exercises 2&lt;/h3&gt;
 &lt;p&gt;[5 points]. Derive the K-th largest direction of variance in principal component analysis (PCA).&lt;/p&gt;
 &lt;p&gt;Solution.&lt;/p&gt;
@@ -69,7 +68,7 @@ So $$0 =\langle Av,\ w \rangle - \langle Av,\ w \rangle = (\lambda_v - \lambda_w
     <updated>2026-11-13T05:07:40Z</updated>
     <content type="html">&lt;ul&gt;
 &lt;li&gt;Let ( p ) be a prime number and ( n ) a natural number such that ( \sqrt{n(n + p)} ) is an integer. Prove that ( n ) is a perfect square.&lt;/li&gt;
-&lt;li&gt;#machine-learning sigmoid nn rarely dies: we can continuously change the weight. constant linear layer + $\epsilon$ change in weight along $x^{(\ell -1)}(x1) - x^{(\ell - 1)}(x_2) \neq 0$ = non-constant linear layer&lt;/li&gt;
+&lt;li&gt;#machine-learning sigmoid nn rarely dies: we can continuously change the weight. constant linear layer + &lt;span class=&quot;math inline&quot;&gt;$\epsilon$&lt;/span&gt; change in weight along &lt;span class=&quot;math inline&quot;&gt;$x^{(\ell -1)}(x1) - x^{(\ell - 1)}(x_2) \neq 0$&lt;/span&gt; = non-constant linear layer&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -83,14 +82,14 @@ So $$0 =\langle Av,\ w \rangle - \langle Av,\ w \rangle = (\lambda_v - \lambda_w
     <updated>2026-11-12T12:13:24Z</updated>
     <content type="html">&lt;h1 id=&quot;orthogonal-projection&quot;&gt;Orthogonal Projection&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;I computed matrix of the adjoin operator $T^*$  under an orthonormal matrix, showing that it is the transpose matrix of $T$ under the same basis when they are over $\mathbb R$ .&lt;/li&gt;
+&lt;li&gt;I computed matrix of the adjoin operator &lt;span class=&quot;math inline&quot;&gt;$T^*$&lt;/span&gt;  under an orthonormal matrix, showing that it is the transpose matrix of &lt;span class=&quot;math inline&quot;&gt;$T$&lt;/span&gt; under the same basis when they are over &lt;span class=&quot;math inline&quot;&gt;$\mathbb R$&lt;/span&gt; .&lt;/li&gt;
 &lt;li&gt;The adjoin operator of the restriction of an operator can be computed, too, via projection.
 &lt;ul&gt;
 &lt;li&gt;&lt;img src=&quot;../assets/image_1764541121516_0.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/li&gt;
 &lt;li&gt;&lt;img src=&quot;../assets/image_1764542272198_0.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/li&gt;
 &lt;li&gt;Two things I don&#x27;t understand
 &lt;ul&gt;
-&lt;li&gt;Why is $V$ necessarily spanned by two eigenvectors, as the solution claims?&lt;br /&gt;
+&lt;li&gt;Why is &lt;span class=&quot;math inline&quot;&gt;$V$&lt;/span&gt; necessarily spanned by two eigenvectors, as the solution claims?&lt;br /&gt;
 logseq.order-list-type:: number
 &lt;ul&gt;
 &lt;li&gt;answer: ((6932e5e1-39b7-450d-b428-3f1afad9e70e))&lt;br /&gt;
@@ -100,7 +99,7 @@ logseq.order-list-type:: number&lt;/li&gt;
 &lt;li&gt;How is the projection operator used? Did it simplify the calculation?&lt;br /&gt;
 logseq.order-list-type:: number
 &lt;ul&gt;
-&lt;li&gt;It computed the projection of $A^t \alpha$ unto $V$. No.&lt;/li&gt;
+&lt;li&gt;It computed the projection of &lt;span class=&quot;math inline&quot;&gt;$A^t \alpha$&lt;/span&gt; unto &lt;span class=&quot;math inline&quot;&gt;$V$&lt;/span&gt;. No.&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -111,22 +110,18 @@ logseq.order-list-type:: number
 &lt;/ul&gt;
 &lt;p&gt;2026-11-12: I just revisited this question. do not know what it says or the solution itself.&lt;br /&gt;
 Then i seem to realize what it means.&lt;br /&gt;
-$L_A \alpha - A^t \alpha$ is orthogonal to $\beta_1,,\beta_2$.&lt;br /&gt;
-So, it is in the space $V^\top$ spanned by the vector orthogonal to both $\beta_1$ and $\beta_2$ .&lt;br /&gt;
-A spanning vector of $V^\top$ is $(1 \quad -1\quad 0)^\top$.&lt;br /&gt;
-Let $v = (1 \quad -1  \quad 0)^\top$ and $v_n = \frac{1}{\sqrt 2} (1 \quad -1  \quad 0)^\top$ is its normalization.&lt;br /&gt;
-$$&lt;br /&gt;
-\begin{align*}&lt;br /&gt;
-&amp;amp; (1 \quad 3 \quad -1)\ v_n \cdot v_n \&lt;br /&gt;
-=\ &amp;amp; \frac{1}{2}\ (1 \quad 3 \quad -1)\ \begin{pmatrix}1 \ -1 \ 0 \end{pmatrix} \begin{pmatrix}1 \ -1 \ 0 \end{pmatrix} \&lt;br /&gt;
-=\ &amp;amp; \frac{1}{2} \times 2\ \begin{pmatrix}1 \ -1 \ 0 \end{pmatrix}  \&lt;br /&gt;
-=\ &amp;amp; \begin{pmatrix}1 \ -1 \ 0 \end{pmatrix}&lt;br /&gt;
-\end{align*}&lt;br /&gt;
-$$&lt;/p&gt;
+&lt;span class=&quot;math inline&quot;&gt;$L_A \alpha - A^t \alpha$&lt;/span&gt; is orthogonal to &lt;span class=&quot;math inline&quot;&gt;$\beta_1,\,\beta_2$&lt;/span&gt;.&lt;br /&gt;
+So, it is in the space &lt;span class=&quot;math inline&quot;&gt;$V^\top$&lt;/span&gt; spanned by the vector orthogonal to both &lt;span class=&quot;math inline&quot;&gt;$\beta_1$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$\beta_2$&lt;/span&gt; .&lt;br /&gt;
+A spanning vector of &lt;span class=&quot;math inline&quot;&gt;$V^\top$&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;$(1 \quad -1\quad 0)^\top$&lt;/span&gt;.&lt;br /&gt;
+Let &lt;span class=&quot;math inline&quot;&gt;$v = (1 \quad -1  \quad 0)^\top$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$v_n = \frac{1}{\sqrt 2} (1 \quad -1  \quad 0)^\top$&lt;/span&gt; is its normalization.&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\begin{align*}
+&amp; (1 \quad 3 \quad -1)\ v_n \cdot v_n \\
+=\ &amp; \frac{1}{2}\ (1 \quad 3 \quad -1)\ \begin{pmatrix}1 \\ -1 \\ 0 \end{pmatrix} \begin{pmatrix}1 \\ -1 \\ 0 \end{pmatrix} \\
+=\ &amp; \frac{1}{2} \times 2\ \begin{pmatrix}1 \\ -1 \\ 0 \end{pmatrix}  \\
+=\ &amp; \begin{pmatrix}1 \\ -1 \\ 0 \end{pmatrix}
+\end{align*}$$&lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;So the answer is&lt;br /&gt;
-$$&lt;br /&gt;
-\begin{pmatrix} 1 \ 3 \ -1 \end{pmatrix} - \begin{pmatrix} -1 \ 1 \ 0 \end{pmatrix} = \fbox {$\begin{pmatrix} 2 \ 2 \ -1 \end{pmatrix}$}.&lt;br /&gt;
-$$&lt;/p&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\begin{pmatrix} 1 \\ 3 \\ -1 \end{pmatrix} - \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix} = \fbox {$\begin{pmatrix} 2 \\ 2 \\ -1 \end{pmatrix}$}.$$&lt;/div&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -160,58 +155,54 @@ $$&lt;/p&gt;
     <title>Perceptron</title>
     <published>2026-10-18T03:39:21Z</published>
     <updated>2026-11-12T07:15:55Z</updated>
-    <content type="html">&lt;h1 id=&quot;为什么w-更新是加theta-更新是减&quot;&gt;为什么w 更新是加，$\theta$ 更新是减&lt;/h1&gt;
-&lt;p&gt;以 ADALINE 为例，$y= w^Tx -\theta$，$E=\tfrac12(z-y)^2$，$\Delta=-\eta,\partial E/\partial(\cdot)$：&lt;br /&gt;
-$$\frac{\partial E}{\partial w_i}=\underbrace{\frac{\partial E}{\partial y}}&lt;em&gt;{-(z-y)}\cdot\underbrace{\frac{\partial y}{\partial u}}&lt;/em&gt;{1}\cdot\underbrace{\frac{\partial u}{\partial w_i}}&lt;em&gt;{x_i}=-(z-y)x_i&lt;br /&gt;
-\quad\Rightarrow\quad&lt;br /&gt;
-\Delta w_i=+\eta(z-y)x_i$$&lt;br /&gt;
-$$\frac{\partial E}{\partial \theta}=\underbrace{-(z-y)}&lt;/em&gt;{\partial E/\partial y}\cdot\underbrace{(-1)}_{\partial u/\partial\theta}=+(z-y)&lt;br /&gt;
-\quad\Rightarrow\quad&lt;br /&gt;
-\Delta\theta=-\eta(z-y)$$&lt;/p&gt;
+    <content type="html">&lt;h1 id=&quot;为什么w-更新是加-更新是减&quot;&gt;为什么w 更新是加，&lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 更新是减&lt;/h1&gt;
+&lt;p&gt;以 ADALINE 为例，&lt;span class=&quot;math inline&quot;&gt;$y= w^Tx -\theta$&lt;/span&gt;，&lt;span class=&quot;math inline&quot;&gt;$E=\tfrac12(z-y)^2$&lt;/span&gt;，&lt;span class=&quot;math inline&quot;&gt;$\Delta=-\eta\,\partial E/\partial(\cdot)$&lt;/span&gt;：&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\frac{\partial E}{\partial w_i}=\underbrace{\frac{\partial E}{\partial y}}_{-(z-y)}\cdot\underbrace{\frac{\partial y}{\partial u}}_{1}\cdot\underbrace{\frac{\partial u}{\partial w_i}}_{x_i}=-(z-y)x_i
+\quad\Rightarrow\quad
+\Delta w_i=+\eta(z-y)x_i$$&lt;/div&gt;&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\frac{\partial E}{\partial \theta}=\underbrace{-(z-y)}_{\partial E/\partial y}\cdot\underbrace{(-1)}_{\partial u/\partial\theta}=+(z-y)
+\quad\Rightarrow\quad
+\Delta\theta=-\eta(z-y)$$&lt;/div&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;θ 就是一个&amp;quot;输入恒为 −1 的权重&amp;quot; &lt;code&gt;delta = lr * (z-y) * input&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id=&quot;xor-不能被单层网络划分&quot;&gt;XOR 不能被单层网络划分&lt;/h1&gt;
-&lt;p&gt;在 $\mathbb R^n$ 里都成立：超平面 $H={x: w^{\mathsf T}x+\theta=0}$（要求 $w\neq0$）把空间分成的两个闭半空间&lt;br /&gt;
-$$H^{+}={x: w^{\mathsf T}x+\theta\ge 0},\qquad H^{-}={x: w^{\mathsf T}x+\theta\le 0}$$&lt;br /&gt;
-都是凸集。（$\mathbb R^2$ 里超平面是直线，$\mathbb R^3$ 里是平面。）&lt;br /&gt;
-注：这里按你的写法 $w^{\mathsf T}x+\theta=0$；本课程 slides 用 $u=\sum w_ix_i-\theta$，只是 θ 符号相反，不影响结论。&lt;br /&gt;
+&lt;p&gt;在 &lt;span class=&quot;math inline&quot;&gt;$\mathbb R^n$&lt;/span&gt; 里都成立：超平面 &lt;span class=&quot;math inline&quot;&gt;$H=\{x: w^{\mathsf T}x+\theta=0\}$&lt;/span&gt;（要求 &lt;span class=&quot;math inline&quot;&gt;$w\neq0$&lt;/span&gt;）把空间分成的两个闭半空间&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$H^{+}=\{x: w^{\mathsf T}x+\theta\ge 0\},\qquad H^{-}=\{x: w^{\mathsf T}x+\theta\le 0\}$$&lt;/div&gt;&lt;br /&gt;
+都是凸集。（&lt;span class=&quot;math inline&quot;&gt;$\mathbb R^2$&lt;/span&gt; 里超平面是直线，&lt;span class=&quot;math inline&quot;&gt;$\mathbb R^3$&lt;/span&gt; 里是平面。）&lt;br /&gt;
+注：这里按你的写法 &lt;span class=&quot;math inline&quot;&gt;$w^{\mathsf T}x+\theta=0$&lt;/span&gt;；本课程 slides 用 &lt;span class=&quot;math inline&quot;&gt;$u=\sum w_ix_i-\theta$&lt;/span&gt;，只是 θ 符号相反，不影响结论。&lt;br /&gt;
 证明&lt;br /&gt;
-凸集定义：$S$ 凸 $\iff$ $\forall x_1,x_2\in S,\ \forall\lambda\in[0,1]$，都有 $\lambda x_1+(1-\lambda)x_2\in S$。&lt;br /&gt;
+凸集定义：&lt;span class=&quot;math inline&quot;&gt;$S$&lt;/span&gt; 凸 &lt;span class=&quot;math inline&quot;&gt;$\iff$&lt;/span&gt; &lt;span class=&quot;math inline&quot;&gt;$\forall x_1,x_2\in S,\ \forall\lambda\in[0,1]$&lt;/span&gt;，都有 &lt;span class=&quot;math inline&quot;&gt;$\lambda x_1+(1-\lambda)x_2\in S$&lt;/span&gt;。&lt;br /&gt;
 第 1 步：仿射函数保持凸组合（关键引理）&lt;br /&gt;
-令 $f(x)=w^{\mathsf T}x+\theta$，则对任意 $x_1,x_2$ 和 $\lambda\in[0,1]$：&lt;br /&gt;
-$$&lt;br /&gt;
-f\big(\lambda x_1+(1-\lambda)x_2\big)&lt;br /&gt;
-= w^{\mathsf T}\big(\lambda x_1+(1-\lambda)x_2\big)+\theta&lt;br /&gt;
-$$&lt;br /&gt;
-$$&lt;br /&gt;
-= \lambda w^{\mathsf T}x_1+(1-\lambda)w^{\mathsf T}x_2+\underbrace{\lambda\theta+(1-\lambda)\theta}_{=\ \theta\ (\text{因为 }\lambda+(1-\lambda)=1)}&lt;br /&gt;
-= \lambda f(x_1)+(1-\lambda)f(x_2)&lt;br /&gt;
-$$&lt;br /&gt;
-（注意最后一步用了 $\lambda+(1-\lambda)=1$——这正是&amp;quot;仿射&amp;quot;（线性 + 常数）而非纯线性的地方。）&lt;br /&gt;
+令 &lt;span class=&quot;math inline&quot;&gt;$f(x)=w^{\mathsf T}x+\theta$&lt;/span&gt;，则对任意 &lt;span class=&quot;math inline&quot;&gt;$x_1,x_2$&lt;/span&gt; 和 &lt;span class=&quot;math inline&quot;&gt;$\lambda\in[0,1]$&lt;/span&gt;：&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$f\big(\lambda x_1+(1-\lambda)x_2\big)
+= w^{\mathsf T}\big(\lambda x_1+(1-\lambda)x_2\big)+\theta$$&lt;/div&gt;&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$= \lambda w^{\mathsf T}x_1+(1-\lambda)w^{\mathsf T}x_2+\underbrace{\lambda\theta+(1-\lambda)\theta}_{=\ \theta\ (\text{因为 }\lambda+(1-\lambda)=1)}
+= \lambda f(x_1)+(1-\lambda)f(x_2)$$&lt;/div&gt;&lt;br /&gt;
+（注意最后一步用了 &lt;span class=&quot;math inline&quot;&gt;$\lambda+(1-\lambda)=1$&lt;/span&gt;——这正是&amp;quot;仿射&amp;quot;（线性 + 常数）而非纯线性的地方。）&lt;br /&gt;
 第 2 步：半空间的定义立即给出凸性&lt;br /&gt;
-设 $x_1,x_2\in H^{+}$，即 $f(x_1)\ge0,\ f(x_2)\ge0$。因为 $\lambda\ge0$、$(1-\lambda)\ge0$：&lt;br /&gt;
-$$f\big(\lambda x_1+(1-\lambda)x_2\big)=\lambda f(x_1)+(1-\lambda)f(x_2)\ \ge\ \lambda\cdot 0+(1-\lambda)\cdot 0=0$$&lt;br /&gt;
-所以线段上任一点仍属于 $H^{+}$ ⟹ $H^{+}$ 凸。$H^{-}$ 把不等号反向，同理。$\blacksquare$&lt;br /&gt;
+设 &lt;span class=&quot;math inline&quot;&gt;$x_1,x_2\in H^{+}$&lt;/span&gt;，即 &lt;span class=&quot;math inline&quot;&gt;$f(x_1)\ge0,\ f(x_2)\ge0$&lt;/span&gt;。因为 &lt;span class=&quot;math inline&quot;&gt;$\lambda\ge0$&lt;/span&gt;、&lt;span class=&quot;math inline&quot;&gt;$(1-\lambda)\ge0$&lt;/span&gt;：&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$f\big(\lambda x_1+(1-\lambda)x_2\big)=\lambda f(x_1)+(1-\lambda)f(x_2)\ \ge\ \lambda\cdot 0+(1-\lambda)\cdot 0=0$$&lt;/div&gt;&lt;br /&gt;
+所以线段上任一点仍属于 &lt;span class=&quot;math inline&quot;&gt;$H^{+}$&lt;/span&gt; ⟹ &lt;span class=&quot;math inline&quot;&gt;$H^{+}$&lt;/span&gt; 凸。&lt;span class=&quot;math inline&quot;&gt;$H^{-}$&lt;/span&gt; 把不等号反向，同理。&lt;span class=&quot;math inline&quot;&gt;$\blacksquare$&lt;/span&gt;&lt;br /&gt;
 三个补充&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;等价证法（更&amp;quot;现代&amp;quot;的写法）&lt;br /&gt;
-$f$ 是仿射函数 ⟹ 既是凸函数也是凹函数 ⟹ $H^{+}={f\le -\theta&#x27;}$… 即 凸函数的下水平集必为凸集，一行证完。（半空间 = 凸函数的 sublevel set。）&lt;/li&gt;
+&lt;span class=&quot;math inline&quot;&gt;$f$&lt;/span&gt; 是仿射函数 ⟹ 既是凸函数也是凹函数 ⟹ &lt;span class=&quot;math inline&quot;&gt;$H^{+}=\{f\le -\theta&#x27;\}$&lt;/span&gt;… 即 凸函数的下水平集必为凸集，一行证完。（半空间 = 凸函数的 sublevel set。）&lt;/li&gt;
 &lt;li&gt;边界与划分的细节&lt;br /&gt;
-严格半空间 ${f&amp;gt;0}$、${f&amp;lt;0}$ 也是凸的（开集）；&lt;br /&gt;
-边界 ${f=0}$ 本身是仿射子空间（维度 $n-1$），也凸，但内部为空；&lt;br /&gt;
-真正的&amp;quot;划分&amp;quot;是三分：${f&amp;gt;0}\ \dot\cup\ {f=0}\ \dot\cup\ {f&amp;lt;0}$；两个闭半空间在边界上重叠。&lt;br /&gt;
-退化情形：若 $w=0$，则 $\theta=0$ 时 $H^+=H^-=\mathbb R^n$（没切开），$\theta\neq0$ 时一半为空——所以定理要求 $w\neq0$。&lt;/li&gt;
+严格半空间 &lt;span class=&quot;math inline&quot;&gt;$\{f&gt;0\}$&lt;/span&gt;、&lt;span class=&quot;math inline&quot;&gt;$\{f&lt;0\}$&lt;/span&gt; 也是凸的（开集）；&lt;br /&gt;
+边界 &lt;span class=&quot;math inline&quot;&gt;$\{f=0\}$&lt;/span&gt; 本身是仿射子空间（维度 &lt;span class=&quot;math inline&quot;&gt;$n-1$&lt;/span&gt;），也凸，但内部为空；&lt;br /&gt;
+真正的&amp;quot;划分&amp;quot;是三分：&lt;span class=&quot;math inline&quot;&gt;$\{f&gt;0\}\ \dot\cup\ \{f=0\}\ \dot\cup\ \{f&lt;0\}$&lt;/span&gt;；两个闭半空间在边界上重叠。&lt;br /&gt;
+退化情形：若 &lt;span class=&quot;math inline&quot;&gt;$w=0$&lt;/span&gt;，则 &lt;span class=&quot;math inline&quot;&gt;$\theta=0$&lt;/span&gt; 时 &lt;span class=&quot;math inline&quot;&gt;$H^+=H^-=\mathbb R^n$&lt;/span&gt;（没切开），&lt;span class=&quot;math inline&quot;&gt;$\theta\neq0$&lt;/span&gt; 时一半为空——所以定理要求 &lt;span class=&quot;math inline&quot;&gt;$w\neq0$&lt;/span&gt;。&lt;/li&gt;
 &lt;li&gt;为什么这个凸性在课程里很重要&lt;br /&gt;
 XOR 的本质：单个超平面只能切出凸的（半空间型）区域，而 XOR 的每个类区域是两个不连通的象限（非凸）⟹ 必然切不开。这也是 Q1(b) 那问&amp;quot;用凸包重叠解释&amp;quot;的理论根据：存在分隔超平面 ⟺ 两类点集的凸包不相交（超平面分离定理）。&lt;br /&gt;
-SVM 的根基：约束 $y_i(w^{\mathsf T}x_i+b)\ge1$ 是一族半空间，半空间的交仍是凸集 ⟹ SVM 原始问题的可行域是凸多面体，目标 $\tfrac12\lVert w\rVert^2$ 是凸函数 ⟹ 整个原始问题是凸二次规划，有唯一全局最优（KKT 即为充要条件）——Q4(a)(b) 全部建立在这个性质上。&lt;/li&gt;
+SVM 的根基：约束 &lt;span class=&quot;math inline&quot;&gt;$y_i(w^{\mathsf T}x_i+b)\ge1$&lt;/span&gt; 是一族半空间，半空间的交仍是凸集 ⟹ SVM 原始问题的可行域是凸多面体，目标 &lt;span class=&quot;math inline&quot;&gt;$\tfrac12\lVert w\rVert^2$&lt;/span&gt; 是凸函数 ⟹ 整个原始问题是凸二次规划，有唯一全局最优（KKT 即为充要条件）——Q4(a)(b) 全部建立在这个性质上。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Q1（Midterm，共 10 分）&lt;br /&gt;
-设一维数据 ${x_1,\dots,x_N}$ i.i.d. 来自高斯分布 $\mathcal{N}(x\mid \mu,\sigma^2)$，其中 $\sigma^2$ 已知。&lt;br /&gt;
-(a) 求 $\mu$ 的最大似然估计 $\hat{\mu}&lt;em&gt;{ML}$，写出完整推导。（3 分）&lt;br /&gt;
-(b) 现对 $\mu$ 施加高斯先验 $p(\mu)=\mathcal{N}(\mu\mid m,s^2)$，求 $\mu$ 的 MAP 估计 $\hat{\mu}&lt;/em&gt;{MAP}$。（3 分）&lt;br /&gt;
-(c) 令 $s^2\to 0$（先验越来越尖锐），$\hat{\mu}&lt;em&gt;{MAP}$ 趋向什么？请给出解释，并说明这体现了贝叶斯估计与 MLE 的什么关系。（2 分）&lt;br /&gt;
-(d) 若改用全贝叶斯方法对新样本 $x&lt;/em&gt;&lt;em&gt;$ 做预测，写出 predictive distribution $p(x_&lt;/em&gt;\mid \mathcal{D})$ 的形式（用共轭性），并说明它与直接用 $\hat{\mu}&lt;em&gt;{MAP}$ 代入 $\mathcal{N}(x&lt;/em&gt;*\mid\mu,\sigma^2)$ 得到的分布有何区别。（2 分）&lt;/p&gt;
+设一维数据 &lt;span class=&quot;math inline&quot;&gt;$\{x_1,\dots,x_N\}$&lt;/span&gt; i.i.d. 来自高斯分布 &lt;span class=&quot;math inline&quot;&gt;$\mathcal{N}(x\mid \mu,\sigma^2)$&lt;/span&gt;，其中 &lt;span class=&quot;math inline&quot;&gt;$\sigma^2$&lt;/span&gt; 已知。&lt;br /&gt;
+(a) 求 &lt;span class=&quot;math inline&quot;&gt;$\mu$&lt;/span&gt; 的最大似然估计 &lt;span class=&quot;math inline&quot;&gt;$\hat{\mu}_{ML}$&lt;/span&gt;，写出完整推导。（3 分）&lt;br /&gt;
+(b) 现对 &lt;span class=&quot;math inline&quot;&gt;$\mu$&lt;/span&gt; 施加高斯先验 &lt;span class=&quot;math inline&quot;&gt;$p(\mu)=\mathcal{N}(\mu\mid m,s^2)$&lt;/span&gt;，求 &lt;span class=&quot;math inline&quot;&gt;$\mu$&lt;/span&gt; 的 MAP 估计 &lt;span class=&quot;math inline&quot;&gt;$\hat{\mu}_{MAP}$&lt;/span&gt;。（3 分）&lt;br /&gt;
+(c) 令 &lt;span class=&quot;math inline&quot;&gt;$s^2\to 0$&lt;/span&gt;（先验越来越尖锐），&lt;span class=&quot;math inline&quot;&gt;$\hat{\mu}_{MAP}$&lt;/span&gt; 趋向什么？请给出解释，并说明这体现了贝叶斯估计与 MLE 的什么关系。（2 分）&lt;br /&gt;
+(d) 若改用全贝叶斯方法对新样本 &lt;span class=&quot;math inline&quot;&gt;$x_*$&lt;/span&gt; 做预测，写出 predictive distribution &lt;span class=&quot;math inline&quot;&gt;$p(x_*\mid \mathcal{D})$&lt;/span&gt; 的形式（用共轭性），并说明它与直接用 &lt;span class=&quot;math inline&quot;&gt;$\hat{\mu}_{MAP}$&lt;/span&gt; 代入 &lt;span class=&quot;math inline&quot;&gt;$\mathcal{N}(x_*\mid\mu,\sigma^2)$&lt;/span&gt; 得到的分布有何区别。（2 分）&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -238,7 +229,7 @@ SVM 的根基：约束 $y_i(w^{\mathsf T}x_i+b)\ge1$ 是一族半空间，半空
 如果 b &lt;em&gt;向a&lt;/em&gt; 传播信息，那么b在c的联通分量中，这里 c是最后一个a的通话对象。&lt;/p&gt;
 &lt;p&gt;所以，至少有5-2=3 个连通分量，既没有来自a的信息，也没有向a传递信息。&lt;br /&gt;
 对这些分量中的边，对a而言v是&lt;strong&gt;无用的&lt;/strong&gt;。&lt;br /&gt;
-这些分量中的边数$\le$ 对a而言无用的电话。&lt;/p&gt;
+这些分量中的边数&lt;span class=&quot;math inline&quot;&gt;$\le$&lt;/span&gt; 对a而言无用的电话。&lt;/p&gt;
 &lt;p&gt;先区分“传递来自a信息”和“向a传递信息”两种电话。&lt;/p&gt;
 &lt;p&gt;在 AB, CD, AC, BD（k=4，取 a=A）里，标记两个方向：&lt;br /&gt;
 通话	from A（传 item A）	to A（信息流向 A）&lt;br /&gt;
@@ -257,7 +248,7 @@ SVM 的根基：约束 $y_i(w^{\mathsf T}x_i+b)\ge1$ 是一族半空间，半空
 这里取等号，因为它是可行的最优方案（k=2n−4），不是书中那个假想的 k=2n−5 反例。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;nohoi 导致，只有a本人参与的电话，才有可能同时符合两种。（为什么？）&lt;br /&gt;
-所以：# “传递来自a信息”$\cap$  #“向a传递信息” $\le$  # a 本人打的电话&lt;br /&gt;
+所以：# “传递来自a信息”&lt;span class=&quot;math inline&quot;&gt;$\cap$&lt;/span&gt;  #“向a传递信息” &lt;span class=&quot;math inline&quot;&gt;$\le$&lt;/span&gt;  # a 本人打的电话&lt;br /&gt;
 我不会&lt;/p&gt;
 </content>
   </entry>
@@ -269,7 +260,7 @@ SVM 的根基：约束 $y_i(w^{\mathsf T}x_i+b)\ge1$ 是一族半空间，半空
     <updated>2026-10-18T03:39:21Z</updated>
     <content type="html">&lt;p&gt;DP 需要把大的问题归结到小的问题。但是「大小」的定义取决于具体的问题。&lt;/p&gt;
 &lt;p&gt;在背包问题中，比较明显——大小是包的总重量。&lt;/p&gt;
-&lt;p&gt;在SPP中，是「最多」允许的步数$k$. 当$k$ 小的时候，很多路径不存在，最小距离简单地变成$\infty$ . 接下来，我们可以对下一个更大的$k+1$ 步内的解进行寻找。&lt;/p&gt;
+&lt;p&gt;在SPP中，是「最多」允许的步数&lt;span class=&quot;math inline&quot;&gt;$k$&lt;/span&gt;. 当&lt;span class=&quot;math inline&quot;&gt;$k$&lt;/span&gt; 小的时候，很多路径不存在，最小距离简单地变成&lt;span class=&quot;math inline&quot;&gt;$\infty$&lt;/span&gt; . 接下来，我们可以对下一个更大的&lt;span class=&quot;math inline&quot;&gt;$k+1$&lt;/span&gt; 步内的解进行寻找。&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -308,7 +299,7 @@ SVM 的根基：约束 $y_i(w^{\mathsf T}x_i+b)\ge1$ 是一族半空间，半空
 &lt;p&gt;&lt;strong&gt;Poor Question:&lt;/strong&gt; &amp;quot;Is our new landing page doing well?&amp;quot;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Good Question:&lt;/strong&gt; &amp;quot;Over the 14 days following release, did the new landing page yield a statistically significant increase ($\ge 2%$) in daily paid conversion rates among users aged 25–34 compared to the old page?&amp;quot;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Good Question:&lt;/strong&gt; &amp;quot;Over the 14 days following release, did the new landing page yield a statistically significant increase (&lt;span class=&quot;math inline&quot;&gt;$\ge 2\%$&lt;/span&gt;) in daily paid conversion rates among users aged 25–34 compared to the old page?&amp;quot;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;rule-2-clearly-define-the-population--sample-scope&quot;&gt;Rule 2: Clearly Define the Population &amp;amp; Sample Scope&lt;/h3&gt;
@@ -332,13 +323,13 @@ SVM 的根基：约束 $y_i(w^{\mathsf T}x_i+b)\ge1$ 是一族半空间，半空
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;rule-4-ensure-testability--falsifiability&quot;&gt;Rule 4: Ensure Testability &amp;amp; Falsifiability&lt;/h3&gt;
-&lt;p&gt;A statistical question should translate into formal null ($H_0$) and alternative ($H_1$) hypotheses that can be rejected or failed to be rejected based on observed data.&lt;/p&gt;
+&lt;p&gt;A statistical question should translate into formal null (&lt;span class=&quot;math inline&quot;&gt;$H_0$&lt;/span&gt;) and alternative (&lt;span class=&quot;math inline&quot;&gt;$H_1$&lt;/span&gt;) hypotheses that can be rejected or failed to be rejected based on observed data.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Poor Question:&lt;/strong&gt; &amp;quot;Is product quality the fundamental driver of sales volume?&amp;quot; &lt;em&gt;(Too broad and difficult to isolate)&lt;/em&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Good Question:&lt;/strong&gt; &amp;quot;After controlling for ad spend and seasonality, is there a statistically significant negative correlation ($p &amp;lt; 0.05$) between product return rates (a proxy for quality) and repeat purchase rates?&amp;quot;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Good Question:&lt;/strong&gt; &amp;quot;After controlling for ad spend and seasonality, is there a statistically significant negative correlation (&lt;span class=&quot;math inline&quot;&gt;$p &lt; 0.05$&lt;/span&gt;) between product return rates (a proxy for quality) and repeat purchase rates?&amp;quot;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;rule-5-distinguish-association-from-causation&quot;&gt;Rule 5: Distinguish Association from Causation&lt;/h3&gt;
@@ -352,7 +343,7 @@ SVM 的根基：约束 $y_i(w^{\mathsf T}x_i+b)\ge1$ 是一族半空间，半空
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;rule-6-aim-for-practical-significance--actionability&quot;&gt;Rule 6: Aim for Practical Significance &amp;amp; Actionability&lt;/h3&gt;
-&lt;p&gt;Statistical significance ($p &amp;lt; 0.05$) does not always translate to practical business significance. The answer to a good statistical question should directly inform a specific decision or action.&lt;/p&gt;
+&lt;p&gt;Statistical significance (&lt;span class=&quot;math inline&quot;&gt;$p &lt; 0.05$&lt;/span&gt;) does not always translate to practical business significance. The answer to a good statistical question should directly inform a specific decision or action.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Poor Question:&lt;/strong&gt; &amp;quot;Is the 0.001-second difference in click response time between Group A and Group B statistically significant?&amp;quot; &lt;em&gt;(Technically testable, but practically meaningless)&lt;/em&gt;&lt;/p&gt;
@@ -389,7 +380,7 @@ SVM 的根基：约束 $y_i(w^{\mathsf T}x_i+b)\ge1$ 是一族半空间，半空
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Actionability&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Will the outcome (reject or fail to reject $H_0$) trigger a clear next action?&lt;/td&gt;
+&lt;td&gt;Will the outcome (reject or fail to reject &lt;span class=&quot;math inline&quot;&gt;$H_0$&lt;/span&gt;) trigger a clear next action?&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -415,7 +406,7 @@ SVM 的根基：约束 $y_i(w^{\mathsf T}x_i+b)\ge1$ 是一族半空间，半空
 &lt;p&gt;&lt;strong&gt;Ambiguous:&lt;/strong&gt; &lt;code&gt;df[&#x27;height&#x27;].____()&lt;/code&gt; &lt;em&gt;(Could be &lt;code&gt;.mean()&lt;/code&gt;, &lt;code&gt;.median()&lt;/code&gt;, &lt;code&gt;.std()&lt;/code&gt;, etc.)&lt;/em&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Unambiguous:&lt;/strong&gt; &lt;code&gt;# Compute the 95th percentile&lt;/code&gt; $\rightarrow$ &lt;code&gt;np.percentile(df[&#x27;height&#x27;], ____)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Unambiguous:&lt;/strong&gt; &lt;code&gt;# Compute the 95th percentile&lt;/code&gt; &lt;span class=&quot;math inline&quot;&gt;$\rightarrow$&lt;/span&gt; &lt;code&gt;np.percentile(df[&#x27;height&#x27;], ____)&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&quot;rule-3-maintain-code-structure--executability&quot;&gt;Rule 3: Maintain Code Structure &amp;amp; Executability&lt;/h4&gt;
@@ -457,7 +448,7 @@ prob = binom.pmf(k=5, n=10, p=____)
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&quot;2-hypothesis-testing--decisions&quot;&gt;2. Hypothesis Testing &amp;amp; Decisions&lt;/h4&gt;
-&lt;p&gt;Focus on test selection, hypothesis directionality (&lt;code&gt;alternative&lt;/code&gt;), or decision rules based on $\alpha$ and $p$-values.&lt;/p&gt;
+&lt;p&gt;Focus on test selection, hypothesis directionality (&lt;code&gt;alternative&lt;/code&gt;), or decision rules based on &lt;span class=&quot;math inline&quot;&gt;$\alpha$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$p$&lt;/span&gt;-values.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Python Example (T-Test Directionality):&lt;/strong&gt;&lt;/p&gt;
@@ -489,7 +480,7 @@ model &amp;lt;- lm(yield ~ temp ____ fertilizer, data = crop_data)
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&quot;4-data-transformation--filtering&quot;&gt;4. Data Transformation &amp;amp; Filtering&lt;/h4&gt;
-&lt;p&gt;Target key statistical operations like standardizing ($Z$-score conversion), grouping, or pivoting.&lt;/p&gt;
+&lt;p&gt;Target key statistical operations like standardizing (&lt;span class=&quot;math inline&quot;&gt;$Z$&lt;/span&gt;-score conversion), grouping, or pivoting.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Python Example (Standardization):&lt;/strong&gt;&lt;/p&gt;
@@ -571,32 +562,34 @@ FP 拖累精确率&lt;/p&gt;
 &lt;p&gt;Sensitivity is the rate in which we find the positive (e.g. a disease). False positive is not cared about.&lt;/p&gt;
 &lt;p&gt;Precision is the rate in which we find the true positive.&lt;/p&gt;
 &lt;h1 id=&quot;beyes-classifier&quot;&gt;Beyes Classifier&lt;/h1&gt;
-&lt;p&gt;Learning:  Learning is done by computing $P(y|{ x})$, where $x$ is the data.&lt;br /&gt;
-Classifying: $P(x^*|y)$ where $x$ is the new data.&lt;/p&gt;
+&lt;p&gt;Learning:  Learning is done by computing &lt;span class=&quot;math inline&quot;&gt;$P(y|{ x})$&lt;/span&gt;, where &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt; is the data.&lt;br /&gt;
+Classifying: &lt;span class=&quot;math inline&quot;&gt;$P(x^*|y)$&lt;/span&gt; where &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt; is the new data.&lt;/p&gt;
 &lt;p&gt;How these probability computations are done? By MLE. TO be specific,...&lt;/p&gt;
 &lt;p&gt;For an event&lt;/p&gt;
-&lt;p&gt;$p(y=c)= \frac{\sum^M_{i=1} \mathbb I [y^{(i)} = c ]  }{M}  \quad c \in {1,2}$&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$p(y=c)= \frac{\sum^M_{i=1} \mathbb I [y^{(i)} = c ]  }{M}  \quad c \in \{1,2\}$&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;平均有多少个样本落在类别 c 中。&lt;/p&gt;
 &lt;h1 id=&quot;maximal-likelihood&quot;&gt;Maximal Likelihood&lt;/h1&gt;
 &lt;p&gt;Functions are convex =&amp;gt; derivative = 0 means global manimum&lt;/p&gt;
 &lt;p&gt;TODO. proof of gaussian distribution&#x27;s ML estimation.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;A1Q2&lt;/em&gt;  用来估计的是三个iid随机变量。实际上是一个随机变量。&lt;/p&gt;
 &lt;h1 id=&quot;regression&quot;&gt;Regression&lt;/h1&gt;
-&lt;p&gt;How is noise defined -- when we have done the regression knowing the $w$, is noise known?&lt;/p&gt;
-&lt;p&gt;噪音的参数是依赖于误差$r$ 的。&lt;/p&gt;
+&lt;p&gt;How is noise defined -- when we have done the regression knowing the &lt;span class=&quot;math inline&quot;&gt;$w$&lt;/span&gt;, is noise known?&lt;/p&gt;
+&lt;p&gt;噪音的参数是依赖于误差&lt;span class=&quot;math inline&quot;&gt;$r$&lt;/span&gt; 的。&lt;/p&gt;
 &lt;h1 id=&quot;后验分布&quot;&gt;后验分布&lt;/h1&gt;
-&lt;p&gt;参数$\theta$ 的后验分布的密度是 $P(\theta |D)$。 这个是参数的分布&lt;/p&gt;
-&lt;p&gt;$$ P(\theta |D ) = \frac{P(D \mid \theta) P(\theta)}{P(D)}$$&lt;br /&gt;
-$P(D)$ 的定义是样本密度。类似于 &lt;a href=&quot;/Machine_Learning_5489/Class_Notes.html#beyes-classifier&quot; class=&quot;internal-link&quot;&gt;Class Notes&lt;/a&gt; 中的“平均有多少个样本落在类别 c 中”。&lt;/p&gt;
-&lt;h1 id=&quot;后验预测-pxstar-mid-theta-&quot;&gt;后验预测 $P(x^\star \mid \theta )$&lt;/h1&gt;
-&lt;p&gt;这只是给定参数$\theta$ 的$x$.  （意思是 $P(X = x^\star \mid \theta)$ , $X$ 有一个参数是$\theta$. 的分布）&lt;/p&gt;
-&lt;p&gt;后验估计: $$p(x^\star | D) = \int P(x^\star \mid \theta)P(\theta |D)d\theta $$&lt;/p&gt;
+&lt;p&gt;参数&lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 的后验分布的密度是 &lt;span class=&quot;math inline&quot;&gt;$P(\theta |D)$&lt;/span&gt;。 这个是参数的分布&lt;/p&gt;
+&lt;div class=&quot;math block&quot;&gt;
+$$P(\theta |D ) = \frac{P(D \mid \theta) P(\theta)}{P(D)}$$
+&lt;/div&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$P(D)$&lt;/span&gt; 的定义是样本密度。类似于 &lt;a href=&quot;/Machine_Learning_5489/Class_Notes.html#beyes-classifier&quot; class=&quot;internal-link&quot;&gt;Class Notes&lt;/a&gt; 中的“平均有多少个样本落在类别 c 中”。&lt;/p&gt;
+&lt;h1 id=&quot;后验预测&quot;&gt;后验预测 &lt;span class=&quot;math inline&quot;&gt;$P(x^\star \mid \theta )$&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;这只是给定参数&lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 的&lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt;.  （意思是 &lt;span class=&quot;math inline&quot;&gt;$P(X = x^\star \mid \theta)$&lt;/span&gt; , &lt;span class=&quot;math inline&quot;&gt;$X$&lt;/span&gt; 有一个参数是&lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt;. 的分布）&lt;/p&gt;
+&lt;p&gt;后验估计: &lt;div class=&quot;math inline&quot;&gt;$$p(x^\star | D) = \int P(x^\star \mid \theta)P(\theta |D)d\theta$$&lt;/div&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;prior 的初始参数怎么选都可以吗？&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;map-和后验分布区别&quot;&gt;MAP 和后验分布区别&lt;/h1&gt;
 &lt;p&gt;后验分布是一个分布。MAP 是求出一个参数的数字。&lt;/p&gt;
-&lt;p&gt;Example:  可以算这个 $y$ 的后验分布&lt;br /&gt;
+&lt;p&gt;Example:  可以算这个 &lt;span class=&quot;math inline&quot;&gt;$y$&lt;/span&gt; 的后验分布&lt;br /&gt;
 &lt;a href=&quot;/Pasted image 20260925223707.png&quot;&gt;&lt;img class=&quot;bodyimg&quot; src=&quot;/Pasted image 20260925223707.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;svm&quot;&gt;SVM&lt;/h1&gt;
 &lt;p&gt;Why should we penalize the weight ？&lt;/p&gt;
@@ -620,7 +613,7 @@ $P(D)$ 的定义是样本密度。类似于 &lt;a href=&quot;/Machine_Learning_5
 &lt;span class=&quot;n&quot;&gt;newXf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;extract_features&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;patches3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;view_as_windows extract  图像，通过滑动窗口。大小19$\times$ 19&lt;br /&gt;
+&lt;p&gt;view_as_windows extract  图像，通过滑动窗口。大小19&lt;span class=&quot;math inline&quot;&gt;$\times$&lt;/span&gt; 19&lt;br /&gt;
 pateches.shape   「原本」的形状&lt;br /&gt;
 patches.reshape 重新塑形。 （应该是自动判断前两个怎么collapse？）&lt;br /&gt;
 每个 &lt;code&gt;patches2[i,:,:]&lt;/code&gt; 是一个小patch.&lt;br /&gt;
@@ -630,55 +623,57 @@ num_y_win  窗口上下滑动一共能产生多少行窗口&lt;br /&gt;
 num_x_win 窗口左右滑动一共能产生多少行窗口&lt;/p&gt;
 &lt;h1 id=&quot;后验分布-1&quot;&gt;后验分布&lt;/h1&gt;
 &lt;h1 id=&quot;maximum-a-posterior&quot;&gt;Maximum a posterior&lt;/h1&gt;
-&lt;p&gt;如果在$\theta=t$ 时，数据$D$ 有分布$p(D|\theta =t)$. 并且我们也假设知道$\theta$ 是什么分布。那么MAP 就是计算&lt;br /&gt;
-$$\arg \max_\theta p(\theta = t|D=x) = \arg \max_\theta \frac{p(D=x \mid \theta =t)p(\theta =t)}{\displaystyle\sum_s p(D=x|\theta=s)}$$&lt;br /&gt;
-[修改] &lt;strong&gt;实际上&lt;/strong&gt; 分母和$\theta$ 没关系，所以只要最大化分子就可以&lt;/p&gt;
-&lt;p&gt;$$\arg \max_\theta p(\theta = t|D=x) = \arg \max_\theta p(D=x \mid \theta =t)p(\theta =t)$$&lt;br /&gt;
-ML是反过来P 中 的 $\theta$ 和$D$&lt;/p&gt;
+&lt;p&gt;如果在&lt;span class=&quot;math inline&quot;&gt;$\theta=t$&lt;/span&gt; 时，数据&lt;span class=&quot;math inline&quot;&gt;$D$&lt;/span&gt; 有分布&lt;span class=&quot;math inline&quot;&gt;$p(D|\theta =t)$&lt;/span&gt;. 并且我们也假设知道&lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 是什么分布。那么MAP 就是计算&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\arg \max_\theta p(\theta = t|D=x) = \arg \max_\theta \frac{p(D=x \mid \theta =t)p(\theta =t)}{\displaystyle\sum_s p(D=x|\theta=s)}$$&lt;/div&gt;&lt;br /&gt;
+[修改] &lt;strong&gt;实际上&lt;/strong&gt; 分母和&lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 没关系，所以只要最大化分子就可以&lt;/p&gt;
+&lt;div class=&quot;math block&quot;&gt;
+$$\arg \max_\theta p(\theta = t|D=x) = \arg \max_\theta p(D=x \mid \theta =t)p(\theta =t)$$
+&lt;/div&gt;
+&lt;p&gt;ML是反过来P 中 的 &lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 和&lt;span class=&quot;math inline&quot;&gt;$D$&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&quot;posterior-estimation&quot;&gt;Posterior Estimation&lt;/h1&gt;
 &lt;p&gt;用全部后验分布的全部概率产生的结果加权平均（？）&lt;/p&gt;
 &lt;h1 id=&quot;bernoulli-update&quot;&gt;Bernoulli Update&lt;/h1&gt;
-&lt;p&gt;一开始的先验是关于参数$\pi$ 的beta分布。&lt;br /&gt;
-结果是一个伯努利分布中参数 $\pi$ 的分布。&lt;/p&gt;
+&lt;p&gt;一开始的先验是关于参数&lt;span class=&quot;math inline&quot;&gt;$\pi$&lt;/span&gt; 的beta分布。&lt;br /&gt;
+结果是一个伯努利分布中参数 &lt;span class=&quot;math inline&quot;&gt;$\pi$&lt;/span&gt; 的分布。&lt;/p&gt;
 &lt;h1 id=&quot;k-means&quot;&gt;K-means&lt;/h1&gt;
-&lt;p&gt;$\pi_k$ 观察到第k堆的概率。这是一个隐变量 $Z= k$  的概率。&lt;/p&gt;
-&lt;p&gt;观察到向量$x_i$ 的条件下，在第$k$ 堆的概率：&lt;br /&gt;
-$$\gamma_{ik} = P(Z= k\mid x_i )$$&lt;br /&gt;
-因为一个空间所有样本概率总和为$1$, 所以$$\sum_k \gamma_{ik} = 1. \tag{1}$$&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$\pi_k$&lt;/span&gt; 观察到第k堆的概率。这是一个隐变量 &lt;span class=&quot;math inline&quot;&gt;$Z= k$&lt;/span&gt;  的概率。&lt;/p&gt;
+&lt;p&gt;观察到向量&lt;span class=&quot;math inline&quot;&gt;$x_i$&lt;/span&gt; 的条件下，在第&lt;span class=&quot;math inline&quot;&gt;$k$&lt;/span&gt; 堆的概率：&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\gamma_{ik} = P(Z= k\mid x_i )$$&lt;/div&gt;&lt;br /&gt;
+因为一个空间所有样本概率总和为&lt;span class=&quot;math inline&quot;&gt;$1$&lt;/span&gt;, 所以&lt;div class=&quot;math inline&quot;&gt;$$\sum_k \gamma_{ik} = 1. \tag{1}$$&lt;/div&gt;&lt;/p&gt;
 &lt;h2 id=&quot;k-means---soft-assignment&quot;&gt;K means - Soft Assignment&lt;/h2&gt;
-&lt;p&gt;$Z = k \mid x_i$  不是一个常数(即，不在任意一点概率是1)。&lt;/p&gt;
-&lt;p&gt;$Z \sim N(\mu_k^{(0)}, \sigma_k^{(0)})$ 时&lt;br /&gt;
-E-M step 可以更新$\mu_k$ 和$\sigma_k$.  分别有一个公式……&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$Z = k \mid x_i$&lt;/span&gt;  不是一个常数(即，不在任意一点概率是1)。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$Z \sim N(\mu_k^{(0)}, \sigma_k^{(0)})$&lt;/span&gt; 时&lt;br /&gt;
+E-M step 可以更新&lt;span class=&quot;math inline&quot;&gt;$\mu_k$&lt;/span&gt; 和&lt;span class=&quot;math inline&quot;&gt;$\sigma_k$&lt;/span&gt;.  分别有一个公式……&lt;/p&gt;
 &lt;h2 id=&quot;hard-assignment&quot;&gt;Hard Assignment&lt;/h2&gt;
-&lt;p&gt;$\gamma_{ik} \in {0,\ 1}$  。更新后的中心是一堆中所有点的平均&lt;br /&gt;
-$$ \mu_{k}^{(1)}=\frac{\sum \gamma_{ik} x_i}{\sum_i\gamma_{ik}} =\frac{\sum_{i在第k堆中} x_i}{\sum_{i 在第k堆中} 1}$$&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$\gamma_{ik} \in \{0,\ 1\}$&lt;/span&gt;  。更新后的中心是一堆中所有点的平均&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\mu_{k}^{(1)}=\frac{\sum \gamma_{ik} x_i}{\sum_i\gamma_{ik}} =\frac{\sum_{i在第k堆中} x_i}{\sum_{i 在第k堆中} 1}$$&lt;/div&gt;&lt;/p&gt;
 &lt;h2 id=&quot;mle-和-map-区别&quot;&gt;MLE 和 MAP 区别&lt;/h2&gt;
 &lt;h3 id=&quot;1-极大似然估计mle&quot;&gt;1. 极大似然估计（MLE）&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;不需要先验（No Prior）&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;基本逻辑&lt;/strong&gt;：只关注当前观察到的数据 $x$。它假设参数 $\theta$ 是一个固定但未知的真实常数，寻找能使数据 $x$ 出现概率（似然 $p(x \mid \theta)$）最大的那个 $\theta$。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;基本逻辑&lt;/strong&gt;：只关注当前观察到的数据 &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt;。它假设参数 &lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 是一个固定但未知的真实常数，寻找能使数据 &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt; 出现概率（似然 &lt;span class=&quot;math inline&quot;&gt;$p(x \mid \theta)$&lt;/span&gt;）最大的那个 &lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt;。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;数学表示&lt;/strong&gt;：&lt;br /&gt;
-$$\hat{\theta}&lt;em&gt;{\text{MLE}} = \arg\max&lt;/em&gt;{\theta} p(x \mid \theta)$$&lt;/li&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\hat{\theta}_{\text{MLE}} = \arg\max_{\theta} p(x \mid \theta)$$&lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;2-后验估计例如-最大后验估计-map&quot;&gt;2. 后验估计（例如 最大后验估计 MAP）&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;必须需要先验（Requires Prior）&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;基本逻辑&lt;/strong&gt;：基于贝叶斯学派的观点，参数 $\theta$ 本身也是一个随机变量，在观察到数据之前我们就对它有一定的认知或倾向（先验分布 $p(\theta)$）。后验估计通过贝叶斯公式将“先验”与“数据似然”结合，寻找使&lt;strong&gt;后验概率&lt;/strong&gt; $p(\theta \mid x)$ 最大的 $\theta$。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;基本逻辑&lt;/strong&gt;：基于贝叶斯学派的观点，参数 &lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 本身也是一个随机变量，在观察到数据之前我们就对它有一定的认知或倾向（先验分布 &lt;span class=&quot;math inline&quot;&gt;$p(\theta)$&lt;/span&gt;）。后验估计通过贝叶斯公式将“先验”与“数据似然”结合，寻找使&lt;strong&gt;后验概率&lt;/strong&gt; &lt;span class=&quot;math inline&quot;&gt;$p(\theta \mid x)$&lt;/span&gt; 最大的 &lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt;。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;数学表示&lt;/strong&gt;：&lt;br /&gt;
-$$\hat{\theta}&lt;em&gt;{\text{MAP}} = \arg\max&lt;/em&gt;{\theta} p(\theta \mid x) = \arg\max_{\theta} \left[ \underbrace{p(x \mid \theta)}&lt;em&gt;{\text{似然}} \cdot \underbrace{p(\theta)}&lt;/em&gt;{\text{先验}} \right]$$&lt;/li&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\hat{\theta}_{\text{MAP}} = \arg\max_{\theta} p(\theta \mid x) = \arg\max_{\theta} \left[ \underbrace{p(x \mid \theta)}_{\text{似然}} \cdot \underbrace{p(\theta)}_{\text{先验}} \right]$$&lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;总结对比&quot;&gt;总结对比&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;MLE&lt;/strong&gt; = 纯粹看数据（$\text{数据似然}$）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;后验估计（MAP）&lt;/strong&gt; = 数据 + 经验（$\text{数据似然} \times \text{先验概率}$）&lt;br /&gt;
-当先验分布 $p(\theta)$ 是均匀分布（即对所有可能的 $\theta$ 不偏不倚，等概率看待）时，MAP 的计算结果就会退化为与 MLE 完全一致。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MLE&lt;/strong&gt; = 纯粹看数据（&lt;span class=&quot;math inline&quot;&gt;$\text{数据似然}$&lt;/span&gt;）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;后验估计（MAP）&lt;/strong&gt; = 数据 + 经验（&lt;span class=&quot;math inline&quot;&gt;$\text{数据似然} \times \text{先验概率}$&lt;/span&gt;）&lt;br /&gt;
+当先验分布 &lt;span class=&quot;math inline&quot;&gt;$p(\theta)$&lt;/span&gt; 是均匀分布（即对所有可能的 &lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 不偏不倚，等概率看待）时，MAP 的计算结果就会退化为与 MLE 完全一致。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;full-posterior-distribution-vs-map&quot;&gt;Full Posterior distribution vs. MAP&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;/Pasted image 20261002141258.png&quot;&gt;&lt;img class=&quot;bodyimg&quot; src=&quot;/Pasted image 20261002141258.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;class 1 with probability $p$&lt;br /&gt;
-class  2 with probability $1-p$&lt;br /&gt;
-The ratio is $\frac{p}{1 - p}$.&lt;br /&gt;
-if both in the form exp, then $\log p/(1-p) = \log (exp (\cdot)) = \cdot$&lt;/p&gt;
+&lt;p&gt;class 1 with probability &lt;span class=&quot;math inline&quot;&gt;$p$&lt;/span&gt;&lt;br /&gt;
+class  2 with probability &lt;span class=&quot;math inline&quot;&gt;$1-p$&lt;/span&gt;&lt;br /&gt;
+The ratio is &lt;span class=&quot;math inline&quot;&gt;$\frac{p}{1 - p}$&lt;/span&gt;.&lt;br /&gt;
+if both in the form exp, then &lt;span class=&quot;math inline&quot;&gt;$\log p/(1-p) = \log (exp (\cdot)) = \cdot$&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;/Pasted image 20261002204030.png&quot;&gt;&lt;img class=&quot;bodyimg&quot; src=&quot;/Pasted image 20261002204030.png&quot;&gt;&lt;/a&gt;&lt;br /&gt;
 不太明白：求出来likelihood ，但是不知道参数是什么。用MLE 来计算吗？&lt;/p&gt;
 </content>
@@ -690,9 +685,9 @@ if both in the form exp, then $\log p/(1-p) = \log (exp (\cdot)) = \cdot$&lt;/p&
     <published>2026-09-08T04:54:53Z</published>
     <updated>2026-09-08T04:54:53Z</updated>
     <content type="html">&lt;p&gt;概率就是用各种方式计算加权和&lt;/p&gt;
-&lt;p&gt;$$&lt;br /&gt;
-E[g(X)]&lt;br /&gt;
-$$&lt;/p&gt;
+&lt;div class=&quot;math block&quot;&gt;
+$$E[g(X)]$$
+&lt;/div&gt;
 &lt;p&gt;信息论：加权和用对数单位&lt;/p&gt;
 </content>
   </entry>

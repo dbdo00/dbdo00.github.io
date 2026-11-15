@@ -47,35 +47,35 @@
     <div class="time"><em>last updated: Nov 23, 2025</em></div>
     <ul>
 <li>
-<p>If the norm of a Gauss integer is the square $p^2$ of a prime number such that $p \equiv 3\pmod 4$, then this integer prime $p$ is a Gauss prime.</p>
-<p><em>Proof.</em> If it is not a Gauss prime, then it can be written as $p=\alpha\beta$, where $\alpha,\ \beta$ are non-units in the Gauss integers. So $$p^2=N(p)=N(\alpha)N(\beta)$$<br />
-Since $\alpha$ and $\beta$ are non-units, $N(\alpha)=p$ and so is $N(\beta)$.<br />
-Let $\alpha = a + bi$  ($a,b$ are ordinary integers). Then $p = a^2 +b^2 \equiv 1 \pmod 4$, which contradicts the assumption that $p\equiv 3 \pmod 4$. $\square$</p>
+<p>If the norm of a Gauss integer is the square <span class="math inline">$p^2$</span> of a prime number such that <span class="math inline">$p \equiv 3\pmod 4$</span>, then this integer prime <span class="math inline">$p$</span> is a Gauss prime.</p>
+<p><em>Proof.</em> If it is not a Gauss prime, then it can be written as <span class="math inline">$p=\alpha\beta$</span>, where <span class="math inline">$\alpha,\ \beta$</span> are non-units in the Gauss integers. So <div class="math inline">$$p^2=N(p)=N(\alpha)N(\beta)$$</div><br />
+Since <span class="math inline">$\alpha$</span> and <span class="math inline">$\beta$</span> are non-units, <span class="math inline">$N(\alpha)=p$</span> and so is <span class="math inline">$N(\beta)$</span>.<br />
+Let <span class="math inline">$\alpha = a + bi$</span>  (<span class="math inline">$a,b$</span> are ordinary integers). Then <span class="math inline">$p = a^2 +b^2 \equiv 1 \pmod 4$</span>, which contradicts the assumption that <span class="math inline">$p\equiv 3 \pmod 4$</span>. <span class="math inline">$\square$</span></p>
 </li>
 <li>
 <h1 id="description-of-irreducible-elements">Description of Irreducible Elements</h1>
 </li>
 <li>
-<p>If $\pi$ is a Gauss prime, then we can show that $N(\pi)$ is either an integer prime or the square of an integer prime.</p>
+<p>If <span class="math inline">$\pi$</span> is a Gauss prime, then we can show that <span class="math inline">$N(\pi)$</span> is either an integer prime or the square of an integer prime.</p>
 <blockquote>
-<p>Proof. If $N(\pi)$ is a prime in $\mathbb Z$, then there is nothing to prove. If $N(\pi)$ is factored as prime divisors in $\mathbb Z$, then each divisor is either an associate of $\pi$ or $\bar \pi$. Suppose $p_1 = u\pi$ from which $p_2 = u^{-1}\pi$, where $u=\pm i, \pm 1$. So, there are at most two divisors of $N(\pi)$. If $u=1$, then $u^{-1}=1$. If $u=\pm i$ or $-1$, then $u^{-1}=-u$. So, the factorization of the norm is given by $N(\pi)=N(\pm p_1^2)=p_1^2$.<br />
-(By the way, we have shown that $p_1$ $(=p_2)$ is a Gauss prime.)</p>
+<p>Proof. If <span class="math inline">$N(\pi)$</span> is a prime in <span class="math inline">$\mathbb Z$</span>, then there is nothing to prove. If <span class="math inline">$N(\pi)$</span> is factored as prime divisors in <span class="math inline">$\mathbb Z$</span>, then each divisor is either an associate of <span class="math inline">$\pi$</span> or <span class="math inline">$\bar \pi$</span>. Suppose <span class="math inline">$p_1 = u\pi$</span> from which <span class="math inline">$p_2 = u^{-1}\pi$</span>, where <span class="math inline">$u=\pm i, \pm 1$</span>. So, there are at most two divisors of <span class="math inline">$N(\pi)$</span>. If <span class="math inline">$u=1$</span>, then <span class="math inline">$u^{-1}=1$</span>. If <span class="math inline">$u=\pm i$</span> or <span class="math inline">$-1$</span>, then <span class="math inline">$u^{-1}=-u$</span>. So, the factorization of the norm is given by <span class="math inline">$N(\pi)=N(\pm p_1^2)=p_1^2$</span>.<br />
+(By the way, we have shown that <span class="math inline">$p_1$</span> <span class="math inline">$(=p_2)$</span> is a Gauss prime.)</p>
 </blockquote>
 </li>
 <li>
-<p>In other words, if the norm $N(a)$ is <em>not</em> one of these types, the number $a$ is not a Gauss prime.</p>
+<p>In other words, if the norm <span class="math inline">$N(a)$</span> is <em>not</em> one of these types, the number <span class="math inline">$a$</span> is not a Gauss prime.</p>
 </li>
 <li>
-<p>Suppose $N(\pi)$ is $p$ or $p^2$ ($p$ is an integer prime). If $N(\pi)=p$, then $\pi$ is a Gauss prime. Otherwise, if $N(\pi)=p^2$, then we consider $p\pmod 4$.</p>
+<p>Suppose <span class="math inline">$N(\pi)$</span> is <span class="math inline">$p$</span> or <span class="math inline">$p^2$</span> (<span class="math inline">$p$</span> is an integer prime). If <span class="math inline">$N(\pi)=p$</span>, then <span class="math inline">$\pi$</span> is a Gauss prime. Otherwise, if <span class="math inline">$N(\pi)=p^2$</span>, then we consider <span class="math inline">$p\pmod 4$</span>.</p>
 <ul>
-<li>if $p \equiv 1 \pmod 4$ (so $p=q \bar q$ for some Gauss prime $q$), then $\pi$ is not irreducible because if it is, then $p^2 = q^2\bar q^2$, from which we get know $p^2$ is not a product of $2$ prime factors, and instead $4$ prime factors in Gauss integers. So $\pi$ can not be a prime.</li>
-<li>if $p \equiv 3 \pmod 4$, then $\pi$ is a prime.</li>
-<li>$1+i,, 1-i,, -1-i,, -1+i$. are the Gauss Primes with norm 2.</li>
+<li>if <span class="math inline">$p \equiv 1 \pmod 4$</span> (so <span class="math inline">$p=q \bar q$</span> for some Gauss prime <span class="math inline">$q$</span>), then <span class="math inline">$\pi$</span> is not irreducible because if it is, then <span class="math inline">$p^2 = q^2\bar q^2$</span>, from which we get know <span class="math inline">$p^2$</span> is not a product of <span class="math inline">$2$</span> prime factors, and instead <span class="math inline">$4$</span> prime factors in Gauss integers. So <span class="math inline">$\pi$</span> can not be a prime.</li>
+<li>if <span class="math inline">$p \equiv 3 \pmod 4$</span>, then <span class="math inline">$\pi$</span> is a prime.</li>
+<li><span class="math inline">$1+i,\, 1-i,\, -1-i,\, -1+i$</span>. are the Gauss Primes with norm 2.</li>
 </ul>
 </li>
 <li>
 <h1 id="division-algorithm">Division Algorithm</h1>
-<p>We can round the real and imaginary part of $a+bi = \frac{a}{q}$ to the closest integer.</p>
+<p>We can round the real and imaginary part of <span class="math inline">$a+bi = \frac{a}{q}$</span> to the closest integer.</p>
 </li>
 </ul>
 

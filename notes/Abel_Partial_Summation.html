@@ -47,22 +47,22 @@
     <div class="time"><em>last updated: Nov 21, 2025</em></div>
     <h1 id="partial-summation">Partial Summation</h1>
 <h2 id="questions">Questions</h2>
-<p>Find the asymptotic expression for the  following functions: $\sum_{n&lt; x}n \log(n)$, $\sum_{n&lt; x} \log(n)$, $\sum_{n&lt; x} \frac{1}{n}$.</p>
+<p>Find the asymptotic expression for the  following functions: <span class="math inline">$\sum_{n< x}n \log(n)$</span>, <span class="math inline">$\sum_{n< x} \log(n)$</span>, <span class="math inline">$\sum_{n< x} \frac{1}{n}$</span>.</p>
 <p>Sometimes we want to find the growth trend of the summations that have no closed form formulae.<br />
 Instead of the summation, we integrate it and see how much error we get. The integration may give a simpler expression that is easier to take limits.</p>
 <h2 id="partial-summation-1">Partial Summation</h2>
-<p>Let ${a_n}$ be a sequence of complex numbers and $f(t)$ a differential function for $t\geq 0$. Set $A(x) = \sum_{n\leq x}a_n$. Then<br />
-$$\sum_{n\leq x}a_n f(x) = A(x)f(x) - \int^x_1 A(t)f^\prime(x)dt$$<br />
-<strong>Proof</strong> Note $a_n = A(n) -A(n-1)$.</p>
-<p>$$<br />
-\begin{align*}<br />
-&amp; \sum_{n &lt; x} (A(n) &amp;- &amp;A(n-1)) f(n) &amp;\<br />
-= &amp; \sum_{n \leq x} A(n)f(n) &amp;- &amp;\sum_{n\leq x} A(n-1) f(n)&amp; \<br />
-= &amp; A(x)f(x) &amp;+ &amp;\sum_{n \leq x - 1} A(n)f(x + 1) &amp;\<br />
-=&amp; A(x)f(x) &amp;- &amp;\int^x_1A(t)f^\prime(t)dt &amp;\end{align*}<br />
-$$</p>
+<p>Let <span class="math inline">$\{a_n\}$</span> be a sequence of complex numbers and <span class="math inline">$f(t)$</span> a differential function for <span class="math inline">$t\geq 0$</span>. Set <span class="math inline">$A(x) = \sum_{n\leq x}a_n$</span>. Then<br />
+<div class="math inline">$$\sum_{n\leq x}a_n f(x) = A(x)f(x) - \int^x_1 A(t)f^\prime(x)dt$$</div><br />
+<strong>Proof</strong> Note <span class="math inline">$a_n = A(n) -A(n-1)$</span>.</p>
+<div class="math block">
+$$\begin{align*} 
+& \sum_{n < x} (A(n) &- &A(n-1)) f(n) &\\ 
+= & \sum_{n \leq x} A(n)f(n) &- &\sum_{n\leq x} A(n-1) f(n)& \\ 
+= & A(x)f(x) &+ &\sum_{n \leq x - 1} A(n)f(x + 1) &\\ 
+=& A(x)f(x) &- &\int^x_1A(t)f^\prime(t)dt &\end{align*}$$
+</div>
 <h2 id="examples">Examples</h2>
-<p>$\sum_{p \text{ prime} &lt;x} \frac{1}{p}$ grows like $\log\log(x)$</p>
+<p><span class="math inline">$\sum_{p \text{ prime} <x} \frac{1}{p}$</span> grows like <span class="math inline">$\log\log(x)$</span></p>
 
     
     <div class="backlinks">

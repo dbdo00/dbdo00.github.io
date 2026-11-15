@@ -47,28 +47,27 @@
     <div class="time"><em>last updated: Nov 14, 2026</em></div>
     <p>Due on November 20, 2026, 11:59pm</p>
 <h3 id="exercise-1">Exercise 1</h3>
-<p>[2 points]. Prove that the eigenvalues of a real symmetric matrix $A \in R^{N ×N}$ ,<br />
-where $A = A^\top$ , are real-valued (i.e., not complex-valued). Prove also that<br />
+<p>[2 points]. Prove that the eigenvalues of a real symmetric matrix <span class="math inline">$A \in R^{N ×N}$</span> ,<br />
+where <span class="math inline">$A = A^\top$</span> , are real-valued (i.e., not complex-valued). Prove also that<br />
 the eigenvectors of A corresponding to different eigenvalues are orthogonal<br />
 to each other</p>
 <p>Proof.</p>
-<p>For $v,\ w \in \mathbb C^N$, let $\langle v, w \rangle$ denote $v^\top \bar w$  , where $\bar w$ is the complex conjugate of the vector $w$.</p>
-<p>Let $t \in \mathbb C$. Then $$\begin{equation}<br />
-\bar t \langle v,\ w\rangle = \bar t v^\top \bar w = v^\top \bar t \bar w = v^\top \overline{t w} = \langle v,\ tw\rangle \end{equation}. $$<br />
-$$\begin{equation} t\langle v,\ w \rangle = tv^\top \bar w= (tv)^\top \overline w = \langle tv,\ w \rangle  \end{equation}<br />
-$$<br />
-$$\begin{equation} \langle v,\ v \rangle = v^\top \bar v= v_1 \overline v_1 + \ldots + v_N \overline v_N \geq 0\end{equation} $$<br />
-where $v = (v_1, \ \ldots ,\ v_N)^\top$.<br />
-Let $A^<em>$ denote the complex transpose of a matrix $A$.  Then $$\langle v, Av \rangle = v^\top \overline{Av}=v^\top \overline{A^\top}^\top v=v^\top (A^</em>)^\top v = (A^* v)^\top v = \langle A^* v ,\ v \rangle$$   Suppose $v$ is an eigenvector of $A$ associated with the eigenvalue $\lambda$.</p>
-<p>If $\langle v,\ v\rangle = 0$, then $v_1 \overline v_1 + \ldots + v_N \overline v_N =0$. Since $v_i \overline v_i \geq 0$ and $=0$ only when $v_i=0$,  we know $$v_i=0 \quad {\rm for \ each\ } i \in {1,\ldots,N}.$$Hence $v=0$.  In this case, the eigenvalue of $v$ is $0$, which is real valued.</p>
-<p>If $\langle v,\ v\rangle &gt;0$, then<br />
-$$\overline\lambda = \frac{1}{\langle v,\ v\rangle}\overline \lambda \langle v,\ v\rangle $$<br />
-By Eq   $\boxed{\overline t\langle v,\ w \rangle=\langle  v,\ tw \rangle}$, we get<br />
-$$\overline \lambda =\frac{1}{\langle v,\ v\rangle} \langle v,\ \lambda v\rangle =\frac{1}{\langle v,\ v\rangle} \langle v,\ Av \rangle$$ By $\boxed {\langle v, Av \rangle =  \langle A^* v ,\ v \rangle}$, we get<br />
-$$\overline \lambda  = \frac{1}{\langle v,\ v\rangle} \langle A^* v ,\ v \rangle=\frac{1}{\langle v,\ v\rangle} \langle \lambda v,\ v\rangle = \frac{1}{\langle v,\ v\rangle} \lambda  \langle v,\ v\rangle = \lambda$$<br />
-So we have derived that $\boxed{\overline \lambda = \lambda}$.  So any eigenvalue of $A$ is real-valued.</p>
-<p>Suppose $v,\ w$ are eigenvectors of $A$ associated with $\lambda_v$ and $\lambda_w$. Then $$\langle Av,\ w \rangle = \lambda_v \langle v,\ w \rangle$$ and since $A\in \mathbb R^{N\times N}$,  $$\langle Av,\ w \rangle =  \langle v,\ A^*w \rangle = \langle v,\ A^\top w \rangle=\langle v,\ Aw \rangle = \lambda_w \langle v,\ w \rangle.$$<br />
-So $$0 =\langle Av,\ w \rangle - \langle Av,\ w \rangle = (\lambda_v - \lambda_w) \langle v,\ w \rangle$$ which implies $\langle v,\ w \rangle = 0$ because $\lambda_v - \lambda_w \neq 0$.</p>
+<p>For <span class="math inline">$v,\ w \in \mathbb C^N$</span>, let <span class="math inline">$\langle v, w \rangle$</span> denote <span class="math inline">$v^\top \bar w$</span>  , where <span class="math inline">$\bar w$</span> is the complex conjugate of the vector <span class="math inline">$w$</span>.</p>
+<p>Let <span class="math inline">$t \in \mathbb C$</span>. Then <div class="math inline">$$\begin{equation}
+\bar t \langle v,\ w\rangle = \bar t v^\top \bar w = v^\top \bar t \bar w = v^\top \overline{t w} = \langle v,\ tw\rangle \end{equation}.$$</div><br />
+<div class="math inline">$$\begin{equation} t\langle v,\ w \rangle = tv^\top \bar w= (tv)^\top \overline w = \langle tv,\ w \rangle  \end{equation}$$</div><br />
+<div class="math inline">$$\begin{equation} \langle v,\ v \rangle = v^\top \bar v= v_1 \overline v_1 + \ldots + v_N \overline v_N \geq 0\end{equation}$$</div><br />
+where <span class="math inline">$v = (v_1, \ \ldots ,\ v_N)^\top$</span>.<br />
+Let <span class="math inline">$A^*$</span> denote the complex transpose of a matrix <span class="math inline">$A$</span>.  Then <div class="math inline">$$\langle v, Av \rangle = v^\top \overline{Av}=v^\top \overline{A^\top}^\top v=v^\top (A^*)^\top v = (A^* v)^\top v = \langle A^* v ,\ v \rangle$$</div>   Suppose <span class="math inline">$v$</span> is an eigenvector of <span class="math inline">$A$</span> associated with the eigenvalue <span class="math inline">$\lambda$</span>.</p>
+<p>If <span class="math inline">$\langle v,\ v\rangle = 0$</span>, then <span class="math inline">$v_1 \overline v_1 + \ldots + v_N \overline v_N =0$</span>. Since <span class="math inline">$v_i \overline v_i \geq 0$</span> and <span class="math inline">$=0$</span> only when <span class="math inline">$v_i=0$</span>,  we know <div class="math inline">$$v_i=0 \quad {\rm for \ each\ } i \in \{1,\ldots,N\}.$$</div>Hence <span class="math inline">$v=0$</span>.  In this case, the eigenvalue of <span class="math inline">$v$</span> is <span class="math inline">$0$</span>, which is real valued.</p>
+<p>If <span class="math inline">$\langle v,\ v\rangle >0$</span>, then<br />
+<div class="math inline">$$\overline\lambda = \frac{1}{\langle v,\ v\rangle}\overline \lambda \langle v,\ v\rangle$$</div><br />
+By Eq   <span class="math inline">$\boxed{\overline t\langle v,\ w \rangle=\langle  v,\ tw \rangle}$</span>, we get<br />
+<div class="math inline">$$\overline \lambda =\frac{1}{\langle v,\ v\rangle} \langle v,\ \lambda v\rangle =\frac{1}{\langle v,\ v\rangle} \langle v,\ Av \rangle$$</div> By <span class="math inline">$\boxed {\langle v, Av \rangle =  \langle A^* v ,\ v \rangle}$</span>, we get<br />
+<div class="math inline">$$\overline \lambda  = \frac{1}{\langle v,\ v\rangle} \langle A^* v ,\ v \rangle=\frac{1}{\langle v,\ v\rangle} \langle \lambda v,\ v\rangle = \frac{1}{\langle v,\ v\rangle} \lambda  \langle v,\ v\rangle = \lambda$$</div><br />
+So we have derived that <span class="math inline">$\boxed{\overline \lambda = \lambda}$</span>.  So any eigenvalue of <span class="math inline">$A$</span> is real-valued.</p>
+<p>Suppose <span class="math inline">$v,\ w$</span> are eigenvectors of <span class="math inline">$A$</span> associated with <span class="math inline">$\lambda_v$</span> and <span class="math inline">$\lambda_w$</span>. Then <div class="math inline">$$\langle Av,\ w \rangle = \lambda_v \langle v,\ w \rangle$$</div> and since <span class="math inline">$A\in \mathbb R^{N\times N}$</span>,  <div class="math inline">$$\langle Av,\ w \rangle =  \langle v,\ A^*w \rangle = \langle v,\ A^\top w \rangle=\langle v,\ Aw \rangle = \lambda_w \langle v,\ w \rangle.$$</div><br />
+So <div class="math inline">$$0 =\langle Av,\ w \rangle - \langle Av,\ w \rangle = (\lambda_v - \lambda_w) \langle v,\ w \rangle$$</div> which implies <span class="math inline">$\langle v,\ w \rangle = 0$</span> because <span class="math inline">$\lambda_v - \lambda_w \neq 0$</span>.</p>
 <h3 id="exercises-2">Exercises 2</h3>
 <p>[5 points]. Derive the K-th largest direction of variance in principal component analysis (PCA).</p>
 <p>Solution.</p>

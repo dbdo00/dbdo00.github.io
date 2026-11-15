@@ -48,27 +48,31 @@
     <div class="time"><em>last updated: Dec 15, 2025</em></div>
     <h1 id="invariant-space">Invariant Space</h1>
 <p>id:: 6932e5e1-39b7-450d-b428-3f1afad9e70e<br />
-- Every invariant Space of $T\in \mathcal L(T)$  is a direct sum of spaces spanned by eigenvectors if  $T$ is diagonalizable. Suppose $V$ is an invariant space of $T$.<br />
-- The idea is  to show $V=\oplus (V\cap V_\lambda)$<br />
-- Of course, $\subset$ is obvious.<br />
-- On the other hand, if $v = v_1 + \ldots + v_n$, where $v_i$ are eigenvectors with different eigenvalues, then we need to show $v_i \in V$ for each $i$. Use lagrange interpolation to construct  a polynomial. $f(\lambda_k)=1$ if $k=i$ and $0$ otherwise. Thus $f(T)v_k = f(\lambda_k)v_k$. This gives $f(A)v=v_i$. So $v_i \in V$ by the invariance of $V$.<br />
-- For a general $T\colon: V\to V$, an invariant space is a direct sum of spaces spanned by <strong>general eigenvectors</strong>. I do not know how this is done exactly.q</p>
+- Every invariant Space of <span class="math inline">$T\in \mathcal L(T)$</span>  is a direct sum of spaces spanned by eigenvectors if  <span class="math inline">$T$</span> is diagonalizable. Suppose <span class="math inline">$V$</span> is an invariant space of <span class="math inline">$T$</span>.<br />
+- The idea is  to show <span class="math inline">$V=\oplus (V\cap V_\lambda)$</span><br />
+- Of course, <span class="math inline">$\subset$</span> is obvious.<br />
+- On the other hand, if <span class="math inline">$v = v_1 + \ldots + v_n$</span>, where <span class="math inline">$v_i$</span> are eigenvectors with different eigenvalues, then we need to show <span class="math inline">$v_i \in V$</span> for each <span class="math inline">$i$</span>. Use lagrange interpolation to construct  a polynomial. <span class="math inline">$f(\lambda_k)=1$</span> if <span class="math inline">$k=i$</span> and <span class="math inline">$0$</span> otherwise. Thus <span class="math inline">$f(T)v_k = f(\lambda_k)v_k$</span>. This gives <span class="math inline">$f(A)v=v_i$</span>. So <span class="math inline">$v_i \in V$</span> by the invariance of <span class="math inline">$V$</span>.<br />
+- For a general <span class="math inline">$T\colon: V\to V$</span>, an invariant space is a direct sum of spaces spanned by <strong>general eigenvectors</strong>. I do not know how this is done exactly.q</p>
 <ul>
 <li>
 <h1 id="lower-bound-of-unipotent-matrix">Lower Bound of Unipotent Matrix</h1>
 <ul>
-<li>For $A$ a matrix, if $A-I$ is nilpotent, then $A$ is said to be unipotent.</li>
-<li>Define $|A| = \max |a_{ij}|$. Then $|A|$ is lower bounded by $1$. Surprisingly, this can be proved using trace. In fact, there is at least one diagonal entry whose absolute value is not less than $1$.</li>
+<li>For <span class="math inline">$A$</span> a matrix, if <span class="math inline">$A-I$</span> is nilpotent, then <span class="math inline">$A$</span> is said to be unipotent.</li>
+<li>Define <span class="math inline">$\|A\| = \max |a_{ij}|$</span>. Then <span class="math inline">$\|A\|$</span> is lower bounded by <span class="math inline">$1$</span>. Surprisingly, this can be proved using trace. In fact, there is at least one diagonal entry whose absolute value is not less than <span class="math inline">$1$</span>.</li>
 <li>A thing I didn't grasp is that the trace is equal to the sum of eigenvalues counting the multiplicity. For the power, the trace is the sum of eigenvalues taken the power, counting the multiplicity.</li>
-<li>$$\mathrm{trace} A^n= \sum \lambda_i^n$$</li>
+<li>
+<div class="math block">
+$$\mathrm{trace} A^n= \sum \lambda_i^n$$
+</div>
+</li>
 <li>This is clear from the Jordan canonical form and I do not know how can one show this without JCF.</li>
-<li>The <strong>upper bound</strong> of $|A^j|$ is $Kj^m$, where $K$ is a positive constant.</li>
+<li>The <strong>upper bound</strong> of <span class="math inline">$\|A^j\|$</span> is <span class="math inline">$Kj^m$</span>, where <span class="math inline">$K$</span> is a positive constant.</li>
 </ul>
 </li>
 <li>
 <h1 id="gluing-lemma">Gluing Lemma</h1>
 <ul>
-<li>For $X\subset \mathbb R^n$, if $X=A\cap B$ and $A,B$ are closed sets, and $f\mid A$, $f\mid B$ are both continuous, then $f$ is continuous.</li>
+<li>For <span class="math inline">$X\subset \mathbb R^n$</span>, if <span class="math inline">$X=A\cap B$</span> and <span class="math inline">$A,B$</span> are closed sets, and <span class="math inline">$f\mid A$</span>, <span class="math inline">$f\mid B$</span> are both continuous, then <span class="math inline">$f$</span> is continuous.</li>
 <li>I saw that this condition can be weakened to Hausdorff space, but I didn't look into it.</li>
 <li>This lemma is useful for algebraic topology.</li>
 <li></li>
