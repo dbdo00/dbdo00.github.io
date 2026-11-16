@@ -238,6 +238,11 @@
 <body>
 <nav id="TOC" role="doc-toc">
 <ul>
+<li><a href="#bandit" id="toc-bandit">bandit</a></li>
+<li><a href="#visualization"
+id="toc-visualization">visualization</a></li>
+<li><a href="#sleeping-vs.-inksloping"
+id="toc-sleeping-vs.-inksloping">Sleeping vs. inksloping</a></li>
 <li><a href="#concentration-problem"
 id="toc-concentration-problem">concentration problem</a></li>
 <li><a href="#don-wake-me-up" id="toc-don-wake-me-up">don wake me
@@ -1007,6 +1012,72 @@ First Time Watch. Finished 11 Episodes Straight.</a></li>
 id="toc-自我写作和公开写作的区别">自我写作和公开写作的区别</a></li>
 </ul>
 </nav>
+<h1 id="bandit">bandit</h1>
+<p>Recall that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo>,</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">Q(s,a)</annotation></semantics></math>
+is the best possible reward if choosing a in the immediate step, and the
+rest of actions are optimal.</p>
+<p>In bandit algorithm, <em>there is no state</em>. We can drop the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>.
+So instead of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo>,</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">Q(s,a)</annotation></semantics></math>,
+we consider
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>𝔼</mi><mo stretchy="false" form="prefix">[</mo><msub><mi>R</mi><mi>t</mi></msub><mo>∣</mo><mspace width="0.222em"></mspace><msub><mi>A</mi><mi>t</mi></msub><mo>=</mo><mi>a</mi><mo stretchy="false" form="postfix">]</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">Q(a)=\mathbb E[R_t \mid\ A_t = a].</annotation></semantics></math></p>
+<h2 id="regret">Regret</h2>
+<p>Regret measures the difference of expected reward and the optimal
+reward value. I have no idea what
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>q</mi><mo>*</mo></msup><annotation encoding="application/x-tex">q^*</annotation></semantics></math>
+is and why is it multiplied by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>,
+a positive integer denoting the number of steps.</p>
+<p>Also, I don’t know what
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>q</mi><mo>*</mo></msup><mo>=</mo><msub><mrow><mi mathvariant="normal">max</mi><mo>&#8289;</mo></mrow><mi>a</mi></msub><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">q^* = \max_a q(a)</annotation></semantics></math>
+– the definition of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>q</mi><mo>⋆</mo></msup><annotation encoding="application/x-tex">q^\star</annotation></semantics></math>
+– means. Since
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">q(a)</annotation></semantics></math>
+is really the expected value of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>t</mi></msub><mo>∣</mo><msub><mi>A</mi><mi>t</mi></msub><mo>=</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">R_t \mid A_t =a</annotation></semantics></math>,
+maximizing
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">q(a)</annotation></semantics></math>
+is just maximizing the immediate reward
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>t</mi></msub><annotation encoding="application/x-tex">R_t</annotation></semantics></math>,
+which meaning greedy? (obviously does not make sense because this is a
+general setting and not restricted greedy strategy.)</p>
+<p>There might be a way to get the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>δ</mi><annotation encoding="application/x-tex">\delta</annotation></semantics></math>
+or
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>δ</mi><mi>a</mi></msub><annotation encoding="application/x-tex">\delta_a</annotation></semantics></math>,
+which is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msup><mi>q</mi><mo>⋆</mo></msup><mo>−</mo><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">Aq^\star - q(a)</annotation></semantics></math>.</p>
+<p>But this again refers to the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>q</mi><mo>⋆</mo></msup><annotation encoding="application/x-tex">q^\star</annotation></semantics></math>
+the definition of which I don’t yet understand.</p>
+<p>Perhaps the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>δ</mi><annotation encoding="application/x-tex">\delta</annotation></semantics></math>
+computation is streamlined, in a similar fashion as the value iteration
+(unsure). It turned out that computation can be done directly. ##
+Gap</p>
+<p>2026-11-16</p>
+<h1 id="visualization">visualization</h1>
+<p>I used to be skeptical of visualization, believing it to be a mere
+fancy tool of marketing. But I now see the potential fun of doing it
+because of how easy we percieve and get stimulated by visuals, and the
+possible ways it might effectively convery ideas and information.</p>
+<p>Two things are hardest to bear: not understanding what is happening,
+not knowing what I want, not knowing <em>why</em> I want. They happen
+simutaneously when I have been trying to build the recommendation
+system. After seeking solutions actively and passively, I begin to
+believe visualization might solve these problems together.</p>
+<p>2026-11-16</p>
+<h1 id="sleeping-vs.-inksloping">Sleeping vs. inksloping</h1>
+<p>I did not sleep enough yesterday. As an result, I am tired the entire
+day.</p>
+<p>Stumbled on the article <a
+href="https://www.lesswrong.com/posts/Wcrujo7wadRpuq8vx/thinkhaven-1">ThinkHaven</a>.
+This might be what i am doing, but not exactly. I do not agree with its
+way of saying this kind of writing I do, but I am not sure.</p>
+<p>2026-11-16</p>
 <h1 id="concentration-problem">concentration problem</h1>
 <p>recently i more and more frequently notice my attention issue. I
 cannot pay attention to things that require it.</p>

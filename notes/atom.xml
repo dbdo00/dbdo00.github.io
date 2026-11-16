@@ -3,17 +3,46 @@
   <title>dbdo notes</title>
   <id>https://dbdo00.github.io/notes</id>
   <link href="https://dbdo00.github.io/notes/atom.xml" rel="self" />
-  <updated>2026-11-15T12:18:01.508362Z</updated>
+  <updated>2026-11-16T15:16:58.25834Z</updated>
   <generator uri="https://github.com/llimllib/obsidian_notes/" version="1.0">
     Obsidian Notes
   </generator>
   <author><name>dbdo</name></author>
   <entry>
+    <id>https://dbdo00.github.io/notes/journals/2026_11_16.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_16.html" />
+    <title>2026_11_16</title>
+    <published>2026-11-16T15:16:47Z</published>
+    <updated>2026-11-16T15:16:47Z</updated>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;TODO write report section about UCB policy_improved&lt;br /&gt;
+:LOGBOOK:&lt;br /&gt;
+CLOCK: [2026-11-16 Mon 19:33:06]--[2026-11-16 Mon 19:33:06] =&amp;gt;  00:00:00&lt;br /&gt;
+CLOCK: [2026-11-16 Mon 19:33:26]&lt;br /&gt;
+CLOCK: [2026-11-16 Mon 19:36:14]--[2026-11-16 Mon 19:42:42] =&amp;gt;  00:06:28&lt;br /&gt;
+CLOCK: [2026-11-16 Mon 19:42:44]--[2026-11-16 Mon 19:42:49] =&amp;gt;  00:00:05&lt;br /&gt;
+CLOCK: [2026-11-16 Mon 19:42:49]&lt;br /&gt;
+CLOCK: [2026-11-16 Mon 19:59:42]--[2026-11-16 Mon 20:21:42] =&amp;gt;  00:22:00&lt;br /&gt;
+CLOCK: [2026-11-16 Mon 20:21:44]--[2026-11-16 Mon 21:11:18] =&amp;gt;  00:49:34&lt;br /&gt;
+CLOCK: [2026-11-16 Mon 21:19:29]--[2026-11-16 Mon 22:04:20] =&amp;gt;  00:44:51&lt;br /&gt;
+:END:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://yhwu-is.github.io/Teach/ec/data_market/2026/lec05-mab.pdf&quot; class=&quot;external-link&quot;&gt;https://yhwu-is.github.io/Teach/ec/data_market/2026/lec05-mab.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;the selection happens on the last line &lt;a href=&quot;https://github.com/kfoofw/bandit_simulations/blob/master/python/multiarmed_bandits/analysis/ucb.md&quot; class=&quot;external-link&quot;&gt;https://github.com/kfoofw/bandit_simulations/blob/master/python/multiarmed_bandits/analysis/ucb.md&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
     <id>https://dbdo00.github.io/notes/journals/2026_11_15.html</id>
     <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_15.html" />
     <title>2026_11_15</title>
     <published>2026-11-15T10:05:18Z</published>
-    <updated>2026-11-15T10:09:39Z</updated>
+    <updated>2026-11-15T17:12:15Z</updated>
     <content type="html">&lt;ul&gt;
 &lt;li&gt;Q: What is the largest number of points on the plain, each two of which have the equal &lt;span class=&quot;math inline&quot;&gt;$\ell_1$&lt;/span&gt; distance?
 &lt;ul&gt;
@@ -26,7 +55,7 @@
 &lt;li&gt;So, the maximal number of pairwise &lt;span class=&quot;math inline&quot;&gt;$\ell_1$&lt;/span&gt;-equidistant points on &lt;span class=&quot;math inline&quot;&gt;$\mathbb R^2$&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;$\boxed 4$&lt;/span&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;dual and support vectors t10 task 4&lt;br /&gt;
+&lt;li&gt;DONE dual and support vectors t10 task 4&lt;br /&gt;
 :LOGBOOK:&lt;br /&gt;
 CLOCK: [2026-11-15 Sun 20:06:21]--[2026-11-15 Sun 20:06:22] =&amp;gt;  00:00:01&lt;br /&gt;
 CLOCK: [2026-11-15 Sun 20:06:23]--[2026-11-15 Sun 20:06:23] =&amp;gt;  00:00:00&lt;br /&gt;
@@ -46,8 +75,16 @@ CLOCK: [2026-11-15 Sun 20:06:37]&lt;br /&gt;
 &lt;li&gt;full margin is &lt;span class=&quot;math inline&quot;&gt;$\frac{2}{\|w\|_2}$&lt;/span&gt;. Primal objective is &lt;span class=&quot;math inline&quot;&gt;$\frac{1}{2} \|w\|_2$&lt;/span&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;TODO &lt;a href=&quot;https://distill.pub/2019/paths-perspective-on-value-learning/&quot; class=&quot;external-link&quot;&gt;https://distill.pub/2019/paths-perspective-on-value-learning/&lt;/a&gt; 想一下怎么可视化自己的rl项目&lt;/li&gt;
-&lt;li&gt;TODO approximate 𝑄-learning&lt;/li&gt;
+&lt;li&gt;TODO &lt;a href=&quot;https://distill.pub/2019/paths-perspective-on-value-learning/&quot; class=&quot;external-link&quot;&gt;https://distill.pub/2019/paths-perspective-on-value-learning/&lt;/a&gt; 想一下怎么可视化自己的rl项目&lt;br /&gt;
+:LOGBOOK:&lt;br /&gt;
+CLOCK: [2026-11-15 Sun 23:34:53]--[2026-11-16 Mon 00:35:30] =&amp;gt;  01:00:37&lt;br /&gt;
+CLOCK: [2026-11-16 Mon 00:35:38]--[2026-11-16 Mon 01:06:20] =&amp;gt;  00:30:42&lt;br /&gt;
+:END:&lt;/li&gt;
+&lt;li&gt;TODO approximate 𝑄-learning&lt;br /&gt;
+:LOGBOOK:&lt;br /&gt;
+CLOCK: [2026-11-15 Sun 23:35:11]--[2026-11-16 Mon 00:35:39] =&amp;gt;  01:00:28&lt;br /&gt;
+CLOCK: [2026-11-16 Mon 00:35:44]--[2026-11-16 Mon 01:11:49] =&amp;gt;  00:36:05&lt;br /&gt;
+:END:&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
@@ -731,19 +768,6 @@ The ratio is &lt;span class=&quot;math inline&quot;&gt;$\frac{p}{1 - p}$&lt;/spa
 if both in the form exp, then &lt;span class=&quot;math inline&quot;&gt;$\log p/(1-p) = \log (exp (\cdot)) = \cdot$&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;/Pasted image 20261002204030.png&quot;&gt;&lt;img class=&quot;bodyimg&quot; src=&quot;/Pasted image 20261002204030.png&quot;&gt;&lt;/a&gt;&lt;br /&gt;
 不太明白：求出来likelihood ，但是不知道参数是什么。用MLE 来计算吗？&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/概率就是用各种方式计算加权和.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/概率就是用各种方式计算加权和.html" />
-    <title>概率就是用各种方式计算加权和</title>
-    <published>2026-09-08T04:54:53Z</published>
-    <updated>2026-09-08T04:54:53Z</updated>
-    <content type="html">&lt;p&gt;概率就是用各种方式计算加权和&lt;/p&gt;
-&lt;div class=&quot;math block&quot;&gt;
-$$E[g(X)]$$
-&lt;/div&gt;
-&lt;p&gt;信息论：加权和用对数单位&lt;/p&gt;
 </content>
   </entry>
 </feed>
