@@ -634,3 +634,158 @@ p.important-title::before {
   content: " · ";
   color: #a39f8a;
 }
+
+/* Org-mode / Logseq task blocks */
+
+.org-task {
+  display: inline;
+}
+
+.task-status {
+  display: inline-block;
+  margin-right: 0.45em;
+  padding: 0 7px;
+  border-radius: 4px;
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  line-height: 1.65;
+  vertical-align: 0.12em;
+  white-space: nowrap;
+}
+
+.task-todo .task-status,
+.task-later .task-status,
+.task-waiting .task-status {
+  background-color: #fff4dc;
+  color: #8a5a00;
+}
+
+.task-done .task-status {
+  background-color: #eaf5ea;
+  color: #1a7f37;
+}
+
+.task-doing .task-status,
+.task-now .task-status {
+  background-color: #e8f1fb;
+  color: #1f5fa8;
+}
+
+.task-canceled .task-status {
+  background-color: #eef0f2;
+  color: #5e6670;
+}
+
+.task-done .task-title,
+.task-canceled .task-title {
+  color: #8e8874;
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+  text-decoration-color: #b9b3a0;
+}
+
+details.task-logbook {
+  margin: 0.3em 0 0.45em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.76rem;
+  line-height: 1.55;
+  color: #6b6450;
+}
+
+details.task-logbook summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 1px 8px 1px 6px;
+  border: 1px solid #e6e1d0;
+  border-radius: 999px;
+  background-color: #f7f4e9;
+  color: #6b6450;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  list-style: none;
+}
+
+details.task-logbook summary::marker,
+details.task-logbook summary::-webkit-details-marker {
+  display: none;
+  content: "";
+}
+
+details.task-logbook summary::before {
+  content: "▸";
+  font-size: 0.7em;
+  color: #a39b83;
+}
+
+details.task-logbook[open] summary::before {
+  content: "▾";
+}
+
+details.task-logbook summary:hover {
+  background-color: #f1eddd;
+  color: #4f4938;
+}
+
+details.task-logbook[open] summary {
+  margin-bottom: 4px;
+  background-color: #f1eddd;
+}
+
+ul.logbook-rows {
+  margin: 3px 0 8px;
+  padding: 7px 10px;
+  list-style: none;
+  border-left: 2px solid #ece7d6;
+  background-color: #fcfbf4;
+}
+
+li.logbook-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 0.45em;
+  margin: 0;
+  padding: 1px 0;
+  white-space: nowrap;
+}
+
+.clock-start,
+.clock-end {
+  color: #77705c;
+}
+
+.clock-arrow {
+  color: #b6ae96;
+}
+
+.clock-dur {
+  margin-left: auto;
+  padding-left: 1em;
+  color: #3f3a2d;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.clock-open {
+  color: #a86a00;
+  font-style: italic;
+}
+
+main li:empty {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  li.logbook-row {
+    white-space: normal;
+  }
+
+  .clock-dur {
+    margin-left: 1.65em;
+    padding-left: 0;
+  }
+}
