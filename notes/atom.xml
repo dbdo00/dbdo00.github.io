@@ -3,17 +3,17 @@
   <title>dbdo notes</title>
   <id>https://dbdo00.github.io/notes</id>
   <link href="https://dbdo00.github.io/notes/atom.xml" rel="self" />
-  <updated>2026-11-17T09:14:29.619329Z</updated>
+  <updated>2026-11-17T09:28:48.891488Z</updated>
   <generator uri="https://github.com/llimllib/obsidian_notes/" version="1.0">
     Obsidian Notes
   </generator>
   <author><name>dbdo</name></author>
   <entry>
-    <id>https://dbdo00.github.io/notes/2026_11_17.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/2026_11_17.html" />
+    <id>https://dbdo00.github.io/notes/journals/2026_11_17.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_17.html" />
     <title>2026_11_17</title>
     <published>2026-11-17T08:16:42Z</published>
-    <updated>2026-11-17T08:16:42Z</updated>
+    <updated>2026-11-17T09:27:30Z</updated>
     <content type="html">&lt;ul&gt;
 &lt;li&gt;&lt;span class=&quot;org-task task-todo&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;TODO&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;dataset handling. for recommendation data especially&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&quot;org-task task-todo&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;TODO&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;review the todo export functioanlity and commit&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
@@ -25,8 +25,8 @@
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/2026_11_16.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/2026_11_16.html" />
+    <id>https://dbdo00.github.io/notes/journals/2026_11_16.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_16.html" />
     <title>2026_11_16</title>
     <published>2026-11-16T15:16:47Z</published>
     <updated>2026-11-16T15:16:47Z</updated>
@@ -43,8 +43,8 @@
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/2026_11_15.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/2026_11_15.html" />
+    <id>https://dbdo00.github.io/notes/journals/2026_11_15.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_15.html" />
     <title>2026_11_15</title>
     <published>2026-11-15T10:05:18Z</published>
     <updated>2026-11-15T17:12:15Z</updated>
@@ -74,8 +74,19 @@
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/2026_11_13.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/2026_11_13.html" />
+    <id>https://dbdo00.github.io/notes/pages/contents.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/pages/contents.html" />
+    <title>contents</title>
+    <published>2025-11-19T18:57:45Z</published>
+    <updated>2026-11-15T10:02:03Z</updated>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <id>https://dbdo00.github.io/notes/journals/2026_11_13.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_13.html" />
     <title>2026_11_13</title>
     <published>2026-11-13T05:07:40Z</published>
     <updated>2026-11-15T09:31:24Z</updated>
@@ -92,8 +103,8 @@
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/2026_06_27.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/2026_06_27.html" />
+    <id>https://dbdo00.github.io/notes/journals/2026_06_27.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_06_27.html" />
     <title>2026_06_27</title>
     <published>2026-06-26T21:41:12Z</published>
     <updated>2026-11-13T05:07:40Z</updated>
@@ -106,8 +117,8 @@
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/2025_12_01.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/2025_12_01.html" />
+    <id>https://dbdo00.github.io/notes/journals/2025_12_01.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_12_01.html" />
     <title>2025_12_01</title>
     <published>2025-11-30T22:16:53Z</published>
     <updated>2026-11-12T12:13:24Z</updated>
@@ -156,8 +167,8 @@ Let &lt;span class=&quot;math inline&quot;&gt;$v = (1 \quad -1  \quad 0)^\top$&l
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/2026_07_08.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/2026_07_08.html" />
+    <id>https://dbdo00.github.io/notes/journals/2026_07_08.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_07_08.html" />
     <title>2026_07_08</title>
     <published>2026-09-08T04:54:53Z</published>
     <updated>2026-09-08T04:54:53Z</updated>
@@ -174,8 +185,8 @@ Let &lt;span class=&quot;math inline&quot;&gt;$v = (1 \quad -1  \quad 0)^\top$&l
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/2026_06_28.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/2026_06_28.html" />
+    <id>https://dbdo00.github.io/notes/journals/2026_06_28.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_06_28.html" />
     <title>2026_06_28</title>
     <published>2026-09-08T04:54:53Z</published>
     <updated>2026-09-08T04:54:53Z</updated>
@@ -191,8 +202,8 @@ define the &#x27;done&#x27;&lt;/li&gt;
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/2026_06_25.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/2026_06_25.html" />
+    <id>https://dbdo00.github.io/notes/journals/2026_06_25.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_06_25.html" />
     <title>2026_06_25</title>
     <published>2026-06-24T22:47:52Z</published>
     <updated>2026-06-24T22:48:12Z</updated>
@@ -205,8 +216,8 @@ define the &#x27;done&#x27;&lt;/li&gt;
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/2026_06_24.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/2026_06_24.html" />
+    <id>https://dbdo00.github.io/notes/journals/2026_06_24.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_06_24.html" />
     <title>2026_06_24</title>
     <published>2026-06-24T08:32:34Z</published>
     <updated>2026-06-24T08:32:34Z</updated>
@@ -217,8 +228,8 @@ define the &#x27;done&#x27;&lt;/li&gt;
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/2025_12_08.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/2025_12_08.html" />
+    <id>https://dbdo00.github.io/notes/journals/2025_12_08.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_12_08.html" />
     <title>2025_12_08</title>
     <published>2025-12-08T12:47:05Z</published>
     <updated>2026-06-24T08:32:34Z</updated>
@@ -238,8 +249,8 @@ define the &#x27;done&#x27;&lt;/li&gt;
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/2025_12_15.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/2025_12_15.html" />
+    <id>https://dbdo00.github.io/notes/journals/2025_12_15.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_12_15.html" />
     <title>2025_12_15</title>
     <published>2025-12-15T06:34:57Z</published>
     <updated>2025-12-28T14:05:57Z</updated>
@@ -259,8 +270,8 @@ define the &#x27;done&#x27;&lt;/li&gt;
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/2025_12_12.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/2025_12_12.html" />
+    <id>https://dbdo00.github.io/notes/journals/2025_12_12.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_12_12.html" />
     <title>2025_12_12</title>
     <published>2025-12-12T03:02:44Z</published>
     <updated>2025-12-15T06:34:57Z</updated>
@@ -277,8 +288,8 @@ define the &#x27;done&#x27;&lt;/li&gt;
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/2025_12_05.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/2025_12_05.html" />
+    <id>https://dbdo00.github.io/notes/journals/2025_12_05.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_12_05.html" />
     <title>2025_12_05</title>
     <published>2025-12-05T14:10:53Z</published>
     <updated>2025-12-15T06:34:57Z</updated>
@@ -314,27 +325,6 @@ $$\mathrm{trace} A^n= \sum \lambda_i^n$$
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/2025_11_20.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/2025_11_20.html" />
-    <title>2025_11_20</title>
-    <published>2025-11-19T18:57:45Z</published>
-    <updated>2025-12-07T09:26:41Z</updated>
-    <content type="html">&lt;h2 id=&quot;independent-aftermath-1&quot;&gt;Independent Aftermath 1&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;today I read the first question in the Chapter 8 &#x27;independent aftermath&#x27;  in the book &amp;quot;Conversational problem Solving&amp;quot;. I wonder why is the probability &amp;quot;symmetric&amp;quot; for different &lt;span class=&quot;math inline&quot;&gt;$x_i$&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../assets/image_1763578596524_0.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/li&gt;
-&lt;li&gt;I think the reason is that &lt;span class=&quot;math inline&quot;&gt;$p_i$&lt;/span&gt; is the probability of Rebecca (in any ways) going to the one of the adjacent of &lt;span class=&quot;math inline&quot;&gt;$x_i$&lt;/span&gt; then moving to the other adjacent of &lt;span class=&quot;math inline&quot;&gt;$x_i$&lt;/span&gt;,  the length of which adds up to the same number  n-1 all &lt;span class=&quot;math inline&quot;&gt;$x_i$&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;$2\leq i \leq n$&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;Regarding the question above, I think the reason is that since Rebecca will eventually move to an adjacent of &lt;span class=&quot;math inline&quot;&gt;$x_i$&lt;/span&gt;, the probability of this event is 1. Therefore, conditioning on this event yields the same probability as &lt;span class=&quot;math inline&quot;&gt;$p_i$&lt;/span&gt;. (18:25)&lt;/li&gt;
-&lt;li&gt;
-&lt;h2 id=&quot;graph&quot;&gt;Graph&lt;/h2&gt;
-&lt;/li&gt;
-&lt;li&gt;In the proof that an Euler walk exists if and only every vertex has an even degree (Theorem 1.8.1 in &lt;a href=&quot;https://www.math.uni-hamburg.de/home/diestel/books/graph.theory/preview/Ch1.pdf&quot; class=&quot;external-link&quot;&gt;https://www.math.uni-hamburg.de/home/diestel/books/graph.theory/preview/Ch1.pdf&lt;/a&gt;), a subtle step is the following: if an edge is in &lt;span class=&quot;math inline&quot;&gt;$G-E(W)$&lt;/span&gt;, then there exists (possible another) edge &lt;span class=&quot;math inline&quot;&gt;$e$&lt;/span&gt; incident to a vertex in in &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;Then, the connected component &lt;span class=&quot;math inline&quot;&gt;$C$&lt;/span&gt; of &lt;span class=&quot;math inline&quot;&gt;$e$&lt;/span&gt; in &lt;span class=&quot;math inline&quot;&gt;$G&#x27;$&lt;/span&gt; is a smaller connected graph with even degrees. (It has to have fewer edges than &lt;span class=&quot;math inline&quot;&gt;$G$&lt;/span&gt; does because &lt;span class=&quot;math inline&quot;&gt;$G&#x27;$&lt;/span&gt;, where this component lies, is already much short of edges than &lt;span class=&quot;math inline&quot;&gt;$G$&lt;/span&gt;.) So, by induction hypothesis, &lt;span class=&quot;math inline&quot;&gt;$C$&lt;/span&gt; has an Euler walk. Concatenation of it with &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt; finishes the proof.&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
