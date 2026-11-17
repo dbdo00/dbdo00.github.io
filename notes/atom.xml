@@ -3,11 +3,53 @@
   <title>dbdo notes</title>
   <id>https://dbdo00.github.io/notes</id>
   <link href="https://dbdo00.github.io/notes/atom.xml" rel="self" />
-  <updated>2026-11-17T14:07:10.06917Z</updated>
+  <updated>2026-11-17T14:15:03.87996Z</updated>
   <generator uri="https://github.com/llimllib/obsidian_notes/" version="1.0">
     Obsidian Notes
   </generator>
   <author><name>dbdo</name></author>
+  <entry>
+    <id>https://dbdo00.github.io/notes/README.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/README.html" />
+    <title>README</title>
+    <published>2025-09-16T17:47:09Z</published>
+    <updated>2026-11-17T14:14:24Z</updated>
+    <content type="html">&lt;h1 id=&quot;algebra&quot;&gt;Algebra&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;[[group_theory]]&lt;/li&gt;
+&lt;li&gt;[[linear_algebra]]&lt;/li&gt;
+&lt;li&gt;[[Dot Product And Cross Product]]&lt;/li&gt;
+&lt;li&gt;[[fields]]&lt;/li&gt;
+&lt;li&gt;[[Gauss Integer]]&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&quot;topology&quot;&gt;Topology&lt;/h1&gt;
+&lt;/li&gt;
+&lt;li&gt;[[Algebraic Topology]]&lt;/li&gt;
+&lt;li&gt;[[surfaces]]&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&quot;analysis&quot;&gt;Analysis&lt;/h1&gt;
+&lt;/li&gt;
+&lt;li&gt;[[Symmetric Integrals]]&lt;/li&gt;
+&lt;li&gt;[[Abel Partial Summation]]&lt;/li&gt;
+&lt;li&gt;[[Analysis]]&lt;/li&gt;
+&lt;li&gt;[[Limit involving e]]&lt;/li&gt;
+&lt;li&gt;[[Compactness and Uniform Continuity]]&lt;/li&gt;
+&lt;li&gt;[[sums]]&lt;/li&gt;
+&lt;li&gt;[[Integrals involving Absolute Values]]&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&quot;number-theory&quot;&gt;Number Theory&lt;/h1&gt;
+&lt;/li&gt;
+&lt;li&gt;[[quadratic_space]]&lt;/li&gt;
+&lt;li&gt;[[Descend Argument]]&lt;/li&gt;
+&lt;li&gt;
+&lt;h2 id=&quot;geometry&quot;&gt;Geometry&lt;/h2&gt;
+&lt;/li&gt;
+&lt;li&gt;[[What is Geometry]]&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <id>https://dbdo00.github.io/notes/journals/2026_11_17.html</id>
     <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_17.html" />
@@ -23,438 +65,296 @@
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/概率就是用各种方式计算加权和.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/概率就是用各种方式计算加权和.html" />
-    <title>概率就是用各种方式计算加权和</title>
-    <published>2026-09-08T04:54:53Z</published>
-    <updated>2026-11-17T12:57:46Z</updated>
-    <content type="html">&lt;p&gt;概率就是用各种方式计算加权和&lt;/p&gt;
-&lt;div class=&quot;math block&quot;&gt;
-$$E[g(X)]$$
-&lt;/div&gt;
-&lt;p&gt;信息论：加权和用对数单位&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/不同的指标意思.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/不同的指标意思.html" />
-    <title>不同的指标意思</title>
-    <published>2026-10-02T22:34:28Z</published>
-    <updated>2026-11-17T12:57:46Z</updated>
-    <content type="html">&lt;p&gt;FNR 召回率：正确找到的/所有的目标&lt;br /&gt;
-FPR 准确率：正确找到的/所有找到的&lt;/p&gt;
-&lt;p&gt;FN 拖累召回率&lt;br /&gt;
-FP 拖累精确率&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/Untitled_4.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/Untitled_4.html" />
-    <title>Untitled 4</title>
-    <published>2026-10-07T05:28:18Z</published>
-    <updated>2026-11-17T12:57:46Z</updated>
-    <content type="html">&lt;ol&gt;
-&lt;li&gt;平移不变性  。存在d, 对任意两点。 d(T(p), T(p&#x27;) )= d(p,p&#x27;)&lt;/li&gt;
-&lt;li&gt;旋转不变性 存在 R, 对任意两点        d(R(p), R(p&#x27;))= d(p,p&#x27;)&lt;/li&gt;
-&lt;li&gt;d 是一个度量。&lt;br /&gt;
-证明这个d 满足勾股定理&lt;/li&gt;
-&lt;/ol&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/Untitled_3.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/Untitled_3.html" />
-    <title>Untitled 3</title>
-    <published>2026-06-24T08:32:34Z</published>
-    <updated>2026-11-17T12:57:46Z</updated>
-    <content type="html">&lt;p&gt;The slice angles form a geometric sequence &lt;span class=&quot;math inline&quot;&gt;$a_n$&lt;/span&gt;, with common ratio &lt;span class=&quot;math inline&quot;&gt;$r = 1.22$&lt;/span&gt;, and the initial term &lt;span class=&quot;math inline&quot;&gt;$a_0=10$&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Let the number of slices be &lt;span class=&quot;math inline&quot;&gt;$n$&lt;/span&gt;. Then&lt;/p&gt;
-&lt;div class=&quot;math block&quot;&gt;
-$$10(\frac{r^n - 1}{r - 1}) =  10 ( 1 + r + \ldots + r^{n-1} ) =\  \rm total\ angle$$
-&lt;/div&gt;
-&lt;p&gt;Here the total angle is of that of the circular cake, which is  360 degree.&lt;/p&gt;
-&lt;p&gt;Rearrangement gives &lt;span class=&quot;math inline&quot;&gt;$n = \frac{\ln [ (r - 1 ) ({\rm \ total\ angle }/10) + 1 ]}{\ln r} = 11.0047... \approx 11$&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;In the slices, the taken ones are the 4th and 8th.&lt;/p&gt;
-&lt;p&gt;The angle of the 4th: &lt;span class=&quot;math inline&quot;&gt;$a_3 = 10 \cdot r ^3$&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;THe anlge of the 8th: &lt;span class=&quot;math inline&quot;&gt;$a_7 = 10 \cdot r^4$&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;The total angles taken:&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$${\rm taken\ } = 10 \times (r^3 + r^7) \approx 147.50209$$&lt;/div&gt;&lt;/p&gt;
-&lt;p&gt;So the remaining area is:&lt;/p&gt;
-&lt;p&gt;&lt;div class=&quot;math inline&quot;&gt;$$\pi r^2  \times \left ( 1 - {\rm taken\ } / 360\right) \approx 65$$&lt;/div&gt;.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/Untitled_2.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/Untitled_2.html" />
-    <title>Untitled 2</title>
-    <published>2025-12-12T03:02:44Z</published>
-    <updated>2026-11-17T12:57:46Z</updated>
-    <content type="html">&lt;p&gt;Find &lt;span class=&quot;math inline&quot;&gt;$D_n$&lt;/span&gt;  &lt;div class=&quot;math inline&quot;&gt;$$D_n = \begin{vmatrix} 1+a_1 &amp; 1 &amp; \cdots &amp; 1 \\ 1 &amp; 1+a_2 &amp; \cdots &amp; 1 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ 1 &amp; 1 &amp; \cdots &amp; 1+a_n \end{vmatrix}$$&lt;/div&gt; 其中 &lt;span class=&quot;math inline&quot;&gt;$a_1​a_2​⋯a_n​=0$&lt;/span&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;方法一：加边法&lt;/strong&gt; 增加一行一列，保持值不变： &lt;div class=&quot;math inline&quot;&gt;$$D_n = \begin{vmatrix} 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 \\ 0 &amp; 1+a_1 &amp; 1 &amp; \cdots &amp; 1 \\ 0 &amp; 1 &amp; 1+a_2 &amp; \cdots &amp; 1 \\ \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ 0 &amp; 1 &amp; 1 &amp; \cdots &amp; 1+a_n \end{vmatrix}$$&lt;/div&gt; 将第一行乘以 −1 加到其余各行： &lt;div class=&quot;math inline&quot;&gt;$$D_n = \begin{vmatrix} 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 \\ -1 &amp; a_1 &amp; 0 &amp; \cdots &amp; 0 \\ -1 &amp; 0 &amp; a_2 &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ -1 &amp; 0 &amp; 0 &amp; \cdots &amp; a_n \end{vmatrix}$$&lt;/div&gt; 按第一列展开或化简，最终结果为：&lt;/p&gt;
-&lt;p&gt;设函数 f(x) 在 [0,1] 上连续，在 (0,1) 内可导，且 f(0)=f(1)=0，f(x)≡0。 证明：存在 ξ∈(0,1)，使得&lt;/p&gt;
-&lt;p&gt;f′(ξ)+2025f(ξ)=0&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/Symmetric_Integrals.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/Symmetric_Integrals.html" />
-    <title>Symmetric Integrals</title>
-    <published>2025-11-15T17:19:08Z</published>
-    <updated>2026-11-17T12:57:46Z</updated>
-    <content type="html">&lt;p&gt;If you&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/surfaces.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/surfaces.html" />
-    <title>surfaces</title>
-    <published>2025-12-12T03:02:44Z</published>
+    <id>https://dbdo00.github.io/notes/journals/2026_11_16.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_16.html" />
+    <title>2026_11_16</title>
+    <published>2026-11-16T15:16:47Z</published>
     <updated>2026-11-17T12:57:46Z</updated>
     <content type="html">&lt;ul&gt;
-&lt;li&gt;8.1.1 Which alphabets are manifolds?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Answer&lt;/em&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;alphabet&lt;/th&gt;
-&lt;th&gt;is it a manifold&lt;/th&gt;
-&lt;th&gt;Explanation&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;A&lt;/td&gt;
-&lt;td&gt;No.&lt;/td&gt;
-&lt;td&gt;It has crosses.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;B&lt;/td&gt;
-&lt;td&gt;No.&lt;/td&gt;
-&lt;td&gt;Same reason&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;C&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;D&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;E&lt;/td&gt;
-&lt;td&gt;No.&lt;/td&gt;
-&lt;td&gt;It has crosses&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;F&lt;/td&gt;
-&lt;td&gt;No.&lt;/td&gt;
-&lt;td&gt;Same  reason&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;G&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;H&lt;/td&gt;
-&lt;td&gt;No.&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;I&lt;/td&gt;
-&lt;td&gt;No.&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;J&lt;/td&gt;
-&lt;td&gt;Yes.&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;K&lt;/td&gt;
-&lt;td&gt;No.&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;L&lt;/td&gt;
-&lt;td&gt;Yes.&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;M&lt;/td&gt;
-&lt;td&gt;Yes.&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;N&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;P&lt;/td&gt;
-&lt;td&gt;No.&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Q&lt;/td&gt;
-&lt;td&gt;No.&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;R&lt;/td&gt;
-&lt;td&gt;No.&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;S&lt;/td&gt;
-&lt;td&gt;Yes.&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;T&lt;/td&gt;
-&lt;td&gt;No.&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;U&lt;/td&gt;
-&lt;td&gt;Yes.&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;V&lt;/td&gt;
-&lt;td&gt;Yes.&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;W&lt;/td&gt;
-&lt;td&gt;Yes.&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Y&lt;/td&gt;
-&lt;td&gt;No.&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Z&lt;/td&gt;
-&lt;td&gt;Yes.&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;ul&gt;
-&lt;li&gt;8.1.2 Prove that the real projective space &lt;span class=&quot;math inline&quot;&gt;$P^n$&lt;/span&gt; is a manifold by constructing, for any &lt;span class=&quot;math inline&quot;&gt;$0\leq i\leq n$&lt;/span&gt;, a homeomorphism between the subset &lt;div class=&quot;math inline&quot;&gt;$$U_i = \{\text{span}\{(x_0,x_1, \ldots, x_n )\} \colon x_i \neq 0 \} \subset P^n$$&lt;/div&gt; and &lt;span class=&quot;math inline&quot;&gt;$\mathbb R^n$&lt;/span&gt;. Similarly, prove that the complex projective space is also a manifold.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Relevant Definitions.&lt;/em&gt; We denote space spanned by the vector &lt;span class=&quot;math inline&quot;&gt;$(x_1,\dots, x_n)$&lt;/span&gt; with thenotation &lt;span class=&quot;math inline&quot;&gt;$[x_1: \dots : x_n]$&lt;/span&gt;. This definition implies that &lt;span class=&quot;math inline&quot;&gt;$[\lambda x_1 : \dots : \lambda x_n] = [x_1 : \dots : x_n]$&lt;/span&gt;. The real linear projective space &lt;span class=&quot;math inline&quot;&gt;$P^n$&lt;/span&gt; is the set of &lt;span class=&quot;math inline&quot;&gt;$1$&lt;/span&gt;-dimensional linear subspaces of &lt;span class=&quot;math inline&quot;&gt;$\mathbb R^n$&lt;/span&gt;. Let &lt;span class=&quot;math inline&quot;&gt;$\phi\colon \mathbb R^n \to P^n$&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;$(x_1,\ldots,x_n)\mapsto [x_1:\dots:x_n]$&lt;/span&gt;. A set &lt;span class=&quot;math inline&quot;&gt;$V \in P^n$&lt;/span&gt; is open if and only &lt;span class=&quot;math inline&quot;&gt;$\phi^{-1}(V)$&lt;/span&gt; is open, by the definition of the topology of &lt;span class=&quot;math inline&quot;&gt;$P^n$&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Answer.&lt;/em&gt;&lt;br /&gt;
-We will use the universal properties of the subspace and quotient topology.&lt;br /&gt;
-In this proof, there is not much geometries going on; instead everything is just&lt;br /&gt;
-the application of the universal properties.&lt;/p&gt;
-&lt;p&gt;Let &lt;span class=&quot;math inline&quot;&gt;$S=:\mathbb R^n \setminus \{0\} - \{(v_1,\ldots,v_n)\in \mathbb R^n | v_i = 0\}$&lt;/span&gt;.&lt;br /&gt;
-We endow &lt;span class=&quot;math inline&quot;&gt;$S$&lt;/span&gt; with the subspace topology of &lt;span class=&quot;math inline&quot;&gt;$\mathbb R^n$&lt;/span&gt;. Also, the quotient map restricted on &lt;span class=&quot;math inline&quot;&gt;$S$&lt;/span&gt; has the image &lt;span class=&quot;math inline&quot;&gt;$U_i$&lt;/span&gt;. Hence &lt;span class=&quot;math inline&quot;&gt;$\pi\colon : S \to U_i$&lt;/span&gt; is well defined.&lt;br /&gt;
-Since &lt;span class=&quot;math inline&quot;&gt;$f\colon S\to \mathbb R^n$&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;$(v_1, \ldots, v_n) \to (\frac{v_1}{v_i}, \ldots, \frac{v_n}{v_i})$&lt;/span&gt; is a map such that &lt;span class=&quot;math inline&quot;&gt;$f(x) = f(y) \iff \exists \lambda \in \mathbb R \,s.t. \, x=\lambda y \iff \pi(x)=\pi(y)$&lt;/span&gt;, there exists a unique map &lt;span class=&quot;math inline&quot;&gt;$g\colon U_i \to \mathbb R^{n-1}$&lt;/span&gt; such that &lt;span class=&quot;math inline&quot;&gt;$f=g\circ \pi$&lt;/span&gt;. This map &lt;span class=&quot;math inline&quot;&gt;$f$&lt;/span&gt; is given by &lt;span class=&quot;math inline&quot;&gt;$[v_1: \dots : v_i : \dots : v_n] \mapsto (v_1, \ldots , v_n)$&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Now, &lt;span class=&quot;math inline&quot;&gt;$g$&lt;/span&gt; is continuous if and only if &lt;span class=&quot;math inline&quot;&gt;$f$&lt;/span&gt; is continuous. Is &lt;span class=&quot;math inline&quot;&gt;$f$&lt;/span&gt; continuous? The inclusion&lt;br /&gt;
-map &lt;span class=&quot;math inline&quot;&gt;$\iota_S: S\to \mathbb R^n$&lt;/span&gt; is certainly continuous. Also, the inclusion map &lt;span class=&quot;math inline&quot;&gt;$\iota_{\mathbb{R}^{n-1}} \to \mathbb R^n$&lt;/span&gt; is continuous. Since &lt;span class=&quot;math inline&quot;&gt;$\iota_S = \iota_{\mathbb R^{n-1}} \circ f$&lt;/span&gt;, we know that &lt;span class=&quot;math inline&quot;&gt;$f$&lt;/span&gt; is continuous, by the universal property of the subspace &lt;span class=&quot;math inline&quot;&gt;$\mathbb R^{n-1} \subset \mathbb R^n$&lt;/span&gt;. So, it follows that &lt;span class=&quot;math inline&quot;&gt;$g$&lt;/span&gt; is continuous.&lt;/p&gt;
-&lt;p&gt;We need to show that the reverse of &lt;span class=&quot;math inline&quot;&gt;$g$&lt;/span&gt; is continuous as well. It decomposes to a composition of continuous maps:&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$\mathbb R^{n-1} \quad \overset{(v_1, \ldots, v_n) \mapsto (v_1, \ldots, 1, \ldots ,v_n)}{\to} \quad S \overset{\pi}{\to} U_i$$&lt;/div&gt;.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/sums.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/sums.html" />
-    <title>sums</title>
-    <published>2025-09-16T18:14:20Z</published>
-    <updated>2026-11-17T12:57:46Z</updated>
-    <content type="html">&lt;h1 id=&quot;estimation-of-summations&quot;&gt;Estimation of Summations&lt;/h1&gt;
-&lt;h2 id=&quot;&quot;&gt;&lt;span class=&quot;math inline&quot;&gt;$\frac{1}{n} \sum^n_{k=1} n^{1/k}$&lt;/span&gt;&lt;/h2&gt;
-&lt;p&gt;By plotting, you can find that the &lt;span class=&quot;math inline&quot;&gt;$\frac{1}{n} \sum^\infty_{k=1} k^{1/k}$&lt;/span&gt; finally goes to &lt;span class=&quot;math inline&quot;&gt;$1$&lt;/span&gt;, because &lt;span class=&quot;math inline&quot;&gt;$\{k^{1/k}\} \to 1$&lt;/span&gt;, from which the average goes to &lt;span class=&quot;math inline&quot;&gt;$1$&lt;/span&gt; by Cesaro-Stolz lemma.&lt;br /&gt;
-Now replacing this sum by &lt;span class=&quot;math inline&quot;&gt;$\frac{1}{n} \sum^\infty_{k=1} n^{1/k}$&lt;/span&gt;, it helps to&lt;br /&gt;
-estimate the new summation by splitting the sum into two pieces.&lt;/p&gt;
-&lt;p&gt;The summation is&lt;/p&gt;
-&lt;div class=&quot;math block&quot;&gt;
-$$n + n^{1/2} + n^{1/3} + \ldots n^{1/n}.$$
-&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;The first &lt;span class=&quot;math inline&quot;&gt;$\ln(n)$&lt;/span&gt; terms can be estimated by summing &lt;span class=&quot;math inline&quot;&gt;$\sqrt n$&lt;/span&gt;.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Why would the upper bound &lt;span class=&quot;math inline&quot;&gt;$n^{1/k} \leq \sqrt n$&lt;/span&gt; for the first &lt;span class=&quot;math inline&quot;&gt;$\ln(n)$&lt;/span&gt; work?? The reason is that we know the sum&lt;br /&gt;
-&lt;span class=&quot;math inline&quot;&gt;$\sum_{2 \leq k &lt; \ln n} n^{1/k} \leq \ln(n) \sqrt n = o(n)$&lt;/span&gt; as &lt;span class=&quot;math inline&quot;&gt;$n\to\infty$&lt;/span&gt;, and so this upper bound is sufficient.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Now we estimate &lt;span class=&quot;math inline&quot;&gt;$\sum_{\ln n \leq k \leq n} n^{1/k}$&lt;/span&gt;&lt;/strong&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;inequality&quot;&gt;Inequality&lt;/h2&gt;
-&lt;p&gt;The first inequality to use is&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$e^{\ln n /k} \leq 3\frac{\ln n}{k} + 1$$&lt;/div&gt; for &lt;span class=&quot;math inline&quot;&gt;$k\geq \ln n$&lt;/span&gt;.  (&lt;span class=&quot;math inline&quot;&gt;$e^x &lt; 3 \implies e^x &lt; 3x +1$&lt;/span&gt; for &lt;span class=&quot;math inline&quot;&gt;$x\in [0,1]$&lt;/span&gt;)&lt;/p&gt;
-&lt;p&gt;Also, for &lt;span class=&quot;math inline&quot;&gt;$k \geq 2$&lt;/span&gt;,&lt;div class=&quot;math inline&quot;&gt;$$1/k = \int^{k}_{k-1} \frac{1}{k} dt &lt;\int^{k}_{k-1} \frac{1}{t} dt$$&lt;/div&gt;&lt;/p&gt;
-&lt;p&gt;So &lt;div class=&quot;math inline&quot;&gt;$$\sum^n_{k=2} 1/k &lt; \sum^n_{k=2} \int^k_{k-1} \frac{1}{t}dt = \int^n_{1} \frac{1}{t}dt =\ln n \tag{1}$$&lt;/div&gt;&lt;/p&gt;
-&lt;h2 id=&quot;concluding-estimate&quot;&gt;Concluding Estimate&lt;/h2&gt;
-&lt;div class=&quot;math block&quot;&gt;
-$$\sum_{\ln n &lt; k \leq n} n^{1/k} = \sum_{\ln n &lt; k \leq n} e^{\ln n/k} &lt; 3 \ln n \left(\sum^n_{k=2} \frac{1}{k}\right) + n&lt; 3\ln n \ln n + n = o(n) + n$$
-&lt;/div&gt;
-&lt;p&gt;Here we used the fact that &lt;span class=&quot;math inline&quot;&gt;$\ln^j(n) = o(n^k)$&lt;/span&gt; for all positive &lt;span class=&quot;math inline&quot;&gt;$j,k$&lt;/span&gt;.&lt;/p&gt;
-&lt;h1 id=&quot;comments&quot;&gt;Comments&lt;/h1&gt;
-&lt;p&gt;A key step in the estimation above is &lt;span class=&quot;math inline&quot;&gt;$e^x &lt; 3x +1$&lt;/span&gt; for &lt;span class=&quot;math inline&quot;&gt;$x\in [0,1]$&lt;/span&gt;, which is actually a quite precise one.&lt;br /&gt;
-Generally, if &lt;span class=&quot;math inline&quot;&gt;$f(x)$&lt;/span&gt; is convex on &lt;span class=&quot;math inline&quot;&gt;$[a, \infty)$&lt;/span&gt;, then &lt;span class=&quot;math inline&quot;&gt;$f(x)&lt; Kx + D$&lt;/span&gt; for &lt;span class=&quot;math inline&quot;&gt;$x\in (a,\infty)$&lt;/span&gt;, where &lt;span class=&quot;math inline&quot;&gt;$K=\frac{f(b)-f(a)}{b-a}$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$D=f(a)-Ka$&lt;/span&gt;. As a result, &lt;div class=&quot;math inline&quot;&gt;$$\sum_{a\leq x \leq n} f(x) = \underbrace{K\sum_{a\leq x \leq n} x}_{(1)} + \underbrace{Dn}_{(2)}$$&lt;/div&gt; Note that when &lt;span class=&quot;math inline&quot;&gt;$a&gt;1$&lt;/span&gt;, (1) is &lt;span class=&quot;math inline&quot;&gt;$O(n^2)$&lt;/span&gt; while &lt;span class=&quot;math inline&quot;&gt;$(2)$&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;$O(n)$&lt;/span&gt;. They are not able to become a constant by letting be divided by a power of &lt;span class=&quot;math inline&quot;&gt;$n$&lt;/span&gt;. However, when &lt;span class=&quot;math inline&quot;&gt;$x\in (0,1)$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$a\leq 0$&lt;/span&gt;, we can possibly make (1) of the magnitude &lt;span class=&quot;math inline&quot;&gt;$o(n)$&lt;/span&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;related-questions&quot;&gt;Related Questions&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;div class=&quot;math block&quot;&gt;
-$$\lim_{n\to \infty} \frac{1}{n}\sum^n_{k=1} \sin\left(\frac{n}{k}\right)$$
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Also think about this problem when the argument of &lt;span class=&quot;math inline&quot;&gt;$\sin$&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;$k/n$&lt;/span&gt; instead of &lt;span class=&quot;math inline&quot;&gt;$n/k$&lt;/span&gt;.&lt;br /&gt;
-This is a Riemann sum.&lt;/p&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&quot;math block&quot;&gt;
-$$\lim_{n\to \infty} \frac{1}{n}\sum_{\ln n &lt; k\leq n} \exp(n/k)$$
-&lt;/div&gt;
-&lt;p&gt;This is a Riemann sum.&lt;br /&gt;
-3. &lt;div class=&quot;math inline&quot;&gt;$$\lim_{n\to \infty} \frac{1}{n}\sum^n_{k=1} \exp\bigg(\frac{\ln\ln n}{k}\bigg)$$&lt;/div&gt;&lt;br /&gt;
-&lt;strong&gt;Solution.&lt;/strong&gt; &lt;span class=&quot;math inline&quot;&gt;$\exp(\frac{\ln\ln n}{k}) = (\ln n)^{1/k}$&lt;/span&gt;. So &lt;span class=&quot;math inline&quot;&gt;$\sum \exp\bigg(\frac{\ln\ln n}{k}\bigg) = \sum (\ln n)^{1/k}$&lt;/span&gt;&lt;br /&gt;
-The first piece of sum is &lt;span class=&quot;math inline&quot;&gt;$\sum_{1\leq k \leq \ln \ln n} (\ln n)^{1/k} \leq \ln\ln n (\ln n) = o(n)$&lt;/span&gt;&lt;br /&gt;
-Note that for &lt;span class=&quot;math inline&quot;&gt;$x\in(0,1)$&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;$1\leq e^x \leq 1+ 2x$&lt;/span&gt;.&lt;br /&gt;
-The second piece of the sum is &lt;div class=&quot;math inline&quot;&gt;$$\sum_{\ln\ln n &lt; k \leq n} (\ln n)^{1/k} \approx\sum_{\ln\ln n &lt; k \leq n} \left( 1 + \ln\ln n (\frac{1}{k})\right)\leq n  + \ln\ln n\bigg(\sum^n_{k=1} \frac{1}{k}\bigg)= n + \ln\ln (n) (\ln n)=n + o(n)$$&lt;/div&gt;  So the whole sum is &lt;span class=&quot;math inline&quot;&gt;$n+ o(n)$&lt;/span&gt;.   Q.E.D.&lt;br /&gt;
-&lt;strong&gt;Comment&lt;/strong&gt; This proof splits the sum when &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt; in &lt;span class=&quot;math inline&quot;&gt;$e^x$&lt;/span&gt; is greater than 1 than when it is less than 1. So, the key there is still the inequality &lt;span class=&quot;math inline&quot;&gt;$1\leq e^x \leq 1 +2x$&lt;/span&gt;. It is evident that, to make this average approach &lt;span class=&quot;math inline&quot;&gt;$1$&lt;/span&gt; when &lt;span class=&quot;math inline&quot;&gt;$n\to \infty$&lt;/span&gt;, the choice of function &lt;span class=&quot;math inline&quot;&gt;$f(x)$&lt;/span&gt; in the expression &lt;span class=&quot;math inline&quot;&gt;$f(x))^{1/k}$&lt;/span&gt; is unessential.&lt;/p&gt;
-&lt;ol start=&quot;4&quot;&gt;
-&lt;li&gt;
-&lt;div class=&quot;math block&quot;&gt;
-$$\sum^n_{k=1}\frac{1}{k^2}$$
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/sequences_series.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/sequences_series.html" />
-    <title>sequences_series</title>
-    <published>2025-09-16T17:47:29Z</published>
-    <updated>2026-11-17T12:57:46Z</updated>
-    <content type="html">&lt;ol&gt;
-&lt;li&gt;Is &lt;div class=&quot;math inline&quot;&gt;$$\frac{1}{1 + z^n}$$&lt;/div&gt; convergent or divergent for complex number &lt;span class=&quot;math inline&quot;&gt;$z$&lt;/span&gt;?&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;em&gt;Hints.&lt;/em&gt; &lt;strong&gt;Comparison test for positive series:&lt;/strong&gt; Suppose &lt;span class=&quot;math inline&quot;&gt;$\{a_n\}$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$\{b_n\}$&lt;/span&gt; are positive series. If &lt;span class=&quot;math inline&quot;&gt;$\lim_{n\to \infty} \frac{a_n}{b_n} = A (\neq 0)$&lt;/span&gt;, then &lt;span class=&quot;math inline&quot;&gt;$\sum a_n$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$\sum b_n$&lt;/span&gt; simutaneously convergent or divergent.&lt;br /&gt;
-&lt;strong&gt;Term Test&lt;/strong&gt;: If &lt;span class=&quot;math inline&quot;&gt;$\sum a_n$&lt;/span&gt; is convergent, then &lt;span class=&quot;math inline&quot;&gt;$\lim_{n\to \infty}a_n =0$&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Solution.&lt;/em&gt; If &lt;span class=&quot;math inline&quot;&gt;$|z|\leq 1$&lt;/span&gt;, then &lt;div class=&quot;math inline&quot;&gt;$$\left|\frac{1}{1 + z^n}\right| \geq \frac{1}{|1| + |z^n|} = \frac{1}{1 + 1} = \frac{1}{2}.$$&lt;/div&gt; So &lt;span class=&quot;math inline&quot;&gt;$\lim_{n\to \infty} \frac{1}{1 + x^n}\neq 0$&lt;/span&gt;. So this series diverges for &lt;span class=&quot;math inline&quot;&gt;$|z|=1$&lt;/span&gt;. If &lt;span class=&quot;math inline&quot;&gt;$|z| &gt;1$&lt;/span&gt;, then &lt;span class=&quot;math inline&quot;&gt;$\lim_{n\to \infty} \frac{1}{1 + \frac{1}{z^n}} = 1$&lt;/span&gt;. Let &lt;span class=&quot;math inline&quot;&gt;$b_n = \frac{1}{z^n}$&lt;/span&gt;. The series &lt;span class=&quot;math inline&quot;&gt;$\sum \frac{1}{1 + z^n}$&lt;/span&gt; converges because &lt;div class=&quot;math inline&quot;&gt;$$\lim \bigg(\frac{1}{1 + z^n}\bigg) \bigg/b_n = \lim_{n\to \infty} \frac{1}{1 + \frac{1}{z^n}} = 1$$&lt;/div&gt; from which the comparison test confirms the convergence. &lt;span class=&quot;math inline&quot;&gt;$\square$&lt;/span&gt;&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/rotation_relection.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/rotation_relection.html" />
-    <title>rotation_relection</title>
-    <published>2025-11-14T13:01:05Z</published>
-    <updated>2026-11-17T12:57:46Z</updated>
-    <content type="html">&lt;h1 id=&quot;旋转和反射&quot;&gt;旋转和反射&lt;/h1&gt;
-&lt;h2 id=&quot;叉积的性质&quot;&gt;叉积的性质&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$x\times y \perp x$&lt;/span&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$x\times y$&lt;/span&gt; 垂直于 &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt; 和 &lt;span class=&quot;math inline&quot;&gt;$y$&lt;/span&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$y + x \times y$&lt;/span&gt; 与 x 垂直，与 y 在同一个平面上。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;绕轴旋转矩阵&quot;&gt;绕轴旋转矩阵&lt;/h2&gt;
-&lt;p&gt;要旋转的向量&lt;br /&gt;
-分解成在轴上和与轴垂直的平面上的分量。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/Relativity.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/Relativity.html" />
-    <title>Relativity</title>
-    <published>2025-09-26T07:25:40Z</published>
-    <updated>2026-11-17T12:57:46Z</updated>
-    <content type="html">&lt;h2 id=&quot;special-relativity&quot;&gt;Special Relativity&lt;/h2&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/Reinforcement_Learning.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/Reinforcement_Learning.html" />
-    <title>Reinforcement Learning</title>
-    <published>2026-11-12T07:15:55Z</published>
-    <updated>2026-11-17T12:57:46Z</updated>
-    <content type="html">&lt;h3 id=&quot;offline-learning&quot;&gt;Offline learning&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;SCOPE-RL: A Python library for offline reinforcement learning, off-policy evaluation, and selection  :&lt;a href=&quot;https://github.com/hakuhodo-technologies/scope-rl&quot; class=&quot;external-link&quot;&gt;https://github.com/hakuhodo-technologies/scope-rl&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;It also contains a dataset.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Open Bandit Pipeline: &lt;a href=&quot;https://github.com/st-tech/zr-obp&quot; class=&quot;external-link&quot;&gt;https://github.com/st-tech/zr-obp&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;reinforce&quot;&gt;REINFORCE&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/machine-learning/reinforce-algorithm/&quot; class=&quot;external-link&quot;&gt;REINFORCE Algorithm&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://ujangriswanto08.medium.com/a-practical-guide-to-implementing-the-reinforce-algorithm-in-python-part-6-7464a2474fe1&quot; class=&quot;external-link&quot;&gt;A Practical Guide to Implementing the REINFORCE Algorithm in Python&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;old-papers&quot;&gt;Old papers&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://all.cs.umass.edu/pubs/before_94/BiolCyb40-1981.pdf&quot; class=&quot;external-link&quot;&gt;ASN&lt;/a&gt;&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/README.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/README.html" />
-    <title>README</title>
-    <published>2025-09-16T17:47:09Z</published>
-    <updated>2026-11-17T12:57:46Z</updated>
-    <content type="html">&lt;h1 id=&quot;algebra&quot;&gt;Algebra&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/group_theory.html&quot; class=&quot;internal-link&quot;&gt;group_theory&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/linear_algebra.html&quot; class=&quot;internal-link&quot;&gt;linear_algebra&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[[Dot Product And Cross Product]]&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/fields.html&quot; class=&quot;internal-link&quot;&gt;fields&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/Gauss_Integer.html&quot; class=&quot;internal-link&quot;&gt;Gauss Integer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;org-task task-todo&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;TODO&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;write report section about UCB policy_improved&lt;/span&gt;&lt;/span&gt;&lt;details class=&quot;task-logbook&quot;&gt;&lt;summary&gt;⏱ 2h 2m · 8 entries · 2 open&lt;/summary&gt;&lt;ul class=&quot;logbook-rows&quot;&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-16 Mon 19:33:06&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-16 Mon 19:33:06&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;0s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-16 Mon 19:33:26&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end clock-open&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;clock-dur clock-open&quot;&gt;running&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-16 Mon 19:36:14&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-16 Mon 19:42:42&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;6m 28s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-16 Mon 19:42:44&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-16 Mon 19:42:49&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;5s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-16 Mon 19:42:49&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end clock-open&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;clock-dur clock-open&quot;&gt;running&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-16 Mon 19:59:42&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-16 Mon 20:21:42&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;22m&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-16 Mon 20:21:44&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-16 Mon 21:11:18&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;49m 34s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-16 Mon 21:19:29&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-16 Mon 22:04:20&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;44m 51s&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://yhwu-is.github.io/Teach/ec/data_market/2026/lec05-mab.pdf&quot; class=&quot;external-link&quot;&gt;https://yhwu-is.github.io/Teach/ec/data_market/2026/lec05-mab.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;the selection happens on the last line &lt;a href=&quot;https://github.com/kfoofw/bandit_simulations/blob/master/python/multiarmed_bandits/analysis/ucb.md&quot; class=&quot;external-link&quot;&gt;https://github.com/kfoofw/bandit_simulations/blob/master/python/multiarmed_bandits/analysis/ucb.md&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&quot;topology&quot;&gt;Topology&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;[[Algebraic Topology]]&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/surfaces.html&quot; class=&quot;internal-link&quot;&gt;surfaces&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;analysis&quot;&gt;Analysis&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/Symmetric_Integrals.html&quot; class=&quot;internal-link&quot;&gt;Symmetric Integrals&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/Abel_Partial_Summation.html&quot; class=&quot;internal-link&quot;&gt;Abel Partial Summation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/Analysis.html&quot; class=&quot;internal-link&quot;&gt;Analysis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/Limit_involving_e.html&quot; class=&quot;internal-link&quot;&gt;Limit involving e&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/Compactness_and_Uniform_Continuity.html&quot; class=&quot;internal-link&quot;&gt;Compactness and Uniform Continuity&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/sums.html&quot; class=&quot;internal-link&quot;&gt;sums&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/Integrals_involving_Absolute_Values.html&quot; class=&quot;internal-link&quot;&gt;Integrals involving Absolute Values&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;number-theory&quot;&gt;Number Theory&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/quadratic_space.html&quot; class=&quot;internal-link&quot;&gt;quadratic_space&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/Descend_Argument.html&quot; class=&quot;internal-link&quot;&gt;Descend Argument&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;geometry&quot;&gt;Geometry&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;[[What is Geometry]]&lt;/li&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
   <entry>
-    <id>https://dbdo00.github.io/notes/rand_alg.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/rand_alg.html" />
-    <title>rand_alg</title>
-    <published>2025-11-14T13:01:05Z</published>
+    <id>https://dbdo00.github.io/notes/journals/2026_11_15.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_15.html" />
+    <title>2026_11_15</title>
+    <published>2026-11-15T10:05:18Z</published>
     <updated>2026-11-17T12:57:46Z</updated>
-    <content type="html">&lt;h1 id=&quot;算法的随机分析&quot;&gt;算法的随机分析&lt;/h1&gt;
-&lt;h2 id=&quot;复习-离散均匀分布&quot;&gt;·复习· 离散均匀分布&lt;/h2&gt;
-&lt;p&gt;每一个单个元素的概率是&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$\frac{1}{|S|}$$&lt;/div&gt;&lt;/p&gt;
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;Q: What is the largest number of points on the plain, each two of which have the equal &lt;span class=&quot;math inline&quot;&gt;$\ell_1$&lt;/span&gt; distance?
+&lt;ul&gt;
+&lt;li&gt;If &lt;span class=&quot;math inline&quot;&gt;$x \in B(y)$&lt;/span&gt;, then &lt;span class=&quot;math inline&quot;&gt;$B(x) \cap B(y) \leq 2$&lt;/span&gt;. Where &lt;span class=&quot;math inline&quot;&gt;$B()$&lt;/span&gt; is the &lt;span class=&quot;math inline&quot;&gt;$\ell_1$&lt;/span&gt; ball of the plane.
+&lt;ul&gt;
+&lt;li&gt;If &lt;span class=&quot;math inline&quot;&gt;$x,\ y$&lt;/span&gt;  have \ell 1 distance &lt;span class=&quot;math inline&quot;&gt;$d$&lt;/span&gt;, what is the number of other points having the equal distance from &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt; &lt;strong&gt;and&lt;/strong&gt; &lt;span class=&quot;math inline&quot;&gt;$y$&lt;/span&gt;?&lt;/li&gt;
+&lt;li&gt;The answer is &lt;span class=&quot;math inline&quot;&gt;$2$&lt;/span&gt;, as the inequality above asserts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;So, the maximal number of pairwise &lt;span class=&quot;math inline&quot;&gt;$\ell_1$&lt;/span&gt;-equidistant points on &lt;span class=&quot;math inline&quot;&gt;$\mathbb R^2$&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;$\boxed 4$&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;org-task task-done&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;DONE&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;dual and support vectors t10 task 4&lt;/span&gt;&lt;/span&gt;&lt;details class=&quot;task-logbook&quot;&gt;&lt;summary&gt;⏱ 7s · 10 entries · 1 open&lt;/summary&gt;&lt;ul class=&quot;logbook-rows&quot;&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 20:06:21&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-15 Sun 20:06:22&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 20:06:23&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-15 Sun 20:06:23&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;0s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 20:06:24&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-15 Sun 20:06:25&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 20:06:26&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-15 Sun 20:06:27&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 20:06:28&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-15 Sun 20:06:29&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 20:06:29&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-15 Sun 20:06:30&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 20:06:31&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-15 Sun 20:06:31&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;0s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 20:06:32&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-15 Sun 20:06:32&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;0s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 20:06:33&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-15 Sun 20:06:35&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;2s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 20:06:37&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end clock-open&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;clock-dur clock-open&quot;&gt;running&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;&lt;ul&gt;
+&lt;li&gt;dual form. For SVM, &lt;span class=&quot;math inline&quot;&gt;$\bm w=\sum \alpha_i y_i  \bm x_i$&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;hessian is negative semi-definite =&amp;gt; function is concave&lt;/li&gt;
+&lt;li&gt;Hard margin SVM =&amp;gt; support vector is on the boundary. We can use this to compute &lt;span class=&quot;math inline&quot;&gt;$b$&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;full margin is &lt;span class=&quot;math inline&quot;&gt;$\frac{2}{\|w\|_2}$&lt;/span&gt;. Primal objective is &lt;span class=&quot;math inline&quot;&gt;$\frac{1}{2} \|w\|_2$&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;org-task task-todo&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;TODO&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;&lt;a href=&quot;https://distill.pub/2019/paths-perspective-on-value-learning/&quot; class=&quot;external-link&quot;&gt;https://distill.pub/2019/paths-perspective-on-value-learning/&lt;/a&gt; 想一下怎么可视化自己的rl项目&lt;/span&gt;&lt;/span&gt;&lt;details class=&quot;task-logbook&quot;&gt;&lt;summary&gt;⏱ 1h 31m · 2 entries&lt;/summary&gt;&lt;ul class=&quot;logbook-rows&quot;&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 23:34:53&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-16 Mon 00:35:30&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1h 37s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-16 Mon 00:35:38&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-16 Mon 01:06:20&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;30m 42s&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;org-task task-todo&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;TODO&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;approximate 𝑄-learning&lt;/span&gt;&lt;/span&gt;&lt;details class=&quot;task-logbook&quot;&gt;&lt;summary&gt;⏱ 1h 36m · 2 entries&lt;/summary&gt;&lt;ul class=&quot;logbook-rows&quot;&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 23:35:11&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-16 Mon 00:35:39&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1h 28s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-16 Mon 00:35:44&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-16 Mon 01:11:49&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;36m 5s&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <id>https://dbdo00.github.io/notes/journals/2026_11_13.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_13.html" />
+    <title>2026_11_13</title>
+    <published>2026-11-13T05:07:40Z</published>
+    <updated>2026-11-17T12:57:46Z</updated>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;why #LinUCB works
+&lt;ul&gt;
+&lt;li&gt;the exploration term comes from Cauchy inequality and covariance. Although it seems to ignore the ridge term (?)&lt;/li&gt;
+&lt;li&gt;the exploitation term comes from ridge regression&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <id>https://dbdo00.github.io/notes/journals/2026_07_08.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_07_08.html" />
+    <title>2026_07_08</title>
+    <published>2026-09-08T04:54:53Z</published>
+    <updated>2026-11-17T12:57:46Z</updated>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;design system &amp;amp; UI kit&lt;/li&gt;
+&lt;li&gt;atomic design&lt;/li&gt;
+&lt;li&gt;prototype&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&quot;component&quot;&gt;component&lt;/h1&gt;
+&lt;/li&gt;
+&lt;li&gt;master, instances. the characteristics of instances inherit the master&lt;/li&gt;
+&lt;li&gt;auto layout.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <id>https://dbdo00.github.io/notes/journals/2026_06_28.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_06_28.html" />
+    <title>2026_06_28</title>
+    <published>2026-09-08T04:54:53Z</published>
+    <updated>2026-11-17T12:57:46Z</updated>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;four quadrant: urgency&lt;/li&gt;
+&lt;li&gt;trigger, behaviour, reward,&lt;br /&gt;
+TBR strategy&lt;br /&gt;
+trigger strong&lt;br /&gt;
+earn the reward&lt;br /&gt;
+define the &#x27;done&#x27;&lt;/li&gt;
+&lt;li&gt;You can only do one thing at a tim&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <id>https://dbdo00.github.io/notes/journals/2026_06_27.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_06_27.html" />
+    <title>2026_06_27</title>
+    <published>2026-06-26T21:41:12Z</published>
+    <updated>2026-11-17T12:57:46Z</updated>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;Let ( p ) be a prime number and ( n ) a natural number such that ( \sqrt{n(n + p)} ) is an integer. Prove that ( n ) is a perfect square.&lt;/li&gt;
+&lt;li&gt;#machine-learning sigmoid nn rarely dies: we can continuously change the weight. constant linear layer + &lt;span class=&quot;math inline&quot;&gt;$\epsilon$&lt;/span&gt; change in weight along &lt;span class=&quot;math inline&quot;&gt;$x^{(\ell -1)}(x1) - x^{(\ell - 1)}(x_2) \neq 0$&lt;/span&gt; = non-constant linear layer&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <id>https://dbdo00.github.io/notes/journals/2026_06_25.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_06_25.html" />
+    <title>2026_06_25</title>
+    <published>2026-06-24T22:47:52Z</published>
+    <updated>2026-11-17T12:57:46Z</updated>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;In the &lt;code&gt;writeblog&lt;/code&gt;, how to test the behaviors? One  way is to let AI write test cases. That might be handy. For example, the passing of parameter might be missed, which causes errors.&lt;/li&gt;
+&lt;li&gt;I didn&#x27;t sleep last night after 2 am and fixed problems in the &lt;code&gt;writeblog&lt;/code&gt; code. It was merely recreational.&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <id>https://dbdo00.github.io/notes/journals/2026_06_24.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_06_24.html" />
+    <title>2026_06_24</title>
+    <published>2026-06-24T08:32:34Z</published>
+    <updated>2026-11-17T12:57:46Z</updated>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;what am i even thinking about?&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <id>https://dbdo00.github.io/notes/journals/2025_12_15.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_12_15.html" />
+    <title>2025_12_15</title>
+    <published>2025-12-15T06:34:57Z</published>
+    <updated>2026-11-17T12:57:46Z</updated>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;determinant: &lt;em&gt;adding sides method&lt;/em&gt; to compute determinants.&lt;/li&gt;
+&lt;li&gt;calculus: intermediate value theorem. For the linear type of questions with constant coefficients, we can construct the function just like we do in for ODE.&lt;/li&gt;
+&lt;li&gt;Abelian Fundamental Group: the isomorphism map of isomorphic fundamental groups, in this case, has only one  possibility --
+&lt;ul&gt;
+&lt;li&gt;suppose &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$y$&lt;/span&gt; are two base points, and &lt;span class=&quot;math inline&quot;&gt;$\alpha$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$\alpha^\prime$&lt;/span&gt; are two paths connecting &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$y$&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;In this case, &lt;span class=&quot;math inline&quot;&gt;$[\alpha(\alpha^\prime)^{-1}] \in \pi(y)$&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;math inline&quot;&gt;$\alpha \circ {\alpha^\prime}^{-1} = id_{\pi(y)} \implies \alpha = \alpha^\prime$&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <id>https://dbdo00.github.io/notes/journals/2025_12_12.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_12_12.html" />
+    <title>2025_12_12</title>
+    <published>2025-12-12T03:02:44Z</published>
+    <updated>2026-11-17T12:57:46Z</updated>
+    <content type="html">&lt;h1 id=&quot;limit-of-derivative-of-different-orders&quot;&gt;Limit of Derivative of Different Orders&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Without monotonicity, the limit of a function cannot be studied abstractly (i.e. using the certain existence theorems), because all existence theorems require monotonicity.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;org-task task-done&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;DONE&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;I will translate The Odyssey # 350.&lt;/span&gt;&lt;/span&gt;&lt;details class=&quot;task-logbook&quot;&gt;&lt;summary&gt;⏱ 1s · 1 entry&lt;/summary&gt;&lt;ul class=&quot;logbook-rows&quot;&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2025-12-12 Fri 11:13:33&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2025-12-12 Fri 11:13:34&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1s&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;org-task task-done&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;DONE&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;Do the math question assigned by Gemini&lt;/span&gt;&lt;/span&gt;&lt;details class=&quot;task-logbook&quot;&gt;&lt;summary&gt;⏱ 75h 14m · 1 entry&lt;/summary&gt;&lt;ul class=&quot;logbook-rows&quot;&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2025-12-12 Fri 11:13:37&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2025-12-15 Mon 14:28:14&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;75h 14m 37s&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;org-task task-todo&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;TODO&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;Xiao p44-50 (goal). At least study it for 1h.&lt;/span&gt;&lt;/span&gt;&lt;details class=&quot;task-logbook&quot;&gt;&lt;summary&gt;⏱ 1s · 1 entry&lt;/summary&gt;&lt;ul class=&quot;logbook-rows&quot;&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2025-12-12 Fri 10:59:56&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2025-12-12 Fri 10:59:57&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1s&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;org-task task-done&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;DONE&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;[[Dec 13th, 2025]] shower&lt;/span&gt;&lt;/span&gt;&lt;details class=&quot;task-logbook&quot;&gt;&lt;summary&gt;⏱ 1s · 1 entry&lt;/summary&gt;&lt;ul class=&quot;logbook-rows&quot;&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2025-12-15 Mon 14:28:26&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2025-12-15 Mon 14:28:27&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1s&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <id>https://dbdo00.github.io/notes/journals/2025_12_08.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_12_08.html" />
+    <title>2025_12_08</title>
+    <published>2025-12-08T12:47:05Z</published>
+    <updated>2026-11-17T12:57:46Z</updated>
+    <content type="html">&lt;h1 id=&quot;the-little-learner&quot;&gt;The Little Learner&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;tensor addition, multiplication: element-wise.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; : the training history. You update it on each revision using the  law
+&lt;ul&gt;
+&lt;li&gt;new &lt;span class=&quot;math inline&quot;&gt;$\theta_0$&lt;/span&gt; = &lt;span class=&quot;math inline&quot;&gt;$\theta_0$&lt;/span&gt; - (&lt;span class=&quot;math inline&quot;&gt;$\alpha \times$&lt;/span&gt; rate of change of loss wrt &lt;span class=&quot;math inline&quot;&gt;$\theta_0$&lt;/span&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;rank of tensor&lt;/em&gt;: &lt;code&gt;sum&lt;/code&gt; reduces the rank of tensor by 1.&lt;/li&gt;
+&lt;li&gt;tensor^1, tensor^2.. are the notations to denote the rank of tensors.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;packages:&lt;/strong&gt; Racket, malt&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <id>https://dbdo00.github.io/notes/journals/2025_12_05.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_12_05.html" />
+    <title>2025_12_05</title>
+    <published>2025-12-05T14:10:53Z</published>
+    <updated>2026-11-17T12:57:46Z</updated>
+    <content type="html">&lt;h1 id=&quot;invariant-space&quot;&gt;Invariant Space&lt;/h1&gt;
+&lt;p&gt;id:: 6932e5e1-39b7-450d-b428-3f1afad9e70e&lt;br /&gt;
+- Every invariant Space of &lt;span class=&quot;math inline&quot;&gt;$T\in \mathcal L(T)$&lt;/span&gt;  is a direct sum of spaces spanned by eigenvectors if  &lt;span class=&quot;math inline&quot;&gt;$T$&lt;/span&gt; is diagonalizable. Suppose &lt;span class=&quot;math inline&quot;&gt;$V$&lt;/span&gt; is an invariant space of &lt;span class=&quot;math inline&quot;&gt;$T$&lt;/span&gt;.&lt;br /&gt;
+- The idea is  to show &lt;span class=&quot;math inline&quot;&gt;$V=\oplus (V\cap V_\lambda)$&lt;/span&gt;&lt;br /&gt;
+- Of course, &lt;span class=&quot;math inline&quot;&gt;$\subset$&lt;/span&gt; is obvious.&lt;br /&gt;
+- On the other hand, if &lt;span class=&quot;math inline&quot;&gt;$v = v_1 + \ldots + v_n$&lt;/span&gt;, where &lt;span class=&quot;math inline&quot;&gt;$v_i$&lt;/span&gt; are eigenvectors with different eigenvalues, then we need to show &lt;span class=&quot;math inline&quot;&gt;$v_i \in V$&lt;/span&gt; for each &lt;span class=&quot;math inline&quot;&gt;$i$&lt;/span&gt;. Use lagrange interpolation to construct  a polynomial. &lt;span class=&quot;math inline&quot;&gt;$f(\lambda_k)=1$&lt;/span&gt; if &lt;span class=&quot;math inline&quot;&gt;$k=i$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$0$&lt;/span&gt; otherwise. Thus &lt;span class=&quot;math inline&quot;&gt;$f(T)v_k = f(\lambda_k)v_k$&lt;/span&gt;. This gives &lt;span class=&quot;math inline&quot;&gt;$f(A)v=v_i$&lt;/span&gt;. So &lt;span class=&quot;math inline&quot;&gt;$v_i \in V$&lt;/span&gt; by the invariance of &lt;span class=&quot;math inline&quot;&gt;$V$&lt;/span&gt;.&lt;br /&gt;
+- For a general &lt;span class=&quot;math inline&quot;&gt;$T\colon: V\to V$&lt;/span&gt;, an invariant space is a direct sum of spaces spanned by &lt;strong&gt;general eigenvectors&lt;/strong&gt;. I do not know how this is done exactly.q&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h1 id=&quot;lower-bound-of-unipotent-matrix&quot;&gt;Lower Bound of Unipotent Matrix&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;For &lt;span class=&quot;math inline&quot;&gt;$A$&lt;/span&gt; a matrix, if &lt;span class=&quot;math inline&quot;&gt;$A-I$&lt;/span&gt; is nilpotent, then &lt;span class=&quot;math inline&quot;&gt;$A$&lt;/span&gt; is said to be unipotent.&lt;/li&gt;
+&lt;li&gt;Define &lt;span class=&quot;math inline&quot;&gt;$\|A\| = \max |a_{ij}|$&lt;/span&gt;. Then &lt;span class=&quot;math inline&quot;&gt;$\|A\|$&lt;/span&gt; is lower bounded by &lt;span class=&quot;math inline&quot;&gt;$1$&lt;/span&gt;. Surprisingly, this can be proved using trace. In fact, there is at least one diagonal entry whose absolute value is not less than &lt;span class=&quot;math inline&quot;&gt;$1$&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;A thing I didn&#x27;t grasp is that the trace is equal to the sum of eigenvalues counting the multiplicity. For the power, the trace is the sum of eigenvalues taken the power, counting the multiplicity.&lt;/li&gt;
+&lt;li&gt;
+&lt;div class=&quot;math block&quot;&gt;
+$$\mathrm{trace} A^n= \sum \lambda_i^n$$
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;This is clear from the Jordan canonical form and I do not know how can one show this without JCF.&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;upper bound&lt;/strong&gt; of &lt;span class=&quot;math inline&quot;&gt;$\|A^j\|$&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;$Kj^m$&lt;/span&gt;, where &lt;span class=&quot;math inline&quot;&gt;$K$&lt;/span&gt; is a positive constant.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&quot;gluing-lemma&quot;&gt;Gluing Lemma&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;For &lt;span class=&quot;math inline&quot;&gt;$X\subset \mathbb R^n$&lt;/span&gt;, if &lt;span class=&quot;math inline&quot;&gt;$X=A\cap B$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$A,B$&lt;/span&gt; are closed sets, and &lt;span class=&quot;math inline&quot;&gt;$f\mid A$&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;$f\mid B$&lt;/span&gt; are both continuous, then &lt;span class=&quot;math inline&quot;&gt;$f$&lt;/span&gt; is continuous.&lt;/li&gt;
+&lt;li&gt;I saw that this condition can be weakened to Hausdorff space, but I didn&#x27;t look into it.&lt;/li&gt;
+&lt;li&gt;This lemma is useful for algebraic topology.&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <id>https://dbdo00.github.io/notes/journals/2025_12_01.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_12_01.html" />
+    <title>2025_12_01</title>
+    <published>2025-11-30T22:16:53Z</published>
+    <updated>2026-11-17T12:57:46Z</updated>
+    <content type="html">&lt;h1 id=&quot;orthogonal-projection&quot;&gt;Orthogonal Projection&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;I computed matrix of the adjoin operator &lt;span class=&quot;math inline&quot;&gt;$T^*$&lt;/span&gt;  under an orthonormal matrix, showing that it is the transpose matrix of &lt;span class=&quot;math inline&quot;&gt;$T$&lt;/span&gt; under the same basis when they are over &lt;span class=&quot;math inline&quot;&gt;$\mathbb R$&lt;/span&gt; .&lt;/li&gt;
+&lt;li&gt;The adjoin operator of the restriction of an operator can be computed, too, via projection.
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&quot;../assets/image_1764541121516_0.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../assets/image_1764542272198_0.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;Two things I don&#x27;t understand
+&lt;ul&gt;
+&lt;li&gt;Why is &lt;span class=&quot;math inline&quot;&gt;$V$&lt;/span&gt; necessarily spanned by two eigenvectors, as the solution claims?&lt;br /&gt;
+logseq.order-list-type:: number
+&lt;ul&gt;
+&lt;li&gt;answer: ((6932e5e1-39b7-450d-b428-3f1afad9e70e))&lt;br /&gt;
+logseq.order-list-type:: number&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How is the projection operator used? Did it simplify the calculation?&lt;br /&gt;
+logseq.order-list-type:: number
+&lt;ul&gt;
+&lt;li&gt;It computed the projection of &lt;span class=&quot;math inline&quot;&gt;$A^t \alpha$&lt;/span&gt; unto &lt;span class=&quot;math inline&quot;&gt;$V$&lt;/span&gt;. No.&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2026-11-12: I just revisited this question. do not know what it says or the solution itself.&lt;br /&gt;
+Then i seem to realize what it means.&lt;br /&gt;
+&lt;span class=&quot;math inline&quot;&gt;$L_A \alpha - A^t \alpha$&lt;/span&gt; is orthogonal to &lt;span class=&quot;math inline&quot;&gt;$\beta_1,\,\beta_2$&lt;/span&gt;.&lt;br /&gt;
+So, it is in the space &lt;span class=&quot;math inline&quot;&gt;$V^\top$&lt;/span&gt; spanned by the vector orthogonal to both &lt;span class=&quot;math inline&quot;&gt;$\beta_1$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$\beta_2$&lt;/span&gt; .&lt;br /&gt;
+A spanning vector of &lt;span class=&quot;math inline&quot;&gt;$V^\top$&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;$(1 \quad -1\quad 0)^\top$&lt;/span&gt;.&lt;br /&gt;
+Let &lt;span class=&quot;math inline&quot;&gt;$v = (1 \quad -1  \quad 0)^\top$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$v_n = \frac{1}{\sqrt 2} (1 \quad -1  \quad 0)^\top$&lt;/span&gt; is its normalization.&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\begin{align*}
+&amp; (1 \quad 3 \quad -1)\ v_n \cdot v_n \\
+=\ &amp; \frac{1}{2}\ (1 \quad 3 \quad -1)\ \begin{pmatrix}1 \\ -1 \\ 0 \end{pmatrix} \begin{pmatrix}1 \\ -1 \\ 0 \end{pmatrix} \\
+=\ &amp; \frac{1}{2} \times 2\ \begin{pmatrix}1 \\ -1 \\ 0 \end{pmatrix}  \\
+=\ &amp; \begin{pmatrix}1 \\ -1 \\ 0 \end{pmatrix}
+\end{align*}$$&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;So the answer is&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\begin{pmatrix} 1 \\ 3 \\ -1 \end{pmatrix} - \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix} = \fbox {$\begin{pmatrix} 2 \\ 2 \\ -1 \end{pmatrix}$}.$$&lt;/div&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>
