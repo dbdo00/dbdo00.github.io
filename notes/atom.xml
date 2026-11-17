@@ -3,38 +3,18 @@
   <title>dbdo notes</title>
   <id>https://dbdo00.github.io/notes</id>
   <link href="https://dbdo00.github.io/notes/atom.xml" rel="self" />
-  <updated>2026-11-17T09:50:41.562379Z</updated>
+  <updated>2026-11-17T12:11:54.701402Z</updated>
   <generator uri="https://github.com/llimllib/obsidian_notes/" version="1.0">
     Obsidian Notes
   </generator>
   <author><name>dbdo</name></author>
   <entry>
-    <id>https://dbdo00.github.io/notes/journals/2026_11_17.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_17.html" />
-    <title>2026_11_17</title>
-    <published>2026-11-17T08:16:42Z</published>
-    <updated>2026-11-17T09:41:55Z</updated>
+    <id>https://dbdo00.github.io/notes/pages/contents.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/pages/contents.html" />
+    <title>contents</title>
+    <published>2026-11-17T12:09:42.500203Z</published>
+    <updated>2026-11-17T12:09:42.500203Z</updated>
     <content type="html">&lt;ul&gt;
-&lt;li&gt;&lt;span class=&quot;org-task task-todo&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;TODO&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;dataset handling. for recommendation data especially&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;org-task task-todo&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;TODO&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;review the todo export functioanlity and commit&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/journals/2026_11_16.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_16.html" />
-    <title>2026_11_16</title>
-    <published>2026-11-16T15:16:47Z</published>
-    <updated>2026-11-17T09:41:55Z</updated>
-    <content type="html">&lt;ul&gt;
-&lt;li&gt;&lt;span class=&quot;org-task task-todo&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;TODO&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;write report section about UCB policy_improved&lt;/span&gt;&lt;/span&gt;&lt;details class=&quot;task-logbook&quot;&gt;&lt;summary&gt;⏱ 2h 2m · 8 entries · 2 open&lt;/summary&gt;&lt;ul class=&quot;logbook-rows&quot;&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-16 Mon 19:33:06&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-16 Mon 19:33:06&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;0s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-16 Mon 19:33:26&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end clock-open&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;clock-dur clock-open&quot;&gt;running&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-16 Mon 19:36:14&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-16 Mon 19:42:42&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;6m 28s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-16 Mon 19:42:44&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-16 Mon 19:42:49&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;5s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-16 Mon 19:42:49&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end clock-open&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;clock-dur clock-open&quot;&gt;running&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-16 Mon 19:59:42&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-16 Mon 20:21:42&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;22m&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-16 Mon 20:21:44&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-16 Mon 21:11:18&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;49m 34s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-16 Mon 21:19:29&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-16 Mon 22:04:20&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;44m 51s&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://yhwu-is.github.io/Teach/ec/data_market/2026/lec05-mab.pdf&quot; class=&quot;external-link&quot;&gt;https://yhwu-is.github.io/Teach/ec/data_market/2026/lec05-mab.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;the selection happens on the last line &lt;a href=&quot;https://github.com/kfoofw/bandit_simulations/blob/master/python/multiarmed_bandits/analysis/ucb.md&quot; class=&quot;external-link&quot;&gt;https://github.com/kfoofw/bandit_simulations/blob/master/python/multiarmed_bandits/analysis/ucb.md&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
@@ -43,8 +23,8 @@
     <id>https://dbdo00.github.io/notes/journals/2026_11_15.html</id>
     <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_15.html" />
     <title>2026_11_15</title>
-    <published>2026-11-15T10:05:18Z</published>
-    <updated>2026-11-17T09:41:55Z</updated>
+    <published>2026-11-17T12:07:10.464342Z</published>
+    <updated>2026-11-17T12:07:10.464342Z</updated>
     <content type="html">&lt;ul&gt;
 &lt;li&gt;Q: What is the largest number of points on the plain, each two of which have the equal &lt;span class=&quot;math inline&quot;&gt;$\ell_1$&lt;/span&gt; distance?
 &lt;ul&gt;
@@ -55,18 +35,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;So, the maximal number of pairwise &lt;span class=&quot;math inline&quot;&gt;$\ell_1$&lt;/span&gt;-equidistant points on &lt;span class=&quot;math inline&quot;&gt;$\mathbb R^2$&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;$\boxed 4$&lt;/span&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;org-task task-done&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;DONE&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;dual and support vectors t10 task 4&lt;/span&gt;&lt;/span&gt;&lt;details class=&quot;task-logbook&quot;&gt;&lt;summary&gt;⏱ 7s · 10 entries · 1 open&lt;/summary&gt;&lt;ul class=&quot;logbook-rows&quot;&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 20:06:21&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-15 Sun 20:06:22&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 20:06:23&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-15 Sun 20:06:23&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;0s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 20:06:24&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-15 Sun 20:06:25&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 20:06:26&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-15 Sun 20:06:27&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 20:06:28&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-15 Sun 20:06:29&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 20:06:29&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-15 Sun 20:06:30&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 20:06:31&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-15 Sun 20:06:31&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;0s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 20:06:32&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-15 Sun 20:06:32&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;0s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 20:06:33&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-15 Sun 20:06:35&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;2s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 20:06:37&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end clock-open&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;clock-dur clock-open&quot;&gt;running&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;&lt;ul&gt;
-&lt;li&gt;dual form. For SVM, &lt;span class=&quot;math inline&quot;&gt;$\bm w=\sum \alpha_i y_i  \bm x_i$&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;hessian is negative semi-definite =&amp;gt; function is concave&lt;/li&gt;
-&lt;li&gt;Hard margin SVM =&amp;gt; support vector is on the boundary. We can use this to compute &lt;span class=&quot;math inline&quot;&gt;$b$&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;full margin is &lt;span class=&quot;math inline&quot;&gt;$\frac{2}{\|w\|_2}$&lt;/span&gt;. Primal objective is &lt;span class=&quot;math inline&quot;&gt;$\frac{1}{2} \|w\|_2$&lt;/span&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;org-task task-todo&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;TODO&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;&lt;a href=&quot;https://distill.pub/2019/paths-perspective-on-value-learning/&quot; class=&quot;external-link&quot;&gt;https://distill.pub/2019/paths-perspective-on-value-learning/&lt;/a&gt; 想一下怎么可视化自己的rl项目&lt;/span&gt;&lt;/span&gt;&lt;details class=&quot;task-logbook&quot;&gt;&lt;summary&gt;⏱ 1h 31m · 2 entries&lt;/summary&gt;&lt;ul class=&quot;logbook-rows&quot;&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 23:34:53&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-16 Mon 00:35:30&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1h 37s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-16 Mon 00:35:38&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-16 Mon 01:06:20&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;30m 42s&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;org-task task-todo&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;TODO&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;approximate 𝑄-learning&lt;/span&gt;&lt;/span&gt;&lt;details class=&quot;task-logbook&quot;&gt;&lt;summary&gt;⏱ 1h 36m · 2 entries&lt;/summary&gt;&lt;ul class=&quot;logbook-rows&quot;&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-15 Sun 23:35:11&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-16 Mon 00:35:39&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1h 28s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-16 Mon 00:35:44&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-16 Mon 01:11:49&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;36m 5s&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
@@ -74,8 +46,8 @@
     <id>https://dbdo00.github.io/notes/journals/2026_11_13.html</id>
     <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_13.html" />
     <title>2026_11_13</title>
-    <published>2026-11-13T05:07:40Z</published>
-    <updated>2026-11-17T09:41:55Z</updated>
+    <published>2026-11-17T12:07:10.464342Z</published>
+    <updated>2026-11-17T12:07:10.464342Z</updated>
     <content type="html">&lt;ul&gt;
 &lt;li&gt;why #LinUCB works
 &lt;ul&gt;
@@ -92,8 +64,8 @@
     <id>https://dbdo00.github.io/notes/journals/2026_07_08.html</id>
     <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_07_08.html" />
     <title>2026_07_08</title>
-    <published>2026-09-08T04:54:53Z</published>
-    <updated>2026-11-17T09:41:55Z</updated>
+    <published>2026-11-17T12:07:10.464342Z</published>
+    <updated>2026-11-17T12:07:10.464342Z</updated>
     <content type="html">&lt;ul&gt;
 &lt;li&gt;design system &amp;amp; UI kit&lt;/li&gt;
 &lt;li&gt;atomic design&lt;/li&gt;
@@ -110,8 +82,8 @@
     <id>https://dbdo00.github.io/notes/journals/2026_06_28.html</id>
     <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_06_28.html" />
     <title>2026_06_28</title>
-    <published>2026-09-08T04:54:53Z</published>
-    <updated>2026-11-17T09:41:55Z</updated>
+    <published>2026-11-17T12:07:10.464342Z</published>
+    <updated>2026-11-17T12:07:10.464342Z</updated>
     <content type="html">&lt;ul&gt;
 &lt;li&gt;four quadrant: urgency&lt;/li&gt;
 &lt;li&gt;trigger, behaviour, reward,&lt;br /&gt;
@@ -127,8 +99,8 @@ define the &#x27;done&#x27;&lt;/li&gt;
     <id>https://dbdo00.github.io/notes/journals/2026_06_27.html</id>
     <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_06_27.html" />
     <title>2026_06_27</title>
-    <published>2026-06-26T21:41:12Z</published>
-    <updated>2026-11-17T09:41:55Z</updated>
+    <published>2026-11-17T12:07:10.464342Z</published>
+    <updated>2026-11-17T12:07:10.464342Z</updated>
     <content type="html">&lt;ul&gt;
 &lt;li&gt;Let ( p ) be a prime number and ( n ) a natural number such that ( \sqrt{n(n + p)} ) is an integer. Prove that ( n ) is a perfect square.&lt;/li&gt;
 &lt;li&gt;#machine-learning sigmoid nn rarely dies: we can continuously change the weight. constant linear layer + &lt;span class=&quot;math inline&quot;&gt;$\epsilon$&lt;/span&gt; change in weight along &lt;span class=&quot;math inline&quot;&gt;$x^{(\ell -1)}(x1) - x^{(\ell - 1)}(x_2) \neq 0$&lt;/span&gt; = non-constant linear layer&lt;/li&gt;
@@ -141,8 +113,8 @@ define the &#x27;done&#x27;&lt;/li&gt;
     <id>https://dbdo00.github.io/notes/journals/2026_06_25.html</id>
     <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_06_25.html" />
     <title>2026_06_25</title>
-    <published>2026-06-24T22:47:52Z</published>
-    <updated>2026-11-17T09:41:55Z</updated>
+    <published>2026-11-17T12:07:10.464342Z</published>
+    <updated>2026-11-17T12:07:10.464342Z</updated>
     <content type="html">&lt;ul&gt;
 &lt;li&gt;In the &lt;code&gt;writeblog&lt;/code&gt;, how to test the behaviors? One  way is to let AI write test cases. That might be handy. For example, the passing of parameter might be missed, which causes errors.&lt;/li&gt;
 &lt;li&gt;I didn&#x27;t sleep last night after 2 am and fixed problems in the &lt;code&gt;writeblog&lt;/code&gt; code. It was merely recreational.&lt;/li&gt;
@@ -155,8 +127,8 @@ define the &#x27;done&#x27;&lt;/li&gt;
     <id>https://dbdo00.github.io/notes/journals/2026_06_24.html</id>
     <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_06_24.html" />
     <title>2026_06_24</title>
-    <published>2026-06-24T08:32:34Z</published>
-    <updated>2026-11-17T09:41:55Z</updated>
+    <published>2026-11-17T12:07:10.463335Z</published>
+    <updated>2026-11-17T12:07:10.463335Z</updated>
     <content type="html">&lt;ul&gt;
 &lt;li&gt;what am i even thinking about?&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
@@ -167,8 +139,8 @@ define the &#x27;done&#x27;&lt;/li&gt;
     <id>https://dbdo00.github.io/notes/journals/2025_12_15.html</id>
     <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_12_15.html" />
     <title>2025_12_15</title>
-    <published>2025-12-15T06:34:57Z</published>
-    <updated>2026-11-17T09:41:55Z</updated>
+    <published>2026-11-17T12:07:10.463335Z</published>
+    <updated>2026-11-17T12:07:10.463335Z</updated>
     <content type="html">&lt;ul&gt;
 &lt;li&gt;determinant: &lt;em&gt;adding sides method&lt;/em&gt; to compute determinants.&lt;/li&gt;
 &lt;li&gt;calculus: intermediate value theorem. For the linear type of questions with constant coefficients, we can construct the function just like we do in for ODE.&lt;/li&gt;
@@ -188,8 +160,8 @@ define the &#x27;done&#x27;&lt;/li&gt;
     <id>https://dbdo00.github.io/notes/journals/2025_12_12.html</id>
     <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_12_12.html" />
     <title>2025_12_12</title>
-    <published>2025-12-12T03:02:44Z</published>
-    <updated>2026-11-17T09:41:55Z</updated>
+    <published>2026-11-17T12:07:10.463335Z</published>
+    <updated>2026-11-17T12:07:10.463335Z</updated>
     <content type="html">&lt;h1 id=&quot;limit-of-derivative-of-different-orders&quot;&gt;Limit of Derivative of Different Orders&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Without monotonicity, the limit of a function cannot be studied abstractly (i.e. using the certain existence theorems), because all existence theorems require monotonicity.&lt;/li&gt;
@@ -206,8 +178,8 @@ define the &#x27;done&#x27;&lt;/li&gt;
     <id>https://dbdo00.github.io/notes/journals/2025_12_08.html</id>
     <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_12_08.html" />
     <title>2025_12_08</title>
-    <published>2025-12-08T12:47:05Z</published>
-    <updated>2026-11-17T09:41:55Z</updated>
+    <published>2026-11-17T12:07:10.463335Z</published>
+    <updated>2026-11-17T12:07:10.463335Z</updated>
     <content type="html">&lt;h1 id=&quot;the-little-learner&quot;&gt;The Little Learner&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;tensor addition, multiplication: element-wise.&lt;/li&gt;
@@ -227,8 +199,8 @@ define the &#x27;done&#x27;&lt;/li&gt;
     <id>https://dbdo00.github.io/notes/journals/2025_12_05.html</id>
     <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_12_05.html" />
     <title>2025_12_05</title>
-    <published>2025-12-05T14:10:53Z</published>
-    <updated>2026-11-17T09:41:55Z</updated>
+    <published>2026-11-17T12:07:10.463335Z</published>
+    <updated>2026-11-17T12:07:10.463335Z</updated>
     <content type="html">&lt;h1 id=&quot;invariant-space&quot;&gt;Invariant Space&lt;/h1&gt;
 &lt;p&gt;id:: 6932e5e1-39b7-450d-b428-3f1afad9e70e&lt;br /&gt;
 - Every invariant Space of &lt;span class=&quot;math inline&quot;&gt;$T\in \mathcal L(T)$&lt;/span&gt;  is a direct sum of spaces spanned by eigenvectors if  &lt;span class=&quot;math inline&quot;&gt;$T$&lt;/span&gt; is diagonalizable. Suppose &lt;span class=&quot;math inline&quot;&gt;$V$&lt;/span&gt; is an invariant space of &lt;span class=&quot;math inline&quot;&gt;$T$&lt;/span&gt;.&lt;br /&gt;
@@ -268,8 +240,8 @@ $$\mathrm{trace} A^n= \sum \lambda_i^n$$
     <id>https://dbdo00.github.io/notes/journals/2025_12_01.html</id>
     <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_12_01.html" />
     <title>2025_12_01</title>
-    <published>2025-11-30T22:16:53Z</published>
-    <updated>2026-11-17T09:41:55Z</updated>
+    <published>2026-11-17T12:07:10.463335Z</published>
+    <updated>2026-11-17T12:07:10.463335Z</updated>
     <content type="html">&lt;h1 id=&quot;orthogonal-projection&quot;&gt;Orthogonal Projection&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;I computed matrix of the adjoin operator &lt;span class=&quot;math inline&quot;&gt;$T^*$&lt;/span&gt;  under an orthonormal matrix, showing that it is the transpose matrix of &lt;span class=&quot;math inline&quot;&gt;$T$&lt;/span&gt; under the same basis when they are over &lt;span class=&quot;math inline&quot;&gt;$\mathbb R$&lt;/span&gt; .&lt;/li&gt;
@@ -318,8 +290,8 @@ Let &lt;span class=&quot;math inline&quot;&gt;$v = (1 \quad -1  \quad 0)^\top$&l
     <id>https://dbdo00.github.io/notes/journals/2025_11_26.html</id>
     <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_11_26.html" />
     <title>2025_11_26</title>
-    <published>2025-11-25T19:01:50Z</published>
-    <updated>2026-11-17T09:41:55Z</updated>
+    <published>2026-11-17T12:07:10.463335Z</published>
+    <updated>2026-11-17T12:07:10.463335Z</updated>
     <content type="html">&lt;ul&gt;
 &lt;li&gt;[Descend Argument](../Descend Argument)&lt;/li&gt;
 &lt;li&gt;Recall that for all positive &lt;span class=&quot;math inline&quot;&gt;$\epsilon$&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;$x^\epsilon$&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;$o(\ln(x))$&lt;/span&gt; as &lt;span class=&quot;math inline&quot;&gt;$x\to 0$&lt;/span&gt;.
@@ -334,6 +306,18 @@ Let &lt;span class=&quot;math inline&quot;&gt;$v = (1 \quad -1  \quad 0)^\top$&l
 &lt;/li&gt;
 &lt;li&gt;Today I learned that &lt;strong&gt;Orbit Stablizer Theorem&lt;/strong&gt; is about an &lt;em&gt;orbit&lt;/em&gt; (of the &lt;strong&gt;conjugacy action&lt;/strong&gt; of &lt;span class=&quot;math inline&quot;&gt;$G$&lt;/span&gt; on a single element).&lt;/li&gt;
 &lt;li&gt;This helps to find the number of centralizer (the elements that commute with a group elment &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt;). The  orbit of the action on &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt; is the &lt;strong&gt;conjugacy class&lt;/strong&gt; and the stablizer is the &lt;strong&gt;centralizer&lt;/strong&gt;. The conjugacy class of &lt;span class=&quot;math inline&quot;&gt;$x\in S_n$&lt;/span&gt; is easy to find. So the stablizer (e.g. centralizer) is easy to find.&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <id>https://dbdo00.github.io/notes/journals/2025_11_25.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_11_25.html" />
+    <title>2025_11_25</title>
+    <published>2026-11-17T12:07:10.463335Z</published>
+    <updated>2026-11-17T12:07:10.463335Z</updated>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;The Lagrange mean value theorem: Prove &lt;span class=&quot;math inline&quot;&gt;$f(\xi) + f(\zeta)=0$&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
