@@ -3,11 +3,25 @@
   <title>dbdo notes</title>
   <id>https://dbdo00.github.io/notes</id>
   <link href="https://dbdo00.github.io/notes/atom.xml" rel="self" />
-  <updated>2026-11-17T13:09:17.225557Z</updated>
+  <updated>2026-11-17T14:03:12.664318Z</updated>
   <generator uri="https://github.com/llimllib/obsidian_notes/" version="1.0">
     Obsidian Notes
   </generator>
   <author><name>dbdo</name></author>
+  <entry>
+    <id>https://dbdo00.github.io/notes/journals/2026_11_17.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_17.html" />
+    <title>2026_11_17</title>
+    <published>2026-11-17T08:16:42Z</published>
+    <updated>2026-11-17T13:15:25Z</updated>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;&lt;span class=&quot;org-task task-todo&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;TODO&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;dataset handling. for recommendation data especially&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;org-task task-todo&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;TODO&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;review the todo export functioanlity and commit&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;111&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <id>https://dbdo00.github.io/notes/概率就是用各种方式计算加权和.html</id>
     <link type="text/html" href="https://dbdo00.github.io/notes/概率就是用各种方式计算加权和.html" />
@@ -441,32 +455,6 @@ $$\sum^n_{k=1}\frac{1}{k^2}$$
 &lt;h2 id=&quot;复习-离散均匀分布&quot;&gt;·复习· 离散均匀分布&lt;/h2&gt;
 &lt;p&gt;每一个单个元素的概率是&lt;br /&gt;
 &lt;div class=&quot;math inline&quot;&gt;$$\frac{1}{|S|}$$&lt;/div&gt;&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/quadratic_space.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/quadratic_space.html" />
-    <title>quadratic_space</title>
-    <published>2025-09-16T17:47:29Z</published>
-    <updated>2026-11-17T12:57:46Z</updated>
-    <content type="html">&lt;h1 id=&quot;theory&quot;&gt;Theory&lt;/h1&gt;
-&lt;p&gt;A &lt;em&gt;Quadratic form&lt;/em&gt; is a function &lt;span class=&quot;math inline&quot;&gt;$Q\colon V \to K$&lt;/span&gt; such that&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&quot;math inline&quot;&gt;$Q(ax) = a^2 Q(x)$&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;math inline&quot;&gt;$(x,y) \mapsto Q(x)Q(y) -Q(x) - Q(y)$&lt;/span&gt; is a bilinear form.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;We deote by &lt;span class=&quot;math inline&quot;&gt;$(x,y)$&lt;/span&gt; the bilinear form &lt;span class=&quot;math inline&quot;&gt;$\frac{1}{2}(Q(x)Q(y) -Q(x) - Q(y))$&lt;/span&gt;.&lt;br /&gt;
-The &lt;em&gt;radical&lt;/em&gt; of a quadratic subspace &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;$W^\perp =\{ v \in V | \forall w\in W\,\, (w,v) =0 \}$&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;A space &lt;span class=&quot;math inline&quot;&gt;$V$&lt;/span&gt; is &lt;em&gt;non-degenerate&lt;/em&gt; if &lt;span class=&quot;math inline&quot;&gt;$V^\perp = \{0\}$&lt;/span&gt;.&lt;/p&gt;
-&lt;h1 id=&quot;exercises&quot;&gt;Exercises&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;Let &lt;span class=&quot;math inline&quot;&gt;$V$&lt;/span&gt; be a non-degenerate space. Then &lt;span class=&quot;math inline&quot;&gt;$V= \text{dim} W^\perp + \text{dim} W$&lt;/span&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;em&gt;Solution.&lt;/em&gt; Consider the natural map &lt;span class=&quot;math inline&quot;&gt;$f\colon V\to V^*$&lt;/span&gt;. Recall that &lt;span class=&quot;math inline&quot;&gt;$V \cong V^*$&lt;/span&gt;, so they have the same&lt;br /&gt;
-dimension. So, &lt;span class=&quot;math inline&quot;&gt;$f$&lt;/span&gt; is surjective if and only if &lt;span class=&quot;math inline&quot;&gt;$f$&lt;/span&gt; is injective. Since &lt;span class=&quot;math inline&quot;&gt;$V$&lt;/span&gt; is non-degenerate, &lt;span class=&quot;math inline&quot;&gt;$f$&lt;/span&gt; is injective,&lt;br /&gt;
-whence &lt;span class=&quot;math inline&quot;&gt;$f$&lt;/span&gt; is surjective. Since the restriction of a linear functional &lt;span class=&quot;math inline&quot;&gt;$v* : V \to V*$&lt;/span&gt; to &lt;span class=&quot;math inline&quot;&gt;$W$&lt;/span&gt; is a surjection&lt;br /&gt;
-&lt;span class=&quot;math inline&quot;&gt;$V*\to W*$&lt;/span&gt;, composition of this restriction with &lt;span class=&quot;math inline&quot;&gt;$f$&lt;/span&gt; gives a surjection &lt;span class=&quot;math inline&quot;&gt;$g\colon V \to W^*$&lt;/span&gt;. Hence&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$\text{dim} V = \text{dim} \ker g + \text{dim} W^* = \text{dim} W^{\perp} + \text{dim} W.$$&lt;/div&gt; Q.E.D.&lt;/p&gt;
 </content>
   </entry>
 </feed>
