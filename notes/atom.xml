@@ -3,11 +3,23 @@
   <title>dbdo notes</title>
   <id>https://dbdo00.github.io/notes</id>
   <link href="https://dbdo00.github.io/notes/atom.xml" rel="self" />
-  <updated>2026-11-17T16:04:08.74225Z</updated>
+  <updated>2026-11-17T16:11:14.621314Z</updated>
   <generator uri="https://github.com/llimllib/obsidian_notes/" version="1.0">
     Obsidian Notes
   </generator>
   <author><name>dbdo</name></author>
+  <entry>
+    <id>https://dbdo00.github.io/notes/journals/2026_11_18.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_18.html" />
+    <title>2026_11_18</title>
+    <published>2026-11-17T16:10:57Z</published>
+    <updated>2026-11-17T16:10:57Z</updated>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <id>https://dbdo00.github.io/notes/journals/2026_11_17.html</id>
     <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_17.html" />
@@ -313,30 +325,6 @@ Let &lt;span class=&quot;math inline&quot;&gt;$v = (1 \quad -1  \quad 0)^\top$&l
 \end{align*}$$&lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;So the answer is&lt;br /&gt;
 &lt;div class=&quot;math inline&quot;&gt;$$\begin{pmatrix} 1 \\ 3 \\ -1 \end{pmatrix} - \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix} = \fbox {$\begin{pmatrix} 2 \\ 2 \\ -1 \end{pmatrix}$}.$$&lt;/div&gt;&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/journals/2025_11_26.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_11_26.html" />
-    <title>2025_11_26</title>
-    <published>2025-11-25T19:01:50Z</published>
-    <updated>2026-11-17T12:57:46Z</updated>
-    <content type="html">&lt;ul&gt;
-&lt;li&gt;[Descend Argument](../Descend Argument)&lt;/li&gt;
-&lt;li&gt;Recall that for all positive &lt;span class=&quot;math inline&quot;&gt;$\epsilon$&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;$x^\epsilon$&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;$o(\ln(x))$&lt;/span&gt; as &lt;span class=&quot;math inline&quot;&gt;$x\to 0$&lt;/span&gt;.
-&lt;ul&gt;
-&lt;li&gt;that is, &lt;span class=&quot;math inline&quot;&gt;$\lim_{x\to 0}x^\epsilon\ln (x)$&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;So, &lt;span class=&quot;math inline&quot;&gt;$\lim_{x\to 0} \frac{x\ln(x)}{x^{1-\epsilon}} =\lim_{x\to 0} x^\epsilon \ln (x) = 0$&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;More roughly, we can say that &lt;span class=&quot;math inline&quot;&gt;$x\ln(x) = O(x^{1-\epsilon})$&lt;/span&gt; for &lt;span class=&quot;math inline&quot;&gt;$|x| &lt;\delta$&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;Notice that when &lt;span class=&quot;math inline&quot;&gt;$\epsilon &gt;1$&lt;/span&gt;, everything above is still valid. (Why?)&lt;/li&gt;
-&lt;li&gt;And it is &lt;em&gt;not correct&lt;/em&gt; to say &lt;span class=&quot;math inline&quot;&gt;$\color{red}x\ln(x) =O(x) (\quad \rm incorrect)$&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Today I learned that &lt;strong&gt;Orbit Stablizer Theorem&lt;/strong&gt; is about an &lt;em&gt;orbit&lt;/em&gt; (of the &lt;strong&gt;conjugacy action&lt;/strong&gt; of &lt;span class=&quot;math inline&quot;&gt;$G$&lt;/span&gt; on a single element).&lt;/li&gt;
-&lt;li&gt;This helps to find the number of centralizer (the elements that commute with a group elment &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt;). The  orbit of the action on &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt; is the &lt;strong&gt;conjugacy class&lt;/strong&gt; and the stablizer is the &lt;strong&gt;centralizer&lt;/strong&gt;. The conjugacy class of &lt;span class=&quot;math inline&quot;&gt;$x\in S_n$&lt;/span&gt; is easy to find. So the stablizer (e.g. centralizer) is easy to find.&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </content>
   </entry>
 </feed>
