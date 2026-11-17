@@ -3,7 +3,7 @@
   <title>dbdo notes</title>
   <id>https://dbdo00.github.io/notes</id>
   <link href="https://dbdo00.github.io/notes/atom.xml" rel="self" />
-  <updated>2026-11-17T14:48:53.051966Z</updated>
+  <updated>2026-11-17T16:04:08.74225Z</updated>
   <generator uri="https://github.com/llimllib/obsidian_notes/" version="1.0">
     Obsidian Notes
   </generator>
@@ -13,11 +13,11 @@
     <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_17.html" />
     <title>2026_11_17</title>
     <published>2026-11-17T08:16:42Z</published>
-    <updated>2026-11-17T14:06:34Z</updated>
+    <updated>2026-11-17T16:03:46Z</updated>
     <content type="html">&lt;ul&gt;
 &lt;li&gt;&lt;span class=&quot;org-task task-todo&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;TODO&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;dataset handling. for recommendation data especially&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&quot;org-task task-todo&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;TODO&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;review the todo export functioanlity and commit&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;confirmed that regret bound does not directly help model evaluation&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
