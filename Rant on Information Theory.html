@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-11-17" />
+  <title>Rant on Information Theory</title>
+  <style>
+    div.sitenav { display: flex; flex-direction: row; flex-wrap: wrap; }
+    span.navlink { flex: 1; }
+    span.navlink-label { display: inline-block; min-width: 4em; }
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav id="sitenav">
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Up:</span> <a href="index.html" accesskey="u" rel="up"></a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Top:</span> <a href="index.html" accesskey="t" rel="top"></a>
+</span>
+</div>
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Next:</span> <a href="Emptiness.html" accesskey="n" rel="next">Emptiness</a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Previous:</span> <a href="static site generator – Slick.html" accesskey="p" rel="previous">static site generator – Slick</a>
+</span>
+</div>
+</nav>
+<section>
+<h1 data-number="345" id="rant-on-information-theory">Rant on
+Information Theory</h1>
+<p>I have been learning information since the beginning of this week,
+following the video by the Cambridge professor.</p>
+<p>This is the first applied math branch I’ve ever learned.</p>
+<p>First coding problems are discussed. (error and decoding) A question
+is how well we can do in decoding?</p>
+<p>There is a probability for errors to occur, i.e. the digit 1 becomes
+0, the digit 0 becomes 1, 1-&gt;0 , 0-&gt;1, in each digit of a binary
+sequence. You want to “decode” the digit that contains error(s),
+i.e. find the original digit with no or at least less errors.</p>
+<h2 data-number="345.1" id="repetition-code">Repetition Code</h2>
+<h3 data-number="345.1.1" id="example">Example</h3>
+<p>Suppose you have the source message</p>
+<pre><code>s =  0 0  1 0  1  1 0 </code></pre>
+<p>We add the noise to the source message in modulo
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>
+arithmetic. The result is the received message.</p>
+<p><img src="transmisionR3.png" /></p>
+<p>For every coordinates in the received message, the repetition code of
+the source code of that coordinate is either <code>000</code> or
+<code>111</code>. We will make an educated guess whether the repetition
+code is <code>000</code> or <code>111</code>.</p>
+<p>We can compute this ratio of probabilities below
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐫</mi><mo stretchy="false" form="prefix">|</mo><mi>s</mi><mo>=</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐫</mi><mo stretchy="false" form="prefix">|</mo><mi>s</mi><mo>=</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><annotation encoding="application/x-tex">\frac{P(\mathbf{ r } | s = 1) }{ P(\mathbf{ r } | s = 0  )}</annotation></semantics></math></p>
+<p>If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐫</mi><mo stretchy="false" form="prefix">|</mo><mi>s</mi><mo>=</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐫</mi><mo stretchy="false" form="prefix">|</mo><mi>s</mi><mo>=</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\frac{P(\mathbf{ r } | s = 1) }{ P(\mathbf{ r } | s = 0  )} &gt; 0</annotation></semantics></math>,
+then
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">s = 1</annotation></semantics></math>
+is more probale. Otherwise, it is the opposite case,
+i.e. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">s = 0</annotation></semantics></math>
+is more probable.</p>
+<p>So, we can make a table of most probable source message for each of 3
+digit strings made up with 0 and 1s.</p>
+<p>2024-05-29 19:18:34</p>
+</section>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-11-17" />
+  <title>static site generator – Slick</title>
+  <style>
+    div.sitenav { display: flex; flex-direction: row; flex-wrap: wrap; }
+    span.navlink { flex: 1; }
+    span.navlink-label { display: inline-block; min-width: 4em; }
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav id="sitenav">
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Up:</span> <a href="index.html" accesskey="u" rel="up"></a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Top:</span> <a href="index.html" accesskey="t" rel="top"></a>
+</span>
+</div>
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Next:</span> <a href="Rant on Information Theory.html" accesskey="n" rel="next">Rant on Information Theory</a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Previous:</span> <a href="shit code writer. what is the meaning.html" accesskey="p" rel="previous">shit code writer. what is the meaning</a>
+</span>
+</div>
+</nav>
+<section>
+<h1 data-number="344" id="static-site-generator-slick">static site
+generator – Slick</h1>
+<p>I tried to learn about <a
+href="https://github.com/ChrisPenner/slick#readme">slick</a>, a static
+site generator written in Haskell.</p>
+<p>One interesting thing about Slick is that it is built upon Shake
+build system. Basically it is a package of haskell that handles caching,
+thus shortening the build time, a key thing for static site generators,
+especially during live-loading.</p>
+<p>It also uses pandoc, which is essentiall for my desire to gain
+experiences in interacting with pandoc in haskell.</p>
+<p>There is also a bullet point in the overview: &gt; Provides only the
+individual tools without opinions about how to wire them up I think this
+means I need to write a few lines of haskell. I am trying haskell so
+this is good.</p>
+<p>2024-05-26 22:14:50</p>
+</section>
+</body>
+</html>

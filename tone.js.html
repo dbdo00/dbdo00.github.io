@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-11-17" />
+  <title>tone.js</title>
+  <style>
+    div.sitenav { display: flex; flex-direction: row; flex-wrap: wrap; }
+    span.navlink { flex: 1; }
+    span.navlink-label { display: inline-block; min-width: 4em; }
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav id="sitenav">
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Up:</span> <a href="index.html" accesskey="u" rel="up"></a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Top:</span> <a href="index.html" accesskey="t" rel="top"></a>
+</span>
+</div>
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Next:</span> <a href="CSS notes.html" accesskey="n" rel="next">CSS notes</a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Previous:</span> <a href="Limitation in human communications.html" accesskey="p" rel="previous">Limitation in human communications</a>
+</span>
+</div>
+</nav>
+<section>
+<h1 data-number="310" id="tone.js">tone.js</h1>
+<p>Tone.js is a javascript library for creating music.</p>
+<h2 data-number="310.1" id="change-the-envelope">change the
+envelope</h2>
+<p>You can change the “envelope” in tone.js.</p>
+<pre><code>let synth = new Tone.Synth({
+    oscillator: { type: &quot;square&quot; },
+    envelope: {attack: 0.8, decay: 0.3, sustain: 0.8, release: 1},
+    volume: -6 
+  }).toDestination();</code></pre>
+<h2 data-number="310.2" id="transport">transport</h2>
+<blockquote>
+<p>Fortunately, Tone.js has a concept called the transport that makes
+writing songs much easier. The transport keeps track of the current
+position in the song, as <strong>measured in bars and beats</strong>.
+This lets you schedule notes to play at certain points in the song in a
+musically intuitive way.</p>
+</blockquote>
+<p>Positions along the transport are given as <em>strings of three
+numbers</em> separated by <em>colons</em>, like “0:0:0”.</p>
+</section>
+</body>
+</html>

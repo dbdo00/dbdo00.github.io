@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-11-17" />
+  <title>A Putnam problem</title>
+  <style>
+    div.sitenav { display: flex; flex-direction: row; flex-wrap: wrap; }
+    span.navlink { flex: 1; }
+    span.navlink-label { display: inline-block; min-width: 4em; }
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav id="sitenav">
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Up:</span> <a href="index.html" accesskey="u" rel="up"></a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Top:</span> <a href="index.html" accesskey="t" rel="top"></a>
+</span>
+</div>
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Next:</span> <a href="Concious.html" accesskey="n" rel="next">Concious</a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Previous:</span> <a href="Sleeping time.html" accesskey="p" rel="previous">Sleeping time</a>
+</span>
+</div>
+</nav>
+<section>
+<h1 data-number="238" id="a-putnam-problem">A Putnam problem</h1>
+<p>Alice and Bob take turns to take numbers from an array</p>
+<pre><code>{1, 2, ..., n}</code></pre>
+<p>Bob wins if the goal that is decalred before the game is achieved
+when the game ends. Otherwise Alice wins the game.</p>
+<p>If the array length is odd, then the winning stategy exists. k = 0
+can be achieved by Bob with no barriers.</p>
+<p>The difficult situation is when the array length is even.</p>
+<!--  -->
+<!-- Alice can prevent the case  -->
+<!--  -->
+<!--    k = 0 -->
+<!--  -->
+<!-- from happening by 'forcing' Bob to choose `n` in the final -->
+<!-- round. So Bob cannot win using the -->
+<!--  -->
+<!--    k = 0 -->
+<!--  -->
+<!-- strategy.  -->
+<!--  -->
+<!-- Does Bob has a winning strategy when the goal is odd and  -->
+<!-- the array length is even? -->
+<!--  -->
+<!-- As discussed above,  -->
+<p>The following is a strategy for Bob to achieve
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">k=0</annotation></semantics></math>
+in any situations when the array is even and is greater than
+<code>2</code>.</p>
+<ol type="1">
+<li>In the first round, if Alice chose <code>n</code>, the Bob chooses
+whatever that is not <code>2</code>. If Alince didn’t choose
+<code>n</code>, then Bob needs to choose <code>n</code>.</li>
+<li>In the rest of the game, Bob chooses any number other than
+<code>k</code> in each <code>k</code>-th turn.</li>
+<li>Finally, Bob chooses any number other than <code>n</code> in the
+<code>n</code>-th turn. Alice cannot stop Bob from doing so because
+<code>n</code> is already chosen in the first or the second turn (by
+Alice or by Bob respectively).</li>
+</ol>
+<p>28 Aug 2024</p>
+</section>
+</body>
+</html>

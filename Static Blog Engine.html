@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-11-17" />
+  <title>Static Blog Engine</title>
+  <style>
+    div.sitenav { display: flex; flex-direction: row; flex-wrap: wrap; }
+    span.navlink { flex: 1; }
+    span.navlink-label { display: inline-block; min-width: 4em; }
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav id="sitenav">
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Up:</span> <a href="index.html" accesskey="u" rel="up"></a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Top:</span> <a href="index.html" accesskey="t" rel="top"></a>
+</span>
+</div>
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Next:</span> <a href="The Engineering of Reading Experiences.html" accesskey="n" rel="next">The Engineering of Reading Experiences</a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Previous:</span> <a href="Micro Editor.html" accesskey="p" rel="previous">Micro Editor</a>
+</span>
+</div>
+</nav>
+<section>
+<h1 data-number="245" id="static-blog-engine">Static Blog Engine</h1>
+<p>When writing this aritcle, I will try to use the an outline approach:
+sketch an outline first, and then fill the details. Why? It’s because I
+am lazy and my understanding of topic is still very insufficient.</p>
+<p>Reader Base Class</p>
+<p>Choose which file to read?</p>
+<ul>
+<li>Reader</li>
+</ul>
+<p>: get the data from <em>a</em> file. (only a single at a time?)<br />
+The base class for a reader in pelican is the class called
+<code>BaseReader</code>. Pelican’s functionality is also built by
+extending this base class. See
+<code>class MarkdownReader(BaseReader)</code>.</p>
+<p>When is the source file (posts) accessed? When a reader instance uses
+<code>.reader</code> method.</p>
+<p>Reader reads a text file, and return two things: - meta data. This is
+obtained by parsing the text file. The way to parse the file varies by
+different format. - File content: the is the content of the file, not
+including the meta data.</p>
+<ul>
+<li>Generator</li>
+</ul>
+<p>: Generate a content from data and content (e.g. metadata and
+markdown -&gt; html) Or perhaps the generated result is an article
+object.</p>
+<ul>
+<li>Writer</li>
+</ul>
+<p>: With the generated content, write things to actual files.</p>
+<p>The three components seem to be quite independent. The jobs are
+partitioned and each part is assigned to different “people”. But each of
+them can technically do everything on its own, except that this will
+make the code messier.</p>
+<p>What is the role of signal?</p>
+<p>How is signals implemented?</p>
+<p>2024-08-25 01:15:17</p>
+</section>
+</body>
+</html>
