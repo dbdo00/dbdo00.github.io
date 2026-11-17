@@ -77,7 +77,8 @@ $$P(\theta |D ) = \frac{P(D \mid \theta) P(\theta)}{P(D)}$$
 </ul>
 <h1 id="map-和后验分布区别">MAP 和后验分布区别</h1>
 <p>后验分布是一个分布。MAP 是求出一个参数的数字。</p>
-<p>Example:  可以算这个 <span class="math inline">$y$</span> 的后验分布</p>
+<p>Example:  可以算这个 <span class="math inline">$y$</span> 的后验分布<br />
+<a href="/Pasted image 20260925223707.png"><img class="bodyimg" src="/Pasted image 20260925223707.png"></a></p>
 <h1 id="svm">SVM</h1>
 <p>Why should we penalize the weight ？</p>
 <pre><code class="language-python"><div class="highlight"><pre><span></span><span class="c1"># step size for the sliding window</span>
@@ -156,11 +157,13 @@ E-M step 可以更新<span class="math inline">$\mu_k$</span> 和<span class="ma
 当先验分布 <span class="math inline">$p(\theta)$</span> 是均匀分布（即对所有可能的 <span class="math inline">$\theta$</span> 不偏不倚，等概率看待）时，MAP 的计算结果就会退化为与 MLE 完全一致。</li>
 </ul>
 <h1 id="full-posterior-distribution-vs-map">Full Posterior distribution vs. MAP</h1>
+<p><a href="/Pasted image 20261002141258.png"><img class="bodyimg" src="/Pasted image 20261002141258.png"></a></p>
 <p>class 1 with probability <span class="math inline">$p$</span><br />
 class  2 with probability <span class="math inline">$1-p$</span><br />
 The ratio is <span class="math inline">$\frac{p}{1 - p}$</span>.<br />
 if both in the form exp, then <span class="math inline">$\log p/(1-p) = \log (exp (\cdot)) = \cdot$</span></p>
-<p>不太明白：求出来likelihood ，但是不知道参数是什么。用MLE 来计算吗？</p>
+<p><a href="/Pasted image 20261002204030.png"><img class="bodyimg" src="/Pasted image 20261002204030.png"></a><br />
+不太明白：求出来likelihood ，但是不知道参数是什么。用MLE 来计算吗？</p>
 
     
     <div class="backlinks">
