@@ -3,7 +3,7 @@
   <title>dbdo notes</title>
   <id>https://dbdo00.github.io/notes</id>
   <link href="https://dbdo00.github.io/notes/atom.xml" rel="self" />
-  <updated>2026-11-17T16:11:14.621314Z</updated>
+  <updated>2026-11-18T14:22:10.331129Z</updated>
   <generator uri="https://github.com/llimllib/obsidian_notes/" version="1.0">
     Obsidian Notes
   </generator>
@@ -13,9 +13,9 @@
     <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_18.html" />
     <title>2026_11_18</title>
     <published>2026-11-17T16:10:57Z</published>
-    <updated>2026-11-17T16:10:57Z</updated>
+    <updated>2026-11-18T14:21:42Z</updated>
     <content type="html">&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;today i read about the red eye and blue eye puzzle. the invalid reasoning might be: the assumption requires the condition that  the blue eyed person does not see other blue eyed people. so seems the induction step cannot be completed&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
@@ -25,10 +25,9 @@
     <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_17.html" />
     <title>2026_11_17</title>
     <published>2026-11-17T08:16:42Z</published>
-    <updated>2026-11-17T16:03:46Z</updated>
+    <updated>2026-11-18T10:45:11Z</updated>
     <content type="html">&lt;ul&gt;
 &lt;li&gt;&lt;span class=&quot;org-task task-todo&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;TODO&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;dataset handling. for recommendation data especially&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;org-task task-todo&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;TODO&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;review the todo export functioanlity and commit&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;confirmed that regret bound does not directly help model evaluation&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
