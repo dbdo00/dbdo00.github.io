@@ -3,11 +3,23 @@
   <title>dbdo notes</title>
   <id>https://dbdo00.github.io/notes</id>
   <link href="https://dbdo00.github.io/notes/atom.xml" rel="self" />
-  <updated>2026-11-19T17:10:05.228195Z</updated>
+  <updated>2026-11-20T06:23:28.359079Z</updated>
   <generator uri="https://github.com/llimllib/obsidian_notes/" version="1.0">
     Obsidian Notes
   </generator>
   <author><name>dbdo</name></author>
+  <entry>
+    <id>https://dbdo00.github.io/notes/journals/2026_11_20.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_20.html" />
+    <title>2026_11_20</title>
+    <published>2026-11-20T06:23:07Z</published>
+    <updated>2026-11-20T06:23:07Z</updated>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;&lt;span class=&quot;org-task task-done&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;DONE&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;see the folder&lt;/span&gt;&lt;/span&gt;&lt;details class=&quot;task-logbook&quot;&gt;&lt;summary&gt;⏱ 1h 7m · 1 entry&lt;/summary&gt;&lt;ul class=&quot;logbook-rows&quot;&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-20 Fri 13:15:19&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-20 Fri 14:23:04&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1h 7m 45s&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <id>https://dbdo00.github.io/notes/journals/2026_11_19.html</id>
     <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_19.html" />
@@ -247,47 +259,6 @@ define the &#x27;done&#x27;&lt;/li&gt;
 &lt;li&gt;tensor^1, tensor^2.. are the notations to denote the rank of tensors.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;packages:&lt;/strong&gt; Racket, malt&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/journals/2025_12_05.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_12_05.html" />
-    <title>2025_12_05</title>
-    <published>2025-12-05T14:10:53Z</published>
-    <updated>2026-11-17T12:57:46Z</updated>
-    <content type="html">&lt;h1 id=&quot;invariant-space&quot;&gt;Invariant Space&lt;/h1&gt;
-&lt;p&gt;id:: 6932e5e1-39b7-450d-b428-3f1afad9e70e&lt;br /&gt;
-- Every invariant Space of &lt;span class=&quot;math inline&quot;&gt;$T\in \mathcal L(T)$&lt;/span&gt;  is a direct sum of spaces spanned by eigenvectors if  &lt;span class=&quot;math inline&quot;&gt;$T$&lt;/span&gt; is diagonalizable. Suppose &lt;span class=&quot;math inline&quot;&gt;$V$&lt;/span&gt; is an invariant space of &lt;span class=&quot;math inline&quot;&gt;$T$&lt;/span&gt;.&lt;br /&gt;
-- The idea is  to show &lt;span class=&quot;math inline&quot;&gt;$V=\oplus (V\cap V_\lambda)$&lt;/span&gt;&lt;br /&gt;
-- Of course, &lt;span class=&quot;math inline&quot;&gt;$\subset$&lt;/span&gt; is obvious.&lt;br /&gt;
-- On the other hand, if &lt;span class=&quot;math inline&quot;&gt;$v = v_1 + \ldots + v_n$&lt;/span&gt;, where &lt;span class=&quot;math inline&quot;&gt;$v_i$&lt;/span&gt; are eigenvectors with different eigenvalues, then we need to show &lt;span class=&quot;math inline&quot;&gt;$v_i \in V$&lt;/span&gt; for each &lt;span class=&quot;math inline&quot;&gt;$i$&lt;/span&gt;. Use lagrange interpolation to construct  a polynomial. &lt;span class=&quot;math inline&quot;&gt;$f(\lambda_k)=1$&lt;/span&gt; if &lt;span class=&quot;math inline&quot;&gt;$k=i$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$0$&lt;/span&gt; otherwise. Thus &lt;span class=&quot;math inline&quot;&gt;$f(T)v_k = f(\lambda_k)v_k$&lt;/span&gt;. This gives &lt;span class=&quot;math inline&quot;&gt;$f(A)v=v_i$&lt;/span&gt;. So &lt;span class=&quot;math inline&quot;&gt;$v_i \in V$&lt;/span&gt; by the invariance of &lt;span class=&quot;math inline&quot;&gt;$V$&lt;/span&gt;.&lt;br /&gt;
-- For a general &lt;span class=&quot;math inline&quot;&gt;$T\colon: V\to V$&lt;/span&gt;, an invariant space is a direct sum of spaces spanned by &lt;strong&gt;general eigenvectors&lt;/strong&gt;. I do not know how this is done exactly.q&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;h1 id=&quot;lower-bound-of-unipotent-matrix&quot;&gt;Lower Bound of Unipotent Matrix&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;For &lt;span class=&quot;math inline&quot;&gt;$A$&lt;/span&gt; a matrix, if &lt;span class=&quot;math inline&quot;&gt;$A-I$&lt;/span&gt; is nilpotent, then &lt;span class=&quot;math inline&quot;&gt;$A$&lt;/span&gt; is said to be unipotent.&lt;/li&gt;
-&lt;li&gt;Define &lt;span class=&quot;math inline&quot;&gt;$\|A\| = \max |a_{ij}|$&lt;/span&gt;. Then &lt;span class=&quot;math inline&quot;&gt;$\|A\|$&lt;/span&gt; is lower bounded by &lt;span class=&quot;math inline&quot;&gt;$1$&lt;/span&gt;. Surprisingly, this can be proved using trace. In fact, there is at least one diagonal entry whose absolute value is not less than &lt;span class=&quot;math inline&quot;&gt;$1$&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;A thing I didn&#x27;t grasp is that the trace is equal to the sum of eigenvalues counting the multiplicity. For the power, the trace is the sum of eigenvalues taken the power, counting the multiplicity.&lt;/li&gt;
-&lt;li&gt;
-&lt;div class=&quot;math block&quot;&gt;
-$$\mathrm{trace} A^n= \sum \lambda_i^n$$
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;This is clear from the Jordan canonical form and I do not know how can one show this without JCF.&lt;/li&gt;
-&lt;li&gt;The &lt;strong&gt;upper bound&lt;/strong&gt; of &lt;span class=&quot;math inline&quot;&gt;$\|A^j\|$&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;$Kj^m$&lt;/span&gt;, where &lt;span class=&quot;math inline&quot;&gt;$K$&lt;/span&gt; is a positive constant.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h1 id=&quot;gluing-lemma&quot;&gt;Gluing Lemma&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;For &lt;span class=&quot;math inline&quot;&gt;$X\subset \mathbb R^n$&lt;/span&gt;, if &lt;span class=&quot;math inline&quot;&gt;$X=A\cap B$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$A,B$&lt;/span&gt; are closed sets, and &lt;span class=&quot;math inline&quot;&gt;$f\mid A$&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;$f\mid B$&lt;/span&gt; are both continuous, then &lt;span class=&quot;math inline&quot;&gt;$f$&lt;/span&gt; is continuous.&lt;/li&gt;
-&lt;li&gt;I saw that this condition can be weakened to Hausdorff space, but I didn&#x27;t look into it.&lt;/li&gt;
-&lt;li&gt;This lemma is useful for algebraic topology.&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
