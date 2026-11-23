@@ -3,11 +3,52 @@
   <title>dbdo notes</title>
   <id>https://dbdo00.github.io/notes</id>
   <link href="https://dbdo00.github.io/notes/atom.xml" rel="self" />
-  <updated>2026-11-23T12:19:41.30435Z</updated>
+  <updated>2026-11-23T12:57:06.835351Z</updated>
   <generator uri="https://github.com/llimllib/obsidian_notes/" version="1.0">
     Obsidian Notes
   </generator>
   <author><name>dbdo</name></author>
+  <entry>
+    <id>https://dbdo00.github.io/notes/Notes/Bandit.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/Notes/Bandit.html" />
+    <title>Bandit</title>
+    <published>2026-11-23T12:55:25Z</published>
+    <updated>2026-11-23T12:55:25Z</updated>
+    <content type="html">&lt;p&gt;different ways of learning when model is not known:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;approach&lt;/th&gt;
+&lt;th&gt;state&lt;/th&gt;
+&lt;th&gt;probability&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;multi-armed bandit&lt;/td&gt;
+&lt;td&gt;x&lt;/td&gt;
+&lt;td&gt;x&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;o&lt;/td&gt;
+&lt;td&gt;x&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;regret-&quot;&gt;Regret = &lt;span class=&quot;math inline&quot;&gt;$\rm What\ I\ could\ (have\ expected\ to)\ have\ gained$&lt;/span&gt; &lt;span class=&quot;math inline&quot;&gt;$-$&lt;/span&gt; &lt;span class=&quot;math inline&quot;&gt;$\rm what\ I\ have\ gained$&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Example.&lt;/strong&gt;  &lt;span class=&quot;math inline&quot;&gt;$q(1)\sim \rm {Bern}(0.1),\ q(2)\sim \rm {Bern}(0.5),\ q(3)\sim \rm {Bern}(0.6)$&lt;/span&gt;.&lt;br /&gt;
+However, I do not know the value (i.e. the reward). I acted &lt;span class=&quot;math inline&quot;&gt;$1,\ 2,\ 3$&lt;/span&gt; sequentially.&lt;br /&gt;
+As a result, the expected  value of my reward is &lt;div class=&quot;math inline&quot;&gt;$$\mathbb E {\left[q(1) + q(2) + q(3)\right]} = \mathbb E\left[q(1)\right] + \mathbb E[q(2)]  + \mathbb E[q(3)]= 0.1 + 0.5 + 0.6 = 1.2$$&lt;/div&gt;&lt;br /&gt;
+The expected value of reward of taking the action &lt;span class=&quot;math inline&quot;&gt;$3$&lt;/span&gt; sequentially for &lt;span class=&quot;math inline&quot;&gt;$3$&lt;/span&gt; times is&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\mathbb E[q(3) + q(3) + q(3)] = 1.8$$&lt;/div&gt;&lt;br /&gt;
+So my regret is&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$1.8 - 1.2 = 0.6.$$&lt;/div&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <id>https://dbdo00.github.io/notes/Notes/Nonlinear_Dimensionality_Reduction.html</id>
     <link type="text/html" href="https://dbdo00.github.io/notes/Notes/Nonlinear_Dimensionality_Reduction.html" />
@@ -368,27 +409,6 @@ define the &#x27;done&#x27;&lt;/li&gt;
     <updated>2026-11-17T12:57:46Z</updated>
     <content type="html">&lt;ul&gt;
 &lt;li&gt;what am i even thinking about?&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/journals/2025_12_15.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_12_15.html" />
-    <title>2025_12_15</title>
-    <published>2025-12-15T06:34:57Z</published>
-    <updated>2026-11-17T12:57:46Z</updated>
-    <content type="html">&lt;ul&gt;
-&lt;li&gt;determinant: &lt;em&gt;adding sides method&lt;/em&gt; to compute determinants.&lt;/li&gt;
-&lt;li&gt;calculus: intermediate value theorem. For the linear type of questions with constant coefficients, we can construct the function just like we do in for ODE.&lt;/li&gt;
-&lt;li&gt;Abelian Fundamental Group: the isomorphism map of isomorphic fundamental groups, in this case, has only one  possibility --
-&lt;ul&gt;
-&lt;li&gt;suppose &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$y$&lt;/span&gt; are two base points, and &lt;span class=&quot;math inline&quot;&gt;$\alpha$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$\alpha^\prime$&lt;/span&gt; are two paths connecting &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;$y$&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;In this case, &lt;span class=&quot;math inline&quot;&gt;$[\alpha(\alpha^\prime)^{-1}] \in \pi(y)$&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;math inline&quot;&gt;$\alpha \circ {\alpha^\prime}^{-1} = id_{\pi(y)} \implies \alpha = \alpha^\prime$&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
