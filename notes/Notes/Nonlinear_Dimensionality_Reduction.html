@@ -48,7 +48,7 @@
     <div class="time"><em>last updated: Nov 23, 2026</em></div>
     <h3 id="从点的距离重建原来点的坐标">从点的距离，重建原来点的坐标</h3>
 <p><span class="math inline">$\newcommand{\bm}{\mathbf}$</span><br />
-<strong>MDS, ISOMAP</strong>   平方距离矩阵<span class="math inline">$\Delta$</span> 的Gram matrix 是 <span class="math inline">$\bm B= -\frac{1}{2}\bm H\Delta\bm H$</span>   . <del> MDS 输出的点的坐标是<span class="math inline">$\bm B$</span> 的特征向量。</del>   如果特征向量是<span class="math inline">$v_1, \ldots\ v_k$</span>,   (k 一定会等于 rank B 因为<span class="math inline">$\bm B$</span>  对称 ) 那么 <div class="math inline">$$\begin{pmatrix} \sqrt \lambda_1 v_1^\top \\ \sqrt \lambda_k v_k^\top  \end{pmatrix} = V_k \Lambda_k$$</div> 的行构成了MDS还原出来的点。<span class="math inline">$d(v_i,\ v_j)\approx \Delta_{i,\ j}$</span>.</p>
+<strong>MDS, ISOMAP</strong>   平方距离矩阵<span class="math inline">$\Delta$</span> 的Gram matrix 是 <span class="math inline">$\bm B= -\frac{1}{2}\bm H\Delta\bm H$</span>   . <del> MDS 输出的点的坐标是<span class="math inline">$\bm B$</span> 的特征向量。</del>   如果特征向量是<span class="math inline">$v_1, \ldots\ v_k$</span>,   (k 一定会等于 rank B 因为<span class="math inline">$\bm B$</span>  对称 ) 那么 <div class="math inline">$$\begin{pmatrix} \sqrt \lambda_1 v_1 \ \ldots\  \sqrt \lambda_k v_k  \end{pmatrix} = \Lambda_k^{1/2}V_k$$</div> 的行 <span class="math inline">$p_1,\ \ldots, p_n$</span> 构成了MDS还原出来的点。<span class="math inline">$d(v_i,\ v_j)\approx \Delta_{i,\ j}$</span>.</p>
 <ul>
 <li>todo. 双中心化公式</li>
 <li>
@@ -76,7 +76,7 @@ $$\boxed{d(x_i,x_j)=\sqrt{\Delta_{ij}}}$$
 </blockquote>
 <p><strong>ISOMAP</strong> 曲面上点的测地距离当成图距离。<br />
 用图上的最短距离估计测地距离。<br />
-用图的similarity matrix 通过 BDS 得到点</p>
+用图的similarity matrix 通过 BDS 得到低维的点。</p>
 
     
     <div class="index"><a href="/notes">↑ up</a></div>
