@@ -3,20 +3,161 @@
   <title>dbdo notes</title>
   <id>https://dbdo00.github.io/notes</id>
   <link href="https://dbdo00.github.io/notes/atom.xml" rel="self" />
-  <updated>2026-11-20T06:23:28.359079Z</updated>
+  <updated>2026-11-23T06:27:42.458994Z</updated>
   <generator uri="https://github.com/llimllib/obsidian_notes/" version="1.0">
     Obsidian Notes
   </generator>
   <author><name>dbdo</name></author>
   <entry>
+    <id>https://dbdo00.github.io/notes/Notes/Nonlinear_Dimensionality_Reduction.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/Notes/Nonlinear_Dimensionality_Reduction.html" />
+    <title>Nonlinear Dimensionality Reduction</title>
+    <published>2026-11-23T06:27:19Z</published>
+    <updated>2026-11-23T06:27:19Z</updated>
+    <content type="html">&lt;h3 id=&quot;知道点的距离找点的坐标&quot;&gt;知道点的距离，找点的坐标&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$\newcommand{\bm}{\mathbf}$&lt;/span&gt;&lt;br /&gt;
+&lt;strong&gt;MDS, ISOMAP&lt;/strong&gt;   平方距离矩阵&lt;span class=&quot;math inline&quot;&gt;$\Delta$&lt;/span&gt; 的Gram matrix 是 &lt;span class=&quot;math inline&quot;&gt;$\bm B= -\frac{1}{2}\bm H\Delta\bm H$&lt;/span&gt;   . MDS 输出的点的坐标是&lt;span class=&quot;math inline&quot;&gt;$\bm B$&lt;/span&gt; 的特征向量。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <id>https://dbdo00.github.io/notes/Notes/Map__MLE.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/Notes/Map__MLE.html" />
+    <title>Map, MLE</title>
+    <published>2026-11-23T06:27:19Z</published>
+    <updated>2026-11-23T06:27:19Z</updated>
+    <content type="html">&lt;h1 id=&quot;precision-and-sensitivity&quot;&gt;Precision and Sensitivity&lt;/h1&gt;
+&lt;p&gt;Sensitivity is the rate in which we find the positive (e.g. a disease). False positive is not cared about.&lt;/p&gt;
+&lt;p&gt;Precision is the rate in which we find the true positive.&lt;/p&gt;
+&lt;h1 id=&quot;beyes-classifier&quot;&gt;Beyes Classifier&lt;/h1&gt;
+&lt;p&gt;Learning:  Learning is done by computing &lt;span class=&quot;math inline&quot;&gt;$P(y|{ x})$&lt;/span&gt;, where &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt; is the data.&lt;br /&gt;
+Classifying: &lt;span class=&quot;math inline&quot;&gt;$P(x^*|y)$&lt;/span&gt; where &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt; is the new data.&lt;/p&gt;
+&lt;p&gt;How these probability computations are done? By MLE. TO be specific,...&lt;/p&gt;
+&lt;p&gt;For an event&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$p(y=c)= \frac{\sum^M_{i=1} \mathbb I [y^{(i)} = c ]  }{M}  \quad c \in \{1,2\}$&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;平均有多少个样本落在类别 c 中。&lt;/p&gt;
+&lt;h1 id=&quot;maximal-likelihood&quot;&gt;Maximal Likelihood&lt;/h1&gt;
+&lt;p&gt;Functions are convex =&amp;gt; derivative = 0 means global manimum&lt;/p&gt;
+&lt;p&gt;TODO. proof of gaussian distribution&#x27;s ML estimation.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;A1Q2&lt;/em&gt;  用来估计的是三个iid随机变量。实际上是一个随机变量。&lt;/p&gt;
+&lt;h1 id=&quot;regression&quot;&gt;Regression&lt;/h1&gt;
+&lt;p&gt;How is noise defined -- when we have done the regression knowing the &lt;span class=&quot;math inline&quot;&gt;$w$&lt;/span&gt;, is noise known?&lt;/p&gt;
+&lt;p&gt;噪音的参数是依赖于误差&lt;span class=&quot;math inline&quot;&gt;$r$&lt;/span&gt; 的。&lt;/p&gt;
+&lt;h1 id=&quot;后验分布&quot;&gt;后验分布&lt;/h1&gt;
+&lt;p&gt;参数&lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 的后验分布的密度是 &lt;span class=&quot;math inline&quot;&gt;$P(\theta |D)$&lt;/span&gt;。 这个是参数的分布&lt;/p&gt;
+&lt;div class=&quot;math block&quot;&gt;
+$$P(\theta |D ) = \frac{P(D \mid \theta) P(\theta)}{P(D)}$$
+&lt;/div&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$P(D)$&lt;/span&gt; 的定义是样本密度。类似于 &lt;a href=&quot;/Notes/Map__MLE.html#beyes-classifier&quot; class=&quot;internal-link&quot;&gt;Map, MLE&lt;/a&gt; 中的“平均有多少个样本落在类别 c 中”。&lt;/p&gt;
+&lt;h1 id=&quot;后验预测&quot;&gt;后验预测 &lt;span class=&quot;math inline&quot;&gt;$P(x^\star \mid \theta )$&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;这只是给定参数&lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 的&lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt;.  （意思是 &lt;span class=&quot;math inline&quot;&gt;$P(X = x^\star \mid \theta)$&lt;/span&gt; , &lt;span class=&quot;math inline&quot;&gt;$X$&lt;/span&gt; 有一个参数是&lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt;. 的分布）&lt;/p&gt;
+&lt;p&gt;后验估计: &lt;div class=&quot;math inline&quot;&gt;$$p(x^\star | D) = \int P(x^\star \mid \theta)P(\theta |D)d\theta$$&lt;/div&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;prior 的初始参数怎么选都可以吗？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;map-和后验分布区别&quot;&gt;MAP 和后验分布区别&lt;/h1&gt;
+&lt;p&gt;后验分布是一个分布。MAP 是求出一个参数的数字。&lt;/p&gt;
+&lt;p&gt;Example:  可以算这个 &lt;span class=&quot;math inline&quot;&gt;$y$&lt;/span&gt; 的后验分布&lt;br /&gt;
+&lt;a href=&quot;/Pasted image 20260925223707.png&quot;&gt;&lt;img class=&quot;bodyimg&quot; src=&quot;/Pasted image 20260925223707.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;svm&quot;&gt;SVM&lt;/h1&gt;
+&lt;p&gt;Why should we penalize the weight ？&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# step size for the sliding window&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;step&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# extract window patches with step size of 4&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;patches&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;skimage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view_as_windows&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;testimg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;psize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;patches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# collapse the first 2 dimensions&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;patches2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;patches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reshape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;psize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;psize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;psize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;psize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;patches2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# histogram equalize patches (improves contrast)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;patches3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;patches2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;patches2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;patches3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,:,:]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;skimage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exposure&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;equalize_hist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;patches2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,:,:])&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# extract features&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;newXf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;extract_features&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;patches3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;view_as_windows extract  图像，通过滑动窗口。大小19&lt;span class=&quot;math inline&quot;&gt;$\times$&lt;/span&gt; 19&lt;br /&gt;
+pateches.shape   「原本」的形状&lt;br /&gt;
+patches.reshape 重新塑形。 （应该是自动判断前两个怎么collapse？）&lt;br /&gt;
+每个 &lt;code&gt;patches2[i,:,:]&lt;/code&gt; 是一个小patch.&lt;br /&gt;
+patches2 第一个维度是什么：是所有patch 的数量&lt;/p&gt;
+&lt;p&gt;patches 前两个维度是什么？num_y_win (y方向窗口数量) 和 num_x_win (x方向窗口数量)。&lt;br /&gt;
+num_y_win  窗口上下滑动一共能产生多少行窗口&lt;br /&gt;
+num_x_win 窗口左右滑动一共能产生多少行窗口&lt;/p&gt;
+&lt;h1 id=&quot;后验分布-1&quot;&gt;后验分布&lt;/h1&gt;
+&lt;h1 id=&quot;maximum-a-posterior&quot;&gt;Maximum a posterior&lt;/h1&gt;
+&lt;p&gt;如果在&lt;span class=&quot;math inline&quot;&gt;$\theta=t$&lt;/span&gt; 时，数据&lt;span class=&quot;math inline&quot;&gt;$D$&lt;/span&gt; 有分布&lt;span class=&quot;math inline&quot;&gt;$p(D|\theta =t)$&lt;/span&gt;. 并且我们也假设知道&lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 是什么分布。那么MAP 就是计算&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\arg \max_\theta p(\theta = t|D=x) = \arg \max_\theta \frac{p(D=x \mid \theta =t)p(\theta =t)}{\displaystyle\sum_s p(D=x|\theta=s)}$$&lt;/div&gt;&lt;br /&gt;
+[修改] &lt;strong&gt;实际上&lt;/strong&gt; 分母和&lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 没关系，所以只要最大化分子就可以&lt;/p&gt;
+&lt;div class=&quot;math block&quot;&gt;
+$$\arg \max_\theta p(\theta = t|D=x) = \arg \max_\theta p(D=x \mid \theta =t)p(\theta =t)$$
+&lt;/div&gt;
+&lt;p&gt;ML是反过来P 中 的 &lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 和&lt;span class=&quot;math inline&quot;&gt;$D$&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&quot;posterior-estimation&quot;&gt;Posterior Estimation&lt;/h1&gt;
+&lt;p&gt;用全部后验分布的全部概率产生的结果加权平均（？）&lt;/p&gt;
+&lt;h1 id=&quot;bernoulli-update&quot;&gt;Bernoulli Update&lt;/h1&gt;
+&lt;p&gt;一开始的先验是关于参数&lt;span class=&quot;math inline&quot;&gt;$\pi$&lt;/span&gt; 的beta分布。&lt;br /&gt;
+结果是一个伯努利分布中参数 &lt;span class=&quot;math inline&quot;&gt;$\pi$&lt;/span&gt; 的分布。&lt;/p&gt;
+&lt;h1 id=&quot;k-means&quot;&gt;K-means&lt;/h1&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$\pi_k$&lt;/span&gt; 观察到第k堆的概率。这是一个隐变量 &lt;span class=&quot;math inline&quot;&gt;$Z= k$&lt;/span&gt;  的概率。&lt;/p&gt;
+&lt;p&gt;观察到向量&lt;span class=&quot;math inline&quot;&gt;$x_i$&lt;/span&gt; 的条件下，在第&lt;span class=&quot;math inline&quot;&gt;$k$&lt;/span&gt; 堆的概率：&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\gamma_{ik} = P(Z= k\mid x_i )$$&lt;/div&gt;&lt;br /&gt;
+因为一个空间所有样本概率总和为&lt;span class=&quot;math inline&quot;&gt;$1$&lt;/span&gt;, 所以&lt;div class=&quot;math inline&quot;&gt;$$\sum_k \gamma_{ik} = 1. \tag{1}$$&lt;/div&gt;&lt;/p&gt;
+&lt;h2 id=&quot;k-means---soft-assignment&quot;&gt;K means - Soft Assignment&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$Z = k \mid x_i$&lt;/span&gt;  不是一个常数(即，不在任意一点概率是1)。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$Z \sim N(\mu_k^{(0)}, \sigma_k^{(0)})$&lt;/span&gt; 时&lt;br /&gt;
+E-M step 可以更新&lt;span class=&quot;math inline&quot;&gt;$\mu_k$&lt;/span&gt; 和&lt;span class=&quot;math inline&quot;&gt;$\sigma_k$&lt;/span&gt;.  分别有一个公式……&lt;/p&gt;
+&lt;h2 id=&quot;hard-assignment&quot;&gt;Hard Assignment&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$\gamma_{ik} \in \{0,\ 1\}$&lt;/span&gt;  。更新后的中心是一堆中所有点的平均&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\mu_{k}^{(1)}=\frac{\sum \gamma_{ik} x_i}{\sum_i\gamma_{ik}} =\frac{\sum_{i在第k堆中} x_i}{\sum_{i 在第k堆中} 1}$$&lt;/div&gt;&lt;/p&gt;
+&lt;h2 id=&quot;mle-和-map-区别&quot;&gt;MLE 和 MAP 区别&lt;/h2&gt;
+&lt;h3 id=&quot;1-极大似然估计mle&quot;&gt;1. 极大似然估计（MLE）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;不需要先验（No Prior）&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;基本逻辑&lt;/strong&gt;：只关注当前观察到的数据 &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt;。它假设参数 &lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 是一个固定但未知的真实常数，寻找能使数据 &lt;span class=&quot;math inline&quot;&gt;$x$&lt;/span&gt; 出现概率（似然 &lt;span class=&quot;math inline&quot;&gt;$p(x \mid \theta)$&lt;/span&gt;）最大的那个 &lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数学表示&lt;/strong&gt;：&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\hat{\theta}_{\text{MLE}} = \arg\max_{\theta} p(x \mid \theta)$$&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;2-后验估计例如-最大后验估计-map&quot;&gt;2. 后验估计（例如 最大后验估计 MAP）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;必须需要先验（Requires Prior）&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;基本逻辑&lt;/strong&gt;：基于贝叶斯学派的观点，参数 &lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 本身也是一个随机变量，在观察到数据之前我们就对它有一定的认知或倾向（先验分布 &lt;span class=&quot;math inline&quot;&gt;$p(\theta)$&lt;/span&gt;）。后验估计通过贝叶斯公式将“先验”与“数据似然”结合，寻找使&lt;strong&gt;后验概率&lt;/strong&gt; &lt;span class=&quot;math inline&quot;&gt;$p(\theta \mid x)$&lt;/span&gt; 最大的 &lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数学表示&lt;/strong&gt;：&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\hat{\theta}_{\text{MAP}} = \arg\max_{\theta} p(\theta \mid x) = \arg\max_{\theta} \left[ \underbrace{p(x \mid \theta)}_{\text{似然}} \cdot \underbrace{p(\theta)}_{\text{先验}} \right]$$&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;总结对比&quot;&gt;总结对比&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;MLE&lt;/strong&gt; = 纯粹看数据（&lt;span class=&quot;math inline&quot;&gt;$\text{数据似然}$&lt;/span&gt;）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;后验估计（MAP）&lt;/strong&gt; = 数据 + 经验（&lt;span class=&quot;math inline&quot;&gt;$\text{数据似然} \times \text{先验概率}$&lt;/span&gt;）&lt;br /&gt;
+当先验分布 &lt;span class=&quot;math inline&quot;&gt;$p(\theta)$&lt;/span&gt; 是均匀分布（即对所有可能的 &lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; 不偏不倚，等概率看待）时，MAP 的计算结果就会退化为与 MLE 完全一致。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;full-posterior-distribution-vs-map&quot;&gt;Full Posterior distribution vs. MAP&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;/Pasted image 20261002141258.png&quot;&gt;&lt;img class=&quot;bodyimg&quot; src=&quot;/Pasted image 20261002141258.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;class 1 with probability &lt;span class=&quot;math inline&quot;&gt;$p$&lt;/span&gt;&lt;br /&gt;
+class  2 with probability &lt;span class=&quot;math inline&quot;&gt;$1-p$&lt;/span&gt;&lt;br /&gt;
+The ratio is &lt;span class=&quot;math inline&quot;&gt;$\frac{p}{1 - p}$&lt;/span&gt;.&lt;br /&gt;
+if both in the form exp, then &lt;span class=&quot;math inline&quot;&gt;$\log p/(1-p) = \log (exp (\cdot)) = \cdot$&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/Pasted image 20261002204030.png&quot;&gt;&lt;img class=&quot;bodyimg&quot; src=&quot;/Pasted image 20261002204030.png&quot;&gt;&lt;/a&gt;&lt;br /&gt;
+不太明白：求出来likelihood ，但是不知道参数是什么。用MLE 来计算吗？&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
     <id>https://dbdo00.github.io/notes/journals/2026_11_20.html</id>
     <link type="text/html" href="https://dbdo00.github.io/notes/journals/2026_11_20.html" />
     <title>2026_11_20</title>
     <published>2026-11-20T06:23:07Z</published>
-    <updated>2026-11-20T06:23:07Z</updated>
+    <updated>2026-11-23T06:27:19Z</updated>
     <content type="html">&lt;ul&gt;
 &lt;li&gt;&lt;span class=&quot;org-task task-done&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;DONE&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;see the folder&lt;/span&gt;&lt;/span&gt;&lt;details class=&quot;task-logbook&quot;&gt;&lt;summary&gt;⏱ 1h 7m · 1 entry&lt;/summary&gt;&lt;ul class=&quot;logbook-rows&quot;&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-20 Fri 13:15:19&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-20 Fri 14:23:04&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1h 7m 45s&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;org-task task-done&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;DONE&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;&lt;code&gt;evaluate&lt;/code&gt;&lt;/span&gt;&lt;/span&gt;&lt;details class=&quot;task-logbook&quot;&gt;&lt;summary&gt;⏱ 20m · 2 entries&lt;/summary&gt;&lt;ul class=&quot;logbook-rows&quot;&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-20 Fri 22:58:23&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-20 Fri 23:18:47&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;20m 24s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-20 Fri 23:18:50&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-20 Fri 23:18:51&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1s&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;org-task task-todo&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;TODO&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;network&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;org-task task-todo&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;TODO&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;ucb bound for linucb&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;org-task task-done&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;DONE&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;run once something about image&lt;/span&gt;&lt;/span&gt;&lt;details class=&quot;task-logbook&quot;&gt;&lt;summary&gt;⏱ 22m · 3 entries&lt;/summary&gt;&lt;ul class=&quot;logbook-rows&quot;&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-20 Fri 14:59:48&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-20 Fri 15:22:40&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;22m 52s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-20 Fri 16:21:35&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-20 Fri 16:21:37&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;2s&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2026-11-20 Fri 16:21:39&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2026-11-20 Fri 16:21:39&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;0s&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;&lt;/li&gt;
+&lt;li&gt;TIL you can change hyper-parameters.&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
@@ -219,45 +360,6 @@ define the &#x27;done&#x27;&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/journals/2025_12_12.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_12_12.html" />
-    <title>2025_12_12</title>
-    <published>2025-12-12T03:02:44Z</published>
-    <updated>2026-11-17T12:57:46Z</updated>
-    <content type="html">&lt;h1 id=&quot;limit-of-derivative-of-different-orders&quot;&gt;Limit of Derivative of Different Orders&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Without monotonicity, the limit of a function cannot be studied abstractly (i.e. using the certain existence theorems), because all existence theorems require monotonicity.&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;org-task task-done&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;DONE&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;I will translate The Odyssey # 350.&lt;/span&gt;&lt;/span&gt;&lt;details class=&quot;task-logbook&quot;&gt;&lt;summary&gt;⏱ 1s · 1 entry&lt;/summary&gt;&lt;ul class=&quot;logbook-rows&quot;&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2025-12-12 Fri 11:13:33&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2025-12-12 Fri 11:13:34&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1s&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;org-task task-done&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;DONE&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;Do the math question assigned by Gemini&lt;/span&gt;&lt;/span&gt;&lt;details class=&quot;task-logbook&quot;&gt;&lt;summary&gt;⏱ 75h 14m · 1 entry&lt;/summary&gt;&lt;ul class=&quot;logbook-rows&quot;&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2025-12-12 Fri 11:13:37&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2025-12-15 Mon 14:28:14&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;75h 14m 37s&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;org-task task-todo&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;TODO&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;Xiao p44-50 (goal). At least study it for 1h.&lt;/span&gt;&lt;/span&gt;&lt;details class=&quot;task-logbook&quot;&gt;&lt;summary&gt;⏱ 1s · 1 entry&lt;/summary&gt;&lt;ul class=&quot;logbook-rows&quot;&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2025-12-12 Fri 10:59:56&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2025-12-12 Fri 10:59:57&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1s&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;org-task task-done&quot;&gt;&lt;span class=&quot;task-status&quot;&gt;DONE&lt;/span&gt; &lt;span class=&quot;task-title&quot;&gt;[[Dec 13th, 2025]] shower&lt;/span&gt;&lt;/span&gt;&lt;details class=&quot;task-logbook&quot;&gt;&lt;summary&gt;⏱ 1s · 1 entry&lt;/summary&gt;&lt;ul class=&quot;logbook-rows&quot;&gt;&lt;li class=&quot;logbook-row&quot;&gt;&lt;span class=&quot;clock-start&quot;&gt;2025-12-15 Mon 14:28:26&lt;/span&gt;&lt;span class=&quot;clock-arrow&quot;&gt;→&lt;/span&gt;&lt;span class=&quot;clock-end&quot;&gt;2025-12-15 Mon 14:28:27&lt;/span&gt;&lt;span class=&quot;clock-dur&quot;&gt;1s&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <id>https://dbdo00.github.io/notes/journals/2025_12_08.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/journals/2025_12_08.html" />
-    <title>2025_12_08</title>
-    <published>2025-12-08T12:47:05Z</published>
-    <updated>2026-11-17T12:57:46Z</updated>
-    <content type="html">&lt;h1 id=&quot;the-little-learner&quot;&gt;The Little Learner&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;tensor addition, multiplication: element-wise.&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;math inline&quot;&gt;$\theta$&lt;/span&gt; : the training history. You update it on each revision using the  law
-&lt;ul&gt;
-&lt;li&gt;new &lt;span class=&quot;math inline&quot;&gt;$\theta_0$&lt;/span&gt; = &lt;span class=&quot;math inline&quot;&gt;$\theta_0$&lt;/span&gt; - (&lt;span class=&quot;math inline&quot;&gt;$\alpha \times$&lt;/span&gt; rate of change of loss wrt &lt;span class=&quot;math inline&quot;&gt;$\theta_0$&lt;/span&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;rank of tensor&lt;/em&gt;: &lt;code&gt;sum&lt;/code&gt; reduces the rank of tensor by 1.&lt;/li&gt;
-&lt;li&gt;tensor^1, tensor^2.. are the notations to denote the rank of tensors.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;packages:&lt;/strong&gt; Racket, malt&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
