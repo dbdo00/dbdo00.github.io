@@ -91,9 +91,13 @@ $$\phi(s_i, a_j) \begin{pmatrix} \theta_1 \\ \theta_2 \end{pmatrix} = v_1i \thet
 <p>We want to solve (with minimal error) for <span class="math inline">$\theta_1, \theta_2$</span> in<br />
 <span class="math inline">$q(s,a) = \phi(s_i, a_j) \begin{pmatrix} \theta_1 \\ \theta_2 \end{pmatrix} = v_1i \theta_1 + v_2j \theta_2$</span>.</p>
 <p>This is a linear regression problem.</p>
-<p>Solution is <div class="math inline">$$\begin{aligned} & (\bm I_2 + \sum^2_i\phi(s_i, a)\phi(s_i, a)^\top )= \bm I_2 + \phi(s_1, a)\phi(s_1, a) ^\top + \phi(s_2, a)\phi(s_i, a_j)^\top \\ 
-=&\left(\bm I_2 + \begin{pmatrix} v_{1,\ a} v_{1,\ a} & v_{1,\ a} v_{2,\ a} \\ v_{2,\ a}v_{1,\ a} & v_{2,\ a} v_{2,\ a}\end{pmatrix}\right)^{-1}  \sum^2_{i=1} \phi(s_i, a) r_i
-\end{aligned}$$</div></p>
+<p>The solution is <span class="math inline">$A_a^{-1} b_a$</span></p>
+<p>where</p>
+<div class="math block">
+$$\begin{aligned} & A_a =(\bm I_2 + \sum^2_i\phi(s_i, a)\phi(s_i, a)^\top )= \bm I_2 + \phi(s_1, a)\phi(s_1, a) ^\top + \phi(s_2, a)\phi(s_i, a_j)^\top \\ 
+=&\left(\bm I_2 + \begin{pmatrix} v_{1,\ a} v_{1,\ a} & v_{1,\ a} v_{2,\ a} \\ v_{2,\ a}v_{1,\ a} & v_{2,\ a} v_{2,\ a}\end{pmatrix}\right)\end{aligned}$$
+</div>
+<p><span class="math inline">$b_a=  \sum^2_{i=1} \phi(s_i, a) r_i$</span></p>
 
     
     <div class="index"><a href="/notes">↑ up</a></div>
