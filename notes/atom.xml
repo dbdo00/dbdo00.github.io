@@ -3,7 +3,7 @@
   <title>dbdo notes</title>
   <id>https://dbdo00.github.io/notes</id>
   <link href="https://dbdo00.github.io/notes/atom.xml" rel="self" />
-  <updated>2026-11-23T06:27:42.458994Z</updated>
+  <updated>2026-11-23T09:04:11.533151Z</updated>
   <generator uri="https://github.com/llimllib/obsidian_notes/" version="1.0">
     Obsidian Notes
   </generator>
@@ -13,10 +13,38 @@
     <link type="text/html" href="https://dbdo00.github.io/notes/Notes/Nonlinear_Dimensionality_Reduction.html" />
     <title>Nonlinear Dimensionality Reduction</title>
     <published>2026-11-23T06:27:19Z</published>
-    <updated>2026-11-23T06:27:19Z</updated>
-    <content type="html">&lt;h3 id=&quot;知道点的距离找点的坐标&quot;&gt;知道点的距离，找点的坐标&lt;/h3&gt;
+    <updated>2026-11-23T09:03:22Z</updated>
+    <content type="html">&lt;h3 id=&quot;从点的距离重建原来点的坐标&quot;&gt;从点的距离，重建原来点的坐标&lt;/h3&gt;
 &lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$\newcommand{\bm}{\mathbf}$&lt;/span&gt;&lt;br /&gt;
-&lt;strong&gt;MDS, ISOMAP&lt;/strong&gt;   平方距离矩阵&lt;span class=&quot;math inline&quot;&gt;$\Delta$&lt;/span&gt; 的Gram matrix 是 &lt;span class=&quot;math inline&quot;&gt;$\bm B= -\frac{1}{2}\bm H\Delta\bm H$&lt;/span&gt;   . MDS 输出的点的坐标是&lt;span class=&quot;math inline&quot;&gt;$\bm B$&lt;/span&gt; 的特征向量。&lt;/p&gt;
+&lt;strong&gt;MDS, ISOMAP&lt;/strong&gt;   平方距离矩阵&lt;span class=&quot;math inline&quot;&gt;$\Delta$&lt;/span&gt; 的Gram matrix 是 &lt;span class=&quot;math inline&quot;&gt;$\bm B= -\frac{1}{2}\bm H\Delta\bm H$&lt;/span&gt;   . &lt;del&gt; MDS 输出的点的坐标是&lt;span class=&quot;math inline&quot;&gt;$\bm B$&lt;/span&gt; 的特征向量。&lt;/del&gt;   如果特征向量是&lt;span class=&quot;math inline&quot;&gt;$v_1, \ldots\ v_k$&lt;/span&gt;,   (k 一定会等于 rank B 因为&lt;span class=&quot;math inline&quot;&gt;$\bm B$&lt;/span&gt;  对称 ) 那么 &lt;div class=&quot;math inline&quot;&gt;$$\begin{pmatrix} \sqrt \lambda_1 v_1^\top \\ \sqrt \lambda_k v_k^\top  \end{pmatrix} = V_k \Lambda_k$$&lt;/div&gt; 的行构成了MDS还原出来的点。&lt;span class=&quot;math inline&quot;&gt;$d(v_i,\ v_j)\approx \Delta_{i,\ j}$&lt;/span&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;todo. 双中心化公式&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&quot;为什么距离能够还原&quot;&gt;为什么距离能够还原？&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;因为：&lt;/p&gt;
+&lt;div class=&quot;math block&quot;&gt;
+$$XX^T = V_r\Lambda_rV_r^T =B$$
+&lt;/div&gt;
+&lt;p&gt;而 (B) 是中心化后的 Gram matrix。&lt;/p&gt;
+&lt;p&gt;因此两个点之间的平方距离为：&lt;/p&gt;
+&lt;div class=&quot;math block&quot;&gt;
+$$d^2(x_i,x_j)=\|x_i-x_j\|^2 =B_{ii}+B_{jj}-2B_{ij}$$
+&lt;/div&gt;
+&lt;p&gt;根据双中心化公式，这恰好等于：&lt;/p&gt;
+&lt;div class=&quot;math block&quot;&gt;
+$$\boxed{d^2(x_i,x_j)=\Delta_{ij}}$$
+&lt;/div&gt;
+&lt;p&gt;所以：&lt;/p&gt;
+&lt;div class=&quot;math block&quot;&gt;
+$$\boxed{d(x_i,x_j)=\sqrt{\Delta_{ij}}}$$
+&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;ISOMAP&lt;/strong&gt; 曲面上点的测地距离当成图距离。&lt;br /&gt;
+用图上的最短距离估计测地距离。&lt;br /&gt;
+用图的similarity matrix 通过 BDS 估计&lt;/p&gt;
 </content>
   </entry>
   <entry>
