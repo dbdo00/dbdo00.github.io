@@ -3,58 +3,17 @@
   <title>dbdo notes</title>
   <id>https://dbdo00.github.io/notes</id>
   <link href="https://dbdo00.github.io/notes/atom.xml" rel="self" />
-  <updated>2026-11-23T12:57:06.835351Z</updated>
+  <updated>2026-11-23T14:40:46.288308Z</updated>
   <generator uri="https://github.com/llimllib/obsidian_notes/" version="1.0">
     Obsidian Notes
   </generator>
   <author><name>dbdo</name></author>
   <entry>
-    <id>https://dbdo00.github.io/notes/Notes/Bandit.html</id>
-    <link type="text/html" href="https://dbdo00.github.io/notes/Notes/Bandit.html" />
-    <title>Bandit</title>
-    <published>2026-11-23T12:55:25Z</published>
-    <updated>2026-11-23T12:55:25Z</updated>
-    <content type="html">&lt;p&gt;different ways of learning when model is not known:&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;approach&lt;/th&gt;
-&lt;th&gt;state&lt;/th&gt;
-&lt;th&gt;probability&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;multi-armed bandit&lt;/td&gt;
-&lt;td&gt;x&lt;/td&gt;
-&lt;td&gt;x&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;o&lt;/td&gt;
-&lt;td&gt;x&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&quot;regret-&quot;&gt;Regret = &lt;span class=&quot;math inline&quot;&gt;$\rm What\ I\ could\ (have\ expected\ to)\ have\ gained$&lt;/span&gt; &lt;span class=&quot;math inline&quot;&gt;$-$&lt;/span&gt; &lt;span class=&quot;math inline&quot;&gt;$\rm what\ I\ have\ gained$&lt;/span&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Example.&lt;/strong&gt;  &lt;span class=&quot;math inline&quot;&gt;$q(1)\sim \rm {Bern}(0.1),\ q(2)\sim \rm {Bern}(0.5),\ q(3)\sim \rm {Bern}(0.6)$&lt;/span&gt;.&lt;br /&gt;
-However, I do not know the value (i.e. the reward). I acted &lt;span class=&quot;math inline&quot;&gt;$1,\ 2,\ 3$&lt;/span&gt; sequentially.&lt;br /&gt;
-As a result, the expected  value of my reward is &lt;div class=&quot;math inline&quot;&gt;$$\mathbb E {\left[q(1) + q(2) + q(3)\right]} = \mathbb E\left[q(1)\right] + \mathbb E[q(2)]  + \mathbb E[q(3)]= 0.1 + 0.5 + 0.6 = 1.2$$&lt;/div&gt;&lt;br /&gt;
-The expected value of reward of taking the action &lt;span class=&quot;math inline&quot;&gt;$3$&lt;/span&gt; sequentially for &lt;span class=&quot;math inline&quot;&gt;$3$&lt;/span&gt; times is&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$\mathbb E[q(3) + q(3) + q(3)] = 1.8$$&lt;/div&gt;&lt;br /&gt;
-So my regret is&lt;br /&gt;
-&lt;div class=&quot;math inline&quot;&gt;$$1.8 - 1.2 = 0.6.$$&lt;/div&gt;&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
     <id>https://dbdo00.github.io/notes/Notes/Nonlinear_Dimensionality_Reduction.html</id>
     <link type="text/html" href="https://dbdo00.github.io/notes/Notes/Nonlinear_Dimensionality_Reduction.html" />
     <title>Nonlinear Dimensionality Reduction</title>
     <published>2026-11-23T06:27:19Z</published>
-    <updated>2026-11-23T12:17:51Z</updated>
+    <updated>2026-11-23T14:39:56Z</updated>
     <content type="html">&lt;h3 id=&quot;从点的距离重建原来点的坐标&quot;&gt;从点的距离，重建原来点的坐标&lt;/h3&gt;
 &lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$\newcommand{\bm}{\mathbf}$&lt;/span&gt;&lt;br /&gt;
 &lt;strong&gt;MDS, ISOMAP&lt;/strong&gt;   平方距离矩阵&lt;span class=&quot;math inline&quot;&gt;$\Delta$&lt;/span&gt; 的Gram matrix 是 &lt;span class=&quot;math inline&quot;&gt;$\bm B= -\frac{1}{2}\bm H\Delta\bm H$&lt;/span&gt;   . &lt;del&gt; MDS 输出的点的坐标是&lt;span class=&quot;math inline&quot;&gt;$\bm B$&lt;/span&gt; 的特征向量。&lt;/del&gt;   如果特征向量是&lt;span class=&quot;math inline&quot;&gt;$v_1, \ldots\ v_k$&lt;/span&gt;,   (k 一定会等于 rank B 因为&lt;span class=&quot;math inline&quot;&gt;$\bm B$&lt;/span&gt;  对称 ) 那么 &lt;div class=&quot;math inline&quot;&gt;$$\begin{pmatrix} \sqrt \lambda_1 v_1 \ \ldots\  \sqrt \lambda_k v_k  \end{pmatrix} = \Lambda_k^{1/2}V_k$$&lt;/div&gt; 的行 &lt;span class=&quot;math inline&quot;&gt;$p_1,\ \ldots, p_n$&lt;/span&gt; 构成了MDS还原出来的点。&lt;span class=&quot;math inline&quot;&gt;$d(v_i,\ v_j)\approx \Delta_{i,\ j}$&lt;/span&gt;.&lt;/p&gt;
@@ -86,7 +45,63 @@ $$\boxed{d(x_i,x_j)=\sqrt{\Delta_{ij}}}$$
 &lt;p&gt;&lt;strong&gt;ISOMAP&lt;/strong&gt; 曲面上点的测地距离当成图距离。&lt;br /&gt;
 用图上的最短距离估计测地距离。&lt;br /&gt;
 用图的similarity matrix 通过 BDS 得到低维的点。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Local reconstruction&lt;/strong&gt; After projection, you want to preserve the linear combination. Negative weights means&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Local reconstruction&lt;/strong&gt; After projection, you want to preserve the linear combination. Negative weights means target is outside the convex hull of given vectors forming the linear combination (i.e. &lt;em&gt;neighbors&lt;/em&gt;).&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <id>https://dbdo00.github.io/notes/Notes/Bandit.html</id>
+    <link type="text/html" href="https://dbdo00.github.io/notes/Notes/Bandit.html" />
+    <title>Bandit</title>
+    <published>2026-11-23T12:55:25Z</published>
+    <updated>2026-11-23T14:39:56Z</updated>
+    <content type="html">&lt;p&gt;different ways of learning when model is not known:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;approach&lt;/th&gt;
+&lt;th&gt;state&lt;/th&gt;
+&lt;th&gt;probability&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;multi-armed bandit&lt;/td&gt;
+&lt;td&gt;x&lt;/td&gt;
+&lt;td&gt;x&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;o&lt;/td&gt;
+&lt;td&gt;x&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;regret-&quot;&gt;Regret = &lt;span class=&quot;math inline&quot;&gt;$\rm \left( What\ I\ could\ (have\ expected\ to)\ have\ gained\ I\ knew\ \\ what\ is\  best \right)-$&lt;/span&gt;  &lt;span class=&quot;math inline&quot;&gt;$\rm what\ I\ have\ gained$&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Example.&lt;/strong&gt;  &lt;span class=&quot;math inline&quot;&gt;$q(1)\sim \rm {Bern}(0.1),\ q(2)\sim \rm {Bern}(0.5),\ q(3)\sim \rm {Bern}(0.6)$&lt;/span&gt;.&lt;br /&gt;
+However, I do not know the value (i.e. the reward). I acted &lt;span class=&quot;math inline&quot;&gt;$1,\ 2,\ 3$&lt;/span&gt; sequentially.&lt;br /&gt;
+As a result, the expected  value of my reward is &lt;div class=&quot;math inline&quot;&gt;$$\mathbb E {\left[q(1) + q(2) + q(3)\right]} = \mathbb E\left[q(1)\right] + \mathbb E[q(2)]  + \mathbb E[q(3)]= 0.1 + 0.5 + 0.6 = 1.2$$&lt;/div&gt;&lt;br /&gt;
+The expected value of reward of taking the action &lt;span class=&quot;math inline&quot;&gt;$3$&lt;/span&gt; sequentially for &lt;span class=&quot;math inline&quot;&gt;$3$&lt;/span&gt; times is&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$\mathbb E[q(3) + q(3) + q(3)] = 1.8$$&lt;/div&gt;&lt;br /&gt;
+So my regret is&lt;br /&gt;
+&lt;div class=&quot;math inline&quot;&gt;$$1.8 - 1.2 = 0.6.$$&lt;/div&gt;&lt;/p&gt;
+&lt;h2 id=&quot;contexual-bandit&quot;&gt;Contexual Bandit&lt;/h2&gt;
+&lt;p&gt;States &lt;span class=&quot;math inline&quot;&gt;$\{s_1, s_2\}$&lt;/span&gt;.&lt;br /&gt;
+Action &lt;span class=&quot;math inline&quot;&gt;$\{a_1, a_2\}$&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&quot;math block&quot;&gt;
+$$\phi(s_i, a_j) = (v_{1i},\  v_{2j})^\top$$
+&lt;/div&gt;
+&lt;div class=&quot;math block&quot;&gt;
+$$\phi(s_i, a_j) \begin{pmatrix} \theta_1 \\ \theta_2 \end{pmatrix} = v_1i \theta_1 + v_2j \theta_2$$
+&lt;/div&gt;
+&lt;p&gt;We want to solve (with minimal error) for &lt;span class=&quot;math inline&quot;&gt;$\theta_1, \theta_2$&lt;/span&gt; in&lt;br /&gt;
+&lt;span class=&quot;math inline&quot;&gt;$q(s,a) = \phi(s_i, a_j) \begin{pmatrix} \theta_1 \\ \theta_2 \end{pmatrix} = v_1i \theta_1 + v_2j \theta_2$&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;This is a linear regression problem.&lt;/p&gt;
+&lt;p&gt;Solution is &lt;div class=&quot;math inline&quot;&gt;$$\begin{aligned} &amp; (\bm I_2 + \sum^2_i\phi(s_i, a)\phi(s_i, a)^\top )= \bm I_2 + \phi(s_1, a)\phi(s_1, a) ^\top + \phi(s_2, a)\phi(s_i, a_j)^\top \\ 
+=&amp;\left(\bm I_2 + \begin{pmatrix} v_{1,\ a} v_{1,\ a} &amp; v_{1,\ a} v_{2,\ a} \\ v_{2,\ a}v_{1,\ a} &amp; v_{2,\ a} v_{2,\ a}\end{pmatrix}\right)^{-1}  \sum^2_{i=1} \phi(s_i, a) r_i
+\end{aligned}$$&lt;/div&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>
