@@ -3,7 +3,7 @@
   <title>dbdo notes</title>
   <id>https://dbdo00.github.io/notes</id>
   <link href="https://dbdo00.github.io/notes/atom.xml" rel="self" />
-  <updated>2026-11-23T14:44:30.979428Z</updated>
+  <updated>2026-11-23T14:47:59.66028Z</updated>
   <generator uri="https://github.com/llimllib/obsidian_notes/" version="1.0">
     Obsidian Notes
   </generator>
@@ -13,8 +13,9 @@
     <link type="text/html" href="https://dbdo00.github.io/notes/Notes/Bandit.html" />
     <title>Bandit</title>
     <published>2026-11-23T12:55:25Z</published>
-    <updated>2026-11-23T14:43:24Z</updated>
-    <content type="html">&lt;p&gt;different ways of learning when model is not known:&lt;/p&gt;
+    <updated>2026-11-23T14:47:28Z</updated>
+    <content type="html">&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$\newcommand{\bm}{\mathbf}$&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;different ways of learning when model is not known:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -59,13 +60,11 @@ $$\phi(s_i, a_j) \begin{pmatrix} \theta_1 \\ \theta_2 \end{pmatrix} = v_1i \thet
 &lt;p&gt;We want to solve (with minimal error) for &lt;span class=&quot;math inline&quot;&gt;$\theta_1, \theta_2$&lt;/span&gt; in&lt;br /&gt;
 &lt;span class=&quot;math inline&quot;&gt;$q(s,a) = \phi(s_i, a_j) \begin{pmatrix} \theta_1 \\ \theta_2 \end{pmatrix} = v_1i \theta_1 + v_2j \theta_2$&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;This is a linear regression problem.&lt;/p&gt;
-&lt;p&gt;The solution is &lt;span class=&quot;math inline&quot;&gt;$A_a^{-1} b_a$&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;With ridge regression, we can find the solution is &lt;span class=&quot;math inline&quot;&gt;$A_a^{-1} b_a$&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;where&lt;/p&gt;
-&lt;div class=&quot;math block&quot;&gt;
-$$\begin{aligned} &amp; A_a =(\bm I_2 + \sum^2_i\phi(s_i, a)\phi(s_i, a)^\top )= \bm I_2 + \phi(s_1, a)\phi(s_1, a) ^\top + \phi(s_2, a)\phi(s_i, a_j)^\top \\ 
-=&amp;\left(\bm I_2 + \begin{pmatrix} v_{1,\ a} v_{1,\ a} &amp; v_{1,\ a} v_{2,\ a} \\ v_{2,\ a}v_{1,\ a} &amp; v_{2,\ a} v_{2,\ a}\end{pmatrix}\right)\end{aligned}$$
-&lt;/div&gt;
-&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$b_a=  \sum^2_{i=1} \phi(s_i, a) r_i$&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class=&quot;math inline&quot;&gt;$$\begin{aligned} &amp; A_a =(\bm I_2 + \sum^2_i\phi(s_i, a)\phi(s_i, a)^\top )= \bm I_2 + \phi(s_1, a)\phi(s_1, a) ^\top + \phi(s_2, a)\phi(s_i, a_j)^\top \\ 
+=&amp;\left(\bm I_2 + \begin{pmatrix} v_{1,\ a} v_{1,\ a} &amp; v_{1,\ a} v_{2,\ a} \\ v_{2,\ a}v_{1,\ a} &amp; v_{2,\ a} v_{2,\ a}\end{pmatrix}\right)\end{aligned}$$&lt;/div&gt; and&lt;br /&gt;
+&lt;span class=&quot;math inline&quot;&gt;$b_a=  \sum^2_{i=1} \phi(s_i, a) r_i$&lt;/span&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>
