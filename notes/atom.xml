@@ -3,7 +3,7 @@
   <title>dbdo notes</title>
   <id>https://dbdo00.github.io/notes</id>
   <link href="https://dbdo00.github.io/notes/atom.xml" rel="self" />
-  <updated>2026-11-23T12:04:25.665312Z</updated>
+  <updated>2026-11-23T12:05:03.233865Z</updated>
   <generator uri="https://github.com/llimllib/obsidian_notes/" version="1.0">
     Obsidian Notes
   </generator>
@@ -13,7 +13,7 @@
     <link type="text/html" href="https://dbdo00.github.io/notes/Notes/Nonlinear_Dimensionality_Reduction.html" />
     <title>Nonlinear Dimensionality Reduction</title>
     <published>2026-11-23T06:27:19Z</published>
-    <updated>2026-11-23T12:03:46Z</updated>
+    <updated>2026-11-23T12:04:08Z</updated>
     <content type="html">&lt;h3 id=&quot;从点的距离重建原来点的坐标&quot;&gt;从点的距离，重建原来点的坐标&lt;/h3&gt;
 &lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;$\newcommand{\bm}{\mathbf}$&lt;/span&gt;&lt;br /&gt;
 &lt;strong&gt;MDS, ISOMAP&lt;/strong&gt;   平方距离矩阵&lt;span class=&quot;math inline&quot;&gt;$\Delta$&lt;/span&gt; 的Gram matrix 是 &lt;span class=&quot;math inline&quot;&gt;$\bm B= -\frac{1}{2}\bm H\Delta\bm H$&lt;/span&gt;   . &lt;del&gt; MDS 输出的点的坐标是&lt;span class=&quot;math inline&quot;&gt;$\bm B$&lt;/span&gt; 的特征向量。&lt;/del&gt;   如果特征向量是&lt;span class=&quot;math inline&quot;&gt;$v_1, \ldots\ v_k$&lt;/span&gt;,   (k 一定会等于 rank B 因为&lt;span class=&quot;math inline&quot;&gt;$\bm B$&lt;/span&gt;  对称 ) 那么 &lt;div class=&quot;math inline&quot;&gt;$$\begin{pmatrix} \sqrt \lambda_1 v_1 \ \ldots\  \sqrt \lambda_k v_k  \end{pmatrix} = \Lambda_k^{1/2}V_k$$&lt;/div&gt; 的行 &lt;span class=&quot;math inline&quot;&gt;$p_1,\ \ldots, p_n$&lt;/span&gt; 构成了MDS还原出来的点。&lt;span class=&quot;math inline&quot;&gt;$d(v_i,\ v_j)\approx \Delta_{i,\ j}$&lt;/span&gt;.&lt;/p&gt;
@@ -45,6 +45,7 @@ $$\boxed{d(x_i,x_j)=\sqrt{\Delta_{ij}}}$$
 &lt;p&gt;&lt;strong&gt;ISOMAP&lt;/strong&gt; 曲面上点的测地距离当成图距离。&lt;br /&gt;
 用图上的最短距离估计测地距离。&lt;br /&gt;
 用图的similarity matrix 通过 BDS 得到低维的点。&lt;/p&gt;
+&lt;hr /&gt;
 </content>
   </entry>
   <entry>
